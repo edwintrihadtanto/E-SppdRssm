@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/list_item_title"
+        />
+
+    <ImageView
+        android:id="@+id/img_welcome1"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:padding="10dp"
+        android:src="@drawable/logo_rssm3x"
+
+        android:contentDescription="@string/todo"/>
+
+    <TextView
+        android:id="@+id/textsatusplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/img_welcome1"
+        android:layout_toEndOf="@id/img_welcome1"
+        android:text="@string/elektronik_surat_perintah_perjalanan_dinas"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/hitam"/>
+
+    <ImageView
+        android:id="@+id/img_welcome"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        app:srcCompat="@drawable/logosplash"
+        android:contentDescription="@string/todo"/>
+
+    <ImageView
+        android:id="@+id/img_welcome23"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        app:srcCompat="@drawable/logosplash"
+        android:contentDescription="@string/todo"/>
+
+</RelativeLayout>

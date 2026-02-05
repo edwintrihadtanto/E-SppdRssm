@@ -1,0 +1,709 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_hijau"
+    tools:context="com.e_sppd_rssm.Detail_Daftar_Laporan_Sppd" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="85dp"
+        android:background="@color/kuning2" >
+
+        <RelativeLayout
+            android:id="@+id/lay09"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/coba3trans"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgicon"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/logo1" />
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/imgicon"
+                android:gravity="center|center_vertical"
+                android:text="Detail Surat Laporan SPPD RSSM"
+                android:textColor="@color/hitam"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sppd"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/judul"
+                android:layout_toRightOf="@+id/imgicon"
+                android:gravity="center|center_vertical"
+                android:text="@string/_sppd_"
+                android:textColor="@color/hitam"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgicon"
+                android:gravity="center|center_horizontal" >
+
+                <TextView
+                    android:id="@+id/nomorsurat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/edit_nmrsrt1"
+                    android:gravity="left|center"
+                    android:text="Nomor : "
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/edit_nmrsrt1"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/nomorsurat"
+                    android:inputType="number|none"
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/garing1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/edit_nmrsrt2"
+                    android:layout_toRightOf="@+id/edit_nmrsrt1"
+                    android:gravity="left"
+                    android:text="/"
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/edit_nmrsrt2"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/garing1"
+                    android:inputType="number|none"
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nmrsrt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/edit_nmrsrt2"
+                    android:layout_toRightOf="@+id/edit_nmrsrt2"
+                    android:gravity="left|center"
+                    android:text=" / 303 / 2017"
+                    android:textColor="@color/hitam"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/View"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/RelativeLayout"
+                android:background="@color/white2" />
+
+            <!-- Nomor 1 -->
+
+            <TextView
+                android:id="@+id/no1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/namapeg"
+                android:layout_alignTop="@+id/namapeg"
+                android:gravity="top|center_vertical"
+                android:text="1."
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/namapeg"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/View"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="Nama Pegawai Yang Diperintahkan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/namapeg"
+                android:layout_alignTop="@+id/namapeg"
+                android:layout_toRightOf="@+id/namapeg"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_nip"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua1"
+                android:layout_alignBottom="@+id/tndatitikdua1"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua1"
+                android:gravity="center"
+                android:text="Detail NIP"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <!-- Nomor 2 a -->
+
+            <TextView
+                android:id="@+id/no2a"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/PdanG"
+                android:layout_alignTop="@+id/PdanG"
+                android:gravity="top|center_vertical"
+                android:text="2."
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PdanG"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/namapeg"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="a. Pangkat dan Golongan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/PdanG"
+                android:layout_alignTop="@+id/PdanG"
+                android:layout_toRightOf="@+id/PdanG"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_PdanG"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua2"
+                android:layout_alignBottom="@+id/tndatitikdua2"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua2"
+                android:gravity="center"
+                android:text="Detail Pangkat dan Golongan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 2 b -->
+
+            <TextView
+                android:id="@+id/JaborIns"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PdanG"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="b. Jabatan / Instansi"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/JaborIns"
+                android:layout_alignTop="@+id/JaborIns"
+                android:layout_toRightOf="@+id/JaborIns"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_JaborIns"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua3"
+                android:layout_alignBottom="@+id/tndatitikdua3"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua3"
+                android:gravity="center"
+                android:text="Detail Jabatan dan Golongan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 2 C -->
+
+            <TextView
+                android:id="@+id/BiayaPerjDinas"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/JaborIns"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="c. Tingkat Biaya Perjalanan Dinas"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/BiayaPerjDinas"
+                android:layout_alignTop="@+id/BiayaPerjDinas"
+                android:layout_toRightOf="@+id/BiayaPerjDinas"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_BiayaPerjDinas"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua4"
+                android:layout_alignBottom="@+id/tndatitikdua4"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua3"
+                android:gravity="center"
+                android:text="Detail Biaya Perj Dinas"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 3 -->
+
+            <TextView
+                android:id="@+id/no3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BiayaPerjDinas"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="3."
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Tujuan"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/BiayaPerjDinas"
+                android:layout_below="@+id/BiayaPerjDinas"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="Maksud Perjalanan Dinas"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/Tujuan"
+                android:layout_alignTop="@+id/Tujuan"
+                android:layout_toRightOf="@+id/Tujuan"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_Tujuan"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua5"
+                android:layout_alignBottom="@+id/tndatitikdua5"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua5"
+                android:gravity="center"
+                android:text="Detail Tujuan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <!-- Nomor 4 -->
+
+            <TextView
+                android:id="@+id/no4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Tujuan"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="4."
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/JnsKendaraan"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/Tujuan"
+                android:layout_below="@+id/Tujuan"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="Alat Angkutan Yang Dipergunakan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/JnsKendaraan"
+                android:layout_alignTop="@+id/JnsKendaraan"
+                android:layout_toRightOf="@+id/JnsKendaraan"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_JnsKendaraan"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua6"
+                android:layout_alignBottom="@+id/tndatitikdua6"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua6"
+                android:gravity="center"
+                android:text="Detail Jenis Kendaraan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 5 -->
+
+            <TextView
+                android:id="@+id/no5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/JnsKendaraan"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="5."
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/AwalBerangkat"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/JnsKendaraan"
+                android:layout_below="@+id/JnsKendaraan"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="a. Tempat Berangkat"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua7"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/AwalBerangkat"
+                android:layout_alignTop="@+id/AwalBerangkat"
+                android:layout_toRightOf="@+id/AwalBerangkat"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_AwalBerangkat"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua7"
+                android:layout_alignBottom="@+id/tndatitikdua7"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua7"
+                android:gravity="center"
+                android:text="Detail Awal Berangkat Dari"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 5 B -->
+
+            <TextView
+                android:id="@+id/AkhirBerangkat"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/AwalBerangkat"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="b. Tempat Tujuan"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua8"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/AkhirBerangkat"
+                android:layout_alignTop="@+id/AkhirBerangkat"
+                android:layout_toRightOf="@+id/AkhirBerangkat"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_AkhirBerangkat"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua8"
+                android:layout_alignBottom="@+id/tndatitikdua8"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua8"
+                android:gravity="center"
+                android:text="Detail Akhir Berangkat Sampai"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 6 A -->
+
+            <TextView
+                android:id="@+id/no6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AkhirBerangkat"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="6."
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lamaperj"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/AkhirBerangkat"
+                android:layout_below="@+id/AkhirBerangkat"
+                android:layout_marginTop="3dp"
+                android:gravity="top|center_vertical"
+                android:text="a. Lamanya Perjalanan Dinas"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua9"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/lamaperj"
+                android:layout_alignTop="@+id/lamaperj"
+                android:layout_toRightOf="@+id/lamaperj"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_lamaperj"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua9"
+                android:layout_alignBottom="@+id/tndatitikdua9"
+                android:layout_toLeftOf="@+id/hari"
+                android:layout_toRightOf="@+id/tndatitikdua9"
+                android:gravity="center"
+                android:text="Detail Lama Perj"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/detail_lamaperj"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_lamaperj"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:text="Hari"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+            <!-- Nomor 6 B -->
+
+            <TextView
+                android:id="@+id/TglBerangkat"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/lamaperj"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="b. Tanggal Berangkat"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua10"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/TglBerangkat"
+                android:layout_alignTop="@+id/TglBerangkat"
+                android:layout_toRightOf="@+id/TglBerangkat"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_TglBerangkat"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua10"
+                android:layout_alignBottom="@+id/tndatitikdua10"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua10"
+                android:gravity="center"
+                android:text="Detail Tanggal Berangkat"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <!-- Nomor 6 C -->
+
+            <TextView
+                android:id="@+id/TglKembali"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/TglBerangkat"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/no1"
+                android:gravity="top|center_vertical"
+                android:text="c. Tanggal Harus Kembali / Tiba di Tempat Baru"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tndatitikdua11"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/TglKembali"
+                android:layout_alignTop="@+id/TglKembali"
+                android:layout_toRightOf="@+id/TglKembali"
+                android:gravity="left|center_vertical"
+                android:text=":"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_TglKembali"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/tndatitikdua11"
+                android:layout_alignBottom="@+id/tndatitikdua11"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tndatitikdua11"
+                android:gravity="center"
+                android:text="Detail Tanggal Kembali"
+                android:textColor="@color/hitam"
+                android:textStyle="bold" />
+
+            <!-- Nomor 7 -->
+
+            <RelativeLayout
+                android:id="@+id/RelativePengikut"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TglKembali"
+                android:visibility="visible" >
+
+                <include layout="@layout/tambahan_activity_main" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/kuning2" />
+
+    <TextView
+        android:id="@+id/abc"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="center|center_horizontal"
+        android:text="Detail Input Data || SPPD RSSm"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dettgl"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/abc"
+        android:gravity="center|center_horizontal"
+        android:text="Tanggal Detail Input Data"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tgl1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dettgl"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/V5"
+        android:gravity="right|center"
+        android:text="Tanggal"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/jam1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dettgl"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/V5"
+        android:gravity="left|center"
+        android:text="Jam"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/V5"
+        android:layout_width="5dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/dettgl"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white2" />
+
+    <View
+        android:id="@+id/View2"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white2" />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+           <ImageView
+            android:id="@+id/img1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/arti_logo" />
+    <View
+        android:id="@+id/v1"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/img1"
+        android:layout_marginTop="20dp"
+        android:background="@color/hitam" />
+       
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/v1"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/logowarna" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img2"
+            android:contentDescription="@string/todo"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/logosimbol1"
+            android:adjustViewBounds="true"
+            android:layout_margin="10dp"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/img3"
+            android:adjustViewBounds="true"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/logosimbol2"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

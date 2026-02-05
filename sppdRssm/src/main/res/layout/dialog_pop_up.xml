@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/logo_rssm_trans" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout4444"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/coba3trans" >
+
+        <TextView
+            android:id="@+id/ambil_nip_pop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hitam"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/list_item_title" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|center_horizontal"
+            android:text="Silahkan Berikan Kritik dan Saran Anda"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/kritik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/judul"
+            android:layout_margin="10dp"
+            android:gravity="center|center_horizontal"
+            android:text="@string/feedback_anda_"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editkritik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kritik"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:gravity="left|top"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="5dp"
+            android:layout_alignBottom="@+id/garisfeed1"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/kritik_dan_saran_anda_n_maks_150_kata"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/monsoon"
+            android:textSize="17sp"
+            android:background="@color/list_background_pressed"
+            android:textStyle="bold|italic" >
+
+            <requestFocus />
+        </EditText>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_cncl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/garisfeed"
+            android:layout_alignBottom="@+id/garisfeed"
+            android:layout_below="@+id/editkritik"
+            android:layout_toLeftOf="@+id/garisfeed"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/orangeposting" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Batal"
+                    android:gravity="center"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawableLeft="@drawable/ic_close_black"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold|normal"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/garisfeed1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_above="@+id/garisfeed"
+            />
+
+        <View
+            android:id="@+id/garisfeed"
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/garisfeed"
+            android:layout_alignBottom="@+id/garisfeed"
+            android:layout_below="@+id/editkritik"
+            android:layout_toRightOf="@+id/garisfeed"
+
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@color/hijau" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kirim"
+                    android:gravity="center"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawableLeft="@drawable/ic_check_black"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold|normal"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

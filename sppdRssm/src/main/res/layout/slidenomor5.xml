@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent" >
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg1" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/img1"
+                android:layout_marginTop="5dp"
+                android:background="@color/hitam" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v1"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg5" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-30dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg6" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/img3"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg2" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="3dp"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@+id/img4"
+                android:layout_alignTop="@+id/img4"
+                android:layout_centerHorizontal="true"
+                android:background="@color/hitam" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/img3"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg2_2" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg7" />
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/img6"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg4" />
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="3dp"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@+id/img7"
+                android:layout_alignTop="@+id/img7"
+                android:layout_centerHorizontal="true"
+                android:background="@color/hitam" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/img6"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg3" />
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/reg8" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

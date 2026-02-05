@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black" >
+
+    <TextView
+        android:id="@+id/textid_rincian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textnomor_sppd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/hanya_gambar"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rupiah"
+        android:layout_alignTop="@+id/texteditrincian_biaya"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:fitsSystemWindows="true"
+        app:srcCompat="@drawable/hitam" />
+
+    <TextView
+        android:id="@+id/texteditrincian_biaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/viewgaris"
+        android:layout_toRightOf="@+id/hanya_gambar"
+        android:text="Uraian Biaya"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/rupiah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texteditrincian_biaya"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/hanya_gambar"
+        android:text="Rp."
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/texteditjmlrincian_biaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texteditrincian_biaya"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/viewgaris"
+        android:layout_toRightOf="@+id/rupiah"
+        android:text="Jumlah Biaya"
+        android:textColor="@color/hitam"
+        android:textSize="16sp"
+        android:textStyle="normal|bold" />
+
+    <ImageView
+        android:id="@+id/gambar_bukti"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/texteditjmlrincian_biaya"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/texteditrincian_biaya"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/todo"
+        android:soundEffectsEnabled="true"
+        app:srcCompat="@drawable/ic_assignment_turned" />
+
+    <View
+        android:id="@+id/viewgaris"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignBottom="@+id/texteditjmlrincian_biaya"
+        android:layout_alignTop="@+id/texteditrincian_biaya"
+        android:layout_toLeftOf="@+id/gambar_bukti"
+
+        android:background="@android:color/transparent" />
+
+    <View
+        android:id="@+id/viewgaris2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/texteditjmlrincian_biaya"
+        android:background="@color/list_item_title" />
+
+</RelativeLayout>

@@ -1,0 +1,479 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:id="@+id/actionbar_profil1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/list_item_title" />
+
+    <View
+        android:id="@+id/actionbar_profil"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/actionbar_profil1"
+        android:background="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/nip_lokal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_back_profil"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_back2"
+        android:contentDescription="@string/tombol_kembali_profil"
+        android:onClick="kembali_activity" />
+
+    <ImageView
+        android:id="@+id/btn_refresh_profil"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/refresh_profil"
+        android:onClick="refresh_profil" />
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutlist_profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_back_profil"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgprof"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/icontaktau"
+            app:civ_border_color="#000000"
+            app:civ_circle_background_color="#000000" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/plus_image"
+            android:onClick="clik_foto"
+            android:contentDescription="@string/ambil_foto_profil" />
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgprof"
+            android:layout_margin="10dp"
+            android:text="@string/ganti_password"
+            android:visibility="visible"
+            android:background="@drawable/circle_gantipass"
+            android:drawableTop="@drawable/ic_swap_horiz_black"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textStyle="normal|bold"
+            android:soundEffectsEnabled="true"/>
+
+        <Button
+            android:id="@+id/btn_batal"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgprof"
+            android:layout_margin="10dp"
+            android:text="@string/batal_password"
+            android:background="@drawable/circle_gantipass"
+            android:drawableTop="@drawable/ic_swap_horiz_black"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/idview"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/RelativeLayoutlist_profil"
+        android:background="@color/white" />
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/idview"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:id="@+id/rellllllalal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_nip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/nomor_induk_pegawai"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/update_nip"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignStart="@+id/text_nip"
+                    android:layout_below="@+id/text_nip"
+                    android:enabled="false"
+                    android:gravity="right|center"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/text_namapeg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/update_nip"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/nama_pegawai"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/update_namapeg"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignStart="@+id/text_namapeg"
+                    android:layout_below="@+id/text_namapeg"
+                    android:gravity="right|center"
+                    android:layout_marginEnd="30dp"
+                    android:enabled="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/text_jabatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/update_namapeg"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/jabatan_instansi"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/update_jabatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignStart="@+id/text_jabatan"
+                    android:layout_below="@+id/text_jabatan"
+                    android:gravity="right|center"
+                    android:layout_marginEnd="30dp"
+                    android:enabled="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/text_golongan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/update_jabatan"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/golongan"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/update_golongan"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/text_golongan"
+                    android:layout_below="@+id/text_golongan"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/text_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/update_golongan"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/unit_kerja"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/update_unit"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_alignStart="@+id/text_unit"
+                    android:layout_below="@+id/text_unit"
+                    android:gravity="right"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/input_unit_kerja"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,RtlHardcoded"
+                    android:inputType="textEmailAddress"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgedit_unit"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/text_unit"
+                    android:layout_alignTop="@+id/update_unit"
+                    android:layout_alignBottom="@+id/update_unit"
+                    android:layout_below="@+id/text_unit"
+                    android:src="@drawable/ic_edit_black"
+                    android:contentDescription="@string/todo" />
+
+                <ImageView
+                    android:id="@+id/imgedit_unit2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/text_unit"
+                    android:layout_alignTop="@+id/update_unit"
+                    android:layout_alignBottom="@+id/update_unit"
+                    android:layout_below="@+id/text_unit"
+                    android:src="@drawable/ic_save_2"
+                    android:visibility="gone"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/update_unit"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/email"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/update_email"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_alignStart="@+id/text_email"
+                    android:layout_below="@+id/text_email"
+                    android:gravity="right"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/input_email"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,RtlHardcoded"
+                    android:inputType="textEmailAddress"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgedit_email1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/text_email"
+                    android:layout_alignTop="@+id/update_email"
+                    android:layout_alignBottom="@+id/update_email"
+                    android:layout_below="@+id/text_email"
+                    android:src="@drawable/ic_edit_black"
+                    android:contentDescription="@string/todo" />
+
+                <ImageView
+                    android:id="@+id/imgedit_email2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/text_email"
+                    android:layout_alignTop="@+id/update_email"
+                    android:layout_alignBottom="@+id/update_email"
+                    android:layout_below="@+id/text_email"
+                    android:src="@drawable/ic_save_2"
+                    android:contentDescription="@string/todo"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/text_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/update_email"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/password"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/update_reg_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/text_pass"
+                    android:layout_alignLeft="@+id/text_pass"
+                    android:layout_marginRight="30dp"
+                    android:enabled="false"
+                    android:gravity="right|center"
+                    android:hint="@string/input_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded,TextViewEdits" />
+
+                <ImageView
+                    android:id="@+id/img_showpass_profil1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/text_pass"
+                    android:layout_alignTop="@+id/update_reg_pass"
+                    android:layout_alignBottom="@+id/update_reg_pass"
+                    android:layout_below="@+id/text_pass"
+                    android:src="@drawable/ic_visibility_grey"
+                    android:contentDescription="@string/todo"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/img_showpass_profil2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignStart="@+id/text_pass"
+                    android:layout_alignTop="@+id/update_reg_pass"
+                    android:layout_alignBottom="@+id/update_reg_pass"
+                    android:layout_below="@+id/text_pass"
+                    android:src="@drawable/ic_visibility_off_grey"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:id="@+id/update_reg_pass_ulangi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/text_pass"
+                    android:layout_below="@+id/update_reg_pass"
+                    android:hint="@string/password_baru_min_5_karakter"
+                    android:gravity="right|center"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/grey"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="Autofill,RtlHardcoded"
+                    android:inputType="text"
+                     />
+
+                <Button
+                    android:id="@+id/btn_update_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/update_reg_pass_ulangi"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/simpan_password_baru"
+                    android:textColor="@color/white"
+                    android:textStyle="normal|bold"
+                    android:background="@drawable/circle_gantipass"
+                    android:drawableTop="@drawable/ic_save_2"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/actionbar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/btn_update_pass" />
+
+                <ViewFlipper
+                    android:id="@+id/viewFlippermainactivity"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/actionbar3"
+                    android:layout_alignParentBottom="true">
+                </ViewFlipper>
+            </RelativeLayout>
+        </ScrollView>
+
+    <View
+        android:id="@+id/grsprofilttengah"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/white"/>
+    <View
+        android:id="@+id/grsprofil1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/grsprofilttengah"
+        android:background="@drawable/circle_reg_v1"/>
+
+    <View
+        android:id="@+id/grsprofil2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/grsprofilttengah"
+        android:background="@drawable/circle_reg_v2"/>
+
+    <RelativeLayout
+        android:id="@+id/frame_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E1FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/gmbar_loading"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sedang_memuat"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="@color/hitam"
+            android:textStyle="bold|italic"
+            android:fontFamily="@font/default_font"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

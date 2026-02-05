@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wrna_bantuan"              >#8e911624  </color>
+    <color name="list_item_title"           >#08BDDD</color>
+    <color name="list_item_title2"          >#e7359f18  </color>
+    <color name="list_item_title_gelap"     >#049BB6</color>
+    <color name="list_background"           >#40AAAAAA  </color>
+    <color name="list_background_pressed"   >#3333B5E5  </color>
+    <color name="colordialog"               >#792d5149  </color>
+    <color name="list_divider"              >#272727    </color>
+    <color name="counter_text_bg"           >#501d0505</color>
+    <color name="counter_text_color"        >#bf7878</color>
+    <color name="blue"                      >#60FFFFFF  </color>
+    <color name="grey"                      >#EEEEEE</color>
+    <color name="biru_laut"                 >#43A047</color>
+    <color name="primary"                   >#E43F3F    </color>
+    <color name="primary_dark"              >#E12929    </color>
+    <color name="primary_darker"            >#ddff00    </color>
+    <color name="accent"                    >#FFFFFF    </color>
+    <color name="black"                     >#26ffd501  </color>
+    <color name="jet"                       >#222222    </color>
+    <color name="oil"                       >#333333    </color>
+    <color name="monsoon"                   >#ce484747  </color>
+    <color name="jumbo"                     >#888888    </color>
+    <color name="aluminum"                  >#c6af7c14  </color>
+    <color name="orangeposting"             >#19D844</color>
+    <color name="base"                      >#bfdaba17  </color>
+    <color name="hijaunom"                  >#615c7938  </color>
+    <color name="white"                     >#FFFFFF    </color>
+    <color name="orange"                    >#2962ff    </color>
+    <color name="hijau"                     >#0AA60A</color>
+    <color name="hijautua"                  >#c608a5cc  </color>
+    <color name="kuning"                    >#ff8f00    </color>
+    <color name="lime"                      >#c6974240  </color>
+    <color name="coba"                      >#2699cc00  </color>
+    <color name="merah"                     >#FFFF0000  </color>
+    <color name="merahtrans"                >#1bff000f  </color>
+    <color name="hitam"                     >#000000    </color>
+    <color name="hitam2"                    >#99000000  </color>
+    <color name="hitam3"                    >#90D3D3D3</color>
+    <color name="kuning2"                   >#99ff8f00  </color>
+    <color name="white2"                    >#a218a7a9  </color>
+    <color name="warnanavigation"           >#C1383A42</color>
+    <color name="dialogdftar"               >#79aed958  </color>
+    <color name="coba3trans"                >#50f7f7f7  </color>
+    <color name="wrnatranparan"             >#2029842f  </color>
+    <color name="cobahijau"                 >#04ff15</color>
+
+    <color name="colorPrimary"      >#17be02</color>
+    <color name="colorPrimaryDark"  >#FF8A80</color>
+    <color name="colorAccent"       >#FFFFFF</color>
+ 
+    <!-- Screens background color-->
+    <color name="bg_screen1">#C6CAFA7A</color>
+    <color name="bg_screen2">#7FFFEE</color>
+    <color name="bg_screen3">#FCF57899</color>
+    <color name="bg_screen4">#c873f4</color>
+    <color name="bg_screen5">#FCF27D</color>
+    <color name="bg_screen6">#79FA8A</color>
+    <color name="bg_screen7">#78D9FD</color>
+ 
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+ 	<color name="dot_dark_screen5">#d1395c</color>
+ 	
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#ab448e84</color>
+    <color name="dot_light_screen3">#3511457e</color>
+    <color name="dot_light_screen4">#8b355346</color>
+    <color name="dot_light_screen5">#a841716a</color>
+ 
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen5</item>
+    </array>
+ 
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+         <item>@color/dot_dark_screen5</item>
+    </array>
+</resources>

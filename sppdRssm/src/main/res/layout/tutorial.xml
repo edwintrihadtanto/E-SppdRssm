@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparan_baru" >
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/todo"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/test_bantuan"
+        app:srcCompat="@drawable/ic_help" />
+    <TextView
+        android:id="@+id/test_bantuan"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Bantuan"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/img1"
+        android:textStyle="normal|bold"
+        android:gravity="center|left"
+        android:layout_alignTop="@+id/img1"/>
+
+    <View
+        android:id="@+id/garisbantuan"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/img1"
+        android:layout_margin="5dp"
+        android:background="@color/list_item_title" />
+
+    <ScrollView
+        android:id="@+id/scr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/garisbantuan"
+        android:layout_margin="5dp"
+        android:background="@color/wrna_bantuan" >
+
+        <RelativeLayout
+            android:id="@+id/re"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent" >
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button1"
+                android:layout_alignTop="@+id/Button1"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk" />
+
+            <Button
+                android:id="@+id/Button1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/img2"
+                android:layout_marginLeft="20dp"
+                android:background="@android:color/transparent"
+                android:gravity="left|center"
+                android:text="Data Tidak Bisa Tampil"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button2"
+                android:layout_alignTop="@+id/Button2"
+                android:layout_alignLeft="@+id/img2"
+                android:layout_alignRight="@+id/img2"
+                android:layout_below="@+id/img2"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk2" />
+
+            <Button
+                android:id="@+id/Button2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Button1"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img3"
+                android:layout_marginLeft="20dp"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Tidak Bisa Posting"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button3"
+                android:layout_alignTop="@+id/Button3"
+                android:layout_alignLeft="@+id/img2"
+                android:layout_alignRight="@+id/img2"
+                android:layout_below="@+id/img3"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk" />
+
+            <Button
+                android:id="@+id/Button3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Button2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/img2"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Alur Posting"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button4"
+                android:layout_alignTop="@+id/Button4"
+                android:layout_alignLeft="@+id/img2"
+                android:layout_alignRight="@+id/img2"
+                android:layout_below="@+id/img4"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk2" />
+
+            <Button
+                android:id="@+id/Button4"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Button3"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img2"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Menampilkan Menu Pilihan"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button5"
+                android:layout_alignTop="@+id/Button5"
+                android:layout_alignLeft="@+id/img2"
+                android:layout_alignRight="@+id/img2"
+                android:layout_below="@+id/img5"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk" />
+
+            <Button
+                android:id="@+id/Button5"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Button4"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img2"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Cara Regristrasi"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button6"
+                android:layout_alignTop="@+id/Button6"
+                android:layout_alignLeft="@+id/img2"
+                android:layout_alignRight="@+id/img2"
+                android:layout_below="@+id/img6"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk2" />
+
+            <Button
+                android:id="@+id/Button6"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Button5"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img2"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Cara Ganti Password"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button7"
+                android:layout_alignTop="@+id/Button7"
+                android:layout_alignLeft="@+id/img2"
+                android:layout_alignRight="@+id/img2"
+                android:layout_below="@+id/img7"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk" />
+
+            <Button
+                android:id="@+id/Button7"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Button6"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img2"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Lupa Password"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/Button8"
+                android:layout_alignTop="@+id/Button8"
+                android:layout_below="@+id/img8"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/tunjuk2"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/Button8"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/Button7"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img2"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:text="Edit Laporan"
+                android:textStyle="normal|bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

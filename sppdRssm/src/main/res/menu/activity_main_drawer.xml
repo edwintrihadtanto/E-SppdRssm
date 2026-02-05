@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu1"
+            android:icon="@drawable/icon_home"
+            android:title="@string/halaman_utama" />
+        <item
+            android:id="@+id/menu2"
+            android:icon="@drawable/icon_input1"
+            android:title="@string/pembuatan_sppd" />
+        <item
+            android:id="@+id/menu3"
+            android:icon="@drawable/icon_input2"
+            android:title="@string/pembuatan_spt" />
+        <item
+            android:id="@+id/menu4"
+            android:icon="@drawable/icon_profil"
+            android:title="@string/profil_pegawai" />
+    </group>
+
+    <item android:title="Lain-Lain">
+        <menu>
+            <group android:checkableBehavior="single" >
+
+                <item
+                    android:id="@+id/menu5"
+                    android:icon="@drawable/icon_tentang"
+                    android:title="Tentang Aplikasi" />
+                <item
+                    android:id="@+id/menu6"
+                    android:icon="@drawable/icon_keluar"
+                    android:title="Logout" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

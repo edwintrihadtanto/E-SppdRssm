@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\182cf9b306e153d8eb29dc9435cfdf83\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\571d17c68eb21101877444929461aa57\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\81159ee22375b085ce3435d5c50b5178\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\4ff9320589a846e61329ebf0333e82a1\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\5f6df38a29524f0ed98b0ed85c2bf890\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e471e12d9816646a9f2508b0c4f54f6f\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9bfbed77b18cb1b280141f688d030dad\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5491acd52bb12e6e6872997c14943e9e\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\d19194d3e9580583a7b68d744566454e\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\d2b9111c7c2e462cd05be8879a0d8001\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\d96b09b1dabce2f48399bd56fde19e3d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\25f2ea489a606e21ad8a9a4d69012a06\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\7c90683b784b81ed799823d5721c76d1\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\088d5c8dd4ce7a9994be48dd7428bae8\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\magic-1.1.aar\d744c5e90023ec0f739bbba4034a0f34\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="5594469d11afe44ab1fae4ab2b2b3723209dc60e">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\bb81d36ff55c165bfb71f3532fa7df8e\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\cb890811203a9ad34741703d143c662a\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\bdb02ee586243900ce43a692a4c67625\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\circleindicator-1.2.2.aar\3542f0ce7dc2e3235ea6eb52af262011\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="1db6784d006818fee2591f13b0bf09ac31a3d49a">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\ff6d175c5e56764f84a81bbe3bd33f51\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\904c0d391a8fa2ca2869b0b6ba76e2fb\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\04a96661982fd14624dc5bba5792a192\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\f1e3179f66cb982fef65fc1cfbdd85a2\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\ed8412ec180cc48a97b44496e31ef118\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\84d4d8db78eebe429404d5d81f43b54d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a7da681941aaf980b8696cb80366d078\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\41b36191e4bc7c39f2703e0862413d1a\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\861198d9c9815912ab581a1ccb237ddd\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Workspace\E-SppdRssm\sppdRssm\libs\httpcore-4.3.3.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="f91b7a4aadc5cf486df6e4634748d7dd7a73f06d">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\1d7c33eed49830e3c3dd3f7f46ec0d6b\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\swipe-button-0.4.0.aar\05348183344ab0f6bf4d88ac45af9fa9\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="4e1f2f3514784b5acc2fe85ddba6f1cca22e84e1">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Workspace\E-SppdRssm\sppdRssm\libs\httpmime-4.3.6.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="66a39a5e37d5da40fdad6176fc24ef4316e74702">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6a74589b004d62934559d71e91963f71\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\cd4ee60e596dc941ab696f480b786cd0\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\66b25d35f3563cfdff96bbeaba0944ca\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\magic-1.1.aar\c78e6e2b80e9f3833b079eef4bed049f\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="5594469d11afe44ab1fae4ab2b2b3723209dc60e">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\dbbf77cbf8b08d67eaa329ca67d08470\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\73f0a0de9704ca6721841e199e12fe20\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Workspace\E-SppdRssm\aFileChooser\build\intermediates\intermediate-jars\release\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="212335faa181147f339e89717947cbd971400f7c">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\BIGBOSS\.gradle\caches\transforms-1\files-1.1\circleindicator-1.2.2.aar\2a1420a71cd782a9ce121f63bb611642\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.2"
+        sha1="1db6784d006818fee2591f13b0bf09ac31a3d49a">
+        <dex dex="D:\Workspace\E-SppdRssm\sppdRssm\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+
+</items>

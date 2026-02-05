@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/textbiasainfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="@string/informasi_data_sppd"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/judul1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textbiasainfo"
+        android:layout_below="@+id/textbiasainfo"
+        android:gravity="start"
+        android:text="Jml SPPD Aktif"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/tndtitik1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textbiasainfo"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/judul1"
+        android:gravity="top|center_horizontal"
+        android:text="@string/tandatitik"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/jmlh_sppd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textbiasainfo"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tndtitik1"
+        android:gravity="top|center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/judul2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textbiasainfo"
+        android:layout_below="@+id/judul1"
+        android:gravity="start"
+        android:text="Ter Posting"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/tndtitik2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jmlh_sppd"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/judul1"
+        android:gravity="top|center_horizontal"
+        android:text="@string/tandatitik"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/jmlh_posting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jmlh_sppd"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tndtitik2"
+        android:gravity="top|center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/img1_inf"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/merah"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_below="@+id/judul2"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/img2_inf"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/hijau"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_below="@+id/img1_inf"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/jdl1"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="artinya SPPD BELUM TERPOSTING"
+        android:textColor="@color/white"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_toEndOf="@+id/img1_inf"
+        android:layout_below="@+id/judul2"
+        android:textSize="15sp"
+        android:gravity="start|center"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/jdl2"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="artinya SPPD SUDAH TERPOSTING"
+        android:textColor="@color/white"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_toEndOf="@+id/img2_inf"
+        android:layout_below="@+id/jdl1"
+        android:textSize="15sp"
+        android:gravity="start|center"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img2_inf"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:background="@color/list_item_title_gelap"
+        android:textStyle="bold|normal" />
+</RelativeLayout>

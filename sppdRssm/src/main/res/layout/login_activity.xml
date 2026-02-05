@@ -1,0 +1,434 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal" >
+
+        <ScrollView
+            android:id="@+id/ScrollView_loginatas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgicon"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_logintengah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_nip"
+                    android:layout_width="488dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center|center_horizontal"
+                    android:hint="@string/input_nipLogin"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/hitam"
+                    android:textColorHint="#90000000"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/circle_username"
+                    android:importantForAutofill="no"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/default_font"
+                    >
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/edit_pass"
+                    android:layout_width="488dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/edit_nip"
+                    android:layout_below="@+id/edit_nip"
+                    android:gravity="center|center_horizontal"
+                    android:hint="@string/masukkan_password"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:textColor="@color/hitam"
+                    android:textColorHint="#90000000"
+                    android:textStyle="bold|normal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/circle_password"
+                    android:importantForAutofill="no"
+                    android:fontFamily="@font/default_font"
+                    tools:ignore="Deprecated"/>
+
+                <ImageView
+                    android:id="@+id/img_showpass_login1"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_visibility_black_24dp"
+                    android:layout_below="@+id/edit_nip"
+                    android:layout_alignTop="@+id/edit_pass"
+                    android:layout_alignBottom="@+id/edit_pass"
+                    android:layout_alignStart="@+id/edit_pass"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginStart="7dp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/img_showpass_login2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_visibility_off_black_24dp"
+                    android:layout_below="@+id/edit_nip"
+                    android:layout_alignTop="@+id/edit_pass"
+                    android:layout_alignBottom="@+id/edit_pass"
+                    android:layout_alignStart="@+id/edit_pass"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginStart="7dp"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/gmbr1"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/edit_nip"
+                    android:layout_alignTop="@+id/edit_nip"
+                    android:layout_alignStart="@+id/edit_nip"
+                    android:layout_marginStart="7dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_person_black" />
+
+                <!--<ImageView
+                    android:id="@+id/lock_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/edit_pass"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/edit_pass"
+                    android:layout_marginStart="7dp"
+                    android:contentDescription="@string/todo"
+                    />-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_btnlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_below="@+id/edit_pass"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignStart="@+id/edit_nip"
+                    android:layout_alignEnd="@+id/edit_nip"
+                    android:onClick="ceklogin"
+                    app:cardBackgroundColor="@color/dot_dark_screen1"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imglogin2"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_vpn_key_black_24dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/todo"
+                            android:layout_toStartOf="@+id/textmasuklogin"/>
+
+                        <TextView
+                            android:id="@+id/textmasuklogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/masuk"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|normal"
+                            android:fontFamily="@font/default_font"
+                            tools:ignore="RelativeOverlap" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textreg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/cardView_btnlogin"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/default_font"
+                    android:gravity="center"
+                    android:text="@string/haven_t_password"
+                    android:textColor="@color/hitam"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/imgnav1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textreg"
+                    android:layout_alignBottom="@+id/textreg"
+                    android:layout_toEndOf="@+id/textreg"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_navigate_next_black_24dp"
+                    tools:ignore="ImageContrastCheck" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignBottom="@+id/textreg"
+                    android:layout_alignTop="@+id/textreg"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toEndOf="@+id/imgnav1"
+                    android:onClick="gotoregister"
+                    app:cardBackgroundColor="#FABD00"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imglogin3"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_touch_app_black_24dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/todo"
+                            android:layout_toStartOf="@+id/text_register"/>
+
+                        <TextView
+                            android:id="@+id/text_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/klik_disini"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold|normal"
+                            android:fontFamily="@font/default_font"
+                            tools:ignore="RelativeOverlap"  />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/text_lupapasssaja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/cardView_register"
+                    android:layout_alignEnd="@+id/cardView_register"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/default_font"
+                    android:gravity="center"
+                    android:text="@string/call_us_nforgot_password"
+                    android:textColor="@color/hitam" />
+
+                <ImageView
+                    android:id="@+id/imgnav2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/text_lupapasssaja"
+                    android:layout_alignBottom="@+id/text_lupapasssaja"
+                    android:layout_toStartOf="@+id/text_lupapasssaja"
+                    android:src="@drawable/ic_navigate_before_black_24dp"
+                    android:contentDescription="@string/todo" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_lupapass"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignBottom="@+id/text_lupapasssaja"
+                    android:layout_alignTop="@+id/text_lupapasssaja"
+                    android:layout_marginStart="15dp"
+                    android:layout_toStartOf="@+id/imgnav2"
+                    android:onClick="gotolupapassword"
+                    app:cardBackgroundColor="#FF00C7"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imglogin4"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_touch_app_black_24dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/todo"
+                            android:layout_toEndOf="@+id/text_lupapass3"/>
+
+                        <TextView
+                            android:id="@+id/text_lupapass3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/klik_disini"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold|normal"
+                            android:fontFamily="@font/default_font"
+                            tools:ignore="RelativeOverlap,RtlSymmetry" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/cardview_lupapass"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/abcde"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ScrollView_loginatas"
+            android:layout_marginBottom="22dp">
+
+            <TextView
+                android:id="@+id/token_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/hitam"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/develp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/hitam"
+                android:textStyle="bold|italic"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/default_font"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/cek_versi_apk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/develp"
+                android:gravity="right|center_vertical"
+                android:layout_alignEnd="@+id/develp"
+                android:textColor="@color/hitam"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/default_font"
+                tools:ignore="RtlHardcoded,RtlSymmetry"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/develp"
+                android:layout_toStartOf="@+id/cek_versi_apk"
+                android:text="@string/versi_"
+                android:gravity="end"
+                android:textColor="@color/hitam"
+                android:textStyle="bold"
+                android:fontFamily="@font/default_font"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgicon"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/simrs"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/grslogtengah"
+        android:background="@drawable/circle_reg_v3"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/grslogtengah"
+        android:background="@drawable/circle_reg_v4"/>
+
+    <View
+        android:id="@+id/grslogtengah"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/grslogtengah"
+        android:background="@drawable/circle_reg_v1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/grslogtengah"
+        android:background="@drawable/circle_reg_v2"/>
+
+    <RelativeLayout
+        android:id="@+id/frame_loading_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E1FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/gmbar_loading_login"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sedang_memuat"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="@color/hitam"
+            android:textStyle="bold|italic"
+            android:fontFamily="@font/default_font"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

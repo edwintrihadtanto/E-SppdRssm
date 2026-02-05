@@ -1,0 +1,154 @@
+package com.e_sppd_rssm;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.e_sppd.rssm.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import koneksi.Daftar_String;
+@SuppressLint("DefaultLocale")
+public class List_History_SPT_per_nip extends BaseAdapter implements Filterable {
+
+	private Context context;
+	private List<Daftar_String> list, filterd;
+
+	public List_History_SPT_per_nip(Context context, List<Daftar_String> list) {
+		this.context = context;
+		this.list = list;
+		this.filterd = this.list;
+	}
+
+	@Override
+	public int getCount() {
+
+		return filterd.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+
+		return filterd.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+
+		return position;
+	}
+
+	@SuppressLint("InflateParams")
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		if (convertView == null) {
+			LayoutInflater inflater = LayoutInflater.from(this.context);
+			convertView = inflater.inflate(R.layout.row_list_detail_history,
+					null);
+
+		}
+		Daftar_String mhs = filterd.get(position);
+
+		TextView menampilkan_nomor_spt = (TextView) convertView
+				.findViewById(R.id.menampilkan_nomor_spt);
+		menampilkan_nomor_spt.setText(mhs.getnomor_SPT());
+
+		TextView menampilkan_nomor_sppd = (TextView) convertView
+				.findViewById(R.id.menampilkan_nomor_sppd);
+		menampilkan_nomor_sppd.setText(mhs.getnomor_SPPD());
+
+		TextView text_tgl_keberangkatan = (TextView) convertView
+				.findViewById(R.id.text_tgl_keberangkatan);
+		text_tgl_keberangkatan.setText(mhs.gettgl_brngkt());
+
+		TextView text_tgl_tiba = (TextView) convertView
+				.findViewById(R.id.text_tgl_tiba);
+		text_tgl_tiba.setText(mhs.gettgl_kembali());
+
+		TextView text_lama_perjalanan = (TextView) convertView
+				.findViewById(R.id.text_lama_perjalanan);
+		text_lama_perjalanan.setText(mhs.getlama_perj() + " Hari");
+
+		TextView status_lap_perj = (TextView) convertView
+				.findViewById(R.id.status_lap_perj);
+		status_lap_perj.setText(mhs.getstatus_laporan_petugas());
+
+		TextView status_rincian = (TextView) convertView
+				.findViewById(R.id.status_rincian);
+		status_rincian.setText(mhs.getstatus_rincian());
+
+		TextView status_riil = (TextView) convertView
+				.findViewById(R.id.status_riil);
+
+		status_riil.setVisibility(View.VISIBLE);
+		status_riil.setText(mhs.getstatus_riil());
+
+		TextView text_sts_post = (TextView) convertView.findViewById(R.id.text_sts_post);
+		text_sts_post.setText(mhs.getsts_postingan());
+		ImageView sts_post1 = (ImageView) convertView
+				.findViewById(R.id.sts_post1);
+
+		if (text_sts_post.getText().toString().contains("1")){
+			text_sts_post.setText("SUDAH POSTING");
+			sts_post1.setBackgroundResource(R.drawable.hijau);
+			text_sts_post.setVisibility(View.VISIBLE);
+			sts_post1.setVisibility(View.VISIBLE);
+		}else{
+			text_sts_post.setText("BELUM POSTING");
+			sts_post1.setBackgroundResource(R.drawable.merah);
+			text_sts_post.setVisibility(View.VISIBLE);
+			sts_post1.setVisibility(View.VISIBLE);
+		}
+		
+		return convertView;
+	}
+
+	@Override
+	public Filter getFilter() {
+
+		ListDataPegawai_Filter filter = new ListDataPegawai_Filter();
+		return filter;
+	}
+
+	/** Class filter untuk melakukan filter (pencarian) */
+
+	private class ListDataPegawai_Filter extends Filter {
+		@Override
+		protected FilterResults performFiltering(CharSequence constraint) {
+			List<Daftar_String> filteredData = new ArrayList<Daftar_String>();
+			FilterResults result = new FilterResults();
+			String filterString = constraint.toString().toLowerCase();
+
+			for (Daftar_String mhs : list) {
+
+				if ((mhs.gettgl_aktivitas().toString().contains(filterString))) {
+					filteredData.add(mhs);
+				}
+			}
+			result.count = filteredData.size();
+			result.values = filteredData;
+			return result;
+		}
+
+		@SuppressWarnings("unchecked")
+		@Override
+		protected void publishResults(CharSequence constraint,
+				FilterResults results) {
+
+			filterd = (List<Daftar_String>) results.values;
+			notifyDataSetChanged();
+		}
+
+	}
+
+}

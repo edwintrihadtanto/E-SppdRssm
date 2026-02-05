@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/pengatur_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/warnanavigation" >
+
+        <TextView
+            android:id="@+id/penomoran"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal|center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/hitam"
+            android:background="@drawable/circle"
+            android:layout_margin="10dp"
+            />
+
+        <View
+            android:id="@+id/atasssssss"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="15dp"
+            android:layout_toStartOf="@+id/penomoran"
+            android:background="@drawable/circle_download1" />
+
+        <CheckBox
+            android:id="@+id/centangdaftar"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/atasssssss"
+            android:layout_alignTop="@+id/atasssssss"
+            android:layout_alignEnd="@+id/atasssssss"
+            android:checked="false"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/img_post"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/atasssssss"
+            android:layout_alignBottom="@+id/atasssssss"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:contentDescription="@string/todo"
+            />
+
+        <TextView
+            android:id="@+id/text_sts_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/atasssssss"
+            android:layout_alignBottom="@+id/atasssssss"
+            android:layout_toEndOf="@+id/img_post"
+            android:gravity="center|center_horizontal"
+            android:paddingStart="10dp"
+            android:textColor="@color/hitam"
+            android:textStyle="normal|bold"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/text_tampil_nomor_spt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/atasssssss"
+            android:layout_margin="2dp"
+            android:text="Nomor SPT"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_tampil_nomor_spt"
+            android:layout_toEndOf="@+id/text_tampil_nomor_spt"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/menampilkan_nomor_spt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/atasssssss"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:layout_toEndOf="@+id/ttikduaduadua1"
+            android:textColor="#FFEA00"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_tampil_nomor_sppd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tampil_nomor_spt"
+            android:layout_margin="2dp"
+            android:text="Nomor SPPD"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_tampil_nomor_sppd"
+            android:layout_toEndOf="@+id/text_tampil_nomor_sppd"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/menampilkan_nomor_sppd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tampil_nomor_spt"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:layout_toEndOf="@+id/ttikduaduadua2"
+            android:textColor="#FFEA00"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/grspnjngview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/text_tampil_nomor_sppd"
+            android:layout_margin="5dp"
+            android:background="#FDF800" />
+
+        <TextView
+            android:id="@+id/text_tgl_keberangkatan1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview"
+            android:layout_margin="2dp"
+            android:text="Tgl. Berangkat"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_tgl_keberangkatan1"
+            android:layout_toEndOf="@+id/text_tgl_keberangkatan1"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_tgl_keberangkatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:background="@drawable/circle_download4"
+            android:layout_toEndOf="@+id/ttikduaduadua3"
+            android:textColor="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textStyle="normal|bold"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/text_tgl_tiba1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tgl_keberangkatan1"
+            android:layout_margin="2dp"
+            android:text="Tgl. Sampai"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_tgl_tiba1"
+            android:layout_toEndOf="@+id/text_tgl_tiba1"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_tgl_tiba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tgl_keberangkatan1"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:background="@drawable/circle_download4"
+            android:layout_toEndOf="@+id/ttikduaduadua4"
+            android:textColor="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textStyle="normal|bold"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/ket_lama_perjalanan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tgl_tiba1"
+            android:layout_margin="2dp"
+            android:text="Jarak Perj."
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ket_lama_perjalanan"
+            android:layout_toEndOf="@+id/ket_lama_perjalanan"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_lama_perjalanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tgl_tiba"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:background="@drawable/circle_download4"
+            android:layout_toEndOf="@+id/ttikduaduadua5"
+            android:textColor="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textStyle="normal|bold"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/grspnjngview_lagi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/text_lama_perjalanan"
+            android:background="#FDF800" />
+
+        <TextView
+            android:id="@+id/text_status_lap_perj"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/grspnjngview_lagi"
+            android:layout_margin="5dp"
+            android:gravity="right|center_horizontal"
+            android:text="Lap. Perj. Dinas"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_status_lap_perj"
+            android:layout_toEndOf="@+id/text_status_lap_perj"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/vstatus1"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_downloadstatus"
+            android:layout_toEndOf="@+id/ttikduaduadua6"
+            android:layout_alignBottom="@+id/text_status_lap_perj" />
+
+        <ImageView
+            android:id="@+id/img_posting_laporan"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/grspnjngview_lagi"
+            android:layout_alignTop="@+id/vstatus1"
+            android:layout_alignBottom="@+id/vstatus1"
+            android:layout_toEndOf="@+id/ttikduaduadua6"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/status_posting_laporan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview_lagi"
+            android:textSize="15sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            android:layout_alignTop="@+id/vstatus1"
+            android:layout_alignBottom="@+id/vstatus1"
+            android:layout_toEndOf="@+id/img_posting_laporan" />
+
+        <TextView
+            android:id="@+id/text_status_rincian"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_status_lap_perj"
+            android:layout_margin="5dp"
+            android:gravity="right|center_horizontal"
+            android:text="Lap. Rincian Biaya"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_status_rincian"
+            android:layout_toEndOf="@+id/text_status_rincian"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/vstatus2"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_downloadstatus"
+            android:layout_toEndOf="@+id/ttikduaduadua7"
+            android:layout_alignBottom="@+id/text_status_rincian" />
+
+        <ImageView
+            android:id="@+id/img_posting_biaya"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_status_lap_perj"
+            android:layout_alignTop="@+id/vstatus2"
+            android:layout_alignBottom="@+id/vstatus2"
+            android:layout_toEndOf="@+id/ttikduaduadua7"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/status_posting_biaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_status_lap_perj"
+            android:textSize="15sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            android:layout_alignTop="@+id/vstatus2"
+            android:layout_alignBottom="@+id/vstatus2"
+            android:layout_toEndOf="@+id/img_posting_biaya" />
+
+        <TextView
+            android:id="@+id/text_status_riil"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_status_rincian"
+            android:layout_margin="5dp"
+            android:gravity="right|center_horizontal"
+            android:text="Lap. Pengeluaran Riil"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_status_riil"
+            android:layout_toEndOf="@+id/text_status_riil"
+            android:text="@string/tandatitik"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/vstatus3"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_downloadstatus"
+            android:layout_toEndOf="@+id/ttikduaduadua8"
+            android:layout_alignBottom="@+id/text_status_riil" />
+
+        <ImageView
+            android:id="@+id/img_posting_riil"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_status_rincian"
+            android:layout_alignTop="@+id/vstatus3"
+            android:layout_alignBottom="@+id/vstatus3"
+            android:layout_toEndOf="@+id/ttikduaduadua8"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/status_posting_riil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_status_rincian"
+            android:textSize="15sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            android:layout_alignTop="@+id/vstatus3"
+            android:layout_alignBottom="@+id/vstatus3"
+            android:layout_toEndOf="@+id/img_posting_riil" />
+
+        <View
+            android:id="@+id/pemisah1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/text_status_riil"
+            android:background="#C62828" />
+        <View
+            android:id="@+id/pemisah2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/pemisah1"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

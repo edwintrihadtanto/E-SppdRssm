@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.e_sppd.rssm.sppdRssm-mergeDebugResources-23:/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\edwin\\AndroidStudioProjects\\workshop\\E-SppdRssm\\aFileChooser\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "53",
+                        "endOffsets": "104"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\edwin\\AndroidStudioProjects\\workshop\\E-SppdRssm\\sppdRssm\\src\\main\\res\\values-v11\\styles.xml",
+                    "from": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "183",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "314"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "109",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "189"
+                    }
+                }
+            ]
+        }
+    ]
+}

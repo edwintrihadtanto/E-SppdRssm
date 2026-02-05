@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent" >
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/alur1" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/img1"
+                android:layout_marginTop="5dp"
+                android:background="@color/hitam" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-30dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/alur2" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-150dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/alur3" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-210dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/alur4" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img4"
+                android:contentDescription="@string/todo"
+                android:layout_marginTop="-100dp"
+                app:srcCompat="@drawable/alur5" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img5"
+                android:layout_marginTop="-80dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/menu_pilihan1" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

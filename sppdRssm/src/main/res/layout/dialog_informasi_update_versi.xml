@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@drawable/logo_rssm_trans" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout4444"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/list_background_pressed" >
+
+        <TextView
+            android:id="@+id/ambil_nip_pop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hitam"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/list_item_title" />
+
+        <View
+            android:id="@+id/view12345"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:background="@color/hitam3" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center|center_horizontal"
+            android:text="Informasi Update Versi"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <ListView
+            android:id="@+id/listupdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:layout_margin="5dp"
+            android:visibility="visible" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

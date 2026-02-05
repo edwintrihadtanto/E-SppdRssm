@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <View
+            android:id="@+id/actionbar_register"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/list_item_title" />
+
+        <Button
+            android:id="@+id/btn_back_reg"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/ic_back2"
+            android:contentDescription="@string/tombol_kembali_register"
+            android:onClick="kembali_activity"/>
+
+        <Button
+            android:id="@+id/btn_refresh_reg"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/refresh"
+            android:contentDescription="@string/tombol_refresh_register"
+            android:onClick="refresh"
+            />
+
+        <TextView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_toStartOf="@+id/img_register"
+            android:layout_toEndOf="@+id/btn_back_reg"
+            android:gravity="center"
+            android:text="@string/register_password"
+            android:textColor="@color/hitam"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/img_register"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@+id/btn_refresh_reg"
+            android:contentDescription="@string/todo"
+            android:visibility="visible"
+            android:background="@drawable/ic_help" />
+
+        <View
+            android:id="@+id/actionbar_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_cari"
+            android:layout_alignBottom="@+id/grsreg1"
+            android:background="@color/list_item_title" />
+
+        <ImageView
+            android:id="@+id/img_cari"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/search_user"
+            android:layout_below="@+id/btn_back_reg"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/pencr_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pencarian_data_pegawai"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/hitam"
+            android:layout_marginStart="5dp"
+            android:layout_alignTop="@+id/img_cari"
+            android:layout_toEndOf="@+id/img_cari"
+            android:paddingStart="5dp"
+            android:layout_below="@+id/actionbar_register"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/e_cari"
+            android:layout_width="488dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/img_cari"
+            android:layout_below="@+id/pencr_reg"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:inputType="text"
+            android:hint="@string/entry_nip_npk_pegawai"
+            android:textColorHint="#2B2829"
+            tools:ignore="Autofill,LabelFor" />
+
+        <ImageView
+            android:id="@+id/img_silanghapus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_close_black_24dp"
+            android:layout_below="@+id/pencr_reg"
+            android:layout_alignTop="@+id/e_cari"
+            android:layout_alignBottom="@+id/e_cari"
+            android:layout_alignEnd="@+id/e_cari"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/todo"
+            />
+
+        <Button
+            android:id="@+id/btn_cari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e_cari"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle_download1"
+            android:onClick="pencarian_data"
+            android:drawableTop="@drawable/ic_touch_app_black_24dp"
+            android:text="@string/cari"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_alignEnd="@+id/e_cari"
+            />
+
+        <View
+            android:id="@+id/grsreg1"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@+id/btn_cari"
+            android:background="@color/white"/>
+
+        <View
+            android:id="@+id/grsregtengah"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@color/white"/>
+
+        <View
+            android:id="@+id/grsreg2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/grsregtengah"
+            android:background="@drawable/circle_reg_v1"/>
+
+        <View
+            android:id="@+id/grsreg3"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/grsregtengah"
+            android:background="@drawable/circle_reg_v2"/>
+
+        <ScrollView
+            android:id="@+id/scroll_reg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionbar_search"
+            android:layout_margin="2dp"
+            android:background="#48707070">
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Registeratas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textnip_pegawai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nip_npk_pegawai"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/nip_pegawai"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/nip_npk_pegawai2"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_below="@+id/textnip_pegawai"
+                    android:importantForAutofill="no"
+                    android:enabled="false"/>
+
+                <ImageView
+                    android:id="@+id/img_contentcopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_content_copy_black_24dp"
+                    android:layout_alignTop="@+id/nip_pegawai"
+                    android:layout_alignBottom="@+id/nip_pegawai"
+                    android:layout_alignEnd="@+id/nip_pegawai"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <TextView
+                    android:id="@+id/textnama_pegawai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama_pegawai"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_below="@+id/nip_pegawai"/>
+
+                <EditText
+                    android:id="@+id/nama_pegawai"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/nama_pegawai2"
+                    android:textColor="@color/white"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_below="@+id/textnama_pegawai"
+                    android:importantForAutofill="no"
+                    android:enabled="false"/>
+
+                <TextView
+                android:id="@+id/textjabatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jabatan_pegawai"
+                android:textSize="15sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_below="@+id/nama_pegawai"/>
+
+                <EditText
+                    android:id="@+id/jabatan"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/jabatan_pegawai2"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_below="@+id/textjabatan"
+                    android:importantForAutofill="no"
+                    android:enabled="false"/>
+
+                <TextView
+                    android:id="@+id/textpass_baru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password_baru"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_below="@+id/jabatan"/>
+
+                <EditText
+                    android:id="@+id/pass_baru"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/masukkan_password_anda"
+                    android:textColor="@color/list_item_title"
+                    android:gravity="end"
+                    android:inputType="textPassword"
+                    android:selectAllOnFocus="true"
+                    android:layout_below="@+id/textpass_baru"
+                    android:importantForAutofill="no"
+                    android:enabled="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_showpass1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_visibility_white"
+                    android:layout_below="@+id/textpass_baru"
+                    android:layout_alignTop="@+id/pass_baru"
+                    android:layout_alignBottom="@+id/pass_baru"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/todo"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/img_showpass2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_visibility_off_white"
+                    android:layout_below="@+id/textpass_baru"
+                    android:layout_alignTop="@+id/pass_baru"
+                    android:layout_alignBottom="@+id/pass_baru"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <TextView
+                    android:id="@+id/textemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alamat_email"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_below="@+id/pass_baru"/>
+
+                <EditText
+                    android:id="@+id/editemail"
+                    android:layout_width="488dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/masukkan_alamat_email_anda"
+                    android:textColor="@color/list_item_title"
+                    android:gravity="end"
+                    android:inputType="textEmailAddress"
+                    android:layout_below="@+id/textemail"
+                    android:importantForAutofill="no"
+                    android:enabled="false" />
+
+                <ImageView
+                    android:id="@+id/img_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_email_black_24dp"
+                    android:layout_below="@+id/textemail"
+                    android:layout_alignTop="@+id/editemail"
+                    android:layout_alignBottom="@+id/editemail"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_emailinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_info_outline_24dp"
+                    android:layout_below="@+id/textemail"
+                    android:layout_alignTop="@+id/editemail"
+                    android:layout_alignBottom="@+id/editemail"
+                    android:layout_alignStart="@+id/editemail"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <Button
+                    android:id="@+id/btn_simpan_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editemail"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/circle_downloadstatus"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="simpan_password"
+                    android:drawableTop="@drawable/ic_save_black_24dp"
+                    android:text="@string/simpan_password"
+                    android:padding="5dp"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    />
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btn_simpan_pass"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frame_loading_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E1FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/gmbar_loading_register"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sedang_memuat"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="@color/hitam"
+            android:textStyle="bold|italic"
+            android:fontFamily="@font/default_font"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

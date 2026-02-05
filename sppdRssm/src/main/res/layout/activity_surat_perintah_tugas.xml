@@ -1,0 +1,2046 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background2"
+    tools:context="com.e_sppd_rssm.Pembuatan_SPT" >
+
+    <TextView
+        android:id="@+id/nip_lokal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tgl_aktiviti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/jam_aktiviti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tgl_aktiviti"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/lay09"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:background="@color/coba3trans"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgicon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_above="@+id/RelativeLayout"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imgicon"
+            android:gravity="center|center_vertical"
+            android:text="Surat Perintah Tugas"
+            android:textColor="@color/hitam"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgicon"
+            android:gravity="center|center_horizontal" >
+
+            <TextView
+                android:id="@+id/nomorsurat"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="left|center"
+                android:text="Nomor : "
+                android:textColor="@color/hitam"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_nmrsrt_spt1"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/nomorsurat"
+                android:editable="false"
+                android:inputType="number|none"
+                android:textColor="@color/hitam"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/garing1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/edit_nmrsrt_spt2"
+                android:layout_toRightOf="@+id/edit_nmrsrt_spt1"
+                android:gravity="left"
+                android:text="/"
+                android:textColor="@color/hitam"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_nmrsrt_spt2"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/garing1"
+                android:editable="false"
+                android:inputType="number|none"
+                android:textColor="@color/hitam"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/nmrsrt3"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/edit_nmrsrt_spt2"
+                android:layout_toRightOf="@+id/edit_nmrsrt_spt2"
+                android:gravity="left|center"
+                android:textColor="@color/hitam"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextView_ambil_nomor_surat_spt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/View"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/RelativeLayout"
+            android:background="@color/merahtrans" />
+
+        <HorizontalScrollView
+            android:id="@+id/HorizontalScrollView_lanjutan"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/View"
+            android:background="@color/hijautua" >
+
+            <ScrollView
+                android:id="@+id/ScrollView_lanjutan"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/relativ_spt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" >
+
+                    <!-- Nomor 1 -->
+
+                    <TextView
+                        android:id="@+id/didapat_dari"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edit_didapat_spt"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:text="Surat Dari"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ttikdua_spt11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edit_didapat_spt"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/didapat_dari"
+                        android:gravity="center_vertical"
+                        android:text=":"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_didapat_spt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="80dp"
+                        android:layout_alignRight="@+id/grspnjng"
+                        android:layout_toRightOf="@+id/ttikdua_spt11"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="Input Surat Masuk Dari"
+                        android:inputType="textCapSentences|textMultiLine" />
+
+                    <EditText
+                        android:id="@+id/edit_diperoleh_tgl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignRight="@+id/grspnjng"
+                        android:layout_below="@+id/edit_didapat_spt"
+                        android:layout_toRightOf="@+id/ttikdua_spt11"
+                        android:editable="false"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="Diperoleh Tgl Masuk" />
+
+                    <TextView
+                        android:id="@+id/dasar_spt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edit_dasar_spt"
+                        android:layout_below="@+id/edit_diperoleh_tgl"
+                        android:gravity="top"
+                        android:text="Dasar"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ttikdua_spt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/edit_dasar_spt"
+                        android:layout_below="@+id/edit_diperoleh_tgl"
+                        android:layout_toRightOf="@+id/dasar_spt"
+                        android:gravity="top"
+                        android:text=":"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_dasar_spt"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignRight="@+id/searc_nm_peawai"
+                        android:layout_below="@+id/edit_diperoleh_tgl"
+                        android:layout_toRightOf="@+id/ttikdua_spt1"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:hint="Input Dasar Surat Perintah Tugas"
+                        android:inputType="textCapSentences|textMultiLine" />
+
+                    <TextView
+                        android:id="@+id/spinjml"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/edit_dasar_spt"
+                        android:gravity="center_vertical"
+                        android:text="Jumlah Petugas yg Ditugaskan"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ttikdua_spt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/spin_jml_petugas"
+                        android:layout_below="@+id/edit_dasar_spt"
+                        android:layout_toRightOf="@+id/spinjml"
+                        android:gravity="center_vertical"
+                        android:text=":"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spin_jml_petugas"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/edit_dasar_spt"
+                        android:layout_toRightOf="@+id/ttikdua_spt3"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <SearchView
+                        android:id="@+id/searc_nm_peawai"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/dasar_spt"
+                        android:layout_alignRight="@+id/grspnjng"
+                        android:layout_below="@+id/spin_jml_petugas"
+                        android:background="@color/hitam3"
+                        android:iconifiedByDefault="false"
+                        android:textStyle="bold|italic"
+                        android:visibility="visible" >
+
+                        <EditText
+                            android:id="@+id/cari_nama_pegawai"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+                    </SearchView>
+
+                    <include
+                        android:id="@+id/ambil_listviewnm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignLeft="@+id/dasar_spt"
+                        android:layout_alignRight="@+id/searc_nm_peawai"
+                        android:layout_below="@+id/searc_nm_peawai"
+                        layout="@layout/list_view_activitysppd"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/grspnjng"
+                        android:layout_width="350dp"
+                        android:layout_height="5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/ambil_listviewnm"
+                        android:background="@color/merah" />
+
+                    <RelativeLayout
+                        android:id="@+id/lay_kepada"
+                        android:layout_width="100dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/grspnjng"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/kepada"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kepada"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dsdf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/kepada"
+                            android:gravity="right"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <!-- Tampilan Petugas 1 -->
+
+                    <RelativeLayout
+                        android:id="@+id/layout_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/grspnjng"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_1text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_1text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text1"
+                            android:layout_toRightOf="@+id/grstext1"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_1text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_1text1"
+                            android:text="NIP/NPK/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text2"
+                            android:layout_toRightOf="@+id/layout_1text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text2"
+                            android:layout_toRightOf="@+id/grstext1"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_1text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_1text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text3"
+                            android:layout_toRightOf="@+id/layout_1text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text3"
+                            android:layout_toRightOf="@+id/grstext1"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_1text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_1text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text4"
+                            android:layout_toRightOf="@+id/layout_1text4"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_1text4"
+                            android:layout_toRightOf="@+id/grstext1"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas1"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_1"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+                    <!-- Tampilan Petugas 1 -->
+
+                    <RelativeLayout
+                        android:id="@+id/layout_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_2text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_2text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text1"
+                            android:layout_toRightOf="@+id/grstext1layout_2"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_2text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_2text1"
+                            android:text="NIP/NPK/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text2"
+                            android:layout_toRightOf="@+id/layout_2text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text2"
+                            android:layout_toRightOf="@+id/grstext1layout_2"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_2text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_2text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text3"
+                            android:layout_toRightOf="@+id/layout_2text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text3"
+                            android:layout_toRightOf="@+id/grstext1layout_2"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_2text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_2text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text4"
+                            android:layout_toRightOf="@+id/layout_2text4"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_2text4"
+                            android:layout_toRightOf="@+id/grstext1layout_2"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas2"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_2"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_3text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_3text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text1"
+                            android:layout_toRightOf="@+id/grstext1layout_3"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_3text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_3text1"
+                            android:text="NIP/NPK/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text2"
+                            android:layout_toRightOf="@+id/layout_3text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text2"
+                            android:layout_toRightOf="@+id/grstext1layout_3"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_3text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_3text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text3"
+                            android:layout_toRightOf="@+id/layout_3text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text3"
+                            android:layout_toRightOf="@+id/grstext1layout_3"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_3text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_3text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text3"
+                            android:layout_toRightOf="@+id/layout_3text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_3text4"
+                            android:layout_toRightOf="@+id/grstext1layout_3"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas3"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_3"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_3"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_4text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_4text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp"
+                            tools:ignore="TooManyViews" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text1"
+                            android:layout_toRightOf="@+id/grstext1layout_4"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_4text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_4text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text2"
+                            android:layout_toRightOf="@+id/layout_4text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text2"
+                            android:layout_toRightOf="@+id/grstext1layout_4"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_4text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_4text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text3"
+                            android:layout_toRightOf="@+id/layout_4text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text3"
+                            android:layout_toRightOf="@+id/grstext1layout_4"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_4text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_4text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text3"
+                            android:layout_toRightOf="@+id/layout_4text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_4text4"
+                            android:layout_toRightOf="@+id/grstext1layout_4"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas4"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_4"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_4"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_5text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_5text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text1"
+                            android:layout_toRightOf="@+id/grstext1layout_5"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_5text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_5text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text2"
+                            android:layout_toRightOf="@+id/layout_5text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text2"
+                            android:layout_toRightOf="@+id/grstext1layout_5"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_5text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_5text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text3"
+                            android:layout_toRightOf="@+id/layout_5text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text3"
+                            android:layout_toRightOf="@+id/grstext1layout_5"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_5text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_5text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text3"
+                            android:layout_toRightOf="@+id/layout_5text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_5text4"
+                            android:layout_toRightOf="@+id/grstext1layout_5"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas5"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_5"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_5"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_6text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_6text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text1"
+                            android:layout_toRightOf="@+id/grstext1layout_6"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_6text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_6text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text2"
+                            android:layout_toRightOf="@+id/layout_6text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text2"
+                            android:layout_toRightOf="@+id/grstext1layout_6"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_6text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_6text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text3"
+                            android:layout_toRightOf="@+id/layout_6text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text3"
+                            android:layout_toRightOf="@+id/grstext1layout_6"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_6text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_6text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text3"
+                            android:layout_toRightOf="@+id/layout_6text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_6text4"
+                            android:layout_toRightOf="@+id/grstext1layout_6"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas6"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_6"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_6"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_7text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_7text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text1"
+                            android:layout_toRightOf="@+id/grstext1layout_7"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_7text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_7text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text2"
+                            android:layout_toRightOf="@+id/layout_7text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text2"
+                            android:layout_toRightOf="@+id/grstext1layout_7"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_7text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_7text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text3"
+                            android:layout_toRightOf="@+id/layout_7text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text3"
+                            android:layout_toRightOf="@+id/grstext1layout_7"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_7text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_7text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text3"
+                            android:layout_toRightOf="@+id/layout_7text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_7text4"
+                            android:layout_toRightOf="@+id/grstext1layout_7"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas7"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_7"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_7"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_8text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_8text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text1"
+                            android:layout_toRightOf="@+id/grstext1layout_8"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_8text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_8text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text2"
+                            android:layout_toRightOf="@+id/layout_8text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text2"
+                            android:layout_toRightOf="@+id/grstext1layout_8"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_8text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_8text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text3"
+                            android:layout_toRightOf="@+id/layout_8text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text3"
+                            android:layout_toRightOf="@+id/grstext1layout_8"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_8text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_8text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text3"
+                            android:layout_toRightOf="@+id/layout_8text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_8text4"
+                            android:layout_toRightOf="@+id/grstext1layout_8"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas8"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_8"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_8"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_9text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_9text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text1"
+                            android:layout_toRightOf="@+id/grstext1layout_9"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_9text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_9text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text2"
+                            android:layout_toRightOf="@+id/layout_9text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text2"
+                            android:layout_toRightOf="@+id/grstext1layout_9"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_9text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_9text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text3"
+                            android:layout_toRightOf="@+id/layout_9text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text3"
+                            android:layout_toRightOf="@+id/grstext1layout_9"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_9text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_9text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text3"
+                            android:layout_toRightOf="@+id/layout_9text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_9text4"
+                            android:layout_toRightOf="@+id/grstext1layout_9"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas9"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_9"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_9"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/lay_kepada"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/layout_10text1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext1layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/layout_10text1"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_namapetugas_layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text1"
+                            android:layout_toRightOf="@+id/grstext1layout_10"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_10text2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_10text1"
+                            android:text="NIP/NPK"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext2layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text2"
+                            android:layout_toRightOf="@+id/layout_10text2"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_nippetugas_layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text2"
+                            android:layout_toRightOf="@+id/grstext1layout_10"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_10text3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_10text2"
+                            android:text="Pangkat / Gol"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext3layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text3"
+                            android:layout_toRightOf="@+id/layout_10text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_pangkatpetugas_layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text3"
+                            android:layout_toRightOf="@+id/grstext1layout_10"
+                            android:enabled="false"
+                            android:hint=""
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/layout_10text4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_10text3"
+                            android:text="Jabatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/grstext4layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text3"
+                            android:layout_toRightOf="@+id/layout_10text3"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/text_jabatanpetugas_layout_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/layout_10text4"
+                            android:layout_toRightOf="@+id/grstext1layout_10"
+                            android:enabled="false"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:id="@+id/pembatas10"
+                            android:layout_width="150dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/text_jabatanpetugas_layout_10"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/text_nippetugas_layout_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hitam"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/lay_untuk"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/grspnjng"
+                        android:layout_below="@+id/layout_10"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/untuk"
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_untuk"
+                            android:gravity="top"
+                            android:text="Untuk"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bbbb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_untuk"
+                            android:layout_toRightOf="@+id/untuk"
+                            android:gravity="top"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edit_untuk"
+                            android:layout_width="fill_parent"
+                            android:layout_height="150dp"
+                            android:layout_toRightOf="@+id/bbbb"
+                            android:ems="10"
+                            android:gravity="top"
+                            android:hint="Input Acara"
+                            android:inputType="textCapSentences|textMultiLine" />
+
+                        <EditText
+                            android:id="@+id/edit_lama_perjalanan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/edit_untuk"
+                            android:layout_toRightOf="@+id/bbbb"
+                            android:gravity="left"
+                            android:hint="Lama Perjalanan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edit_tgl_pelaksanaan_dimulai_tgl"
+                            android:layout_width="160dp"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/edit_lama_perjalanan"
+                            android:layout_toRightOf="@+id/bbbb"
+                            android:editable="false"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:hint="Pilih Tgl Pelaksanaan"
+                            android:textColor="@color/hitam"
+                            android:textStyle="bold"
+                            tools:ignore="Deprecated" />
+
+                        <TextView
+                            android:id="@+id/TextView_garis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/edit_lama_perjalanan"
+                            android:layout_toRightOf="@+id/edit_tgl_pelaksanaan_dimulai_tgl"
+                            android:gravity="center|center_vertical"
+                            android:text="-"
+                            android:textColor="@color/hitam"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edit_tgl_pelaksanaan_sampai_tgl"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/edit_lama_perjalanan"
+                            android:layout_toRightOf="@+id/TextView_garis"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:gravity="left"
+                            android:hint="Sampai Pada Tanggal"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textColor="@color/hitam"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/grsbawah"
+                            android:layout_width="fill_parent"
+                            android:layout_height="5dp"
+                            android:layout_below="@+id/edit_tgl_pelaksanaan_dimulai_tgl"
+                            android:background="@color/hitam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_khusus_dikeluarkan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="300dp"
+                        android:layout_below="@+id/lay_untuk"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@+id/atas_nama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_atas_namasatu"
+                            android:text="a.n."
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:visibility="gone"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/asasa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_atas_namasatu"
+                            android:layout_toRightOf="@+id/atas_nama"
+                            android:gravity="top"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                             android:visibility="gone"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edit_atas_namasatu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_toRightOf="@+id/asasa"
+                             android:visibility="gone"
+                            android:hint="Input Atas.Nama" />
+                         
+                        <EditText
+                            android:id="@+id/edit_atas_namadua"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_toRightOf="@+id/asasa"
+                            android:layout_below="@+id/asasa"
+                            android:visibility="gone"
+                            android:hint="Input Atas.Nama.Bawah" />
+                        
+                        <TextView
+                            android:id="@+id/dikeluarkan_di"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_dikeluarkan"
+                            
+                            android:text="Dikeluarkan di"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/mmmm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_dikeluarkan"
+                            
+                            android:layout_toRightOf="@+id/dikeluarkan_di"
+                            android:gravity="top"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edit_dikeluarkan"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_toRightOf="@+id/mmmm"
+                            android:layout_below="@+id/edit_atas_namadua"
+                            android:hint="Input Lokasi" />
+
+                        <TextView
+                            android:id="@+id/pada_tgl"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_pada_tgl"
+                            android:layout_below="@+id/edit_dikeluarkan"
+                            android:text="Pada Tanggal"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/kkkk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_pada_tgl"
+                            android:layout_below="@+id/edit_dikeluarkan"
+                            android:layout_toRightOf="@+id/pada_tgl"
+                            android:gravity="top"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edit_pada_tgl"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/edit_dikeluarkan"
+                            android:layout_toRightOf="@+id/kkkk"
+                            android:hint="Pada Tanggal" />
+
+                        <TextView
+                            android:id="@+id/pemberi_perintah"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_pemberi_perintah"
+                            android:layout_below="@+id/edit_pada_tgl"
+                            android:gravity="top"
+                            android:text="Pemberi Perintah"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/cekbox_pemberi_perintah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_pemberi_perintah"
+                            android:layout_below="@+id/edit_pada_tgl"
+                            android:visibility="gone"
+                            android:layout_toLeftOf="@+id/llll" />
+
+                        <TextView
+                            android:id="@+id/llll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/edit_pemberi_perintah"
+                            android:layout_below="@+id/edit_pada_tgl"
+                            android:layout_toRightOf="@+id/pemberi_perintah"
+                            android:gravity="top"
+                            android:text=":"
+                            android:textColor="@color/hitam"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/edit_pemberi_perintah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/edit_pada_tgl"
+                            android:layout_toRightOf="@+id/llll"                           
+                            android:gravity="center"                         
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            
+                          />
+                        
+
+                        <View
+                            android:id="@+id/grspemberi"
+                            android:layout_width="250dp"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/edit_pemberi_perintah"
+                            android:layout_toRightOf="@+id/llll"
+                            android:visibility="gone"
+                            android:background="@color/hitam" />
+
+                        <EditText
+                            android:id="@+id/edit_nip_pemberi_perintah"
+                            android:layout_width="250dp"
+                            android:layout_height="120dp"
+                            android:layout_below="@+id/grspemberi"
+                            android:layout_toRightOf="@+id/llll"
+                            android:enabled="false"
+                            android:gravity="top|center"
+                            android:hint="Nomor Induk Pegawai"
+                            android:textColor="@color/hitam"
+                            android:textStyle="bold"
+                             android:visibility="gone"
+                            tools:ignore="TooManyView" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/kuning2" />
+
+    <Button
+        android:id="@+id/btn_refresh_spt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/refresh"
+        android:onClick="refresh"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/asa"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/btn_refresh_spt"
+        android:gravity="center|center_horizontal"
+        android:text="Menu Input Data Surat Perintah Tugas|| SPPD RSSM"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_simpan_spt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/centang"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:visibility="visible" />
+
+</RelativeLayout>

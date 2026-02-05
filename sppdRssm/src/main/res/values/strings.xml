@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="app_name" translatable="false">E-SPPD</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="next" translatable="false">Lanjut</string>
+    <string name="skip" translatable="false">Lewati</string>
+    <string name="start" translatable="false">Selesai</string>
+    <string name="permission_dialog" translatable="false">Dibutuhkan Ijin Untuk Mengakses Kamera dan Tempat Penyimpananan Data ?</string>
+    <string name="go_to_permissions_settings" translatable="false">Pergi Ke Pengaturan->Manajemen Aplikasi->E-SPPD->Ijin Aplikasi->Aktifkan</string>
+
+    <string-array name="kendaraan" translatable="false">
+        <item>Kendaraan Dinas</item>
+        <item>Kendaraan Umum</item>
+        <item>Kendaraan Pribadi</item>
+    </string-array>
+    <string-array name="searchingberdasarkan" translatable="false">
+        <item>NIP/NPK/NAMA PEGAWAI</item>
+        <item>Tanggal/Bulan/Tahun</item>
+        <item>Status Complete</item>
+    </string-array>
+    <string-array name="akun" translatable="false">
+        <item>-Pilih-</item>
+        <item>07 001 5 2 2 15 01 || BOEDI PRIJO SOEPRAJITNO, SH, M.Si</item>
+        <item>07 001 5 2 2 15 02 || BOEDI PRIJO SOEPRAJITNO, SH, M.Si</item>
+        <item>48 001 5 2 2 15 01 || dr. DITA ARTNINGTYAS, M. Kes.</item>
+        <item>48 001 5 2 2 15 02 || dr. DITA ARTNINGTYAS, M. Kes.</item>
+        <item>47 014 5 2 2 15 01 || dr. MOCHAMAD HAFIDIN ILHAM, Sp.An</item>
+        <item>07 002 5 2 2 15 01 || BOEDI PRIJO SOEPRAJITNO, SH, M.Si</item>
+        <item>07 002 5 2 2 15 02 || BOEDI PRIJO SOEPRAJITNO, SH, M.Si</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="ttd" translatable="false">
+        <item>-Pilih-</item>
+        <item>19730227 199903 1 003 || M. SUCAHYONO, SKM.M.Kes</item>
+        <item>19600812 198603 1 026 || BOEDI PRIJO SOEPRAJITNO, SH, M.Si</item>
+        <item>19600401 198711 2 001 || dr. DITA ARTNINGTYAS, M. Kes.</item>
+        <item>19620506 198901 1 002 || dr. MOCHAMAD HAFIDIN ILHAM, Sp.An</item>
+        <item>19620628 198903 2 003 || Dra. SUSWATI DWI WORO, Apt, MKes</item>
+        <item>19660411 199606 2 001 || dr. DWI SIWI MARDIATI</item>
+        <item>19650519 200501 1 005 || dr. RADEN SJAIFUL ANWAR, Sp.JP</item>
+        <item>19630827 198409 2 001 || NINIEK SULASMININGSIH, SST</item>
+        <item>19671231 199112 1 014 || SUGENG HARIJANTO, SKM.MPH</item>
+        <item>19680827 200604 2 008 || dr. RATIH KARTIKA SURYANI</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="jml_petugas_yg_ditugaskan" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="surat_perintah_perjalanan_dinas" translatable="false">Surat Perintah Perjalanan Dinas</string>
+    <string name="_sppd_" translatable="false">(SPPD)</string>
+    <string name="selamat_datang_di_aplikasi_sppd_rssm" translatable="false">Selamat Datang, Di Aplikasi SPPD RSSM</string>
+    <string name="masukkan_password" translatable="false">Masukkan Password</string>
+    <string name="tampilkan_password" translatable="false">Tampilkan Password</string>
+    <string name="login" translatable="false">Masuk</string>
+    <string name="input_nipLogin" translatable="false">NIP/NPK Lengkap Anda</string>
+    <string name="aplikasi_surat_perintah_perjalanan_dinas" translatable="false">Sistem Informasi Elektronik\nSurat Perintah Perjalanan Dinas</string>
+    <string name="_e_sppd_" translatable="false">- E-SPPD -</string>
+    <string name="suatu_sistem_berbasis_mobile_aplikasi_surat_perintah_perjalanan_dinas_sppd_pada_rumah_sakit_dr_soedomo_madiun" translatable="false">Merupakan salah satu sistem aplikasi berbasis mobile yang dikembangkan di Rumah Sakit dr. Soedono Madiun untuk keperluan perjalanan dinas dalam kota dan atau luar kota."</string>
+    <string name="versi_1_1" translatable="false">versi 1.1</string>
+    <string name="created_by_edwin_ipde_design_" translatable="false">"Created by I.T.I.S.I Team Design"</string>
+    <string name="feedback" translatable="false">feedback</string>
+    <string name="copyright_2017_by_ipde_rssm_" translatable="false">"Copyright © 2017 By I.T.I.S.I RSSM "</string>
+    <string name="tentang_aplikasi_sppd_rssm" translatable="false">Informasi Aplikasi</string>
+    <string name="feedback_anda_" translatable="false">Kritik dan Saran Anda :</string>
+    <string name="kritik_dan_saran_anda_n_maks_150_kata" translatable="false">Kritik dan Saran Anda\nMaks. 150 Kata</string>
+    <string name="_copy_sppd_2017_develop_ipde_rssm" translatable="false">© ESPPD 2017-2019, Developed by IPDE - RSSM</string>
+    <string name="informasi_update_versi" translatable="false">Informasi Update Versi</string>
+    <string name="versi_" translatable="false">"V. "</string>
+    <string name="_1_dasar_spt" translatable="false">1. Dasar SPT</string>
+    <string name="dasar_spt" translatable="false">1. Dasar SPT</string>
+    <string name="titikdua" translatable="false">:</string>
+    <string name="_tgl_pelaksanaan" translatable="false">2. Tgl Pelaksanaan</string>
+    <string name="_3_nama_petugas" translatable="false">3. Nama Petugas</string>
+    <string name="_4_daerah_tujuan" translatable="false">4. Daerah Tujuan</string>
+    <string name="_5_instansi_yang_dikunjungi" translatable="false">5. Instansi yang dikunjungi</string>
+    <string name="_6_acara" translatable="false">6. Acara</string>
+    <string name="_7_hasil_pertemuan_rapat" translatable="false">7. Hasil Pertemuan / Rapat</string>
+    <string name="_8_masalah_temuan" translatable="false">8. Masalah / Temuan</string>
+    <string name="_9_saran_tindakan" translatable="false">9. Saran Tindakan</string>
+    <string name="_10_lain_lain" translatable="false">10. Lain - lain</string>
+    <string name="menu_laporan_perjalanan_dinas_e_sppd_rssm" translatable="false">Laporan Perjalanan Dinas E-SPPD</string>
+    <string name="nama_petugas" translatable="false">Nama Petugas</string>
+    <string name="menu_utama_sppd_rssm" translatable="false" />
+    <string name="daerah_tujuan" translatable="false">Daerah Tujuan</string>
+    <string name="acara" translatable="false">Acara</string>
+    <string name="hasil_laporan" translatable="false">Hasil</string>
+    <string name="masalah_temuan_laporan" translatable="false">Masalah / Temuan</string>
+    <string name="saran_tindakan_laporan" translatable="false">Saran Tindakan</string>
+    <string name="lain_lain" translatable="false">Lain - lain</string>
+    <string name="madiun_kota" translatable="false">Madiun,</string>
+    <string name="tgl_bulan_tahun" translatable="false">Tgl-Bulan-Tahun</string>
+    <string name="petugas_nama" translatable="false">Petugas,</string>
+    <string name="ttd" translatable="false">TTD</string>
+    <string name="nip_npk_petugas_laporan" translatable="false">NIP/NPK.</string>
+    <string name="bukti" translatable="false">Bukti</string>
+    <string name="masuk" translatable="false">Log In</string>
+    <string name="klik_disini" translatable="false">Klik Disini</string>
+    <string name="daftar_spt_dan_sppd" translatable="false">Daftar SPT dan SPPD</string>
+    <string name="history_spt_dan_sppd" translatable="false">History SPT dan SPPD</string>
+    <string name="download_laporan_perjalanan_dinas" translatable="false">Download Laporan Perjalanan Dinas</string>
+    <string name="download_laporan_spt" translatable="false">Download Laporan SPT</string>
+    <string name="download_laporan_sppd" translatable="false">Download Laporan SPPD</string>
+    <string name="download_laporan_rincian_biaya" translatable="false">Download Laporan Rincian Biaya</string>
+    <string name="download_laporan_riil_biaya" translatable="false">Download Laporan Riil Biaya</string>
+    <string name="posting_spt_sppd" translatable="false"><![CDATA[Posting SPT & SPPD]]></string>
+    <string name="laporan_perjalanan_dinas" translatable="false">Laporan Perjalanan Dinas</string>
+    <string name="cek_spt_surat_perintah_tugas" translatable="false">Cek (SPT) Surat Perintah Tugas</string>
+    <string name="cek_lembar_1_e_sppd" translatable="false">Cek Lembar 1 E-SPPD</string>
+    <string name="daftar_rincian_biaya_bukti" translatable="false">Daftar Rincian Biaya + Bukti</string>
+    <string name="daftar_pengeluaran_riil" translatable="false">Daftar Pengeluaran Riil</string>
+    <string name="tandatitik" translatable="false">:</string>
+    <string name="informasi_data_sppd" translatable="false">- INFORMASI DATA SPPD -</string>
+    <string name="halaman_utama" translatable="false">Halaman Utama</string>
+    <string name="histori_spt_dan_sppd" translatable="false">Histori SPT dan SPPD</string>
+    <string name="profil_pegawai" translatable="false">Profil Pegawai</string>
+    <string name="notifikasi" translatable="false">Notifikasi</string>
+    <string name="tentang_aplikasi" translatable="false">Tentang Aplikasi</string>
+    <string name="keluar" translatable="false">Keluar</string>
+    <string name="haven_t_password" translatable="false">Haven\'t  Password ?</string>
+    <string name="call_us_nforgot_password" translatable="false">Call Us !!!\n Forgot Password</string>
+    <string name="nip_npk_pegawai" translatable="false">NIP/NPK Pegawai :</string>
+    <string name="nip_npk_pegawai2" translatable="false">NIP/NPK Pegawai</string>
+    <string name="jabatan_pegawai" translatable="false">Jabatan Pegawai :</string>
+    <string name="jabatan_pegawai2" translatable="false">Jabatan Pegawai</string>
+    <string name="password_baru" translatable="false">Password Baru :</string>
+    <string name="masukkan_password_anda" translatable="false">Masukkan Password Baru Anda</string>
+    <string name="register_password" translatable="false">Register Password</string>
+    <string name="pencarian_data_pegawai" translatable="false">Pencarian Data Pegawai :</string>
+    <string name="entry_nip_npk_pegawai" translatable="false">Entry NIP/NPK Pegawai</string>
+    <string name="cari" translatable="false">Cari</string>
+    <string name="simpan_password" translatable="false">SIMPAN PASSWORD</string>
+    <string name="masukkan_alamat_email_anda" translatable="false">Masukkan Alamat Email Anda</string>
+    <string name="alamat_email" translatable="false">Alamat Email</string>
+    <string name="data_profil" translatable="false">Data Profil</string>
+    <string name="ganti_password" translatable="false">Ganti Password</string>
+    <string name="batal_password" translatable="false">Batal Password</string>
+    <string name="nomor_induk_pegawai" translatable="false">Nomor Induk Pegawai :</string>
+    <string name="nama_pegawai" translatable="false">Nama Pegawai :</string>
+    <string name="jabatan_instansi" translatable="false">Jabatan / Instansi :</string>
+    <string name="golongan" translatable="false">Golongan :</string>
+    <string name="password" translatable="false">Password :</string>
+    <string name="password_baru_min_5_karakter" translatable="false">Password Baru (Min. 5 Karakter)</string>
+    <string name="simpan_password_baru" translatable="false">Simpan Password Baru</string>
+    <string name="nama_pegawai2" translatable="false">Nama Pegawai</string>
+    <string name="email" translatable="false">Email :</string>
+    <string name="sedang_memuat" translatable="false">Sedang Memuat...</string>
+    <string name="elektronik_surat_perintah_perjalanan_dinas" translatable="false">Elektronik Surat Perintah Perjalanan Dinas</string>
+    <string name="ext" translatable="false">Ext :</string>
+    <string name="nomor_edwin" translatable="false">082-299-458-803</string>
+    <string name="nomor_reski" translatable="false">085-708-679-994</string>
+    <string name="informasi_lupa_password" translatable="false">Informasi Lupa Password</string>
+    <string name="lupa_password_nsilahkan_hubungi_admin_ipde" translatable="false">Lupa Password Silahkan Hubungi Admin IPDE</string>
+    <string name="_146_ipde" translatable="false">146 [ IPDE ]</string>
+    <string name="_262_tu_umum" translatable="false">262 [ TU/UMUM ]</string>
+    <string name="no_kontak" translatable="false">No. Kontak</string>
+    <string name="edwin" translatable="false">/ Edwin</string>
+    <string name="reski" translatable="false">/ Reski</string>
+    <string name="btn_refresh" translatable="false" />
+    <string name="pembuatan_sppd" translatable="false">Pembuatan SPPD</string>
+    <string name="pembuatan_spt" translatable="false">Pembuatan SPT</string>
+    <string name="https_rssoedono_jatimprov_go_id" translatable="false">https://rssoedono.jatimprov.go.id</string>
+    <string name="berikan_kritik_dan_saran" translatable="false">Berikan Kritik dan Saran</string>
+    <string name="tutorial_penggunaan_aplikasi" translatable="false">Tutorial Penggunaan Aplikasi</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="tombol_kembali_profil">Tombol Kembali Profil</string>
+    <string name="refreshmenu">Refresh</string>
+    <string name="tombol_menu_awal">Tombol Menu Awal</string>
+    <string name="tombol_kembali_informasi">Tombol Kembali Informasi</string>
+    <string name="refresh_profil">Refresh Profil</string>
+    <string name="ambil_foto_profil">Foto Profil</string>
+    <string name="input_password">Input Password</string>
+    <string name="input_email">Input Email</string>
+    <string name="tombol_kembali_register">Tombol Kembali Register</string>
+    <string name="tombol_refresh_register">Tombol Refresh Register</string>
+    <string name="unit_kerja">Unit Kerja</string>
+    <string name="input_unit_kerja">Input Unit Kerja</string>
+
+</resources>

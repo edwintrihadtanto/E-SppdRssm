@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    >
+
+    <View
+        android:id="@+id/actionbar_register"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/list_item_title" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="2dp"
+        android:layout_alignBottom="@+id/actionbar_register"
+        android:layout_alignTop="@+id/actionbar_register"
+        android:background="@drawable/ic_reload"
+        android:onClick="refresh"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_help_register"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="2dp"
+        android:layout_toLeftOf="@+id/btn_refresh"
+        android:layout_alignBottom="@+id/actionbar_register"
+        android:layout_alignTop="@+id/actionbar_register"
+        android:background="@drawable/ic_help" />
+
+    <TextView
+        android:id="@+id/asa"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@+id/btn_back"
+        android:layout_toLeftOf="@+id/btn_help_register"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/actionbar_register"
+        android:layout_alignTop="@+id/actionbar_register"
+        android:text="Pendaftaran Password Baru || SPPD RSSM"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:layout_alignBottom="@+id/actionbar_register"
+        android:layout_alignTop="@+id/actionbar_register"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ic_back"
+        android:onClick="kembali_activity"/>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_Register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar_register"
+        android:background="@android:color/transparent" >
+
+        <RelativeLayout
+            android:id="@+id/rel_pencarian_nip12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/list_item_title"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/Button_tampil_listview"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/grsbwah"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="2dp"
+                android:background="@drawable/ic_cari"
+                android:onClick="tampil_list_view" />
+
+            <SearchView
+                android:id="@+id/pencarian_nip12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:imeOptions="actionSearch"
+                android:inputType="textAutoComplete"
+                android:textColor="@color/hitam"
+                android:textStyle="bold|italic"
+                android:visibility="visible" >
+
+                <EditText
+                    android:id="@+id/edit_text_cariregister"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"                  
+                    android:textColor="@color/hitam"
+                    android:textColorHint="@color/hitam"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone"
+                   />
+
+
+                <requestFocus />
+            </SearchView>
+
+            <View
+                android:id="@+id/grsbwah"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/pencarian_nip12"
+                android:background="@color/hitam" />
+
+            <RelativeLayout
+                android:id="@+id/rel_list_view_pegawai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grsbwah"
+                android:visibility="gone" >
+
+                <include layout="@layout/list_view_pegawai" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_register"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/rel_pencarian_nip12"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/todo"
+            android:adjustViewBounds="false"
+            app:srcCompat="@drawable/profil" />
+
+        <ScrollView
+            android:id="@+id/ScrollView_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/image_register"
+            android:layout_margin="10dp"
+            android:background="#A50A83CE"
+             >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_Registeratas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                 >
+
+                <TextView
+                    android:id="@+id/text_nip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Nomor Induk Pegawai :"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edit_nip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/text_nip"
+                    android:layout_below="@+id/text_nip"
+                    android:layout_marginLeft="30dp"
+                    android:enabled="false"
+                    android:hint="Nomor Induk Pegawai"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_namapeg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/edit_nip"
+                    android:layout_marginLeft="30dp"
+                    android:text="Nama Pegawai :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_namapeg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_namapeg"
+                    android:layout_below="@+id/text_namapeg"
+                    android:layout_marginRight="30dp"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:hint="Nama Pegawai"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_jabatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/edit_namapeg"
+                    android:layout_marginLeft="30dp"
+                    android:text="Jabatan / Instansi :"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edit_jabatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/text_jabatan"
+                    android:layout_below="@+id/text_jabatan"
+                    android:layout_marginLeft="30dp"
+                    android:enabled="false"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_golongan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/edit_jabatan"
+                    android:layout_marginLeft="30dp"
+                    android:text="Golongan :"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edit_golongan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/text_golongan"
+                    android:layout_below="@+id/text_golongan"
+                    android:layout_marginLeft="30dp"
+                    android:enabled="false"
+                    android:textColor="@color/hitam"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/edit_golongan"
+                    android:layout_marginLeft="30dp"
+                    android:text="Password :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_reg_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/text_pass"
+                    android:layout_below="@+id/text_pass"
+                    android:layout_marginRight="30dp"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:hint="Password Baru (Min. 5 Karakter)"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_pass_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edit_reg_pass"
+                    android:layout_alignRight="@+id/edit_reg_pass"
+                    android:layout_below="@+id/edit_reg_pass"
+                    android:checked="false"
+                    android:gravity="right|center"
+                    android:hint="Tampilkan Password"
+                    android:pointerIcon="hand"
+                    android:textColorHint="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_simpan_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/checkbox_pass_reg"
+                    android:layout_margin="10dp"
+                    android:background="@color/hitam3"
+                    android:onClick="simpan_btn_simpan_register"
+                    android:text="Simpan Register"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold|italic"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

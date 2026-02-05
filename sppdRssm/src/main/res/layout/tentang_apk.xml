@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/actionbar_tentang"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/asa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/btn_back"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/default_bold"
+        android:gravity="center|center_horizontal"
+        android:text="@string/tentang_aplikasi_sppd_rssm"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nip_lokal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tgl_kritik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/ic_back2"
+        android:contentDescription="@string/tombol_kembali_informasi"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="kembali_activity"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/asa" >
+
+        <RelativeLayout
+            android:id="@+id/relrelrel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/imagetentang"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/simrs" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagetentang"
+                android:layout_centerHorizontal="true"
+                android:gravity="center|center_horizontal"
+                android:text="@string/aplikasi_surat_perintah_perjalanan_dinas"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/default_bold"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center|center_horizontal"
+                android:text="@string/_e_sppd_"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:fontFamily="@font/default_font_2"
+                android:textStyle="normal|bold" />
+
+            <View
+                android:id="@+id/grstentang"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white" />
+
+            <View
+                android:id="@+id/grstentang2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/grstentang"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/merah" />
+
+            <View
+                android:id="@+id/grstentang3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/grstentang2"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@color/hijau" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grstentang3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/default_bold"
+                android:gravity="center|center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="normal|bold" />
+
+            <View
+                android:id="@+id/grstentang4"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/text4"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/hijau" />
+
+            <View
+                android:id="@+id/grstentang5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/grstentang4"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/merah" />
+
+            <View
+                android:id="@+id/grstentang6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/grstentang5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white" />
+
+<!--            <Button-->
+<!--                android:id="@+id/tutorial"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_above="@+id/historyversi"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/tutorial_penggunaan_aplikasi"-->
+<!--                android:fontFamily="@font/default_font_2"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="italic|bold"-->
+<!--                android:background="@drawable/circle"-->
+<!--                android:layout_margin="5dp"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/feedback"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_above="@+id/tutorial"-->
+<!--                android:layout_alignStart="@+id/tutorial"-->
+<!--                android:layout_alignEnd="@+id/tutorial"-->
+<!--                android:text="@string/berikan_kritik_dan_saran"-->
+<!--                android:fontFamily="@font/default_font_2"-->
+<!--                android:background="@drawable/circle3"-->
+<!--                android:textStyle="bold|italic" />-->
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/grstentang6"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="@string/versi_"
+                android:fontFamily="@font/default_bold"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text7"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:fontFamily="@font/default_bold"
+                android:text="@string/copyright_2017_by_ipde_rssm_"/>
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text5"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:fontFamily="@font/default_bold"
+                android:layout_centerInParent="true"
+                android:text="@string/created_by_edwin_ipde_design_"/>
+            <!--android:text="@string/created_by_edwin_ipde_design_"-->
+
+<!--            <Button-->
+<!--                android:id="@+id/historyversi"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:gravity="center"-->
+<!--                android:text="History Version"-->
+<!--                android:fontFamily="@font/default_font_2"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="italic|bold"-->
+<!--                android:background="@drawable/circle_download4"-->
+<!--                android:layout_margin="5dp"/>-->
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/historyversi"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/feedback"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="#E0F7FA"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/ic_info"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/todo" />
+
+                    </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/feedback"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="#FBE9E7"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/ic_chat"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/todo" />
+
+                    </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/tutorial"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/feedback"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="#FFF8E1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/ic_tutorial"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/todo" />
+
+                    </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

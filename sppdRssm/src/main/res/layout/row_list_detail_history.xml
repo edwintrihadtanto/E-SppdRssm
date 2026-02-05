@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/pengatur_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dot_light_screen3" >
+
+        <View
+            android:id="@+id/atasssssss"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle_download4" />
+
+        <ImageView
+            android:id="@+id/sts_post1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/atasssssss"
+            android:layout_alignBottom="@+id/atasssssss"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toLeftOf="@+id/text_sts_post"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/merah"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_sts_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/atasssssss"
+            android:layout_alignBottom="@+id/atasssssss"
+            android:layout_toLeftOf="@+id/status_lap_perj"
+            android:layout_toStartOf="@+id/status_lap_perj"
+            android:gravity="center"
+            android:text="BELUM DIPOSTING"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/text_tampil_nomor_spt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/atasssssss"
+            android:layout_alignBottom="@+id/menampilkan_nomor_spt"
+            android:layout_alignTop="@+id/menampilkan_nomor_spt"
+            android:text="Nomor SPT"
+            android:gravity="left|center"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua1"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_tampil_nomor_spt"
+            android:layout_alignTop="@+id/text_tampil_nomor_spt"
+            android:layout_toRightOf="@+id/text_tampil_nomor_spt"
+            android:text=":"
+            android:gravity="left|center"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/menampilkan_nomor_spt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+             android:layout_below="@+id/atasssssss"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/ttikduaduadua1"
+            android:textColor="@color/primary_darker"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_tampil_nomor_sppd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_tampil_nomor_spt"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ttikduaduadua1"
+            android:text="Nomor SPPD"
+            android:layout_alignBottom="@+id/menampilkan_nomor_sppd"
+            android:layout_alignTop="@+id/menampilkan_nomor_sppd"
+            android:textColor="@color/white"
+            android:gravity="left|center"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ttikduaduadua2"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_tampil_nomor_sppd"
+            android:layout_alignTop="@+id/text_tampil_nomor_sppd"
+            android:layout_toRightOf="@+id/text_tampil_nomor_sppd"
+            android:text=":"
+            android:gravity="left|center"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/menampilkan_nomor_sppd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tampil_nomor_spt"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/ttikduaduadua2"
+            android:textColor="@color/primary_darker"
+            android:textSize="15sp"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/grspnjngview"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/menampilkan_nomor_sppd"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/bg_screen3" />
+        <TextView
+            android:id="@+id/text_tglkeberangkatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/grspnjngview_lagi"
+            android:text="Tgl. Keberangkatan"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:id="@+id/text_tgl_keberangkatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tglkeberangkatan"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:layout_toLeftOf="@+id/grspnjngview_lagi"
+            android:textColor="@color/primary_darker"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_tgltiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tgl_keberangkatan"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Tgl. Tiba"
+            android:layout_toLeftOf="@+id/grspnjngview_lagi"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:id="@+id/text_tgl_tiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_tgltiba"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:layout_toLeftOf="@+id/grspnjngview_lagi"
+            android:textColor="@color/primary_darker"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_lama_perjalanan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ket_lama_perjalanan"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/grspnjngview_lagi"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/primary_darker"
+            android:textSize="16sp"
+            android:layout_alignBottom="@+id/grspnjngview_lagi"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/ket_lama_perjalanan"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/grspnjngview_lagi"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Lama Perjalanan"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:id="@+id/grspnjngview_lagi"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/text_tgl_tiba"
+            android:layout_below="@+id/grspnjngview"
+            android:layout_centerHorizontal="true"
+            android:background="@color/bg_screen3" />
+
+        <View
+            android:id="@+id/grspnjngview_lagi3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/grspnjngview_lagi"
+            android:layout_centerVertical="true"
+            android:background="@color/bg_screen3" />
+
+        <TextView
+            android:id="@+id/mfddad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview_lagi"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/grspnjngview_lagi3"
+            android:layout_alignTop="@+id/grspnjngview_lagi3"
+            android:text="::: STATUS LAPORAN PETUGAS :::"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_status_lap_perj"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/text_status_riil"
+            android:layout_below="@+id/grspnjngview_lagi3"
+            android:layout_margin="5dp"
+            android:gravity="left|center_vertical"
+            android:text="Lap. Perj. Dinas"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:id="@+id/imgpost_status_lap_perj"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/status_lap_perj"
+            android:layout_alignTop="@+id/status_lap_perj"
+            android:layout_toRightOf="@+id/text_status_riil"
+            android:background="@drawable/hijau"
+             android:layout_marginLeft="5dp"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/status_lap_perj"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grspnjngview_lagi3"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/imgpost_status_lap_perj"
+            android:gravity="left|center_horizontal"
+            android:textColor="@color/primary_darker"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_status_rincian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/text_status_riil"
+            android:layout_below="@+id/text_status_lap_perj"
+            android:layout_margin="5dp"
+            android:gravity="left|center_vertical"
+            android:text="Lap. Perincian Biaya Beserta Bukti"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold" />
+
+         <ImageView
+            android:id="@+id/imgpost_status_rincian"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/status_rincian"
+            android:layout_alignTop="@+id/status_rincian"
+            android:layout_toRightOf="@+id/text_status_riil"
+            android:background="@drawable/hijau"
+            android:layout_marginLeft="5dp"
+             android:layout_marginTop="3dp"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/status_rincian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_status_lap_perj"
+            android:layout_margin="5dp"
+            android:layout_alignBottom="@+id/text_status_rincian"
+            android:layout_alignTop="@+id/text_status_rincian"
+            android:layout_toRightOf="@+id/imgpost_status_rincian"
+            android:gravity="left|center"
+            android:textColor="@color/primary_darker"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_status_riil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_status_rincian"
+            android:layout_margin="5dp"
+            android:gravity="left|center_vertical"
+            android:text="Lap. Pengeluaran Riil"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            android:visibility="visible" />
+
+         <ImageView
+            android:id="@+id/imgpost_status_riil"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/status_riil"
+            android:layout_alignTop="@+id/status_riil"
+            android:layout_toRightOf="@+id/text_status_riil"
+            android:background="@drawable/hijau"
+             android:layout_marginLeft="5dp"
+            android:contentDescription="@string/todo"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="visible" />
+         
+        <TextView
+            android:id="@+id/status_riil"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_status_rincian"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/imgpost_status_riil"
+            android:gravity="left"
+            android:textColor="@color/primary_darker"
+            android:textStyle="normal|bold"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/ko"
+            android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:layout_below="@+id/status_riil"
+            android:layout_centerHorizontal="true"
+            android:background="@color/bg_screen3" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/pemisah"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/pengatur_layout"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/pemisah2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/pemisah"
+        android:layout_marginBottom="10dp"
+        android:background="@color/list_item_title" />
+
+</RelativeLayout>

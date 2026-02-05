@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="Deprecated">
+        <ignore path="res/layout/register_activity.xml" />
+    </issue>
+    <issue id="MissingTranslation" severity="warning" />
+</lint>

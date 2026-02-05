@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+        <TextView
+            android:id="@+id/ambil_nip_pop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hitam"
+            android:visibility="gone" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_gotoinput_lap_perj_dinas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/bg_screen6"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img1dialog"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_assignment_black_24dp"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <TextView
+                    android:id="@+id/text_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/img1dialog"
+                    android:gravity="center"
+                    android:text="@string/laporan_perjalanan_dinas"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_gotocek_spt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_gotoinput_lap_perj_dinas"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/bg_screen7"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img1dialog2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_file_download_black_24dp"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/text_download_spt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/img1dialog2"
+                    android:gravity="center"
+                    android:text="@string/cek_spt_surat_perintah_tugas"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_gotocek_sppd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_gotocek_spt"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/bg_screen3"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img1dialog3"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_file_download_black_24dp"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/text_download_sppd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/img1dialog3"
+                    android:gravity="center"
+                    android:text="@string/cek_lembar_1_e_sppd"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_gotoinputdaftar_pengeluaran_rincian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_gotocek_sppd"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/bg_screen2"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img1dialog4"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_playlist_add_black_24dp"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <TextView
+                    android:id="@+id/text_rincian"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/img1dialog4"
+                    android:gravity="center"
+                    android:text="@string/daftar_rincian_biaya_bukti"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_gotoinputdaftar_pengeluaran_riil"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_gotoinputdaftar_pengeluaran_rincian"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/bg_screen5"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img1dialog5"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_playlist_add_black_24dp"
+                    android:contentDescription="@string/todo"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/text_riil"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/img1dialog5"
+                    android:gravity="center"
+                    android:text="@string/daftar_pengeluaran_riil"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--
+       <br.com.bloder.magic.view.MagicButton
+           android:id="@+id/riilbcd"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:magic_button_size="50dp"
+           app:button_icon="@drawable/ic_dftar_riil"
+           app:button_icon_width="25dp"
+           app:button_icon_height="25dp"
+           app:hide_text="Daftar Pengeluaran Riil"
+           app:hide_text_size="10sp"
+           android:visibility="gone"
+           app:hide_text_color="@color/hitam"
+           app:icon_button_color="@color/white"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:layout_marginLeft="10dp"
+           android:animationCache="true"
+           app:expandable_area_color="@color/white"
+           android:layout_marginStart="10dp"/>
+        !-->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_posting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_gotoinputdaftar_pengeluaran_riil"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img1dialog6"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/merah_posting"
+                    android:contentDescription="@string/todo"
+                    />
+
+                <TextView
+                    android:id="@+id/text_posting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/img1dialog6"
+                    android:gravity="center"
+                    android:text="@string/posting_spt_sppd"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold|normal" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

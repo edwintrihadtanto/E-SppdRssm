@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <View
+        android:id="@+id/vrow"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="110dp"        
+         android:layout_alignTop="@+id/text_nip"
+        android:layout_alignBottom="@+id/text_namapeg"
+        android:background="@color/hitam" />
+
+    <TextView
+        android:id="@+id/text_namapeg"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/text_nip"
+        android:layout_alignRight="@+id/text_nip"
+        android:layout_below="@+id/row_nipprofil"
+        android:text="Nama Pegawai"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_nipprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/text_nip"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_nip"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/vrow"
+        android:hint="Nomor Induk Pegawai"
+        android:textColor="@color/kuning"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/text_nip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/vrow"
+        android:layout_marginTop="20dp"
+        android:text="NIP"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/text_jabatan"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/text_namapeg"
+        android:layout_below="@+id/text_namapeg"
+        android:text="Jabatan / Instansi"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_jabatanprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/text_jabatan"
+        android:layout_alignLeft="@+id/row_namapegprofil"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_jabatan"
+        android:hint="Jabatan / Instansi"
+        android:textColor="@color/hitam"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/text_golongan"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/text_namapeg"
+        android:layout_below="@+id/text_jabatan"
+        android:text="Golongan"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_golonganprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/row_jabatanprofil"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_golongan"
+        android:hint="Golongan"
+        android:textColor="@color/hitam"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/text_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/vrow"
+        android:layout_below="@+id/text_golongan"
+        android:text="Password"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_reg_passprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/row_golonganprofil"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_pass"
+        android:hint="Password Anda"
+        android:textColor="@color/hitam"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_namapegprofil"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/text_namapeg"
+        android:layout_alignLeft="@+id/row_nipprofil"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_namapeg"
+        android:hint="Nama Pegawai"
+        android:textColor="@color/kuning"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>

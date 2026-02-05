@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparan_baru" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout4444"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colordialog" >
+
+        <TextView
+            android:id="@+id/ambil_nip_pop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hitam"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/list_item_title" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|center_horizontal"
+            android:text="Pengisisan Daftar Perincian Riil"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/kritik"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/judul"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|center_horizontal"
+            android:text="Uraian / Isi :"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold|normal" />
+
+        <EditText
+            android:id="@+id/edit_dialog_uraian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/kritik"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:gravity="left|top"
+            android:hint="Daftar Uraian"
+            android:inputType="textCapWords|text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dot_dark_screen1"
+            android:textSize="18sp"
+            android:textStyle="bold|normal" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textjml_riil"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/edit_dialog_uraian"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|center_horizontal"
+            android:text="Jumlah Biaya :"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold|normal" />
+        <TextView
+            android:id="@+id/txtrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textjml_riil"
+            android:layout_marginLeft="10dp"
+            android:gravity="left|center"
+            android:text="Rp."
+            android:layout_alignTop="@+id/edit_textjml_riil"
+            android:layout_alignBottom="@+id/edit_textjml_riil"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|normal" />
+        <EditText
+            android:id="@+id/edit_textjml_riil"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textjml_riil"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|top"
+            android:layout_toRightOf="@+id/txtrp"
+            android:hint="Jumlah"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/dot_dark_screen1"
+            android:textSize="18sp"
+            android:textStyle="bold|normal" />
+
+        <TextView
+            android:id="@+id/pilihanupload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_textjml_riil"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:text="Pilihan Upload Bukti Perincian Biaya"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_upload_image"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/pilihanupload"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="GALERI"
+            android:textColor="@color/white"
+            android:layout_toLeftOf="@+id/atau"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:drawableLeft="@drawable/ic_picture"
+            android:background="@drawable/circle_download3"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/atau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imgPreview"
+            android:layout_below="@+id/pilihanupload"
+            android:layout_centerHorizontal="true"
+            android:text="atau"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/atau"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="Kamera"
+            android:layout_below="@+id/pilihanupload"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_camera"
+            android:paddingLeft="12dp"
+            android:background="@drawable/circle_download1"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_cncl"
+            android:layout_below="@+id/btn_camera"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/todo"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_cncl"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/garisfeed"
+            android:layout_below="@+id/edit_textjml_riil"
+            android:layout_toLeftOf="@+id/garisfeed"
+            android:text="Batal"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/ic_cancel_black"
+            android:paddingLeft="20dp"
+            android:paddingRight="30dp"
+            android:background="@drawable/circle_download4"
+            android:textStyle="bold|italic" />
+
+
+        <View
+            android:id="@+id/garisfeed"
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/garisfeed"
+            android:layout_below="@+id/edit_textjml_riil"
+            android:layout_toEndOf="@+id/garisfeed"
+            android:text="Tambah"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_download2"
+            android:textColor="@color/white"
+            android:drawableStart="@drawable/ic_add_circle"
+            android:paddingStart="20dp"
+            android:paddingEnd="30dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/path"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_upload_image"
+            android:layout_marginStart="10dp"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/hitam"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

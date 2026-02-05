@@ -1,0 +1,1213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparan_baru" >
+
+    <View
+        android:id="@+id/actionbar_laporanriil"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/list_item_title" />
+
+
+    <ImageView
+        android:id="@+id/bantuan_riil"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/todo"
+        android:soundEffectsEnabled="true"
+        app:srcCompat="@drawable/ic_help" />
+    <TextView
+        android:id="@+id/asa"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/bantuan_riil"
+        android:gravity="center|center_horizontal"
+        android:text="Perincian Biaya Riil Perjalanan Dinas E-SPPD"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:id="@+id/info_pembuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/asa"
+        android:layout_margin="5dp"
+        android:gravity="center|center_horizontal"
+        android:text="Yang bertanda tangan dibawah ini :"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info_nama_pembuat"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/info_pembuat"
+        android:layout_marginLeft="15dp"
+        android:gravity="left|center_vertical"
+        android:text="Nama"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/grstndpetik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_pembuat"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/info_nama_pembuat"
+        android:gravity="center|center_horizontal"
+        android:text=":"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/edit_nama_pembuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_pembuat"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/grstndpetik"
+        android:gravity="center|center_horizontal"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info_nip_pembuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/info_nama_pembuat"
+        android:layout_below="@+id/info_nama_pembuat"
+        android:layout_marginLeft="15dp"
+        android:gravity="left|center_vertical"
+        android:text="NIP/NPK"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/grstndpetik2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grstndpetik"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/info_nip_pembuat"
+        android:gravity="center|center_horizontal"
+        android:text=":"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/edit_nip_pembuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grstndpetik"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/grstndpetik2"
+        android:gravity="center|center_horizontal"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info_jab_pembuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/info_nama_pembuat"
+        android:layout_below="@+id/info_nip_pembuat"
+        android:layout_marginLeft="15dp"
+        android:gravity="left|center_vertical"
+        android:text="Jabatan"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/grstndpetik3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grstndpetik2"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/info_jab_pembuat"
+        android:gravity="center|center_horizontal"
+        android:text=":"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/edit_jab_pembuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grstndpetik2"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/grstndpetik3"
+        android:gravity="center|center_horizontal"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rel_lap_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar_laporanriil"
+        android:layout_margin="2dp"
+        android:background="@color/grey" >
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingRight="10dp"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <ScrollView
+                android:id="@+id/scrollview_rel_lap_input"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:overScrollMode="always" >
+
+                <RelativeLayout
+                    android:id="@+id/rel_lap_input_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/infolagi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center|center_horizontal"
+                        android:text="Berdasarkan Surat Perintah Perjalanan Dinas (SPPD) Nomor :"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/info_no_sppd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi"
+                        android:gravity="left|center_vertical"
+                        android:text="Sppd"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/infolagi"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="left|center_vertical"
+                        android:text="Tanggal "
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/info_tgl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/infolagi"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi2"
+                        android:gravity="left|center_vertical"
+                        android:text="Tanggal SPPD"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/infolagi"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/info_tgl"
+                        android:gravity="left|center_vertical"
+                        android:text=", dengan ini kami menyatakan dengan sesungguhnya bahwa :"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi4"
+                        android:layout_width="20dp"
+                        android:layout_height="50dp"
+                        android:layout_alignTop="@+id/infolagi5"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center|center_vertical"
+                        android:text="1. "
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_atas_palingatas"
+                        android:layout_alignRight="@+id/v_atas_palingatas"
+                        android:layout_below="@+id/infolagi2"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi4"
+                        android:gravity="left|center_vertical"
+                        android:text="Biaya Transport pegawai dan / atau biaya penginapan dibawah ini yang tidak dapat diperoleh bukti-bukti pengeluarannya meliputi :"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_atas"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_atas_palingkiri"
+                        android:layout_alignRight="@+id/v_atas7"
+                        android:layout_below="@+id/infolagi4"
+                        android:background="@color/white2" />
+
+                    <View
+                        android:id="@+id/v_tengah"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/nomorbiaya_10"
+                        android:layout_alignLeft="@+id/v_atas_palingkiri"
+                        android:layout_alignRight="@+id/v_atas7"
+                        android:layout_alignTop="@+id/nomorbiaya_1"
+                        android:layout_below="@+id/v_atas"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/no_kiri"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center|center_horizontal"
+                        android:text="No."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_atas1"
+                        android:layout_width="3dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/no_kiri"
+                        android:background="@color/hitam" />
+
+                    <TextView
+                        android:id="@+id/v_judul_atas"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/v_atas1"
+                        android:gravity="center|center_horizontal"
+                        android:text="URAIAN"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/v_ket_atas"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/v_atas3"
+                        android:gravity="center|center_horizontal"
+                        android:text="KETERANGAN"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_atas2"
+                        android:layout_width="3dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/v_judul_atas"
+                        android:background="@color/hitam" />
+
+                    <TextView
+                        android:id="@+id/v_jml_atas"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/v_atas2"
+                        android:gravity="center|center_horizontal"
+                        android:text="JUMLAH"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_atas3"
+                        android:layout_width="3dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi4"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/v_jml_atas"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas4"
+                        android:layout_width="3dp"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/nomorbiaya_10"
+                        android:layout_alignTop="@+id/nomorbiaya_1"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/nomorbiaya_1"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas_palingkiri"
+                        android:layout_width="3dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/nomorbiaya_11"
+                        android:layout_alignTop="@+id/no_kiri"
+                        android:layout_toLeftOf="@+id/nomorbiaya_1"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas_palingatas"
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_above="@+id/v_atas"
+                        android:layout_alignLeft="@+id/v_atas"
+                        android:layout_alignRight="@+id/v_atas7"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas_palingbawah"
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignLeft="@+id/v_atas_palingatas"
+                        android:layout_alignRight="@+id/v_atas_palingatas"
+                        android:layout_below="@+id/ingolagidanlagi"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas5"
+                        android:layout_width="3dp"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/nomorbiaya_11"
+                        android:layout_alignTop="@+id/nomorbiaya_1"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/edit_rincian_1"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas6"
+                        android:layout_width="3dp"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/nomorbiaya_11"
+                        android:layout_alignTop="@+id/nomorbiaya_1"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/edit_jml_rincian_1"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas7"
+                        android:layout_width="3dp"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/nomorbiaya_11"
+                        android:layout_alignTop="@+id/v_atas_palingatas"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/v_ket_atas"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas_grs_bawah"
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignLeft="@+id/v_atas_palingatas"
+                        android:layout_alignRight="@+id/v_atas_palingatas"
+                        android:layout_below="@+id/v_atas"
+                        android:background="@color/hitam" />
+
+                    <View
+                        android:id="@+id/v_atas_grs_bawah2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignLeft="@+id/v_atas_palingatas"
+                        android:layout_alignRight="@+id/v_atas_palingatas"
+                        android:layout_below="@+id/nomorbiaya_10"
+                        android:background="@color/hitam" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/v_atas_grs_bawah"
+                        android:gravity="center|center_horizontal"
+                        android:text="1."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_1"
+                        android:gravity="center|center_horizontal"
+                        android:text="2."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_2"
+                        android:gravity="center|center_horizontal"
+                        android:text="3."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_3"
+                        android:gravity="center|center_horizontal"
+                        android:text="4."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_4"
+                        android:gravity="center|center_horizontal"
+                        android:text="5."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_5"
+                        android:gravity="center|center_horizontal"
+                        android:text="6."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_6"
+                        android:gravity="center|center_horizontal"
+                        android:text="7."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_7"
+                        android:gravity="center|center_horizontal"
+                        android:text="8."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_8"
+                        android:gravity="center|center_horizontal"
+                        android:text="9."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_9"
+                        android:gravity="center|center_horizontal"
+                        android:text="10."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nomorbiaya_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/no_kiri"
+                        android:layout_below="@+id/nomorbiaya_10" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/v_atas_grs_bawah"
+                        android:gravity="left|center_horizontal"
+                        android:hint="Daftar Uraian "
+                        android:textColor="@color/hitam"
+                        android:textColorHint="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_1"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold"
+                        android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_2"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_3"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_4"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_5"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_6"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_7"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_8"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_rincian_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_judul_atas"
+                        android:layout_alignRight="@+id/v_judul_atas"
+                        android:layout_below="@+id/edit_rincian_9"
+                        android:gravity="left|center_horizontal"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" android:inputType="textCapCharacters" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/v_atas_grs_bawah"
+                        android:gravity="center|center_horizontal"
+                        android:hint="Jumlah"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textColorHint="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_1"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_2"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_3"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_4"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_5"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_6"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_7"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_8"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_jml_rincian_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignLeft="@+id/v_jml_atas"
+                        android:layout_alignRight="@+id/v_jml_atas"
+                        android:layout_below="@+id/edit_jml_rincian_9"
+                        android:gravity="center|center_horizontal"
+                        android:inputType="number"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_1"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_1"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 1"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_2"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_2"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 2"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_3"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_3"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 3"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_4"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_4"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 4"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_5"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_5"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 5"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_6"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_6"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 6"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_7"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_7"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 7"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_8"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_8"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 8"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_9"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_9"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 9"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/btn_upload_ket_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/v_ket_atas"
+                        android:layout_alignRight="@+id/v_ket_atas"
+                        android:layout_alignTop="@+id/edit_jml_rincian_10"
+                        android:layout_alignBottom="@+id/edit_jml_rincian_10"
+                        android:background="@drawable/circle_keterangan"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:layout_margin="5dp"
+                        android:text="Hapus No. 10"
+                        android:drawableLeft="@drawable/ic_delete_black"
+                        android:textColor="@color/hitam"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- BATASAN -->
+
+                    <TextView
+                        android:id="@+id/ingolagidanlagi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="77dp"
+                        android:layout_alignLeft="@+id/no_kiri"
+                        android:layout_alignRight="@+id/v_atas5"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_below="@+id/edit_rincian_10"
+                        android:gravity="center|center_vertical"
+                        android:text="Jumlah"
+                        android:textColor="@color/hitam"
+                        android:background="@color/white2"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:id="@+id/edit_grand_total_riil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="77dp"
+                        android:layout_alignLeft="@+id/v_atas5"
+                        android:layout_alignRight="@+id/v_atas6"
+                        android:layout_margin="3dp"
+                        android:layout_below="@+id/edit_jml_rincian_10"
+                        android:enabled="true"
+                        android:gravity="center|center_vertical"
+                        android:hint="Grand Total"
+                        android:background="@color/white2"
+                        android:textColor="@color/hitam"
+                        android:textColorHint="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_tambahan_bawah"
+                        android:layout_width="match_parent"
+                        android:layout_height="77dp"
+                        android:layout_alignLeft="@+id/v_atas6"
+                        android:layout_alignRight="@+id/v_atas7"
+                        android:layout_margin="3dp"
+                        android:layout_below="@+id/edit_jml_rincian_10"
+                        android:background="@color/white2" />
+                    <TextView
+                        android:id="@+id/infolagi6"
+                        android:layout_width="20dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/infolagi7"
+                        android:layout_alignTop="@+id/infolagi7"
+                        android:layout_below="@+id/v_atas_palingbawah"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center|center_vertical"
+                        android:text="2. "
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/v_atas_palingatas"
+                        android:layout_alignRight="@+id/v_atas_palingatas"
+                        android:layout_below="@+id/v_atas_palingbawah"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/infolagi6"
+                        android:gravity="left|center_vertical"
+                        android:text="Jumlah uang tersebut pada angka 1 diatas benar-benar dikeluarkan untuk pelaksanaan Perjalanan Dinas dimaksud dan apabila di kemudian hari terdapat kelebihan atas pembayaran, kami bersedia untuk menyetorkan kembali tersebut ke kas daerah"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:layout_alignLeft="@+id/infolagi6"
+                        android:layout_alignRight="@+id/v_atas_palingatas"
+                        android:layout_below="@+id/infolagi6"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="left|center_vertical"
+                        android:text="Demikian pernyataan ini kami buat dengan sebenarnya, untuk dipergunakan sebagaimana mestinya."
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi9"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi8"
+                        android:layout_marginLeft="300dp"
+                        android:gravity="left|center_vertical"
+                        android:text="Madiun,"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edit_tgl_dibuat_dftr_riil"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/infolagi8"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi9"
+                        android:enabled="false"
+                        android:gravity="left|center_vertical"
+                        android:hint="Tanggal"
+                        android:textColor="@color/hitam"
+                        android:textSize="15sp"
+                        android:textColorHint="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/infolagi10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:layout_below="@+id/infolagi9"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi9"
+                        android:gravity="top|left"
+                        android:text="Pelaksanan SPPD"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nama_pembuat_dftr_riil"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/infolagi10"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi9"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/id_vie_nm"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignLeft="@+id/nama_pembuat_dftr_riil"
+                        android:layout_alignRight="@+id/nama_pembuat_dftr_riil"
+                        android:layout_below="@+id/nama_pembuat_dftr_riil"
+                        android:layout_toRightOf="@+id/infolagi9"
+                        android:background="@color/hitam" />
+
+                    <TextView
+                        android:id="@+id/nip_pembuat_dftr_riil"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:layout_below="@+id/id_vie_nm"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/infolagi9"
+                        android:gravity="top|left"
+                        android:textColor="@color/hitam"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </ScrollView>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_penjumlahan_riil"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btn_simpan_rincian_biaya_riil"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/plus"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_tambh_uraian_riil"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="9dp"
+        android:layout_above="@+id/btn_simpan_rincian_biaya_riil"
+        android:background="@drawable/ic_plus"
+       />
+
+    <Button
+        android:id="@+id/btn_simpan_rincian_biaya_riil"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/ic_ok" />
+
+    <TextView
+        android:id="@+id/status_riil"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="left"
+        android:textColor="@color/hitam"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_rincian_biaya"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="left"
+        android:text=""
+        android:textColor="@color/hitam"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

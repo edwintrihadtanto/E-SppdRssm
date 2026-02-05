@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/fdcd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="left|center_vertical"
+        android:text="Nomor SPT :"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/row_nomorspt_pegawai_spt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/fdcd"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/kuning"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:id="@+id/vlopisa"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/row_nomorspt_pegawai_spt"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/hitam" />
+
+    <TextView
+        android:id="@+id/row_nama_pegawai_spt"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/vlopisa"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center|center_vertical"
+        android:text="Nama Pegawai"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/row_gol_pegawai_spt"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row_nama_pegawai_spt"
+        android:gravity="center|center_vertical"
+        android:text="Gol Pegawai"
+        android:textColor="@color/hitam"
+        android:textSize="17sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/row_jab_pegawai_spt"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row_gol_pegawai_spt"
+        android:gravity="center|center_vertical"
+        android:text="Jabatan Pegawai"
+        android:textColor="@color/hitam"
+        android:textSize="17sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone" />
+
+</RelativeLayout>

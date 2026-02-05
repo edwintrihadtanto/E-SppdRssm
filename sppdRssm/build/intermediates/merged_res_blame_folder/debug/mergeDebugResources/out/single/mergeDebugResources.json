@@ -1,0 +1,2574 @@
+[
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_touch_app_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_touch_app_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_edit_rincian_biaya_dinas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/edit_rincian_biaya_dinas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_lock_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_lock_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_gantipass2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_gantipass2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gnti_pass4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gnti_pass4.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_swap_horiz_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_swap_horiz_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_visibility_off_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_visibility_off_white.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gmbr_transparan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gmbr_transparan.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_assignment_turned.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_assignment_turned.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_visibility_off_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg8.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg8.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_info.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_info.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_content_copy_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_visibility_off_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_visibility_off_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_file_download_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_file_download_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_cara_menampilkan_menu_pilihan1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/cara_menampilkan_menu_pilihan1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_assignment_turned.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_assignment_turned.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_close_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_close_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font_aladin.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font/aladin.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_add_circle.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_add_circle.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_arrow_back_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_arrow_back_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_visibility_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_visibility_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_input_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_input_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_close_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_close_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_mode_edit.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_mode_edit.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_delete_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_delete_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_refresh_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_edit_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_edit_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_lock_open_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_lock_open_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_edit_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_edit_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_swap_horiz_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_swap_horiz_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_rssm_gif2.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_rssm_gif2.gif"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_inputdatasppd.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/inputdatasppd.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_save_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_back2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_back2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_content_copy_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_content_copy_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_youtube_searched_for_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_youtube_searched_for_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_visibility_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_visibility_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_reload.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_reload.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_image_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_image_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_refresh_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_picture.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_picture.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gnti_pass2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gnti_pass2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font_default_bold.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font/default_bold.ttf"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg6.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg6.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_date_range_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_date_range_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_navigate_before_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_navigate_before_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_check_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_check_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_cancel_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_cancel_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_edit_riil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_edit_riil.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_visibility_off_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_visibility_off_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_save_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_swap_horiz_red.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_swap_horiz_red.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_satu_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/satu_gambar.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_live_help_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_live_help_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_arti_logo.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/arti_logo.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_close_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_close_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_anim_memutar.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/anim_memutar.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_reg_v1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_reg_v1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_tampil_nama_peg.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_tampil_nama_peg.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icontaktau.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icontaktau.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logobaru.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logobaru.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_keluar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_keluar.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_navigate_next_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_assignment_turned.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_assignment_turned.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_add_circle.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_add_circle.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor1_1_1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor1_1_1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_swap_horiz_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_swap_horiz_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_close_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_close_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_input_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_input_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_pilihan_download.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_pilihan_download.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_swap_horiz_red.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_swap_horiz_red.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_anim_berputar.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/anim_berputar.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_edit_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_edit_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_save_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_save_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_date_range_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_date_range_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logosimbol2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logosimbol2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_navigate_before_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_navigate_before_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_input_lap_set_perj_dinas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/input_lap_set_perj_dinas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_transparan_baru2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/transparan_baru2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_close_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_close_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_lakilaki.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_lakilaki.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_check_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_check_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_image_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_image_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_delete_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_delete_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_mode_edit.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_mode_edit.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_list_view_pegawai.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_list_view_pegawai.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_date_range_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_date_range_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_file_download_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_file_download_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg2_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg2_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_save_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_save_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_reg_v3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_reg_v3.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_anim_berputarrepeat.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/anim_berputarrepeat.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_keterangan.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_keterangan.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_posting.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_posting.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_input_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_input_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_save_3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_save_3.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_content.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_content.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_rssm_trans.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_rssm_trans.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_gantipass.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_gantipass.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_progress.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_progress.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_tdktampildata4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/tdktampildata4.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_visibility_off_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_refresh_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_assignment_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_assignment_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_login_activity.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/login_activity.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_menu_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_dua_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/dua_gambar.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_visibility_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_visibility_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_edit_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_edit_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_call_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_call_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_lock_open_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_lock_open_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_input_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_input_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_lima_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/lima_gambar.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_background3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/background3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_visibility_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_visibility_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_check_circle_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_check_circle_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_person_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_person_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_tampil_activity_sppd_berdasarkan_spt.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_tampil_activity_sppd_berdasarkan_spt.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_rssm3x.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_rssm3x.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_visibility_off_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_visibility_off_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_mode_edit.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_mode_edit.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_edit_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_edit_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_pertanyaan_cek_no_spt.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_pertanyaan_cek_no_spt.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_youtube_searched_for_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_youtube_searched_for_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_refresh3.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/refresh3.gif"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_visibility_off_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_multi_login.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/multi_login.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_visibility_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_visibility_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_call_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_call_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_visibility_off_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_help.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_help.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_edit_rincian_riil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/edit_rincian_riil.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_profil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_profil.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slide2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slide2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_lupa_password.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_lupa_password.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_aplikasi.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_aplikasi.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_menu_pilihan2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/menu_pilihan2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_visibility_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_visibility_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_lupa1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_lupa1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_search_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_search_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_plus_image.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/plus_image.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_save_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_save_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_loading_ring.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/loading_ring.gif"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_swap_horiz_red.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_swap_horiz_red.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_visibility_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_visibility_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_info_outline_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_info_outline_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_visibility_off_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_visibility_off_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_vpn_key_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_check_circle_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_check_circle_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_visibility_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_visibility_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_swap_horiz_red.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_swap_horiz_red.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_menampilkan_menu_1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/menampilkan_menu_1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_save_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_save_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_info_outline_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_info_outline_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_notifications_none_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_notifications_none_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/animator_welcome_anim_satu.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/animator/welcome_anim_satu.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor7.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor7.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_rincian_riil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/rincian_riil.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_lap_perj_dinas.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/lap_perj_dinas.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_navigate_before_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_navigate_before_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_close_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_close_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_back_hijau.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/back_hijau.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_refresh_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_background2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/background2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_solusi_koneksi1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/solusi_koneksi1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_visibility_off_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_navigate_next_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_youtube_searched_for_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_youtube_searched_for_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_visibility_off_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_visibility_off_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_swap_horiz_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_swap_horiz_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_mode_edit.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_mode_edit.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_close_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_close_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_lock_open_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_lock_open_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_check_circle_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_check_circle_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_viewutama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_viewutama.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_lock_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_lock_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_person_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_person_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_file_download_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_file_download_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_splash.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_splash.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slide1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slide1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_image_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_image_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_check_circle_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_check_circle_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gnti_pass.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gnti_pass.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_welcome.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/welcome.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_cara_menampilkan_menu_pilihan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/cara_menampilkan_menu_pilihan.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_swap_horiz_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_swap_horiz_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_merah.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/merah.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_cancel_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_cancel_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_visibility_off_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_visibility_off_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_date_range_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_date_range_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_mode_edit.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_mode_edit.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_playlist_add_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_playlist_add_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_anim_menghilang.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/anim_menghilang.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_lupa1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/lupa1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_mode_edit.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_mode_edit.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_edit_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_edit_white.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_assignment_turned.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_assignment_turned.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_photo_camera.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_photo_camera.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_search_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_search_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_swap_horiz_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_swap_horiz_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_pilihan_daftar_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_pilihan_daftar_petugas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_search_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_search_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_download2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_download2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_close_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_close_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_mode_edit.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_mode_edit.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_save_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_inputlapperj.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_inputlapperj.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_menampilkan_menu_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/menampilkan_menu_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_visibility_off_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_activity_surat_perintah_tugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/activity_surat_perintah_tugas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_playlist_add_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_list_detail_history.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_list_detail_history.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_visibility_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_visibility_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_dftar_riil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_dftar_riil.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_lupa2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/lupa2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_save_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_save_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_touch_app_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_touch_app_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_kotaknama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_kotaknama.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/menu_activity_main_drawer_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/menu/activity_main_drawer_petugas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_content.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_content.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_menu_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_live_help_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_live_help_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_daftrrincian.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_daftrrincian.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_pilihanmenu.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/pilihanmenu.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg5.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg5.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_selesai.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/selesai.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_menampilkan_menu_4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/menampilkan_menu_4.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_warning_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_warning_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_register_button.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/register_button.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_navigate_next_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_welcometutor.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/welcometutor.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_menu_utama_superuser.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/menu_utama_superuser.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_daftaratasppd.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/daftaratasppd.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_download1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_download1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_assignment_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_assignment_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_activity_sppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/activity_sppd.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_file_download_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_file_download_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_cancel_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_cancel_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_vpn_key_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg4.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_content_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/content_main.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_playlist_add_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_lock_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_lock_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_menampilkan_menu_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/menampilkan_menu_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_email_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_email_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_menu_utama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/menu_utama.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_lock_icon.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/lock_icon.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_tentang.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/tentang.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_tunjuk2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/tunjuk2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_warning_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_warning_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_touch_app_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_touch_app_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_add_circle.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_add_circle.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_visibility_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_visibility_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_input_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_input_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_lock_open_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_lock_open_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_person_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_person_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_visibility_off_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_file_download_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_file_download_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_navigate_before_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_navigate_before_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_notifications_none_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_notifications_none_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_pop_up_perincian_riil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_pop_up_perincian_riil.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_logout.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_logout.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_content_copy_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_vpn_key_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_delete_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_delete_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_activity_welcome.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_tampil_detail_datasppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_tampil_detail_datasppd.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_hijau.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/hijau.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_check_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_check_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_no_image.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/no_image.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_lock_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_lock_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_file_download_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_file_download_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_menu_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_login_activity2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/login_activity2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_assignment_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_assignment_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_cancel_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_cancel_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_close_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_close_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_list_nama_peg.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_list_nama_peg.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_visibility_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_visibility_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_pilihan_edit.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_pilihan_edit.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_password.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_password.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_visibility_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_visibility_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_slide_in_right.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_soedono.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/soedono.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_navigate_next_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_search_user.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/search_user.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_info_outline_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_info_outline_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_file_download_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_file_download_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_save_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_save_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_dftr_perj_dinas.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/dftr_perj_dinas.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/menu_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/menu/main.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_rssm_gif.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_rssm_gif.gif"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_assignment_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_assignment_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gnti_pass3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gnti_pass3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_visibility_off_grey.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_visibility_off_grey.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_refresh.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/refresh.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_touch_app_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_touch_app_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_beberapa_menu1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/beberapa_menu1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_vpn_key_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_menu_utama_petugas_designlain.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/menu_utama_petugas_designlain.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logosplash.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logosplash.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_nav_header_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg7.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg7.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_content_copy_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_activity_main_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/activity_main_petugas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_save.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_save.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_menu_utama_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/menu_utama_petugas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_lock_open_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_lock_open_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_register_activity.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/register_activity.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_close_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_close_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_navigate_next_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logout.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logout.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_menu_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_content_copy_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_splash_welcome.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/splash_welcome.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_cancel_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_cancel_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_ext.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_ext.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_download_spt.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_download_spt.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_rincian_biaya_dinas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/rincian_biaya_dinas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_activity_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_menu_pilihan1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/menu_pilihan1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_wanita.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_wanita.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_visibility_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_visibility_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_delete_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_delete_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_galery.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/galery.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_photo_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_photo_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_visibility_grey.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_visibility_grey.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_date_range_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_date_range_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_email_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_email_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_search_icon.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/search_icon.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_refresh_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_refresh_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_list_detail_datasppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_list_detail_datasppd.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_viewutamaframe.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_viewutamaframe.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/animator_translate.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/animator/translate.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_alur5.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/alur5.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gnti_pass5.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gnti_pass5.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_anim_kekanan.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/anim_kekanan.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_register_activity2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/register_activity2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_menu_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_info_outline_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_info_outline_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_edit_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_edit_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle3.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_person_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_person_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_email_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_email_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_add_circle.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_add_circle.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_content.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_content.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_centang.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/centang.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_save_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_save_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_save_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_notifications_none_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_notifications_none_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_live_help_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_live_help_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_reg_v2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_reg_v2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_cancel_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_cancel_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_lock_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_lock_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_photo_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_photo_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_lock_open_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_lock_open_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slide3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slide3.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/animator_welcome_anim_dua.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/animator/welcome_anim_dua.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_delete_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_delete_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_file_download_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_file_download_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_copyright.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/copyright.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_chat.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_chat.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_save_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_swap_horiz_red.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_swap_horiz_red.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_youtube_searched_for_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_youtube_searched_for_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_notifications_none_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_notifications_none_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_hijau_background_transparan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/hijau_background_transparan.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_gnti_pass1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/gnti_pass1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_refresh_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_input2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_input2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logosimbol1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logosimbol1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_photo_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_photo_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_visibility_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_visibility_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_side_nav_bar.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/side_nav_bar.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_live_help_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_live_help_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_hijau_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/hijau_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_live_help_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_live_help_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_file_download_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_file_download_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_tiga_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/tiga_gambar.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_check_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_check_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_visibility_off_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_edit_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_edit_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_call_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_call_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_playlist_add_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_email_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_email_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_add_circle.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_add_circle.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_notifications_none_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_notifications_none_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_swap_horiz_red.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_swap_horiz_red.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_download3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_download3.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_simrs.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/simrs.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/animator_fade_in.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/animator/fade_in.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_save_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_save_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_live_help_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_live_help_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_save_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_save_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_lock.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_lock.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_calender.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_calender.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_input_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_input_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_warning_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_warning_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_visibility_off_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_silahkan_register.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/silahkan_register.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_menusamping2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_menusamping2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_save_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_save_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_call_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_call_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_listview_activitysppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_listview_activitysppd.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_hitam.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/hitam.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_plus.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/plus.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_login_button.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/login_button.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_informasi.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_informasi.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_call_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_call_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_profils.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/profils.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_assignment_turned.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_assignment_turned.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_visibility_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_visibility_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_close_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_close_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_visibility_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_visibility_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_warning_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_warning_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_tampil_detail_history.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_tampil_detail_history.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_live_help_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_live_help_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor6.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor6.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_informasi_update_versi.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_informasi_update_versi.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_pilihanmenu_baru.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/pilihanmenu_baru.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_iconbantuan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/iconbantuan.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_save_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_save_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_person_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_person_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_nama_pegawai.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_nama_pegawai.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_vpn_key_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_youtube_searched_for_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_youtube_searched_for_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_navigate_before_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_navigate_before_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_splash3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_splash3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_alur1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/alur1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_touch_app_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_touch_app_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_playlist_add_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_username.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_username.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_plus.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_plus.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_info_outline_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_info_outline_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_visibility_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_visibility_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_edit_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_edit_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_assignment_turned.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_assignment_turned.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_download_sppd.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_download_sppd.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_info_outline_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_info_outline_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_visibility_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_visibility_white.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_warning_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_warning_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_download4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_download4.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font-v26_default_font.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font-v26/default_font.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_close_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_close_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font_default_regular.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font/default_regular.ttf"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_swap_horiz_red.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_swap_horiz_red.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_check_circle_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_check_circle_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_reg1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/reg1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_file_download_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_file_download_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_close_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_close_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_assignment_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_assignment_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_playlist_add_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_content.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_content.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_swap_horiz_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_swap_horiz_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_user.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_user.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_penyebab2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/penyebab2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_visibility_off_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_edit_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_edit_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_touch_app_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_touch_app_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_edit_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_edit_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_reg_v4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_reg_v4.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_view_activitysppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_view_activitysppd.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_photo_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_photo_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_solusi_koneksi.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/solusi_koneksi.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_image_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_image_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_email_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_email_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_image_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_image_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_tentang.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_tentang.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/xml_provider_paths.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/xml/provider_paths.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_input1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_input1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_edit_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_edit_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_add_circle.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_add_circle.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_tambahan_activity_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/tambahan_activity_main.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_youtube_searched_for_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_youtube_searched_for_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_alur2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/alur2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_email_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_email_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor5.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor5.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_input_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_input_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_refresh2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/refresh2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_cp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_cp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_vpn_key_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_vpn_key_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_tampil_data_sppd_berdasarkan_spt.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_tampil_data_sppd_berdasarkan_spt.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_date_range_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_date_range_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_search_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_search_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_visibility_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_visibility_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_visibility_off_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_visibility_off_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_assignment_turned.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_assignment_turned.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_input1coba.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_input1coba.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_photo_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_photo_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_check_circle_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_check_circle_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_icon_home.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/icon_home.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_row_edit_rincian.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/row_edit_rincian.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_ok.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_ok.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_check_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_check_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_file_download_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_file_download_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_menu_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_menu_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_viewutama_info.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_viewutama_info.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_empat_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/empat_gambar.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_tutorial.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_tutorial.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_edit_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_edit_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_visibility_off_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_detail_daftar_sppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/detail_daftar_sppd.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_arrow_back_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_menusamping.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_menusamping.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_cnth1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/cnth1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_add_circle.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_add_circle.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_save_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_save_3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_visibility_off_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_time.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_time.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor4.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_tentang_apk.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/tentang_apk.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_content_copy_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font_default_font.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font/default_font.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_delete_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_delete_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_tdktampildata3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/tdktampildata3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_image_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_image_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_search_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_search_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_vpn_key_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_vpn_key_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_check_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_check_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_inputdataspt.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/inputdataspt.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_save_2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_save_2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_touch_app_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_touch_app_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_call_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_call_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_dialog_pop_up.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/dialog_pop_up.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_slide_out_left.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_search_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_search_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_content_copy_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_alur4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/alur4.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_search_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_search_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_panah.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/panah.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ucapan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ucapan.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font_font_insomnia.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font/font_insomnia.ttf"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_date_range_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_date_range_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_youtube_searched_for_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_youtube_searched_for_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_lock_open_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_lock_open_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_delete_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_delete_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slide4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slide4.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_file_download_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_file_download_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_visibility_grey.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_visibility_grey.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_view_pegawai.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_view_pegawai.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_downloadpdf.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_downloadpdf.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_alur3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/alur3.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_anim_kekiri.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/anim_kekiri.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/menu_activity_main_drawer.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_history.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/history.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_navigate_next_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_cari.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_cari.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/anim_alpha.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/anim/alpha.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_file_download_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_file_download_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_content.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_content.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_save_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_jdlpenyebab1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/jdlpenyebab1.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_lock_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_lock_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_person_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_person_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_save_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_save_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_tutorial.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/tutorial.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_assignment_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_assignment_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_navigate_before_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_navigate_before_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_profil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/profil.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_person_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_person_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_rssm_gif3.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_rssm_gif3.gif"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_merah_posting.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/merah_posting.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_assignment_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_assignment_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_photo_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_photo_camera.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_check_circle_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_check_circle_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_transparan_baru.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/transparan_baru.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor1_1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor1_1.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_refresh_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_warning_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_warning_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_app_bar_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/app_bar_main.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_beberapa_menu.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/beberapa_menu.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_file_download_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_file_download_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_notifications_none_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_notifications_none_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_cancel_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_cancel_black.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_edit_white.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_edit_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slide5.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slide5.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/font_default_font_2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/font/default_font_2.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-mdpi_ic_playlist_add_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-mdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_notifications_none_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_notifications_none_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_menu_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_menu_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logowarna.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logowarna.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_email_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_email_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_warning_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_warning_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_content.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_content.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_navigate_before_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_navigate_before_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_ic_back.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/ic_back.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slidenomor3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slidenomor3.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_call_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_call_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_tunjuk.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/tunjuk.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_logo_splash2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/logo_splash2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-anydpi-v21_ic_navigate_next_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-anydpi-v21/ic_navigate_next_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_downloadstatus.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_downloadstatus.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/xml_network_security_config.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_info_outline_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_info_outline_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable_circle_login.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/drawable/circle_login.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-ldpi_ic_close_black_24dp.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-ldpi/ic_close_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_slide_gambar_utama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/slide_gambar_utama.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/layout_list_profil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-27:/layout/list_profil.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-hdpi_ic_image_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-hdpi/ic_image_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_check_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_check_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxxhdpi_ic_lock_black.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxxhdpi/ic_lock_black.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-25:/drawable-xxhdpi_ic_content.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-21:/drawable-xxhdpi/ic_content.png"
+    }
+]
