@@ -64,9 +64,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
-import koneksi.JSONParser;
+//import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 import koneksi.PermissionHelper;
 
@@ -115,7 +117,7 @@ public class Login_Activity extends AppCompatActivity {
 	ImageView img_showpass_login1, img_showpass_login2, imgicon, gmbar_loading_login;
 	EditText edit_pass, edit_nip;
 	ProgressDialog loading, download;
-	JSONParser classJsonParser = new JSONParser();
+//	JSONParser classJsonParser = new JSONParser();
 	TextView cek_versi_apk, develpe;
 	ListView listView;
 	ArrayAdapter<String> arrayAdapter;
@@ -175,17 +177,19 @@ public class Login_Activity extends AppCompatActivity {
 		email			= sharedpreferences.getString(TAG_EMAIL, null);
 
 		if (session_1) {
-			Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Admin.class);
-			intent.putExtra(TAG_NIP, nip);
-			intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
-			intent.putExtra(TAG_JABATAN, jabatan);
-			intent.putExtra(TAG_GOLONGAN, golongan);
-			intent.putExtra(TAG_UNIT, unit);
-			intent.putExtra(TAG_PASSWORD, password);
-			intent.putExtra(TAG_EMAIL, email);
-			intent.putExtra(versi, kirim_versi);
-			finish();
-			startActivity(intent);
+//			Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Admin.class);
+//			intent.putExtra(TAG_NIP, nip);
+//			intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
+//			intent.putExtra(TAG_JABATAN, jabatan);
+//			intent.putExtra(TAG_GOLONGAN, golongan);
+//			intent.putExtra(TAG_UNIT, unit);
+//			intent.putExtra(TAG_PASSWORD, password);
+//			intent.putExtra(TAG_EMAIL, email);
+//			intent.putExtra(versi, kirim_versi);
+//			finish();
+//			startActivity(intent);
+			Toast.makeText(Login_Activity.this, "Aplikasi E-SPPD Khusus Admin Tidak Bisa Digunakan\nSilahkan Hubungi Administrator",
+					Toast.LENGTH_LONG).show();
 		}else if (session_2) {
 			Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Petugas.class);
 			intent.putExtra(TAG_NIP, nip);
@@ -353,7 +357,7 @@ public class Login_Activity extends AppCompatActivity {
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	public class Cek_Versi_Dulu extends AsyncTask<String, String, String> {
+	/*public class Cek_Versi_Dulu extends AsyncTask<String, String, String> {
 
 
 		@Override
@@ -456,7 +460,91 @@ public class Login_Activity extends AppCompatActivity {
 
         }
 
+	}*/
+
+	public class Cek_Versi_Dulu extends AsyncTask<Void, Void, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			loading_tampil();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			String versiApk = cek_versi_apk.getText().toString().trim();
+			Java_Connection jc = new Java_Connection();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("versi_apk", versiApk);
+
+				Log.d("CEK_VERSI", "Request dimulai");
+
+				String response = jc.sendPostRequest(
+						Koneksi.CEK_VERSI,
+						params
+				);
+
+				if (response == null) {
+					return "0"; // gagal / tidak ada respon
+				}
+
+				Log.d("CEK_VERSI", "RESPON = " + response);
+
+				JSONObject json = new JSONObject(response);
+				int code = json.getInt(TAG_CODE);
+
+				pesan = json.optString(TAG_PESAN_CEK, "");
+				warning = json.optString(TAG_WARNING, "");
+				versiygbaru = json.optString(TAG_VERSIBARU, "");
+
+				return String.valueOf(code);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "0";
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String code) {
+			loading_sembunyi();
+
+			switch (code) {
+				case "1": // versi terbaru
+					new Login_APK().execute();
+					break;
+
+				case "405": // info
+					jikainfo(pesan);
+					break;
+
+				case "404": // maintenance
+					jikamaintenance(pesan);
+					break;
+
+				case "405404": // info + maintenance
+					jikamaintenancedaninfo(pesan);
+					break;
+
+				case "101": // wajib update
+					info_download(pesan);
+					break;
+
+				default:
+					Toast.makeText(
+							getApplicationContext(),
+							"Gagal cek versi",
+							Toast.LENGTH_LONG
+					).show();
+					break;
+			}
+		}
 	}
+
 	private void info_versi_commingsoon(String message) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(message)
@@ -686,7 +774,7 @@ public class Login_Activity extends AppCompatActivity {
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	public class Login_APK extends AsyncTask<String, String, String> {
+	/*public class Login_APK extends AsyncTask<String, String, String> {
 
 		@Override
 		protected void onPreExecute() {
@@ -744,7 +832,7 @@ public class Login_Activity extends AppCompatActivity {
 						String pesan = "Untuk Dapat Menggunakan Aplikasi E-SPPD Dengan Menggunakan\nUser :"+nip+
 								"Password :"+password+"\nAnda Perlu Menghubungi Pihak Administrator Untuk Mendapatkan Hak Akses Aplikasi E-SPPD";
 						info(pesan);
-/*
+*//*
 						SharedPreferences.Editor editor = sharedpreferences.edit();
 						editor.putBoolean(session_status_level1, true);
 						editor.putString(TAG_NIP, nip);
@@ -761,7 +849,7 @@ public class Login_Activity extends AppCompatActivity {
 						intent.putExtra(versi, kirim_versi);
 						finish();
 						startActivity(intent);
-						*/
+						*//*
 					}else if (cek_level == 2) {
 
 							SharedPreferences.Editor editor = sharedpreferences.edit();
@@ -826,6 +914,124 @@ public class Login_Activity extends AppCompatActivity {
 
 		}
 
+	}*/
+
+	public class Login_APK extends AsyncTask<Void, Void, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			loading_tampil();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			String nippegawai   = edit_nip.getText().toString().trim();
+			String passpegawai  = edit_pass.getText().toString().trim();
+			String versiApk     = cek_versi_apk.getText().toString().trim();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("nip", nippegawai);
+				params.put("pass", passpegawai);
+				params.put("versi", versiApk);
+
+				Log.d("LOGIN", "Request login dimulai");
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.LINK_UNTUK_LOGIN_TES,
+						params
+				);
+
+				if (response == null) {
+					return "Gagal terhubung ke server";
+				}
+
+				Log.d("LOGIN", "RESPON = " + response);
+
+				JSONObject jsonObjectNya = new JSONObject(response);
+				int jikaSukses = jsonObjectNya.getInt(TAG_SUKSES2);
+
+				if (jikaSukses == 1) {
+
+					int cek_level = jsonObjectNya.getInt(Security_Level);
+
+					nip           = jsonObjectNya.getString(TAG_NIP);
+					nama_pegawai  = jsonObjectNya.getString(TAG_NAMA_PEGAWAI);
+					jabatan       = jsonObjectNya.getString(TAG_JABATAN);
+					golongan      = jsonObjectNya.getString(TAG_GOLONGAN);
+					unit          = jsonObjectNya.getString(TAG_UNIT);
+					password      = jsonObjectNya.getString(TAG_PASSWORD);
+					email         = jsonObjectNya.getString(TAG_EMAIL);
+
+					if (cek_level == 1) {
+
+						String pesan = "Untuk Dapat Menggunakan Aplikasi E-SPPD Dengan Menggunakan\n" +
+								"User : " + nip +
+								"\nPassword : " + password +
+								"\nAnda Perlu Menghubungi Pihak Administrator Untuk Mendapatkan Hak Akses Aplikasi E-SPPD";
+
+						runOnUiThread(() -> info(pesan));
+
+					} else if (cek_level == 2) {
+
+						SharedPreferences.Editor editor = sharedpreferences.edit();
+						editor.putBoolean(session_status_level2, true);
+						editor.putString(TAG_NIP, nip);
+						editor.putString(TAG_NAMA_PEGAWAI, nama_pegawai);
+						editor.putString(TAG_JABATAN, jabatan);
+						editor.putString(TAG_GOLONGAN, golongan);
+						editor.putString(TAG_UNIT, unit);
+						editor.putString(TAG_PASSWORD, password);
+						editor.putString(TAG_EMAIL, email);
+						editor.putString(versi, versiApk);
+						editor.apply();
+
+						Intent intent = new Intent(
+								Login_Activity.this,
+								MainActivityBaru_Petugas.class
+						);
+
+						intent.putExtra(TAG_NIP, nip);
+						intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
+						intent.putExtra(TAG_JABATAN, jabatan);
+						intent.putExtra(TAG_GOLONGAN, golongan);
+						intent.putExtra(TAG_UNIT, unit);
+						intent.putExtra(TAG_PASSWORD, password);
+						intent.putExtra(TAG_EMAIL, email);
+						intent.putExtra(versi, versiApk);
+
+						finish();
+						startActivity(intent);
+					}
+
+					return jsonObjectNya.getString(TAG_PESAN2);
+
+				} else {
+					return jsonObjectNya.getString(TAG_PESAN2);
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return e.toString();
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String jawaban_json) {
+			loading_sembunyi();
+
+			if (jawaban_json != null) {
+				Toast.makeText(
+						getApplicationContext(),
+						jawaban_json,
+						Toast.LENGTH_LONG
+				).show();
+			}
+		}
 	}
 
 	private void show_warning(String message) {

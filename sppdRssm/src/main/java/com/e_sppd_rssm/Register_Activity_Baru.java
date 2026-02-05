@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -24,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,15 +34,12 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
-import koneksi.JSONParser;
+//import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
 public class Register_Activity_Baru extends AppCompatActivity {
@@ -48,11 +47,11 @@ public class Register_Activity_Baru extends AppCompatActivity {
 	public ImageView imgshowpass1, imgshowpass2, img_contentcopy, img_emailinfo, img_silanghapus, gmbar_loading_register;
 	private EditText enip_pegawai, enama_pegawai, ejabatan, passbaru, e_cari, e_email ;
 	ProgressDialog loading;
-	JSONParser classJsonParser = new JSONParser();
+//	JSONParser classJsonParser = new JSONParser();
 	Animation anim_hilang, anim_putar, anim_flash;
 	RelativeLayout frame_loading_register;
 	private static final String TAG_BERHASIL 	= "success";
-	private static final String TAG_PESAN 		= "message";
+//	private static final String TAG_PESAN 		= "message";
 
 	public final static String TAG_PESAN_DIALOG	= "message";
 	public final static String TAG_NIP 			= "nip";
@@ -145,7 +144,7 @@ public class Register_Activity_Baru extends AppCompatActivity {
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	public class Cek_Data_Pegawai extends AsyncTask<String, String, String> {
+	/*public class Cek_Data_Pegawai extends AsyncTask<String, String, String> {
 
 		@Override
 		protected void onPreExecute() {
@@ -222,10 +221,95 @@ public class Register_Activity_Baru extends AppCompatActivity {
 			}
 
 		}
+	}*/
+	public class Cek_Data_Pegawai extends AsyncTask<Void, Void, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			loading_tampil();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			String nipCari = e_cari.getText().toString().trim();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("nip", nipCari);
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.LINK_PENCARIAN,
+						params
+				);
+
+				if (response == null) return null;
+
+				JSONObject json = new JSONObject(response);
+
+				nip           = json.getString(TAG_NIP);
+				nama_pegawai  = json.getString(TAG_NAMA_PEGAWAI);
+				jabatan       = json.getString(TAG_JABATAN);
+				golongan      = json.getString(TAG_GOLONGAN);
+				password      = json.getString(TAG_PASSWORD);
+				email         = json.getString(TAG_EMAIL);
+				pesannya      = json.getString(TAG_PESAN_DIALOG);
+
+				Log.i("Cek_Data_Pegawai", json.toString());
+
+				return json.getString(TAG_BERHASIL);
+
+			} catch (Exception e) {
+				Log.e("Cek_Data_Pegawai", "ERROR", e);
+				return e.toString();
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			loading_sembunyi();
+
+			Log.i("Cek_Data_Pegawai", "Hasil: " + hasil);
+
+			if (hasil == null) {
+				Toast.makeText(
+						Register_Activity_Baru.this,
+						"Error Koneksi Server\nHubungi IT RSSM",
+						Toast.LENGTH_LONG
+				).show();
+				return;
+			}
+
+			pesan_cekdataregister(pesannya);
+			e_email.setEnabled(email.isEmpty());
+
+			switch (hasil) {
+				case "1":
+					passbaru.setEnabled(false);
+					simpan_pass.setVisibility(View.GONE);
+					data();
+					break;
+
+				case "0":
+					passbaru.setEnabled(true);
+					passbaru.requestFocus();
+					simpan_pass.setVisibility(View.VISIBLE);
+					data();
+					break;
+
+				default:
+					passbaru.setEnabled(false);
+					datakosong();
+					break;
+			}
+		}
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	public class Proses_Simpan_Password_Baru extends AsyncTask<String, String, String> {
+	/*public class Proses_Simpan_Password_Baru extends AsyncTask<String, String, String> {
 
 		@Override
 		protected void onPreExecute() {
@@ -288,6 +372,80 @@ public class Register_Activity_Baru extends AppCompatActivity {
 			Log.e("Isinya", "jsonnya : " + jawaban_json);
 			Toast.makeText(Register_Activity_Baru.this, pesannya, Toast.LENGTH_LONG).show();
 
+		}
+	}*/
+
+	public class Proses_Simpan_Password_Baru extends AsyncTask<Void, Void, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			loading = new ProgressDialog(Register_Activity_Baru.this);
+			loading.setMessage("Sedang memuat...");
+			loading.setIndeterminate(false);
+			loading.setIcon(R.drawable.ic_info_outline_24dp);
+			loading.setCancelable(false);
+			loading.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			String nip        = enip_pegawai.getText().toString().trim();
+			String passBaru   = passbaru.getText().toString().trim();
+			String emailBaru  = e_email.getText().toString().trim();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("nippegawai", nip);
+				params.put("password", passBaru);
+				params.put("email", emailBaru);
+
+				Log.d("req_register", "Start");
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.simpan_pass_baru,
+						params
+				);
+
+				if (response == null) return null;
+
+				JSONObject json = new JSONObject(response);
+
+				pesannya = json.getString(TAG_PESAN_DIALOG);
+
+				Log.d("req_register", json.toString());
+
+				return json.getString(TAG_BERHASIL);
+
+			} catch (Exception e) {
+				Log.e("Proses_Simpan_Pass", "ERROR", e);
+				return e.toString();
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			loading.dismiss();
+
+			Log.e("Proses_Simpan_Pass", "Hasil : " + hasil);
+
+			if (hasil == null) {
+				Toast.makeText(
+						Register_Activity_Baru.this,
+						"Koneksi server bermasalah",
+						Toast.LENGTH_LONG
+				).show();
+				return;
+			}
+
+			Toast.makeText(
+					Register_Activity_Baru.this,
+					pesannya,
+					Toast.LENGTH_LONG
+			).show();
 		}
 	}
 

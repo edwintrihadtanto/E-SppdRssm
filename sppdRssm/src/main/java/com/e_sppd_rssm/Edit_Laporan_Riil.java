@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +22,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,10 +37,11 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import koneksi.Daftar_String;
-import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
 public class Edit_Laporan_Riil extends AppCompatActivity {
@@ -52,12 +55,9 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 	private ImageView img_bantuan_edit_riil;
 	private Daftar_String selectedList;
 	private List_Edit_Riil adapter;
-	private Koneksi Koneksi_Server;	
-
+	private Koneksi Koneksi_Server;
 	private static final String TAG_SUKSES 	= "berhasil";
 	private static final String TAG_PESAN 	= "tampilkan_pesan";
-	
-	JSONParser classJsonParser = new JSONParser();
     String ambil_sppd, ambil_tgl_sppd;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -352,8 +352,9 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 		ad.show();
 	}
 	
-	public class Hapus_Riil_Per_Id extends AsyncTask<String, String, String> {
+	/*public class Hapus_Riil_Per_Id extends AsyncTask<String, String, String> {
 		ProgressDialog pd ;
+			JSONParser classJsonParser = new JSONParser();
 		@Override
 		protected void onPreExecute() {
 			
@@ -419,7 +420,82 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 
 		}
 
+	}*/
+
+	public class Hapus_Riil_Per_Id extends AsyncTask<String, String, String> {
+
+		ProgressDialog pd;
+		Java_Connection jc = new Java_Connection();
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+
+			pd = new ProgressDialog(Edit_Laporan_Riil.this);
+			pd.setMessage("Hapus Uraian !!!");
+			pd.setIndeterminate(false);
+			pd.setCancelable(false);
+			pd.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String id_riil = selectedList.getid_riil();
+			String ambil_uraian = selectedList.geturaian_riil();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("id_riil", id_riil);
+				params.put("uraian_daftar_riil", ambil_uraian);
+
+				Log.d("HAPUS_RIIL", "POST DATA = " + params.toString());
+
+				String response = jc.sendPostRequest(
+						Koneksi.hapus_data_per_riil,
+						params
+				);
+
+				if (response == null || response.isEmpty()) {
+					Log.e("HAPUS_RIIL", "Response NULL / kosong");
+					return null;
+				}
+
+				Log.d("HAPUS_RIIL", "RAW RESPONSE = " + response);
+
+				JSONObject json = new JSONObject(response);
+
+				int sukses = json.getInt(TAG_SUKSES);
+				String pesan = json.getString(TAG_PESAN);
+
+				if (sukses == 1) {
+					Log.d("HAPUS_RIIL", "SUKSES: " + pesan);
+				} else {
+					Log.e("HAPUS_RIIL", "GAGAL: " + pesan);
+				}
+
+				return pesan;
+
+			} catch (Exception e) {
+				Log.e("HAPUS_RIIL", "EXCEPTION", e);
+				return null;
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			pd.dismiss();
+
+			if (hasil != null) {
+				Toast.makeText(Edit_Laporan_Riil.this, hasil, Toast.LENGTH_LONG).show();
+			}
+
+			finish();
+			startActivity(getIntent());
+		}
 	}
+
 
 	private void dialog_pop_up_edit_riil() {
 		final Dialog dialog = new Dialog(this);
@@ -480,13 +556,13 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 		});	
 	}
 	
-	public class Update_Riil extends AsyncTask<String, String, String> {
+	/*public class Update_Riil extends AsyncTask<String, String, String> {
 		ProgressDialog pd ;
 		@Override
 		protected void onPreExecute() {
-			
+
 			super.onPreExecute();
-			
+
 			pd = new ProgressDialog(Edit_Laporan_Riil.this);
 			pd.setMessage("Update Uraian Riil ...!!!");
 			pd.setIndeterminate(false);
@@ -499,29 +575,29 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 
 			int jikaSukses;
 
-			String id_riil 				  = ambil_nip_pop.getText().toString();			
+			String id_riil 				  = ambil_nip_pop.getText().toString();
 			String uraian_daftar_riil 	  = edit_dialog_uraian.getText().toString();
 			String jumlah_riil 		  	  = edit_textjml_riil.getText().toString();
-		
+
 			try {
 
 				List<NameValuePair> oio = new ArrayList<NameValuePair>();
 				oio.add(new BasicNameValuePair("id_riil", id_riil));
 				oio.add(new BasicNameValuePair("uraian_daftar_riil", uraian_daftar_riil));
 				oio.add(new BasicNameValuePair("jumlah_riil", jumlah_riil));
-											
+
 				Log.d("Start Goo !!!", "Majuuu");
 				JSONObject jsonObjectNya = classJsonParser.makeHttpRequest(Koneksi.update_riil, "POST", oio);
 				Log.d("Coba login", jsonObjectNya.toString());
-				
+
 				jikaSukses = jsonObjectNya.getInt(TAG_SUKSES);
 				if (jikaSukses == 1) {
 					Log.d("Edit Sukses!", jsonObjectNya.toString());
-					
+
 					return jsonObjectNya.getString(TAG_PESAN);
 				} else{
 					Log.d("Edit Gagal!",jsonObjectNya.getString(TAG_PESAN));
-					
+
 					return jsonObjectNya.getString(TAG_PESAN);
 				}
 			} catch (JSONException e) {
@@ -537,19 +613,93 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 		@Override
 		protected void onPostExecute(String urlFileNya) {
 			pd.dismiss();
-			
+
 			if (urlFileNya != null) {
 				Toast.makeText(Edit_Laporan_Riil.this, urlFileNya, Toast.LENGTH_LONG).show();
 				finish();
 				startActivity(getIntent());
 			}
-			
+
 
 		}
 
+	}*/
+	public class Update_Riil extends AsyncTask<String, String, String> {
+
+		ProgressDialog pd;
+		Java_Connection jc = new Java_Connection();
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+
+			pd = new ProgressDialog(Edit_Laporan_Riil.this);
+			pd.setMessage("Update Uraian Riil ...!!!");
+			pd.setIndeterminate(false);
+			pd.setCancelable(false);
+			pd.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String id_riil = ambil_nip_pop.getText().toString();
+			String uraian_daftar_riil = edit_dialog_uraian.getText().toString();
+			String jumlah_riil = edit_textjml_riil.getText().toString();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("id_riil", id_riil);
+				params.put("uraian_daftar_riil", uraian_daftar_riil);
+				params.put("jumlah_riil", jumlah_riil);
+
+				Log.d("UPDATE_RIIL", "POST DATA = " + params.toString());
+
+				String response = jc.sendPostRequest(
+						Koneksi.update_riil,
+						params
+				);
+
+				if (response == null || response.isEmpty()) {
+					Log.e("UPDATE_RIIL", "Response NULL / kosong");
+					return null;
+				}
+
+				Log.d("UPDATE_RIIL", "RAW RESPONSE = " + response);
+
+				JSONObject json = new JSONObject(response);
+
+				int sukses = json.getInt(TAG_SUKSES);
+				String pesan = json.getString(TAG_PESAN);
+
+				if (sukses == 1) {
+					Log.d("UPDATE_RIIL", "SUKSES: " + pesan);
+				} else {
+					Log.e("UPDATE_RIIL", "GAGAL: " + pesan);
+				}
+
+				return pesan;
+
+			} catch (Exception e) {
+				Log.e("UPDATE_RIIL", "EXCEPTION", e);
+				return null;
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			pd.dismiss();
+
+			if (hasil != null) {
+				Toast.makeText(Edit_Laporan_Riil.this, hasil, Toast.LENGTH_LONG).show();
+				finish();
+				startActivity(getIntent());
+			}
+		}
 	}
-	
-	public class Tambah_Uraian_Baru extends AsyncTask<String, String, String> {
+
+	/*public class Tambah_Uraian_Baru extends AsyncTask<String, String, String> {
 		ProgressDialog pd ;
 		@Override
 		protected void onPreExecute() {
@@ -615,8 +765,84 @@ public class Edit_Laporan_Riil extends AppCompatActivity {
 
 		}
 
+	}*/
+
+	public class Tambah_Uraian_Baru extends AsyncTask<String, String, String> {
+
+		ProgressDialog pd;
+		Java_Connection jc = new Java_Connection();
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+
+			pd = new ProgressDialog(Edit_Laporan_Riil.this);
+			pd.setMessage("Sedang Dalam Proses Simpan Data...");
+			pd.setIndeterminate(false);
+			pd.setCancelable(false);
+			pd.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String nip_riil = nip.getText().toString();
+			String uraian_daftar_riil = edit_dialog_uraian.getText().toString();
+			String jumlah_riil = edit_textjml_riil.getText().toString();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("nomor_sppd", ambil_sppd);
+				params.put("nip", nip_riil);
+				params.put("uraian_daftar_riil", uraian_daftar_riil);
+				params.put("jumlah_riil", jumlah_riil);
+
+				Log.d("TAMBAH_RIIL", "POST DATA = " + params.toString());
+
+				String response = jc.sendPostRequest(
+						Koneksi.tambah_uraian_riil,
+						params
+				);
+
+				if (response == null || response.isEmpty()) {
+					Log.e("TAMBAH_RIIL", "Response NULL / kosong");
+					return null;
+				}
+
+				Log.d("TAMBAH_RIIL", "RAW RESPONSE = " + response);
+
+				JSONObject json = new JSONObject(response);
+
+				int sukses = json.getInt(TAG_SUKSES);
+				String pesan = json.getString(TAG_PESAN);
+
+				if (sukses == 1) {
+					Log.d("TAMBAH_RIIL", "SUKSES: " + pesan);
+				} else {
+					Log.e("TAMBAH_RIIL", "GAGAL: " + pesan);
+				}
+
+				return pesan;
+
+			} catch (Exception e) {
+				Log.e("TAMBAH_RIIL", "EXCEPTION", e);
+				return null;
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			pd.dismiss();
+
+			if (hasil != null) {
+				Toast.makeText(Edit_Laporan_Riil.this, hasil, Toast.LENGTH_LONG).show();
+				finish();
+				startActivity(getIntent());
+			}
+		}
 	}
-	
+
 	private void informasi(String message) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(message)

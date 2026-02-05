@@ -45,18 +45,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.e_sppd_rssm.Sppd" />
-        <activity android:name="com.e_sppd_rssm.Main_Activity_Admin" />
-        <activity android:name="com.e_sppd_rssm.Main_Activity_SUPERUSER" />
-        <activity android:name="com.e_sppd_rssm.Main_Activity_Petugas" />
+
+
         <activity android:name="com.e_sppd_rssm.Daftar_Laporan_Per_Petugas" />
         <activity android:name="com.e_sppd_rssm.History" />
         <activity android:name="com.e_sppd_rssm.Laporan_Rincian_Biaya_Perj_Dinas" />
         <activity android:name="com.e_sppd_rssm.Edit_Laporan_Rincian_Biaya" />
-        <activity android:name="com.e_sppd_rssm.Laporan_Riil" />
         <activity android:name="com.e_sppd_rssm.Edit_Laporan_Riil" />
-        <activity android:name="com.e_sppd_rssm.Pembuatan_SPT" android:theme="@style/AppTheme"/>
-        <activity android:name="com.e_sppd_rssm.Detail_Daftar_Laporan_Sppd" android:theme="@style/AppTheme"/>
+
         <activity android:name="com.e_sppd_rssm.Tentang_Aplikasi" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Profil" android:theme="@style/AppTheme"/>
         <activity android:name="bantuan_tutorial.Tutorial" android:theme="@style/AppTheme"/>
@@ -65,8 +61,8 @@
         <activity android:name="bantuan_tutorial.Tutorial_Bantuan_Data_Tidak_Tampil" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Pembuatan_Lap_Setelah_Perj_Dinas" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Register_Activity_Baru" android:theme="@style/AppTheme"/>
-        <activity android:name="com.e_sppd_rssm.Register_Activity" android:theme="@style/AppTheme"/>
-        <activity android:name="com.e_sppd_rssm.MainActivityBaru_Admin" android:theme="@style/AppTheme"/>
+
+
         <activity android:name="com.e_sppd_rssm.MainActivityBaru_Petugas" android:theme="@style/AppTheme"/>
 
         <uses-library android:name="org.apache.http.legacy" android:required="false" />

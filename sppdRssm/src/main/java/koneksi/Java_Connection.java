@@ -23,6 +23,7 @@ public class Java_Connection {
 		StringBuilder response = new StringBuilder();
 
 		try {
+			Log.e("JAVA_CONN", "REQUEST URL = " + requestURL);
 			URL url = new URL(requestURL);
 			conn = (HttpURLConnection) url.openConnection();
 
@@ -72,7 +73,7 @@ public class Java_Connection {
 
 		return response.toString();
 	}
-	private String getPostDataString(HashMap<String, String> params)
+	/*private String getPostDataString(HashMap<String, String> params)
 			throws UnsupportedEncodingException {
 
 		StringBuilder result = new StringBuilder();
@@ -88,7 +89,32 @@ public class Java_Connection {
 		}
 
 		return result.toString();
+	}*/
+	private String getPostDataString(HashMap<String, String> params)
+			throws UnsupportedEncodingException {
+
+		StringBuilder result = new StringBuilder();
+		boolean first = true;
+
+		for (Map.Entry<String, String> entry : params.entrySet()) {
+			if (!first) result.append("&");
+			first = false;
+
+			String key = entry.getKey();
+			String value = entry.getValue();
+
+			// 🔒 ANTI NULL (INI PENTING)
+			if (key == null) key = "";
+			if (value == null) value = "";
+
+			result.append(URLEncoder.encode(key, "UTF-8"));
+			result.append("=");
+			result.append(URLEncoder.encode(value, "UTF-8"));
+		}
+
+		return result.toString();
 	}
+
 
 	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
 	public String sendGetRequest(String requestURL) {

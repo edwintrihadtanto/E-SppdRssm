@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
@@ -40,14 +41,12 @@ import com.ipaulpro.afilechooser.utils.FileUtils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -60,12 +59,14 @@ import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
 import koneksi.Daftar_String;
-import koneksi.JSONParser;
+//import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 import koneksi.Progres_Sistem;
 import koneksi.Progres_Sistem.ProgressListener;
@@ -95,7 +96,7 @@ public class Edit_Laporan_Rincian_Biaya extends AppCompatActivity {
 	private static final int MEDIA_TYPE_IMAGE = 1;
 	public final int REQUEST_CAMERA = 0;
 
-	JSONParser classJsonParser = new JSONParser();
+//	JSONParser classJsonParser = new JSONParser();
 	private Uri fileUri;	
 	long totalSize = 0;
 	public String ambil_lokasi_path = null;
@@ -490,8 +491,7 @@ public class Edit_Laporan_Rincian_Biaya extends AppCompatActivity {
 	private boolean isDeviceSupportCamera() {
 		// this device has a camera
 		// no camera on this device
-		return getApplicationContext().getPackageManager().hasSystemFeature(
-				PackageManager.FEATURE_CAMERA);
+		return getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
 	}
 	
 	private static File getOutputMediaFile() {
@@ -756,7 +756,7 @@ public class Edit_Laporan_Rincian_Biaya extends AppCompatActivity {
 		ad.show();
 	}
 	
-	public class Hapus_Rincian_Per_Id extends AsyncTask<String, String, String> {
+	/*public class Hapus_Rincian_Per_Id extends AsyncTask<String, String, String> {
 		ProgressDialog pd ;
 		@Override
 		protected void onPreExecute() {
@@ -823,9 +823,89 @@ public class Edit_Laporan_Rincian_Biaya extends AppCompatActivity {
 
 		}
 
+	}*/
+
+	public class Hapus_Rincian_Per_Id extends AsyncTask<String, String, String> {
+
+		ProgressDialog pd;
+		Java_Connection jc = new Java_Connection();
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+
+			pd = new ProgressDialog(Edit_Laporan_Rincian_Biaya.this);
+			pd.setMessage("Hapus Uraian !!!");
+			pd.setIndeterminate(false);
+			pd.setCancelable(false);
+			pd.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String id_rincian = selectedList.getid_rincian();
+			String ambil_uraian = selectedList.geturaian_rincian();
+			String no_sppd = edit_lamp_sppd.getText().toString();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("no_sppd", no_sppd);
+				params.put("id_rincian", id_rincian);
+				params.put("uraian", ambil_uraian);
+
+				Log.d("HAPUS_RINCIAN", "POST DATA = " + params.toString());
+
+				String response = jc.sendPostRequest(
+						Koneksi.hapus_data_per_uraian,
+						params
+				);
+
+				if (response == null || response.isEmpty()) {
+					Log.e("HAPUS_RINCIAN", "Response NULL / kosong");
+					return null;
+				}
+
+				Log.d("HAPUS_RINCIAN", "RAW RESPONSE = " + response);
+
+				JSONObject json = new JSONObject(response);
+
+				int sukses = json.getInt(TAG_SUKSES);
+				String pesan = json.getString(TAG_PESAN);
+
+				if (sukses == 1) {
+					Log.d("HAPUS_RINCIAN", "SUKSES: " + pesan);
+				} else {
+					Log.e("HAPUS_RINCIAN", "GAGAL: " + pesan);
+				}
+
+				return pesan;
+
+			} catch (Exception e) {
+				Log.e("HAPUS_RINCIAN", "EXCEPTION", e);
+				return null;
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			pd.dismiss();
+
+			if (hasil != null) {
+				Toast.makeText(
+						Edit_Laporan_Rincian_Biaya.this,
+						hasil,
+						Toast.LENGTH_LONG
+				).show();
+			}
+
+			finish();
+			startActivity(getIntent());
+		}
 	}
 
-	public class Update_Rincian extends AsyncTask<String, String, String> {
+	/*public class Update_Rincian extends AsyncTask<String, String, String> {
 		ProgressDialog pd ;
 		@Override
 		protected void onPreExecute() {
@@ -893,7 +973,91 @@ public class Edit_Laporan_Rincian_Biaya extends AppCompatActivity {
 
 		}
 
+	}*/
+
+	public class Update_Rincian extends AsyncTask<String, String, String> {
+
+		ProgressDialog pd;
+		Java_Connection jc = new Java_Connection();
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+
+			pd = new ProgressDialog(Edit_Laporan_Rincian_Biaya.this);
+			pd.setMessage("Update Rincian Biaya ...!!!");
+			pd.setIndeterminate(false);
+			pd.setCancelable(false);
+			pd.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String uraian = edit_dialog_uraian.getText().toString();
+			String jml = edit_textjml_riil.getText().toString();
+			String no_sppd = edit_lamp_sppd.getText().toString();
+			String id_rincian = ambil_nip_pop.getText().toString();
+			String nip_pegawai = nippegwdit.getText().toString();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("nomor_surat_sppd", no_sppd);
+				params.put("uraian", uraian);
+				params.put("jml", jml);
+				params.put("id_rincian", id_rincian);
+				params.put("nip", nip_pegawai);
+
+				Log.d("UPDATE_RINCIAN", "POST DATA = " + params.toString());
+
+				String response = jc.sendPostRequest(
+						Koneksi.update_rincian_biaya,
+						params
+				);
+
+				if (response == null || response.isEmpty()) {
+					Log.e("UPDATE_RINCIAN", "Response NULL / kosong");
+					return null;
+				}
+
+				Log.d("UPDATE_RINCIAN", "RAW RESPONSE = " + response);
+
+				JSONObject json = new JSONObject(response);
+
+				int sukses = json.getInt(TAG_SUKSES);
+				String pesan = json.getString(TAG_PESAN);
+
+				if (sukses == 1) {
+					Log.d("UPDATE_RINCIAN", "SUKSES: " + pesan);
+				} else {
+					Log.e("UPDATE_RINCIAN", "GAGAL: " + pesan);
+				}
+
+				return pesan;
+
+			} catch (Exception e) {
+				Log.e("UPDATE_RINCIAN", "EXCEPTION", e);
+				return null;
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			pd.dismiss();
+
+			if (hasil != null) {
+				Toast.makeText(
+						Edit_Laporan_Rincian_Biaya.this,
+						hasil,
+						Toast.LENGTH_LONG
+				).show();
+				finish();
+				startActivity(getIntent());
+			}
+		}
 	}
+
 	@Override
 	public void onBackPressed() {
 		String persen = untuk_cek_keluar.getText().toString();

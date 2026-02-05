@@ -59,8 +59,6 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 	private ProgressDialog loading;
 	public ImageView bantuan;
 	private Daftar_String selectedList;
-//	JSONParser classJsonParser = new JSONParser();
-
 	private static final int progress_bar_type_spt 	= 0; 
 	private static final int progress_bar_type_sppd = 1;
 	String transfer_nip = null;
@@ -87,7 +85,6 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			startActivity(i);
 		});
 
-//		Koneksi_Server = new Koneksi();
 		Bundle b = getIntent().getExtras();
 
 		if (b != null) {
@@ -102,80 +99,6 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 		}
 	}
 
-	/*@SuppressLint("StaticFieldLeak")
-	private class Load_DatabaseXX extends AsyncTask<String, Void, String> {
-
-		@Override
-		protected void onPreExecute() {
-			loading = new ProgressDialog(Daftar_Laporan_Per_Petugas.this);
-			loading.setMessage("Sedang Memuat...");
-			loading.setIndeterminate(false);
-			loading.setCancelable(false);
-			loading.show();
-		}
-
-		@Override
-		protected String doInBackground(String... params) {
-
-			*//* Mengirimkan request ke server dan memproses JSON response *//*
-			String Cek = nip_lokal.getText().toString().trim();
-
-			//String Cek = nip_pegawai;
-			String url, url2;
-			String responseString = null; 		
-			// Super PENTINGGGGGGGGGGGGGGGGGGGGGG PUOOLLLLLLLLLL
-			// Barokallah Alhamdulilah KETEMU CARANE MENGATASI
-			// DATA NIP YANG BERSIFAT VARCHAR DENGAN SPASI BANYAK
-			try {
-
-				url = Koneksi_Server
-						.sendGetRequest(Koneksi.list_sptsppd
-								+ "?nip_pegawai="
-								+ URLEncoder.encode(Cek, "UTF-8"));
-				url2 = Koneksi_Server
-						.sendGetRequest(Koneksi.tampil_daftar_sppd_per_nip_POSTING
-								+ "?nip_pegawai="
-								+ URLEncoder.encode(Cek, "UTF-8"));
-				
-				listpost 	= proses_pengambilan_data_jmlh_postingan(url2);
-				
-				list 		= proses_pengambilan_data(url);
-			
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				responseString = e.toString();								
-			}catch (Exception e) {
-				responseString = e.toString();	
-			}
-
-			return responseString;
-		}
-
-		
-		@Override
-		protected void onPostExecute(String result) {
-			loading.dismiss();
-			Log.e("Pesan Load SPPD", "" + result);
-			String pesan = "java.lang.NullPointerException";
-			if (result != null) {
-				if (result.contains(pesan)){
-					String info_pesan1 = "Gagal Sinkronisasi Data ...";	
-					showAlert(info_pesan1);	
-				}				
-			}else{				
-				menampilkan_nama_pegawai();
-				//tampil_jml_post();
-				String pesanawal = "Untuk Pembuatan\n" +
-						"1. Laporan Perjalanan Dinas,\n" +
-						"2. Perincian Biaya, dan\n" +
-						"3. Pengeluaran Riil\n\n" +
-						"**Pilih Salah Satu Daftar SPT & SPPD berikut ini, untuk menampilkan MENU PILIHAN";
-				info_pesan(pesanawal);
-			}
-			super.onPostExecute(result);		
-		}
-
-	}*/
 	@SuppressLint("StaticFieldLeak")
     private class Load_Data extends AsyncTask<Void, Void, String> {
 
@@ -201,7 +124,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 				String urlList = Koneksi.list_sptsppd
 						+ "?nip_pegawai=" + nipEncoded;
 
-				String urlPosting = Koneksi.tampil_daftar_sppd_per_nip_POSTING
+				String urlPosting = Koneksi.count_sptsppd
 						+ "?nip_pegawai=" + nipEncoded;
 
 				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -636,51 +559,51 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 				finish();
 			Daftar_Laporan_Per_Petugas.this.finish();
 
-			Intent i ;
-			i = new Intent(Daftar_Laporan_Per_Petugas.this,
-					Laporan_Riil.class);
-			i.putExtra("id_spt", selectedList.getid_spt());
-			i.putExtra("nomor_spt", selectedList.getnomor_SPT());
-			i.putExtra("nomor_surat_sppd", selectedList.getnomor_SPPD());
-			i.putExtra("nip", selectedList.getnip());
-			i.putExtra("nama_pegawai", selectedList.getnama_pegawai());
-			i.putExtra("jabatan", selectedList.getjabatan());
-			i.putExtra("golongan", selectedList.getgolongan());
-			i.putExtra("biaya_perj", selectedList.getbiaya_perj());
-			i.putExtra("maksud_perj", selectedList.getmaksud_perj());
-			i.putExtra("alat_angkutan", selectedList.getalat_angkutan());
-			i.putExtra("tempat_brngkt",
-					selectedList.gettempat_brngkt());
-			i.putExtra("tempat_tujuan",
-					selectedList.gettempat_tujuan());
-			i.putExtra("lama_perj", selectedList.getlama_perj());
-			i.putExtra("tgl_brngkt", selectedList.gettgl_brngkt());
-			i.putExtra("tgl_kembali", selectedList.gettgl_kembali());
-			i.putExtra("tambh_pengikut1",
-					selectedList.gettambh_pengikut1());
-			i.putExtra("tambh_pengikut2",
-					selectedList.gettambh_pengikut2());
-			i.putExtra("tambh_pengikut3",
-					selectedList.gettambh_pengikut3());
-			i.putExtra("tambh_pengikut4",
-					selectedList.gettambh_pengikut4());
-			i.putExtra("tambh_pengikut5",
-					selectedList.gettambh_pengikut5());
-			i.putExtra("tanggal_aktivitas",
-					selectedList.gettgl_aktivitas());
-			i.putExtra("waktu_aktivitas",
-					selectedList.getjam_aktivitas());
-			i.putExtra("akun_pembebanan_anggaran",
-					selectedList.getakun_anggaran());
-			i.putExtra("surat_masuk_dari",
-					selectedList.getsurat_masuk_dari());
-			i.putExtra("tgl_surat_masuk",
-					selectedList.gettgl_surat_spt_masuk());
-			i.putExtra("status_laporan_petugas",
-					selectedList.getstatus_laporan_petugas());
-			i.putExtra("status_rincian_biaya", selectedList.getstatus_rincian());
-			i.putExtra("status_riil", selectedList.getstatus_riil());
-			startActivity(i);
+//			Intent i ;
+//			i = new Intent(Daftar_Laporan_Per_Petugas.this,
+//					Laporan_Riil.class);
+//			i.putExtra("id_spt", selectedList.getid_spt());
+//			i.putExtra("nomor_spt", selectedList.getnomor_SPT());
+//			i.putExtra("nomor_surat_sppd", selectedList.getnomor_SPPD());
+//			i.putExtra("nip", selectedList.getnip());
+//			i.putExtra("nama_pegawai", selectedList.getnama_pegawai());
+//			i.putExtra("jabatan", selectedList.getjabatan());
+//			i.putExtra("golongan", selectedList.getgolongan());
+//			i.putExtra("biaya_perj", selectedList.getbiaya_perj());
+//			i.putExtra("maksud_perj", selectedList.getmaksud_perj());
+//			i.putExtra("alat_angkutan", selectedList.getalat_angkutan());
+//			i.putExtra("tempat_brngkt",
+//					selectedList.gettempat_brngkt());
+//			i.putExtra("tempat_tujuan",
+//					selectedList.gettempat_tujuan());
+//			i.putExtra("lama_perj", selectedList.getlama_perj());
+//			i.putExtra("tgl_brngkt", selectedList.gettgl_brngkt());
+//			i.putExtra("tgl_kembali", selectedList.gettgl_kembali());
+//			i.putExtra("tambh_pengikut1",
+//					selectedList.gettambh_pengikut1());
+//			i.putExtra("tambh_pengikut2",
+//					selectedList.gettambh_pengikut2());
+//			i.putExtra("tambh_pengikut3",
+//					selectedList.gettambh_pengikut3());
+//			i.putExtra("tambh_pengikut4",
+//					selectedList.gettambh_pengikut4());
+//			i.putExtra("tambh_pengikut5",
+//					selectedList.gettambh_pengikut5());
+//			i.putExtra("tanggal_aktivitas",
+//					selectedList.gettgl_aktivitas());
+//			i.putExtra("waktu_aktivitas",
+//					selectedList.getjam_aktivitas());
+//			i.putExtra("akun_pembebanan_anggaran",
+//					selectedList.getakun_anggaran());
+//			i.putExtra("surat_masuk_dari",
+//					selectedList.getsurat_masuk_dari());
+//			i.putExtra("tgl_surat_masuk",
+//					selectedList.gettgl_surat_spt_masuk());
+//			i.putExtra("status_laporan_petugas",
+//					selectedList.getstatus_laporan_petugas());
+//			i.putExtra("status_rincian_biaya", selectedList.getstatus_rincian());
+//			i.putExtra("status_riil", selectedList.getstatus_riil());
+//			startActivity(i);
 
 
 			}

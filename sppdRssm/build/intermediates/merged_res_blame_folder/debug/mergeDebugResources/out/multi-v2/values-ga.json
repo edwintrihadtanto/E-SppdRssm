@@ -4,7 +4,7 @@
             "outputFile": "com.e_sppd.rssm.sppdRssm-mergeDebugResources-23:/values-ga/values-ga.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\edwin\\AndroidStudioProjects\\workshop\\E-SppdRssm\\aFileChooser\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values-ga\\values-ga.xml",
+                    "source": "G:\\Kumpulan Project Android\\E-SppdRssm\\aFileChooser\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values-ga\\values-ga.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

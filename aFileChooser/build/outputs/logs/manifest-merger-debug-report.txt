@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml:17:1-19:13
-INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml:17:1-19:13
+ADDED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml:17:1-19:13
+INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml:17:1-19:13
 	package
-		INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
+		INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
 uses-sdk
-INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
-INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
+INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
+INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
+		INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\edwin\AndroidStudioProjects\workshop\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml
+		INJECTED from G:\Kumpulan Project Android\E-SppdRssm\aFileChooser\src\main\AndroidManifest.xml

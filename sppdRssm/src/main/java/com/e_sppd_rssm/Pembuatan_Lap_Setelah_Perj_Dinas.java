@@ -6,32 +6,30 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.e_sppd.rssm.R;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
+import java.util.HashMap;
 
-import koneksi.JSONParser;
+//import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 	private static final String TAG = "Lap. Perjalanan Dinas";
@@ -48,7 +46,7 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 	static final int DATE_DIALOG_ID = 1;
 	private String[] varBulan = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
 	int jam, menit, tahun, bulan, hari;
-	JSONParser classJsonParser = new JSONParser();
+//	JSONParser classJsonParser = new JSONParser();
 	private static final String TAG_BERHASIL 	= "success";
 	private static final String TAG_PESAN 		= "message";
 	private String abc;
@@ -125,7 +123,7 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 		startActivity(getIntent());
 	}*/
 	
-	class Simpan_Laporan_Perjalanan_Dinas extends
+	/*public class Simpan_Laporan_Perjalanan_Dinas extends
 			AsyncTask<String, String, String> {
 		boolean failure = false;
 
@@ -189,9 +187,9 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 			return responseString;
 		}
 
-		/**
+		*//**
 		 * kalau sudah selesai tugas background_nya matikan progressbar_nya
-		 * **/
+		 * **//*
 		@Override
 		protected void onPostExecute(String url_registrasi_nya) {
 			// matikan progressBar-nya setelah selesai di gunakan
@@ -213,7 +211,107 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 
 		}
 
+	}*/
+	public class Simpan_Laporan_Perjalanan_Dinas extends AsyncTask<Void, Void, String> {
+		Java_Connection jc = new Java_Connection();
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			ProgressDialog1 = new ProgressDialog(
+					Pembuatan_Lap_Setelah_Perj_Dinas.this);
+			ProgressDialog1.setMessage("Loading ...");
+			ProgressDialog1.setIndeterminate(false);
+			ProgressDialog1.setCancelable(false);
+			ProgressDialog1.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+
+				params.put("ambil_nomor_spt",
+						edit_dsr_sppt_1.getText().toString().trim());
+				params.put("nip",
+						nip_lokal.getText().toString().trim());
+				params.put("hasil_pertemuan",
+						edit_hsl_rapat.getText().toString().trim());
+				params.put("masalah",
+						edit_masalah.getText().toString().trim());
+				params.put("saran",
+						edit_saran.getText().toString().trim());
+				params.put("lain_lain",
+						edit_lain_lain.getText().toString().trim());
+				params.put("tgl_pembuatan_laporan",
+						tgl_sembunyi.getText().toString().trim());
+
+				Log.d("Send Data Laporan", "Go...");
+
+
+				String response = jc.sendPostRequest(
+						Koneksi.insertupdate_data_laporan_petugas,
+						params
+				);
+
+				if (response == null) {
+					return null;
+				}
+
+				Log.d("Info", response);
+
+				JSONObject json = new JSONObject(response);
+				int berhasil = json.getInt(TAG_BERHASIL);
+
+				if (berhasil == 1) {
+					return json.getString(TAG_PESAN);
+				} else {
+					return json.getString(TAG_PESAN);
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return e.toString();
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+
+			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
+				ProgressDialog1.dismiss();
+			}
+
+			Log.e(TAG, "Respon Dari Server Pembuatan Laporan ::: " + hasil);
+
+			if (hasil != null) {
+
+				String errorJson = "org.json.JSONException: No value for sukses";
+				if (hasil.contains(errorJson)) {
+
+					String pesan =
+							"Koneksi Terputus\n" +
+									"Pastikan Koneksi Data Internet Terhubung dan Lancar !!!";
+					show_alert(pesan);
+
+				} else {
+					Toast.makeText(
+							Pembuatan_Lap_Setelah_Perj_Dinas.this,
+							hasil,
+							Toast.LENGTH_LONG
+					).show();
+					finish();
+				}
+
+			} else {
+				show_alert(
+						"Koneksi Terputus\nPastikan Internet Aktif"
+				);
+			}
+		}
 	}
+
 
 	private void pertanyaan_simpan() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
@@ -266,7 +364,7 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 		ad.show();
 	}
 
-	class Edit_Laporan_Perj_Dinas extends AsyncTask<String, String, String> {
+	/*public class Edit_Laporan_Perj_Dinas extends AsyncTask<String, String, String> {
 		boolean failure = false;
 	
 		@Override
@@ -348,9 +446,9 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 
 		}
 
-		/**
+		*//**
 		 * kalau sudah selesai tugas background_nya matikan progressbar_nya
-		 * **/
+		 * **//*
 		@Override
 		protected void onPostExecute(String url_registrasi_nya) {
 			// matikan progressBar-nya setelah selesai di gunakan
@@ -361,6 +459,102 @@ public class Pembuatan_Lap_Setelah_Perj_Dinas extends AppCompatActivity {
 
 		}
 	
+	}*/
+
+	public class Edit_Laporan_Perj_Dinas
+			extends AsyncTask<Void, Void, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			ProgressDialog1 = new ProgressDialog(
+					Pembuatan_Lap_Setelah_Perj_Dinas.this);
+			ProgressDialog1.setMessage("Loading Update Laporan ...");
+			ProgressDialog1.setIndeterminate(false);
+			ProgressDialog1.setCancelable(false);
+			ProgressDialog1.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+
+				params.put(
+						"nip_pembuatlaporanperj",
+						getIntent().getStringExtra("nip_pembuatlaporanperj")
+				);
+				params.put(
+						"ambil_nomor_spt",
+						edit_dsr_sppt_1.getText().toString().trim()
+				);
+				params.put(
+						"nip",
+						nip_lokal.getText().toString().trim()
+				);
+				params.put(
+						"hasil_pertemuan",
+						edit_hsl_rapat.getText().toString().trim()
+				);
+				params.put(
+						"masalah",
+						edit_masalah.getText().toString().trim()
+				);
+				params.put(
+						"saran",
+						edit_saran.getText().toString().trim()
+				);
+				params.put(
+						"lain_lain",
+						edit_lain_lain.getText().toString().trim()
+				);
+				params.put(
+						"tgl_pembuatan_laporan",
+						tgl_sembunyi.getText().toString().trim()
+				);
+
+				Log.d("Send Data Laporan", "Go...");
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.insertupdate_data_laporan_petugas,
+						params
+				);
+
+				if (response == null) {
+					return null;
+				}
+
+				Log.d("Info", response);
+
+				JSONObject json = new JSONObject(response);
+				int berhasil = json.getInt(TAG_BERHASIL);
+
+				if (berhasil == 1) {
+					return json.getString(TAG_PESAN);
+				} else {
+					return json.getString(TAG_PESAN);
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return e.toString();
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+
+			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
+				ProgressDialog1.dismiss();
+			}
+
+			if (hasil != null) {
+				show_alert2(hasil);
+			}
+		}
 	}
 
 	private void show_alert2(String pesan) {

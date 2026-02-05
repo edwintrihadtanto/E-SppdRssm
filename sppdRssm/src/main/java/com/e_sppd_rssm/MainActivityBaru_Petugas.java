@@ -16,6 +16,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -27,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,15 +40,13 @@ import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -59,25 +59,25 @@ import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
+import java.util.HashMap;
 
-import koneksi.JSONParser;
+//import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
 public class MainActivityBaru_Petugas extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private final Handler handler = new Handler();
     private final static String TAG = "Informasi_error";
-    JSONParser classJsonParser = new JSONParser();
+//    JSONParser classJsonParser = new JSONParser();
     ProgressDialog loading_cek, loading_fcm;
     DrawerLayout drawer;
     NavigationView navigationView;
     FragmentManager fragmentManager;
     Fragment fragment = null;
     SharedPreferences sharedpreferences;
-    String nip, nama_pegawai, jabatan, golongan, unit, password, email, cek_versi_apk;
+    String nip, nama_pegawai, jabatan, golongan, unit, password, email;
     RelativeLayout frame_loading_utama;
     ImageView gmbar_loading_utama, img_refresh;
     private ProgressDialog progresdialog;
@@ -99,6 +99,8 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
     private static final String TAG_VERSI           = "versi";
     private static final int progress_DOWNLOAD 	= 0;
     String get_pesan;
+    String cek_versi_apk = BuildConfig.VERSION_NAME;
+
     public String token_lama;
     public  static final int RequestPermissionCode_StorageCamera  = 11 ;
 
@@ -109,7 +111,7 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
         setContentView(R.layout.activity_main_petugas);
         handler.postDelayed(runnable, 1000);
         Permission_AksesCameradanStorage();
-
+        Log.e("info versi bawaan ", BuildConfig.VERSION_NAME);
         gmbar_loading_utama     = findViewById(R.id.gmbar_loading_utama);
         frame_loading_utama     = findViewById(R.id.frame_loading_utama);
 
@@ -121,12 +123,12 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
         tgl_utama               = findViewById(R.id.tgl_utama);
         jam_utama               = findViewById(R.id.jam_utama);
         tvToken1                = findViewById(R.id.token_utama);
-        img_refresh               = findViewById(R.id.btn_refresh_utama);
+        img_refresh             = findViewById(R.id.btn_refresh_utama);
 
         sharedpreferences   = getSharedPreferences(Login_Activity.my_shared_preferences, Context.MODE_PRIVATE);
         nip                 = getIntent().getStringExtra(TAG_NIP);
         nama_pegawai        = getIntent().getStringExtra(TAG_NAMA_PEGAWAI);
-        cek_versi_apk       = getIntent().getStringExtra(TAG_VERSI);
+//        cek_versi_apk       = getIntent().getStringExtra(TAG_VERSI);
         jabatan             = getIntent().getStringExtra(TAG_JABATAN);
         golongan            = getIntent().getStringExtra(TAG_GOLONGAN);
         unit                = getIntent().getStringExtra(TAG_UNIT);
@@ -187,7 +189,7 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
         }
     }
 
-    @SuppressLint("StaticFieldLeak")
+    /*@SuppressLint("StaticFieldLeak")
     public class FCM_TOKEN extends AsyncTask<String, String, String> {
 
         @Override
@@ -310,9 +312,70 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
         }
 
 	}
+*/
 
-    @SuppressLint("StaticFieldLeak")
-    public class Cek_Versi_APK extends AsyncTask<String, String, String> {
+    public class GETTOKEN extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            loading_tampil();
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            String fcm_token = tvToken1.getText().toString().trim();
+            String nip_peg   = menuutama_nippetugas.getText().toString().trim();
+
+            try {
+                HashMap<String, String> params = new HashMap<>();
+                params.put("fcm_token", fcm_token);
+                params.put("nip_pegawai", nip_peg);
+
+                Log.i("FCM", "Kirim token ke server");
+
+                Java_Connection jc = new Java_Connection();
+                String response = jc.sendPostRequest(
+                        Koneksi.FCM_TOKEN,
+                        params
+                );
+
+                if (response == null) {
+                    return "Gagal mengirim token ke server";
+                }
+
+                Log.i("FCM", "RESPON = " + response);
+
+                JSONObject jsonObject = new JSONObject(response);
+                int status = jsonObject.getInt(STATUSSUKSES);
+
+                return jsonObject.getString(STATUSPESANTOKEN);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.toString();
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String pesan) {
+            loading_sembunyi();
+
+            if (pesan != null) {
+                Snackbar.make(
+                        findViewById(R.id.myCoordinatorLayout),
+                        pesan,
+                        Snackbar.LENGTH_SHORT
+                ).show();
+                new Cek_Versi_APK().execute();
+            }
+        }
+    }
+
+//    @SuppressLint("StaticFieldLeak")
+    /*public class Cek_Versi_APK extends AsyncTask<String, String, String> {
 
         @Override
         protected void onPreExecute() {
@@ -394,6 +457,102 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
 
         }
 
+    }*/
+
+    public class Cek_Versi_APK extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            loading_cek = new ProgressDialog(MainActivityBaru_Petugas.this);
+            loading_cek.setIndeterminate(false);
+            loading_cek.setCancelable(false);
+            loading_tampil();
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            try {
+
+                HashMap<String, String> params = new HashMap<>();
+                if (cek_versi_apk == null) {
+                    cek_versi_apk = "";
+                }
+                params.put("versi_apk", cek_versi_apk);
+
+                Java_Connection jc = new Java_Connection();
+                String response = jc.sendPostRequest(
+                        Koneksi.CEK_VERSI,
+                        params
+                );
+                Log.d("DEBUG_VERSI", "versi apk = " + cek_versi_apk);
+                if (response == null) {
+                    return "ERROR_CONNECTION";
+                }
+
+                Log.d("Pesan Versi:", response);
+
+                JSONObject jsonObject = new JSONObject(response);
+                int jikaSukses = jsonObject.getInt(TAG_SUKSES);
+
+                if (jikaSukses == 1) {
+                    // versi benar
+                    return jsonObject.getString(TAG_PESAN);
+                } else {
+                    // perlu versi baru / maintenance / info
+                    get_pesan = jsonObject.optString(Info_Pesan);
+                    return jsonObject.getString(TAG_PESAN);
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.toString();
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String hasil) {
+            if ("ERROR_CONNECTION".equals(hasil)) {
+                showAlert(
+                        "Gagal terhubung ke server.\n" +
+                                "Server tidak merespon atau sedang bermasalah"
+                );
+                return;
+            }
+
+            if (loading_cek != null && loading_cek.isShowing()) {
+                loading_cek.dismiss();
+            }
+            loading_sembunyi();
+
+            if (hasil != null) {
+
+                if (hasil.contains("Silahkan")) {
+                    download_informasi_versi(hasil);
+
+                } else if (hasil.contains("Maintenance")) {
+                    info_maintenance(hasil);
+
+                } else if (hasil.contains("Wajib")) {
+                    info_download(get_pesan);
+
+                } else if (hasil.contains("Sunnah")) {
+                    info_download(hasil);
+                }
+
+                // tetap jalan
+//                fcm();
+
+            } else {
+                String pesan =
+                        "Sambungan Internet Terputus.\n" +
+                                "Pastikan Wi-Fi atau Data Seluler aktif, lalu coba lagi";
+                showAlert(pesan);
+            }
+        }
     }
 
     private void download_informasi_versi(String pesan) {
@@ -409,7 +568,6 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
             //String kirim_versi = "1.3.2";
             String Cek = cek_versi_apk;
             try {
-
 
                 new Download_Aplikasi().execute(Koneksi.download_apk + "e-Sppd.v"
                        + URLEncoder.encode(Cek, "UTF-8")+".apk");

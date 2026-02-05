@@ -38,9 +38,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.e_sppd.rssm.R;
 import com.ipaulpro.afilechooser.utils.FileUtils;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.DataOutputStream;
@@ -50,13 +47,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Locale;
 
-import koneksi.JSONParser;
+import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
 public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implements
@@ -103,7 +99,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 	// "Mei",
 	// "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"
 	// };
-	private String[] varBulan = { "01", "02", "03", "04", "05", "06", "07",
+	private final String[] varBulan = { "01", "02", "03", "04", "05", "06", "07",
 			"08", "09", "10", "11", "12" };
 	int jam, menit, tahun, bulan, hari;
 
@@ -111,7 +107,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 
 	int serverResponseCode = 0;
 	ProgressDialog dialog = null;
-	JSONParser classJsonParser = new JSONParser();
+//	JSONParser classJsonParser = new JSONParser();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -120,69 +116,69 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		handler.postDelayed(runnable, 1000);
 
 		// PROSES PADA MENU LAPORAN RINCIAN BIAYA SEMENTARA BELUM DIGUNAKAN
-		status_riil 				= (TextView) findViewById(R.id.status_riil);
-		status_laporan_petugas 		= (TextView) findViewById(R.id.status_laporan_petugas);
-		infolagi12 					= (TextView) findViewById(R.id.infolagi12);
-		nama_lokal 					= (TextView) findViewById(R.id.nama_lokal);
-		nip_lokal 					= (TextView) findViewById(R.id.nip_lokal);
-		jab_lokal 					= (TextView) findViewById(R.id.jab_lokal);
-		edit_lamp_sppd 				= (TextView) findViewById(R.id.edit_lamp_sppd);
-		edit_tgl_lamp 				= (TextView) findViewById(R.id.edit_tgl_lamp);
-		textview_informasi_riil 	= (TextView) findViewById(R.id.textview_informasi_riil);
-		textview_grandtotal_riil 	= (TextView) findViewById(R.id.textview_grandtotal_riil);
-		edit_terbilang_total 		= (TextView) findViewById(R.id.edit_terbilang_total);
-		status_rincian_biaya 		= (TextView) findViewById(R.id.status_rincian_biaya);
-		btn_menuju_form_daftar_riil = (Button) findViewById(R.id.btn_menuju_form_daftar_riil);
-		btn_simpan_rincian_biaya 	= (Button) findViewById(R.id.btn_simpan_rincian_biaya);
-		ImageView_Help 				= (ImageView) findViewById(R.id.bantuan_rincian);
-		btn_tambh_uraian_upload 	= (Button) findViewById(R.id.btn_tambh_uraian_upload);
+		status_riil 				= findViewById(R.id.status_riil);
+		status_laporan_petugas 		= findViewById(R.id.status_laporan_petugas);
+		infolagi12 					= findViewById(R.id.infolagi12);
+		nama_lokal 					= findViewById(R.id.nama_lokal);
+		nip_lokal 					= findViewById(R.id.nip_lokal);
+		jab_lokal 					= findViewById(R.id.jab_lokal);
+		edit_lamp_sppd 				= findViewById(R.id.edit_lamp_sppd);
+		edit_tgl_lamp 				= findViewById(R.id.edit_tgl_lamp);
+		textview_informasi_riil 	= findViewById(R.id.textview_informasi_riil);
+		textview_grandtotal_riil 	= findViewById(R.id.textview_grandtotal_riil);
+		edit_terbilang_total 		= findViewById(R.id.edit_terbilang_total);
+		status_rincian_biaya 		= findViewById(R.id.status_rincian_biaya);
+		btn_menuju_form_daftar_riil = findViewById(R.id.btn_menuju_form_daftar_riil);
+		btn_simpan_rincian_biaya 	= findViewById(R.id.btn_simpan_rincian_biaya);
+		ImageView_Help 				= findViewById(R.id.bantuan_rincian);
+		btn_tambh_uraian_upload 	= findViewById(R.id.btn_tambh_uraian_upload);
 
 		//----------------------
-        img_hapusrincian1      = (ImageView) findViewById(R.id.img_hapusrincian1);
-        img_hapusrincian2      = (ImageView) findViewById(R.id.img_hapusrincian2);
-        img_hapusrincian3      = (ImageView) findViewById(R.id.img_hapusrincian3);
-        img_hapusrincian4      = (ImageView) findViewById(R.id.img_hapusrincian4);
-        img_hapusrincian5      = (ImageView) findViewById(R.id.img_hapusrincian5);
-        img_hapusrincian6      = (ImageView) findViewById(R.id.img_hapusrincian6);
-        img_hapusrincian7      = (ImageView) findViewById(R.id.img_hapusrincian7);
-        img_hapusrincian8      = (ImageView) findViewById(R.id.img_hapusrincian8);
-        img_hapusrincian9      = (ImageView) findViewById(R.id.img_hapusrincian9);
-        img_hapusrincian10     = (ImageView) findViewById(R.id.img_hapusrincian10);
+        img_hapusrincian1      = findViewById(R.id.img_hapusrincian1);
+        img_hapusrincian2      = findViewById(R.id.img_hapusrincian2);
+        img_hapusrincian3      = findViewById(R.id.img_hapusrincian3);
+        img_hapusrincian4      = findViewById(R.id.img_hapusrincian4);
+        img_hapusrincian5      = findViewById(R.id.img_hapusrincian5);
+        img_hapusrincian6      = findViewById(R.id.img_hapusrincian6);
+        img_hapusrincian7      = findViewById(R.id.img_hapusrincian7);
+        img_hapusrincian8      = findViewById(R.id.img_hapusrincian8);
+        img_hapusrincian9      = findViewById(R.id.img_hapusrincian9);
+        img_hapusrincian10     = findViewById(R.id.img_hapusrincian10);
 		// ---------------------
-		edit_rincian_1 = (EditText) findViewById(R.id.edit_rincian_1);
-		edit_rincian_2 = (EditText) findViewById(R.id.edit_rincian_2);
-		edit_rincian_3 = (EditText) findViewById(R.id.edit_rincian_3);
-		edit_rincian_4 = (EditText) findViewById(R.id.edit_rincian_4);
-		edit_rincian_5 = (EditText) findViewById(R.id.edit_rincian_5);
-		edit_rincian_6 = (EditText) findViewById(R.id.edit_rincian_6);
-		edit_rincian_7 = (EditText) findViewById(R.id.edit_rincian_7);
-		edit_rincian_8 = (EditText) findViewById(R.id.edit_rincian_8);
-		edit_rincian_9 = (EditText) findViewById(R.id.edit_rincian_9);
-		edit_rincian_10 = (EditText) findViewById(R.id.edit_rincian_10);
+		edit_rincian_1 = findViewById(R.id.edit_rincian_1);
+		edit_rincian_2 = findViewById(R.id.edit_rincian_2);
+		edit_rincian_3 = findViewById(R.id.edit_rincian_3);
+		edit_rincian_4 = findViewById(R.id.edit_rincian_4);
+		edit_rincian_5 = findViewById(R.id.edit_rincian_5);
+		edit_rincian_6 = findViewById(R.id.edit_rincian_6);
+		edit_rincian_7 = findViewById(R.id.edit_rincian_7);
+		edit_rincian_8 = findViewById(R.id.edit_rincian_8);
+		edit_rincian_9 = findViewById(R.id.edit_rincian_9);
+		edit_rincian_10 = findViewById(R.id.edit_rincian_10);
 
-		edit_jml_rincian_1      = (EditText) findViewById(R.id.edit_jml_rincian_1);
-		edit_jml_rincian_2      = (EditText) findViewById(R.id.edit_jml_rincian_2);
-		edit_jml_rincian_3      = (EditText) findViewById(R.id.edit_jml_rincian_3);
-		edit_jml_rincian_4      = (EditText) findViewById(R.id.edit_jml_rincian_4);
-		edit_jml_rincian_5      = (EditText) findViewById(R.id.edit_jml_rincian_5);
-		edit_jml_rincian_6      = (EditText) findViewById(R.id.edit_jml_rincian_6);
-		edit_jml_rincian_7      = (EditText) findViewById(R.id.edit_jml_rincian_7);
-		edit_jml_rincian_8      = (EditText) findViewById(R.id.edit_jml_rincian_8);
-		edit_jml_rincian_9      = (EditText) findViewById(R.id.edit_jml_rincian_9);
-		edit_jml_rincian_10     = (EditText) findViewById(R.id.edit_jml_rincian_10);
-		edit_tgl_telah_diterima = (EditText) findViewById(R.id.edit_tgl_telah_diterima);
-		edit_grand_total_jml    = (EditText) findViewById(R.id.edit_grand_total_jml);
+		edit_jml_rincian_1      = findViewById(R.id.edit_jml_rincian_1);
+		edit_jml_rincian_2      = findViewById(R.id.edit_jml_rincian_2);
+		edit_jml_rincian_3      = findViewById(R.id.edit_jml_rincian_3);
+		edit_jml_rincian_4      = findViewById(R.id.edit_jml_rincian_4);
+		edit_jml_rincian_5      = findViewById(R.id.edit_jml_rincian_5);
+		edit_jml_rincian_6      = findViewById(R.id.edit_jml_rincian_6);
+		edit_jml_rincian_7      = findViewById(R.id.edit_jml_rincian_7);
+		edit_jml_rincian_8      = findViewById(R.id.edit_jml_rincian_8);
+		edit_jml_rincian_9      = findViewById(R.id.edit_jml_rincian_9);
+		edit_jml_rincian_10     = findViewById(R.id.edit_jml_rincian_10);
+		edit_tgl_telah_diterima = findViewById(R.id.edit_tgl_telah_diterima);
+		edit_grand_total_jml    = findViewById(R.id.edit_grand_total_jml);
 
-		btn_upload_ket_1 = (TextView) findViewById(R.id.btn_upload_ket_1);
-		btn_upload_ket_2 = (TextView) findViewById(R.id.btn_upload_ket_2);
-		btn_upload_ket_3 = (TextView) findViewById(R.id.btn_upload_ket_3);
-		btn_upload_ket_4 = (TextView) findViewById(R.id.btn_upload_ket_4);
-		btn_upload_ket_5 = (TextView) findViewById(R.id.btn_upload_ket_5);
-		btn_upload_ket_6 = (TextView) findViewById(R.id.btn_upload_ket_6);
-		btn_upload_ket_7 = (TextView) findViewById(R.id.btn_upload_ket_7);
-		btn_upload_ket_8 = (TextView) findViewById(R.id.btn_upload_ket_8);
-		btn_upload_ket_9 = (TextView) findViewById(R.id.btn_upload_ket_9);
-		btn_upload_ket_10 = (TextView) findViewById(R.id.btn_upload_ket_10);
+		btn_upload_ket_1 = findViewById(R.id.btn_upload_ket_1);
+		btn_upload_ket_2 = findViewById(R.id.btn_upload_ket_2);
+		btn_upload_ket_3 = findViewById(R.id.btn_upload_ket_3);
+		btn_upload_ket_4 = findViewById(R.id.btn_upload_ket_4);
+		btn_upload_ket_5 = findViewById(R.id.btn_upload_ket_5);
+		btn_upload_ket_6 = findViewById(R.id.btn_upload_ket_6);
+		btn_upload_ket_7 = findViewById(R.id.btn_upload_ket_7);
+		btn_upload_ket_8 = findViewById(R.id.btn_upload_ket_8);
+		btn_upload_ket_9 = findViewById(R.id.btn_upload_ket_9);
+		btn_upload_ket_10 = findViewById(R.id.btn_upload_ket_10);
 
 		edit_jml_rincian_1.setText("0");
 		edit_jml_rincian_2.setText("0");
@@ -373,7 +369,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		edit_grand_total_jml.setText("Rp." + " " + hasil);
 		infolagi12.setText(hasil);
 		int inputan = Integer.parseInt(hasil);
-		String hasil_terbilang = "Terbilang :" + "" + info_terbilang(inputan)
+		String hasil_terbilang = "Terbilang :" + info_terbilang(inputan)
 				+ " rupiah";
 		String rubah_huruf = hasil_terbilang.toUpperCase();
 		edit_terbilang_total.setText(rubah_huruf);
@@ -577,67 +573,67 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 				String ambil_rincian_riil_10 = b
 						.getString("ambil_rincian_riil_10");
 
-				Intent i = null;
-
-				i = new Intent(Laporan_Rincian_Biaya_Perj_Dinas.this,
-						Laporan_Riil.class);
-
-				Bundle Bundle = new Bundle();
-				Bundle.putString("nama", nip);
-				Bundle.putString("nip", nama);
-				Bundle.putString("jab", jab);
-				Bundle.putString("sppd", sppd);
-				Bundle.putString("tgl_sppd", tgl_sppd);
-				Bundle.putString("status_riil", cek_status_riil);
-				Bundle.putString("status_rincian_biaya", cek_status_rincian);
-
-				Bundle.putString("ambl_jml1", ambl_jml1);
-				Bundle.putString("ambl_jml2", ambl_jml2);
-				Bundle.putString("ambl_jml3", ambl_jml3);
-				Bundle.putString("ambl_jml4", ambl_jml4);
-				Bundle.putString("ambl_jml5", ambl_jml5);
-				Bundle.putString("ambl_jml6", ambl_jml6);
-				Bundle.putString("ambl_jml7", ambl_jml7);
-				Bundle.putString("ambl_jml8", ambl_jml8);
-				Bundle.putString("ambl_jml9", ambl_jml9);
-				Bundle.putString("ambl_jml10", ambl_jml10);
-
-				Bundle.putString("ambil_rincian_1", ambil_rincian_1);
-				Bundle.putString("ambil_rincian_2", ambil_rincian_2);
-				Bundle.putString("ambil_rincian_3", ambil_rincian_3);
-				Bundle.putString("ambil_rincian_4", ambil_rincian_4);
-				Bundle.putString("ambil_rincian_5", ambil_rincian_5);
-				Bundle.putString("ambil_rincian_6", ambil_rincian_6);
-				Bundle.putString("ambil_rincian_7", ambil_rincian_7);
-				Bundle.putString("ambil_rincian_8", ambil_rincian_8);
-				Bundle.putString("ambil_rincian_9", ambil_rincian_9);
-				Bundle.putString("ambil_rincian_10", ambil_rincian_10);
-
-				// -------------------
-				Bundle.putString("ambl_jml_riil_1", ambl_jml_riil_1);
-				Bundle.putString("ambl_jml_riil_2", ambl_jml_riil_2);
-				Bundle.putString("ambl_jml_riil_3", ambl_jml_riil_3);
-				Bundle.putString("ambl_jml_riil_4", ambl_jml_riil_4);
-				Bundle.putString("ambl_jml_riil_5", ambl_jml_riil_5);
-				Bundle.putString("ambl_jml_riil_6", ambl_jml_riil_6);
-				Bundle.putString("ambl_jml_riil_7", ambl_jml_riil_7);
-				Bundle.putString("ambl_jml_riil_8", ambl_jml_riil_8);
-				Bundle.putString("ambl_jml_riil_9", ambl_jml_riil_9);
-				Bundle.putString("ambl_jml_riil_10", ambl_jml_riil_10);
-
-				Bundle.putString("ambil_rincian_riil_1", ambil_rincian_riil_1);
-				Bundle.putString("ambil_rincian_riil_2", ambil_rincian_riil_2);
-				Bundle.putString("ambil_rincian_riil_3", ambil_rincian_riil_3);
-				Bundle.putString("ambil_rincian_riil_4", ambil_rincian_riil_4);
-				Bundle.putString("ambil_rincian_riil_5", ambil_rincian_riil_5);
-				Bundle.putString("ambil_rincian_riil_6", ambil_rincian_riil_6);
-				Bundle.putString("ambil_rincian_riil_7", ambil_rincian_riil_7);
-				Bundle.putString("ambil_rincian_riil_8", ambil_rincian_riil_8);
-				Bundle.putString("ambil_rincian_riil_9", ambil_rincian_riil_9);
-				Bundle.putString("ambil_rincian_riil_10", ambil_rincian_riil_10);
-
-				i.putExtras(Bundle);
-				startActivity(i);
+//				Intent i = null;
+//
+//				i = new Intent(Laporan_Rincian_Biaya_Perj_Dinas.this,
+//						Laporan_Riil.class);
+//
+//				Bundle Bundle = new Bundle();
+//				Bundle.putString("nama", nip);
+//				Bundle.putString("nip", nama);
+//				Bundle.putString("jab", jab);
+//				Bundle.putString("sppd", sppd);
+//				Bundle.putString("tgl_sppd", tgl_sppd);
+//				Bundle.putString("status_riil", cek_status_riil);
+//				Bundle.putString("status_rincian_biaya", cek_status_rincian);
+//
+//				Bundle.putString("ambl_jml1", ambl_jml1);
+//				Bundle.putString("ambl_jml2", ambl_jml2);
+//				Bundle.putString("ambl_jml3", ambl_jml3);
+//				Bundle.putString("ambl_jml4", ambl_jml4);
+//				Bundle.putString("ambl_jml5", ambl_jml5);
+//				Bundle.putString("ambl_jml6", ambl_jml6);
+//				Bundle.putString("ambl_jml7", ambl_jml7);
+//				Bundle.putString("ambl_jml8", ambl_jml8);
+//				Bundle.putString("ambl_jml9", ambl_jml9);
+//				Bundle.putString("ambl_jml10", ambl_jml10);
+//
+//				Bundle.putString("ambil_rincian_1", ambil_rincian_1);
+//				Bundle.putString("ambil_rincian_2", ambil_rincian_2);
+//				Bundle.putString("ambil_rincian_3", ambil_rincian_3);
+//				Bundle.putString("ambil_rincian_4", ambil_rincian_4);
+//				Bundle.putString("ambil_rincian_5", ambil_rincian_5);
+//				Bundle.putString("ambil_rincian_6", ambil_rincian_6);
+//				Bundle.putString("ambil_rincian_7", ambil_rincian_7);
+//				Bundle.putString("ambil_rincian_8", ambil_rincian_8);
+//				Bundle.putString("ambil_rincian_9", ambil_rincian_9);
+//				Bundle.putString("ambil_rincian_10", ambil_rincian_10);
+//
+//				// -------------------
+//				Bundle.putString("ambl_jml_riil_1", ambl_jml_riil_1);
+//				Bundle.putString("ambl_jml_riil_2", ambl_jml_riil_2);
+//				Bundle.putString("ambl_jml_riil_3", ambl_jml_riil_3);
+//				Bundle.putString("ambl_jml_riil_4", ambl_jml_riil_4);
+//				Bundle.putString("ambl_jml_riil_5", ambl_jml_riil_5);
+//				Bundle.putString("ambl_jml_riil_6", ambl_jml_riil_6);
+//				Bundle.putString("ambl_jml_riil_7", ambl_jml_riil_7);
+//				Bundle.putString("ambl_jml_riil_8", ambl_jml_riil_8);
+//				Bundle.putString("ambl_jml_riil_9", ambl_jml_riil_9);
+//				Bundle.putString("ambl_jml_riil_10", ambl_jml_riil_10);
+//
+//				Bundle.putString("ambil_rincian_riil_1", ambil_rincian_riil_1);
+//				Bundle.putString("ambil_rincian_riil_2", ambil_rincian_riil_2);
+//				Bundle.putString("ambil_rincian_riil_3", ambil_rincian_riil_3);
+//				Bundle.putString("ambil_rincian_riil_4", ambil_rincian_riil_4);
+//				Bundle.putString("ambil_rincian_riil_5", ambil_rincian_riil_5);
+//				Bundle.putString("ambil_rincian_riil_6", ambil_rincian_riil_6);
+//				Bundle.putString("ambil_rincian_riil_7", ambil_rincian_riil_7);
+//				Bundle.putString("ambil_rincian_riil_8", ambil_rincian_riil_8);
+//				Bundle.putString("ambil_rincian_riil_9", ambil_rincian_riil_9);
+//				Bundle.putString("ambil_rincian_riil_10", ambil_rincian_riil_10);
+//
+//				i.putExtras(Bundle);
+//				startActivity(i);
 
 			}
 
@@ -668,31 +664,39 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 			break;
 
         case R.id.img_hapusrincian1:
-            img_hapusrincian1.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    pertanyaan_hapus_button_satu();
-                }
-            });
+           img_hapusrincian1.setOnClickListener(v ->
+					konfirmasiHapus(
+							edit_rincian_1,
+							edit_jml_rincian_1,
+                            (Button) btn_upload_ket_1
+                    )
+			);
             break;
 
 		case R.id.img_hapusrincian2:
-            img_hapusrincian2.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-					pertanyaan_hapus_button_dua();
-				}
-			});
+            img_hapusrincian2.setOnClickListener(v ->
+//				pertanyaan_hapus_button_dua();
+				konfirmasiHapus(
+						edit_rincian_2,
+						edit_jml_rincian_2,
+						(Button) btn_upload_ket_2
+				)
+
+			);
 			break;
 		case R.id.img_hapusrincian3:
-            img_hapusrincian3.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-					pertanyaan_hapus_button_tiga();
-				}
-			});
+			img_hapusrincian3.setOnClickListener(v ->
+
+//					pertanyaan_hapus_button_tiga();
+					konfirmasiHapus(
+							edit_rincian_3,
+							edit_jml_rincian_3,
+							(Button) btn_upload_ket_3
+					)
+
+			);
 			break;
-		case R.id.img_hapusrincian4:
+		/*case R.id.img_hapusrincian4:
             img_hapusrincian4.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -748,7 +752,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 					pertanyaan_hapus_button_sepuluh();
 				}
 			});
-			break;
+			break;*/
 
 		default:
 			break;
@@ -759,18 +763,18 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		final Dialog dialog = new Dialog(this);
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		dialog.setContentView(R.layout.dialog_pop_up_perincian_riil);
-		edit_dialog_uraian 	= (EditText) dialog
+		edit_dialog_uraian 	= dialog
 				.findViewById(R.id.edit_dialog_uraian);
-		edit_textjml_riil 	= (EditText) dialog
+		edit_textjml_riil 	= dialog
 				.findViewById(R.id.edit_textjml_riil);
-		btn_upload_image 	= (Button) dialog.findViewById(R.id.btn_upload_image);
-		btn_camera 			= (Button) dialog.findViewById(R.id.btn_camera);
-		imgPreview 			= (ImageView) dialog.findViewById(R.id.imgPreview);
-		TextView judul 		= (TextView) dialog.findViewById(R.id.judul);
-		Button btn_cncl 	= (Button) dialog.findViewById(R.id.btn_cncl);
-		Button btn_simpan 	= (Button) dialog.findViewById(R.id.btn_simpan);
+		btn_upload_image 	= dialog.findViewById(R.id.btn_upload_image);
+		btn_camera 			= dialog.findViewById(R.id.btn_camera);
+		imgPreview 			= dialog.findViewById(R.id.imgPreview);
+		TextView judul 		= dialog.findViewById(R.id.judul);
+		Button btn_cncl 	= dialog.findViewById(R.id.btn_cncl);
+		Button btn_simpan 	= dialog.findViewById(R.id.btn_simpan);
 
-		path = (TextView) dialog.findViewById(R.id.path);
+		path = dialog.findViewById(R.id.path);
 		judul.setText("Pengisian Uraian Rincian Biaya");
 		dialog.show();
 
@@ -854,14 +858,10 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 	}
 
 	private boolean isDeviceSupportCamera() {
-		if (getApplicationContext().getPackageManager().hasSystemFeature(
-				PackageManager.FEATURE_CAMERA)) {
-			// this device has a camera
-			return true;
-		} else {
-			// no camera on this device
-			return false;
-		}
+        // this device has a camera
+        // no camera on this device
+        return getApplicationContext().getPackageManager().hasSystemFeature(
+                PackageManager.FEATURE_CAMERA);
 	}
 
 	/**
@@ -1022,7 +1022,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 	public void tombol_upload_galery() {
 		final String path1 = btn_upload_image.getText().toString();
 
-		if (path1 != null && FileUtils.isLocal(path1)) {
+		if (FileUtils.isLocal(path1)) {
 
 			File file = new File(path1);
 		} else if (path1 == null) {
@@ -1068,7 +1068,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 	public void tombol_upload_camera() {
 		final String path1 = btn_camera.getText().toString();
 
-		if (path1 != null && FileUtils.isLocal(path1)) {
+		if (FileUtils.isLocal(path1)) {
 
 			File file = new File(path1);
 		} else if (path1 == null) {
@@ -1126,7 +1126,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		String boundary = "*****";
 		int bytesRead, bytesAvailable, bufferSize;
 		byte[] buffer;
-		int maxBufferSize = 1 * 1024 * 1024;
+		int maxBufferSize = 1024 * 1024;
 		File sourceFile = new File(url_simpan_image);
 
 		if (!sourceFile.isFile()) {
@@ -1488,12 +1488,12 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		ad.show();
 	}
 
-	class Simpan_Laporan_Rincian extends AsyncTask<String, String, String> {
+	/*public class Simpan_Laporan_Rincian extends AsyncTask<String, String, String> {
 
-		/**
+		*//**
 		 * saat setelah tekan tombol registrasi tunjukanlah progressBar kepada
 		 * *pengguna agar ia tahu aplikasi sedang apa
-		 * */
+		 * *//*
 		boolean failure = false;
 
 		@Override
@@ -1640,7 +1640,91 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 
 		}
 
+	}*/
+
+	public class Simpan_Laporan_Rincian extends AsyncTask<String, String, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			dialog_lainnya = new ProgressDialog(
+					Laporan_Rincian_Biaya_Perj_Dinas.this);
+			dialog_lainnya.setMessage("Loading ...");
+			dialog_lainnya.setCancelable(false);
+			dialog_lainnya.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String ambil_nomor_sppd = edit_lamp_sppd.getText().toString().trim();
+			String nip = nama_lokal.getText().toString().trim();
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+
+				params.put("ambil_nomor_sppd", ambil_nomor_sppd);
+				params.put("nip", nip);
+
+				params.put("rincian_biaya_default", edit_rincian_1.getText().toString().trim());
+				params.put("rincian_biaya_2", edit_rincian_2.getText().toString().trim());
+				params.put("rincian_biaya_3", edit_rincian_3.getText().toString().trim());
+				params.put("rincian_biaya_4", edit_rincian_4.getText().toString().trim());
+				params.put("rincian_biaya_5", edit_rincian_5.getText().toString().trim());
+				params.put("rincian_biaya_6", edit_rincian_6.getText().toString().trim());
+				params.put("rincian_biaya_7", edit_rincian_7.getText().toString().trim());
+				params.put("rincian_biaya_8", edit_rincian_8.getText().toString().trim());
+				params.put("rincian_biaya_9", edit_rincian_9.getText().toString().trim());
+				params.put("rincian_biaya_10", edit_rincian_10.getText().toString().trim());
+
+				params.put("jml_biaya_default", edit_jml_rincian_1.getText().toString().trim());
+				params.put("jml_biaya_2", edit_jml_rincian_2.getText().toString().trim());
+				params.put("jml_biaya_3", edit_jml_rincian_3.getText().toString().trim());
+				params.put("jml_biaya_4", edit_jml_rincian_4.getText().toString().trim());
+				params.put("jml_biaya_5", edit_jml_rincian_5.getText().toString().trim());
+				params.put("jml_biaya_6", edit_jml_rincian_6.getText().toString().trim());
+				params.put("jml_biaya_7", edit_jml_rincian_7.getText().toString().trim());
+				params.put("jml_biaya_8", edit_jml_rincian_8.getText().toString().trim());
+				params.put("jml_biaya_9", edit_jml_rincian_9.getText().toString().trim());
+				params.put("jml_biaya_10", edit_jml_rincian_10.getText().toString().trim());
+
+				params.put("tgl_pembuatan_rincian",
+						edit_tgl_telah_diterima.getText().toString().trim());
+				params.put("grand_total",
+						infolagi12.getText().toString().trim());
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.simpan_update_data_rincian,
+						params
+				);
+
+				if (response == null) {
+					return "Tidak ada respon dari server";
+				}
+
+				Log.d("RESPON SERVER", response);
+
+				JSONObject json = new JSONObject(response);
+				return json.getString(TAG_PESAN);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "Terjadi kesalahan saat menyimpan data";
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			dialog_lainnya.dismiss();
+
+			if (hasil != null) {
+				informasi_keluar(hasil);
+			}
+		}
 	}
+
 
 	@Override
 	protected Dialog onCreateDialog(int id) {
@@ -1652,7 +1736,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		return null;
 	}
 
-	private DatePickerDialog.OnDateSetListener tgl_ttd_petugas_pembuatlaporan = new DatePickerDialog.OnDateSetListener() {
+	private final DatePickerDialog.OnDateSetListener tgl_ttd_petugas_pembuatlaporan = new DatePickerDialog.OnDateSetListener() {
 
 		@Override
 		public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -1674,10 +1758,10 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		for (int i = sret.length(); i < len; i++) {
 			sret = spad + sret;
 		}
-		return new String(sret);
+		return sret;
 	}
 
-	private Runnable runnable = new Runnable() {
+	private final Runnable runnable = new Runnable() {
 
 		@SuppressLint("SimpleDateFormat")
 		@Override
@@ -1752,7 +1836,7 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		ad.show();
 	}
 
-	class Hapus_Total_Rincian extends AsyncTask<String, String, String> {
+	/*public class Hapus_Total_Rincian extends AsyncTask<String, String, String> {
 		boolean failure = false;
 
 		@Override
@@ -1818,6 +1902,72 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 
 		}
 
+	}*/
+	public class Hapus_Total_Rincian extends AsyncTask<String, String, String> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			dialog_lainnya = new ProgressDialog(
+					Laporan_Rincian_Biaya_Perj_Dinas.this);
+			dialog_lainnya.setMessage("Sedang Dalam Proses Penghapusan Total...");
+			dialog_lainnya.setCancelable(false);
+			dialog_lainnya.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(String... args) {
+
+			String ambil_nomor_sppd = edit_lamp_sppd.getText().toString().trim();
+			String nip = nama_lokal.getText().toString().trim();
+
+			try {
+				// 🔹 PARAM POST
+				HashMap<String, String> params = new HashMap<>();
+				params.put("ambil_nomor_sppd", ambil_nomor_sppd);
+				params.put("nip", nip);
+
+				// 🔹 REQUEST
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.hapus_data_rincian,
+						params
+				);
+
+				if (response == null) {
+					return "Tidak ada respon dari server";
+				}
+
+				Log.d("RESPON SERVER", response);
+
+				// 🔹 PARSE JSON
+				JSONObject json = new JSONObject(response);
+				int berhasil = json.getInt(TAG_BERHASIL);
+
+				return json.getString(TAG_PESAN);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "Terjadi kesalahan saat menghapus data";
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			dialog_lainnya.dismiss();
+
+			Toast.makeText(
+					Laporan_Rincian_Biaya_Perj_Dinas.this,
+					hasil,
+					Toast.LENGTH_LONG
+			).show();
+
+			// tutup activity jika sukses
+			if (hasil != null && hasil.toLowerCase().contains("sukses")) {
+				finish();
+			}
+		}
 	}
 
 	// --------------------------------------------------------------------------------------------------------------------------------
@@ -2087,7 +2237,109 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		return temp;
 	}
 
-	private void pertanyaan_hapus_button_satu() {
+	public class HapusRincianTask extends AsyncTask<Void, Void, String> {
+
+		private final EditText etRincian;
+        private final EditText etJumlah;
+		private final Button btnUpload;
+		private ProgressDialog dialog;
+
+		public HapusRincianTask(EditText rincian,
+								EditText jumlah,
+								Button btnUpload) {
+			this.etRincian = rincian;
+			this.etJumlah = jumlah;
+			this.btnUpload = btnUpload;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			dialog = new ProgressDialog(Laporan_Rincian_Biaya_Perj_Dinas.this);
+			dialog.setMessage("Sedang Dalam Proses Hapus...");
+			dialog.setCancelable(false);
+			dialog.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("no_sppd", edit_lamp_sppd.getText().toString().trim());
+				params.put("uraian", etRincian.getText().toString().trim());
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.hapus_data_per_uraian_laporan,
+						params
+				);
+
+				if (response == null) {
+					return "Tidak ada respon dari server";
+				}
+
+				Log.d("RESPON HAPUS", response);
+
+				JSONObject json = new JSONObject(response);
+				return json.getString(TAG_PESAN);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return "Terjadi kesalahan";
+			}
+		}
+
+		@Override
+		protected void onPostExecute(String hasil) {
+			dialog.dismiss();
+
+			if (hasil != null) {
+				Toast.makeText(
+						Laporan_Rincian_Biaya_Perj_Dinas.this,
+						hasil,
+						Toast.LENGTH_LONG
+				).show();
+
+				etRincian.setText("");
+				etJumlah.setText("");
+				btnUpload.setText("Bukti");
+
+				function_jumlah();
+			}
+		}
+	}
+
+	private void konfirmasiHapus(
+			EditText rincian,
+			EditText jumlah,
+			Button btnUpload) {
+
+		String isi = rincian.getText().toString().trim();
+
+		if (isi.isEmpty()) {
+			Toast.makeText(this, "Tidak Ada Data", Toast.LENGTH_LONG).show();
+			return;
+		}
+
+		new AlertDialog.Builder(this)
+				.setTitle("Informasi")
+				.setMessage(
+						"Rincian : " + isi +
+								"\n\nApakah Data Akan Di Hapus ???"
+				)
+				.setPositiveButton("Hapus", (d, w) ->
+						new HapusRincianTask(
+								rincian,
+								jumlah,
+								btnUpload
+						).execute()
+				)
+				.setNegativeButton("Tidak", (d, w) -> d.dismiss())
+				.show();
+	}
+
+	/*private void pertanyaan_hapus_button_satu() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_1.getText().toString();
 		ad.setTitle("Informasi");
@@ -2113,9 +2365,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
-	// ----------------------------------------------------------------HAPUS
-	// FILE 1---------------------------------------------------
 	public class Hapus_File_Satu extends AsyncTask<String, String, String> {
 
 		@Override
@@ -2179,9 +2428,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		}
 
 	}
-
-	// ----------------------------------------------------------------HAPUS
-	// FILE 2---------------------------------------------------
 	private void pertanyaan_hapus_button_dua() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_2.getText().toString();
@@ -2208,7 +2454,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
 	public class Hapus_File_Dua extends AsyncTask<String, String, String> {
 
 		@Override
@@ -2272,10 +2517,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		}
 
 	}
-
-	// ----------------------------------------------------------------HAPUS
-	// FILE 3---------------------------------------------------
-
 	private void pertanyaan_hapus_button_tiga() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_3.getText().toString();
@@ -2302,7 +2543,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Tiga extends AsyncTask<String, String, String> {
 
         @Override
@@ -2366,9 +2606,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 4---------------------------------------------------
-
 	private void pertanyaan_hapus_button_empat() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_4.getText().toString();
@@ -2395,7 +2632,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Empat extends AsyncTask<String, String, String> {
 
         @Override
@@ -2459,9 +2695,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 5---------------------------------------------------
-
 	private void pertanyaan_hapus_button_lima() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_5.getText().toString();
@@ -2551,9 +2784,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 6---------------------------------------------------
-
 	private void pertanyaan_hapus_button_enam() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_6.getText().toString();
@@ -2580,7 +2810,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Enam extends AsyncTask<String, String, String> {
 
         @Override
@@ -2644,9 +2873,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 7---------------------------------------------------
-
 	private void pertanyaan_hapus_button_tujuh() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_7.getText().toString();
@@ -2673,7 +2899,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Tujuh extends AsyncTask<String, String, String> {
 
         @Override
@@ -2737,9 +2962,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 8---------------------------------------------------
-
 	private void pertanyaan_hapus_button_delapan() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_8.getText().toString();
@@ -2770,7 +2992,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Delapan extends AsyncTask<String, String, String> {
 
         @Override
@@ -2834,9 +3055,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 9---------------------------------------------------
-
 	private void pertanyaan_hapus_button_sembilan() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_9.getText().toString();
@@ -2863,7 +3081,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Sembilan extends AsyncTask<String, String, String> {
 
         @Override
@@ -2927,8 +3144,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
         }
 
     }
-	// ----------------------------------------------------------------HAPUS
-	// FILE 10---------------------------------------------------
 	private void pertanyaan_hapus_button_sepuluh() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		String ambil_rincian = edit_rincian_10.getText().toString();
@@ -2955,7 +3170,6 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
 		});
 		ad.show();
 	}
-
     public class Hapus_File_Sepuluh extends AsyncTask<String, String, String> {
 
         @Override
@@ -3017,5 +3231,5 @@ public class Laporan_Rincian_Biaya_Perj_Dinas extends AppCompatActivity implemen
             }
 
         }
-    }
+    }*/
 }

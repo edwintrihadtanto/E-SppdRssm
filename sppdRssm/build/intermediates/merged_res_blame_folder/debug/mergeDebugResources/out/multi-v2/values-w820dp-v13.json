@@ -4,7 +4,7 @@
             "outputFile": "com.e_sppd.rssm.sppdRssm-mergeDebugResources-23:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\edwin\\AndroidStudioProjects\\workshop\\E-SppdRssm\\sppdRssm\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "from": {
                         "startLines": "8",
                         "startColumns": "4",

@@ -30,7 +30,7 @@ public class Koneksi {
 	public static final String tampil_data_nip 						= "tampil_data_nip.php";
 	public static final String tampil_data_nip_spt 					= "tampil_data_nip_spt.php";
 	public static final String tampil_data_nip_berdasarkan_spt 		= "tampil_data_nip_berdasarkan_spt.php";
-		public static final String profil_pegawai 						= "profil_pegawai.php";
+		public static final String profil_pegawai 					= "profil_pegawai.php";
 	/*    public static final String search_nama_pegawai 					= "search_nama_pegawai.php";
         public static final String simpan_data_sppdbaru 				= "simpan_data_sppdbaru.php";*/
 //	public static final String tampil_daftar_sppd_per_nip 			= "tampil_daftar_sppd_per_nip.php/";
@@ -76,10 +76,10 @@ public class Koneksi {
 	public static final String simpan_kritik 						= URL_SERVERNEW + "tentang/simpan_kritik.php/";
 
 	public static final String list_sptsppd 						= URL_SERVERNEW + "sptsppd/list_sptsppd.php";
-	public static final String tampil_daftar_sppd_per_nip_POSTING 	= URL_SERVERNEW + "sptsppd/count_sptsppd.php";
+	public static final String count_sptsppd 						= URL_SERVERNEW + "sptsppd/count_sptsppd.php";
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
-	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php";
+	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php/";
 	public Koneksi() {
 		super();
 	}
