@@ -347,7 +347,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 						ALert_Edit_Laporan_Perjalanan_Dinas(pesan2);
 					}else{
 						dialog2.dismiss();
-						String pesan = "Anda Sudah Membuat Laporan Perjalanan Dinas\n"+"NIP/NPK Pembuat Laporan : "+cek_nip_pembuat_lap;
+						String pesan = "Laporan Perjalanan Dinas Sudah di Buat oleh \n"+"NIP: "+cek_nip_pembuat_lap;
 						showAlert_Khusus_Lap(pesan);
 					}
 				}else{

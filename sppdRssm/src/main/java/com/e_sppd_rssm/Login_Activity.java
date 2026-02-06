@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +16,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -44,13 +47,11 @@ import androidx.core.app.ActivityCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -62,10 +63,8 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 //import koneksi.JSONParser;
 import koneksi.Java_Connection;
@@ -74,7 +73,7 @@ import koneksi.PermissionHelper;
 
 public class Login_Activity extends AppCompatActivity {
 	private final static String TAG = "Login_Activity";
-	public static final String nippegawai 		= "nip";
+//	public static final String nippegawai 		= "nip";
 	private static final String versi 			= "versi";
 
 	private static final String TAG_CODE 		= "code";
@@ -98,6 +97,7 @@ public class Login_Activity extends AppCompatActivity {
 	public  static final int RequestPermissionCode_StorageCamera  = 11 ;
 
 	private final String[] daftarversiaplikasi={
+			"Versi 4.0",
 			"Versi 3.0",
 			"Versi 2.1",
 			"Versi 2.0",
@@ -111,12 +111,13 @@ public class Login_Activity extends AppCompatActivity {
 	public static final String my_shared_preferences = "my_shared_preferences";
 	public static final String session_status_level1 = "session_status_level1";
 	public static final String session_status_level2 = "session_status_level2";
-	public String pesan, warning, versiygbaru, progressdownload;
-
+	public String pesan, warning, versiygbaru;
+	private ProgressDialog downloaddiMAIN;
+	private String progressdownload = "";
 	PermissionHelper permissionHelper;
-	ImageView img_showpass_login1, img_showpass_login2, imgicon, gmbar_loading_login;
+	ImageView img_showpass_login1, img_showpass_login2, gmbar_loading_login;
 	EditText edit_pass, edit_nip;
-	ProgressDialog loading, download;
+	ProgressDialog  download;
 //	JSONParser classJsonParser = new JSONParser();
 	TextView cek_versi_apk, develpe;
 	ListView listView;
@@ -127,8 +128,8 @@ public class Login_Activity extends AppCompatActivity {
 	Animation animAlpha, animkekiri, animkekanan;
 	RelativeLayout frame_loading_login;
 	CardView cardView_btnlogin, cardView_register, cardview_lupapass;
-	String info = "© ESPPD 2017-2024,\nDeveloped by I.T.I.S.I - RSSM";
-
+	String info = "© ESPPD 2017-2026,\nDeveloped by I.T.I.S.I - RSSM";
+	String versinya = BuildConfig.VERSION_NAME;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -154,8 +155,8 @@ public class Login_Activity extends AppCompatActivity {
 		img_showpass_login2 = findViewById(R.id.img_showpass_login2);
 		develpe.setText(info);
 
-		String versi = "3.0"; //JANGAN LUPA VERSI INI DIRUBAH SESUAI UPDATENYA
-		cek_versi_apk.setText(versi);
+//		String versi = "3.0"; //JANGAN LUPA VERSI INI DIRUBAH SESUAI UPDATENYA
+		cek_versi_apk.setText(versinya);
 		kirim_versi = cek_versi_apk.getText().toString();
 		//edit_nip.setText("303-03081992-052017-8776");
 		//edit_pass.setText("edwin");
@@ -175,7 +176,7 @@ public class Login_Activity extends AppCompatActivity {
 		unit			= sharedpreferences.getString(TAG_UNIT, null);
 		password		= sharedpreferences.getString(TAG_PASSWORD, null);
 		email			= sharedpreferences.getString(TAG_EMAIL, null);
-
+		Log.e(TAG, String.valueOf(session_1));
 		if (session_1) {
 //			Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Admin.class);
 //			intent.putExtra(TAG_NIP, nip);
@@ -664,9 +665,7 @@ public class Login_Activity extends AppCompatActivity {
 	
 	//@SuppressLint("SdCardPath")
 	@SuppressLint("StaticFieldLeak")
-	private class down_apk extends AsyncTask<String, String, String>
-
-	{
+	private class down_apkXXX extends AsyncTask<String, String, String> {
 		@Override
 		@SuppressWarnings("deprecation")
 		protected void onPreExecute() {
@@ -756,6 +755,146 @@ public class Login_Activity extends AppCompatActivity {
 		}
 	}
 
+	@SuppressLint("StaticFieldLeak")
+    private class down_apk extends AsyncTask<String, Integer, String> {
+
+		private Uri fileUri;
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+
+			downloaddiMAIN = new ProgressDialog(Login_Activity.this);
+			downloaddiMAIN.setTitle("Download Aplikasi");
+			downloaddiMAIN.setMessage("Sedang mengunduh...");
+			downloaddiMAIN.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			downloaddiMAIN.setIndeterminate(false);
+			downloaddiMAIN.setMax(100);
+			downloaddiMAIN.setCancelable(false);
+			downloaddiMAIN.show();
+		}
+
+		@Override
+		protected String doInBackground(String... f_url) {
+			String error = null;
+			int count;
+
+			try {
+				URL url = new URL(f_url[0]);
+				URLConnection connection = url.openConnection();
+				connection.connect();
+
+				int lengthOfFile = connection.getContentLength();
+
+				// ===== MediaStore.Files (Universal) =====
+				ContentValues values = new ContentValues();
+				values.put(MediaStore.MediaColumns.DISPLAY_NAME,
+						"e-Sppd.v" + versiygbaru + ".apk");
+				values.put(MediaStore.MediaColumns.MIME_TYPE,
+						"application/vnd.android.package-archive");
+
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+					values.put("relative_path", Environment.DIRECTORY_DOWNLOADS);
+				}
+
+				fileUri = getContentResolver().insert(
+						MediaStore.Files.getContentUri("external"), values);
+
+				if (fileUri == null) {
+					return "Gagal membuat file Download";
+				}
+
+				InputStream input = new BufferedInputStream(url.openStream());
+				OutputStream output = getContentResolver().openOutputStream(fileUri);
+
+				if (output == null) {
+					return "Gagal membuka OutputStream";
+				}
+
+				byte[] data = new byte[1024];
+				long total = 0;
+
+				while ((count = input.read(data)) != -1) {
+					total += count;
+					int progress = (int) ((total * 100) / lengthOfFile);
+					publishProgress(progress);
+					output.write(data, 0, count);
+				}
+
+				output.flush();
+				output.close();
+				input.close();
+
+			} catch (Exception e) {
+				error = e.toString();
+			}
+
+			return error;
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... progress) {
+			if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
+				downloaddiMAIN.setProgress(progress[0]);
+			}
+			progressdownload = String.valueOf(progress[0]);
+			Log.e(TAG, "Progress Download: " + progress[0] + "%");
+		}
+
+		@Override
+		protected void onPostExecute(String error) {
+
+			if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
+				downloaddiMAIN.dismiss();
+				downloaddiMAIN = null;
+			}
+
+			if (error == null && "100".equals(progressdownload)) {
+
+				String pesan =
+						"Download E-SPPD V" + versiygbaru + " berhasil.\n\n" +
+								"File tersimpan di folder Download.\n" +
+								"Silakan install ulang aplikasi.";
+
+				showprogress_download(pesan);
+
+			} else if (error != null) {
+
+				if (error.contains("UnknownHost") ||
+						error.contains("ETIMEDOUT") ||
+						error.contains("SSLException")) {
+
+					show_warning(
+							"Tidak ada koneksi internet.\n" +
+									"Periksa Wi-Fi atau data seluler lalu coba lagi."
+					);
+
+				} else if (error.contains("Permission denied")) {
+
+					Toast.makeText(
+							Login_Activity.this,
+							"Izin penyimpanan diperlukan.\nAktifkan di pengaturan aplikasi.",
+							Toast.LENGTH_LONG
+					).show();
+
+				} else {
+                    showErrorSnackbar("Download gagal: " + error);
+                }
+
+			} else {
+				showErrorSnackbar("Download tidak selesai");
+			}
+
+			super.onPostExecute(error);
+		}
+	}
+
+	private void showErrorSnackbar(String message) {
+		View rootView = findViewById(android.R.id.content);
+		Snackbar.make(rootView, message, Snackbar.LENGTH_LONG)
+				.setAction("OK", v -> {})
+				.show();
+	}
 	@SuppressLint("UnsafeIntentLaunch")
 	private void showprogress_download(String a) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);

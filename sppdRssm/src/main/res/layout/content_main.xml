@@ -30,20 +30,21 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:contentDescription="@string/todo"
-        app:srcCompat="@drawable/simrs" />
+        app:srcCompat="@drawable/simrsxx" />
 
     <ImageView
         android:id="@+id/btn_refresh_utama"
-        android:layout_width="48dp"
+        android:layout_width="35dp"
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="5dp"
         android:contentDescription="@string/refreshmenu"
+        android:src="@drawable/ic_refresh_black_24dp"
         android:onClick="refresh" />
 
     <Button
         android:id="@+id/btn_ic_menusamping"
-        android:layout_width="48dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_margin="5dp"
@@ -78,16 +79,6 @@
             android:src="@drawable/icontaktau"
             android:contentDescription="@android:string/unknownName"
             />
-        <!--<de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_utamax"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:clickable="false"
-            android:src="@drawable/icontaktau"
-            app:civ_border_color="#000000"
-            app:civ_border_width="2dp"
-            />-->
 
         <TextView
             android:id="@+id/menuutama_nippetugas"
@@ -96,7 +87,7 @@
             android:layout_alignTop="@+id/img_utama"
             android:layout_marginEnd="5dp"
             android:layout_toEndOf="@+id/img_utama"
-            android:fontFamily="@font/default_font"
+            android:fontFamily="@font/poppins_regular"
             android:gravity="center|top"
             android:textColor="@color/hitam"
             android:textSize="20sp"
@@ -111,7 +102,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             android:layout_toEndOf="@+id/img_utama"
-            android:fontFamily="@font/default_font"
+            android:fontFamily="@font/poppins_regular"
             android:gravity="bottom|center"
             android:textColor="@color/hitam"
             android:textSize="20sp"
@@ -136,7 +127,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_toEndOf="@+id/img_utama"
-            android:fontFamily="@font/default_font"
+            android:fontFamily="@font/poppins_regular"
             android:gravity="bottom|center"
             android:textColor="@color/hitam"
             android:textSize="16sp"
@@ -151,7 +142,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_toEndOf="@+id/img_utama"
-            android:fontFamily="@font/default_font"
+            android:fontFamily="@font/poppins_regular"
             android:gravity="bottom|center"
             android:textColor="@color/hitam"
             android:textSize="16sp"
@@ -168,7 +159,7 @@
         android:textColor="@color/white"
         android:textStyle="normal|italic"
         android:textSize="14sp"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="@font/poppins_regular"
         android:layout_below="@+id/cardView_kotaknama"
         android:layout_alignLeft="@+id/cardView_kotaknama"
         android:layout_alignRight="@+id/cardView_kotaknama"
@@ -180,7 +171,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/menuutama_version"
-        android:fontFamily="cursive"
+        android:fontFamily="@font/poppins_regular"
         android:gravity="center|center_vertical"
         android:textColor="@color/white"
         android:textSize="35sp"
@@ -193,7 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/jam_utama"
         android:layout_marginBottom="10dp"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="@font/poppins_regular"
         android:gravity="center|center_vertical"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -226,7 +217,7 @@
     <View
         android:id="@+id/grsutama1"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/grsutamattengah"
         android:background="@drawable/circle_reg_v1"/>
@@ -234,7 +225,7 @@
     <View
         android:id="@+id/grsutama2"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/grsutamattengah"
         android:background="@drawable/circle_reg_v2"/>

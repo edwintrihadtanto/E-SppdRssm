@@ -1,692 +1,244 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/transparan_baru" >
+    android:layout_height="match_parent">
 
+    <!-- Action Bar -->
     <View
         android:id="@+id/actionbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
         android:background="@color/list_item_title" />
-
-<!--    <Button-->
-<!--        android:id="@+id/btn_refresh"-->
-<!--        android:layout_width="30dp"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_marginRight="15dp"-->
-<!--        android:background="@drawable/ic_reload"-->
-<!--        android:onClick="refresh"-->
-<!--        android:textColor="@color/hitam"-->
-<!--        android:textStyle="bold" />-->
 
     <TextView
         android:id="@+id/asa"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:gravity="center|center_horizontal"
+        android:gravity="center"
         android:text="@string/menu_laporan_perjalanan_dinas_e_sppd_rssm"
         android:textColor="@color/hitam"
         android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rel_lap_input"
+    <!-- FORM -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/actionbar"
-        android:layout_margin="2dp"
-        android:background="@color/grey" >
+        android:layout_below="@id/actionbar"
+        android:padding="16dp">
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbarStyle="insideOverlay"
-            android:background="@android:color/transparent" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ScrollView
-                android:id="@+id/scrollview_rel_lap_input"
+            <!-- Informasi SPT -->
+
+            <TextView
+                android:id="@+id/status_laporan_petugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informasi SPT"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edit_dsr_sppt_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor SPT"
+                android:enabled="false" />
+
+            <EditText
+                android:id="@+id/edit_tgl_dsr_sppt_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal SPT"
+                android:enabled="false" />
+
+            <!-- Pelaksanaan -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pelaksanaan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="16dp" />
+
+            <EditText
+                android:id="@+id/edit_tgl_pelaksanaan_awal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Mulai"
+                android:enabled="false" />
+
+            <EditText
+                android:id="@+id/edit_tgl_pelaksanaan_sampai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Selesai"
+                android:enabled="false" />
+
+            <EditText
+                android:id="@+id/edit_lama_tgl_pelaksanaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lama Hari"
+                android:enabled="false" />
+
+            <!-- Petugas -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Petugas"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="16dp" />
+
+            <EditText
+                android:id="@+id/edit_tampil_nip_spt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama / NIP Petugas"
+                android:enabled="false" />
+
+            <!-- Tujuan -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tujuan Perjalanan"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="16dp" />
+
+            <EditText
+                android:id="@+id/edit_daerah_tujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Daerah Tujuan"
+                android:enabled="false" />
+
+            <EditText
+                android:id="@+id/edit_ins_yg_kunjungi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Instansi yang Dikunjungi"
+                android:enabled="false" />
+
+            <EditText
+                android:id="@+id/edit_acara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Acara"
+                android:enabled="false" />
+
+            <!-- Hasil -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasil dan Evaluasi"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="16dp" />
+
+            <EditText
+                android:id="@+id/edit_hsl_rapat"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Hasil Rapat"
+                android:gravity="top"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/edit_masalah"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Masalah / Temuan"
+                android:gravity="top"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/edit_saran"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Saran / Tindakan"
+                android:gravity="top"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/edit_lain_lain"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Lain-lain"
+                android:gravity="top"
+                android:inputType="textMultiLine" />
+
+            <!-- TTD -->
+            <TextView
+                android:id="@+id/nmkota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/madiun_kota"
+                android:textStyle="bold"
+                android:paddingTop="16dp" />
+
+            <EditText
+                android:id="@+id/edit_tgl_ttd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/btn_browser"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:overScrollMode="ifContentScrolls">
+                android:layout_height="wrap_content"
+                android:text="@string/ttd" />
 
-                <RelativeLayout
-                    android:id="@+id/rel_lap_input_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/grey"
-                    android:orientation="horizontal">
+            <View
+                android:id="@+id/grs_tanda_tangan"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/hitam"
+                android:layout_marginTop="16dp" />
 
-                    <TextView
-                        android:id="@+id/dsr_sppt"
-                        android:layout_width="200dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/dasar_spt"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
+            <TextView
+                android:id="@+id/vietampil_niplagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nip_npk_petugas_laporan"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/titikduasppt_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/dsr_sppt"
-                        android:gravity="center_vertical"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tampil_niplagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/nosj"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_1"
-                        android:gravity="center_vertical"
-                        android:text="No."
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tgl_sembunyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
 
-                    <TextView
-                        android:id="@+id/tgl_spt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/nosj"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_1"
-                        android:text="Tgl."
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 
-                    <EditText
-                        android:id="@+id/edit_dsr_sppt_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignBottom="@+id/nosj"
-                        android:layout_alignTop="@+id/nosj"
-                        android:layout_toRightOf="@+id/nosj"
-                        android:enabled="false"
-                        android:gravity="center_vertical"
-                        android:hint="moss"
-                        android:inputType="none"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_tgl_dsr_sppt_"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_alignBottom="@+id/tgl_spt"
-                        android:layout_toRightOf="@+id/tgl_spt"
-                        android:enabled="false"
-                        android:inputType="none"
-                        android:labelFor="@+id/edit_tgl_dsr_sppt_"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tgl_pelaksanaan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignBottom="@+id/titikduasppt_2"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:gravity="center_vertical"
-                        android:text="@string/_tgl_pelaksanaan"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/tgl_pelaksanaan"
-                        android:gravity="center_vertical"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/texttglsajas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_2"
-                        android:gravity="center_vertical"
-                        android:text="Tgl."
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_tgl_pelaksanaan_awal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:layout_toRightOf="@+id/texttglsajas"
-                        android:enabled="false"
-                        android:hint="Awal"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/grssampai"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:layout_toRightOf="@+id/edit_tgl_pelaksanaan_awal"
-                        android:gravity="center|center_vertical"
-                        android:text=" - "
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <EditText
-                        android:id="@+id/edit_tgl_pelaksanaan_sampai"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:layout_toRightOf="@+id/grssampai"
-                        android:enabled="false"
-                        android:hint="Akhir"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <EditText
-                        android:id="@+id/edit_lama_tgl_pelaksanaan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_1"
-                        android:layout_toRightOf="@+id/edit_tgl_pelaksanaan_sampai"
-                        android:enabled="false"
-                        android:hint="Lama Hari"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/nm_petugas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/tgl_pelaksanaan"
-                        android:gravity="center_vertical"
-                        android:text="@string/_3_nama_petugas"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_2"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/nm_petugas"
-                        android:gravity="center_vertical"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_tampil_nip_spt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_2"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_3"
-                        android:enabled="false"
-                        android:inputType="none"
-                        android:labelFor="@+id/edit_tampil_nip_spt"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/daerah_tujuan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/nm_petugas"
-                        android:gravity="center_vertical"
-                        android:text="@string/_4_daerah_tujuan"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_3"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/daerah_tujuan"
-                        android:gravity="center_vertical"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_daerah_tujuan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_3"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_4"
-                        android:enabled="false"
-                        android:gravity="center_vertical"
-                        android:hint="@string/daerah_tujuan"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/ins_yg_kunjungi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/daerah_tujuan"
-                        android:gravity="center_vertical"
-                        android:text="@string/_5_instansi_yang_dikunjungi"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_4"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/ins_yg_kunjungi"
-                        android:gravity="center_vertical"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_ins_yg_kunjungi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_4"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_5"
-                        android:enabled="false"
-                        android:gravity="center_vertical"
-                        android:hint="Instansi yang dikunjungi"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/acara"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/ins_yg_kunjungi"
-                        android:gravity="center_vertical"
-                        android:text="@string/_6_acara"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_5"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/acara"
-                        android:gravity="center_vertical"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_acara"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_5"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_6"
-                        android:enabled="false"
-                        android:hint="@string/acara"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/hsl_rapat"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/acara"
-                        android:layout_marginTop="5dp"
-                        android:layout_alignTop="@+id/edit_hsl_rapat"
-                        android:text="@string/_7_hasil_pertemuan_rapat"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_below="@+id/titikduasppt_6"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_alignTop="@+id/edit_hsl_rapat"
-                        android:layout_toRightOf="@+id/hsl_rapat"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_hsl_rapat"
-                        style="@android:style/Widget.DeviceDefault.EditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_alignRight="@+id/edit_lama_tgl_pelaksanaan"
-                        android:layout_below="@+id/titikduasppt_6"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_7"
-                        android:ems="10"
-                        android:gravity="left|top"
-                        android:hint="@string/hasil_laporan"
-                        android:inputType="textCapWords|textMultiLine"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/masalah"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_below="@+id/hsl_rapat"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_toLeftOf="@+id/titikduasppt_9"
-                        android:layout_toStartOf="@+id/titikduasppt_9"
-                        android:text="@string/_8_masalah_temuan"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_below="@+id/titikduasppt_7"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_alignTop="@+id/edit_masalah"
-                        android:layout_toRightOf="@+id/masalah"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_masalah"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_alignRight="@+id/edit_lama_tgl_pelaksanaan"
-                        android:layout_below="@+id/titikduasppt_7"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_8"
-                        android:ems="10"
-                        android:gravity="left|top"
-                        android:hint="@string/masalah_temuan_laporan"
-                        android:inputType="textCapSentences|textMultiLine"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/saran"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/masalah"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/_9_saran_tindakan"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_below="@+id/titikduasppt_8"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_toRightOf="@+id/saran"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_saran"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_alignRight="@+id/edit_lama_tgl_pelaksanaan"
-                        android:layout_below="@+id/titikduasppt_8"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_9"
-                        android:ems="10"
-                        android:gravity="left|top"
-                        android:hint="@string/saran_tindakan_laporan"
-                        android:inputType="textCapSentences|textMultiLine"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/lain"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_alignLeft="@+id/dsr_sppt"
-                        android:layout_alignRight="@+id/dsr_sppt"
-                        android:layout_below="@+id/saran"
-                        android:layout_marginTop="5dp"
-                        android:text="@string/_10_lain_lain"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/titikduasppt_10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_below="@+id/titikduasppt_9"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_toRightOf="@+id/lain"
-                        android:text="@string/titikdua"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_lain_lain"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_alignRight="@+id/edit_lama_tgl_pelaksanaan"
-                        android:layout_below="@+id/titikduasppt_9"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/titikduasppt_10"
-                        android:ems="10"
-                        android:gravity="left|top"
-                        android:hint="@string/lain_lain"
-                        android:inputType="textCapSentences|textMultiLine"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/nmkota"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_alignBaseline="@+id/edit_tgl_ttd"
-                        android:layout_below="@+id/titikduasppt_10"
-                        android:layout_marginTop="30dp"
-                        android:layout_toRightOf="@+id/titikduasppt_10"
-                        android:gravity="top|left"
-                        android:text="@string/madiun_kota"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/edit_tgl_ttd"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/titikduasppt_10"
-                        android:layout_marginTop="30dp"
-                        android:layout_toRightOf="@+id/nmkota"
-                        android:enabled="false"
-                        android:gravity="center_vertical"
-                        android:hint="@string/tgl_bulan_tahun"
-                        android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/petugas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_below="@+id/nmkota"
-                        android:layout_marginTop="4dp"
-                        android:layout_toRightOf="@+id/titikduasppt_10"
-                        android:text="@string/petugas_nama"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/btn_browser"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_alignLeft="@+id/petugas"
-                        android:layout_alignRight="@+id/grs_tanda_tangan"
-                        android:layout_below="@+id/petugas"
-                        android:layout_margin="2dp"
-                        android:background="@android:color/transparent"
-                        android:text="@string/ttd"
-                        android:textColor="@color/hitam"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <View
-                        android:id="@+id/grs_tanda_tangan"
-                        android:layout_width="230dp"
-                        android:layout_height="3dp"
-                        android:layout_alignLeft="@+id/petugas"
-
-                        android:layout_below="@+id/petugas"
-                        android:layout_marginTop="70dp"
-                        android:background="@color/hitam" />
-
-                    <TextView
-                        android:id="@+id/vietampil_niplagi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:layout_alignLeft="@+id/petugas"
-                        android:layout_below="@+id/grs_tanda_tangan"
-                        android:layout_marginTop="2dp"
-                        android:gravity="left"
-                        android:text="@string/nip_npk_petugas_laporan"
-                        android:textColor="@color/hitam"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tampil_niplagi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="60dp"
-                        android:layout_below="@+id/grs_tanda_tangan"
-                        android:layout_marginBottom="50dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_toRightOf="@+id/vietampil_niplagi"
-                        android:gravity="left"
-                        android:textColor="@color/hitam"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tgl_sembunyi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="gone" />
-                </RelativeLayout>
-            </ScrollView>
-        </HorizontalScrollView>
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/status_laporan_petugas"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:gravity="left"
-        android:textColor="@color/hitam"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+    <!-- Button Simpan -->
     <Button
         android:id="@+id/btn_simpan_lap_set_per_dinas"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_margin="20dp"
-        android:background="@drawable/ic_ok" />
+        android:background="@drawable/ic_ok"
+        android:contentDescription="@string/todo" />
 
 </RelativeLayout>

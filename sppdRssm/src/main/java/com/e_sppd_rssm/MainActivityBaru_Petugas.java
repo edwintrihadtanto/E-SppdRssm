@@ -6,8 +6,9 @@ import static android.widget.Toast.makeText;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.provider.MediaStore;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +19,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
@@ -59,6 +61,7 @@ import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -69,9 +72,9 @@ import koneksi.Koneksi;
 public class MainActivityBaru_Petugas extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private final Handler handler = new Handler();
-    private final static String TAG = "Informasi_error";
-//    JSONParser classJsonParser = new JSONParser();
-    ProgressDialog loading_cek, loading_fcm;
+    private final static String TAG = "MainActivity";
+    private ProgressDialog downloaddiMAIN;
+    private String progressdownload = "";
     DrawerLayout drawer;
     NavigationView navigationView;
     FragmentManager fragmentManager;
@@ -98,9 +101,14 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
     private static final String STATUSPESANTOKEN 	= "pesan";
     private static final String TAG_VERSI           = "versi";
     private static final int progress_DOWNLOAD 	= 0;
+
+    private static final String TAG_VERSICODE 		= "code";
+    private static final String TAG_VERSIPESAN_CEK	= "pesan";
+    private static final String TAG_VERSIWARNING	= "warning";
+    private static final String TAG_VERSIBARU	    = "versiygbaru";
     String get_pesan;
     String cek_versi_apk = BuildConfig.VERSION_NAME;
-
+    public String pesanversi, warningversi, versiygbaru;
     public String token_lama;
     public  static final int RequestPermissionCode_StorageCamera  = 11 ;
 
@@ -111,7 +119,8 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
         setContentView(R.layout.activity_main_petugas);
         handler.postDelayed(runnable, 1000);
         Permission_AksesCameradanStorage();
-        Log.e("info versi bawaan ", BuildConfig.VERSION_NAME);
+//        Log.e("info versi bawaan ", BuildConfig.VERSION_NAME);
+        Log.e("TAG_VERSI", getIntent().getStringExtra(TAG_VERSI));
         gmbar_loading_utama     = findViewById(R.id.gmbar_loading_utama);
         frame_loading_utama     = findViewById(R.id.frame_loading_utama);
 
@@ -163,12 +172,12 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
             callFragment(fragment);
         }
 
-        Glide.with(MainActivityBaru_Petugas.this)
+        /*Glide.with(MainActivityBaru_Petugas.this)
                 // LOAD URL DARI LOKAL DRAWABLE
                 .load(R.drawable.loading_ring)
                 .asGif()
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .into(img_refresh);
+                .into(img_refresh);*/
     }
 
     private boolean terkoneksi_roaming(Context mContext) {
@@ -314,6 +323,7 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
 	}
 */
 
+    @SuppressLint("StaticFieldLeak")
     public class GETTOKEN extends AsyncTask<Void, Void, String> {
 
         @Override
@@ -459,7 +469,7 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
 
     }*/
 
-    public class Cek_Versi_APK extends AsyncTask<Void, Void, String> {
+    /*public class Cek_Versi_APK extends AsyncTask<Void, Void, String> {
 
         @Override
         protected void onPreExecute() {
@@ -553,8 +563,130 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
                 showAlert(pesan);
             }
         }
+    }*/
+    @SuppressLint("StaticFieldLeak")
+    public class Cek_Versi_APK extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            loading_tampil();
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            String versiApk = cek_versi_apk.trim();
+            Java_Connection jc = new Java_Connection();
+
+            try {
+                HashMap<String, String> params = new HashMap<>();
+                params.put("versi_apk", versiApk);
+                Log.i("Proses Cek Versi!", versiApk);
+                String response = jc.sendPostRequest(
+                        Koneksi.CEK_VERSI,
+                        params
+                );
+
+                if (response == null) {
+                    return "0"; // gagal / tidak ada respon
+                }
+
+                Log.d("CEK_VERSI", "RESPON = " + response);
+
+                JSONObject json = new JSONObject(response);
+                int code = json.getInt(TAG_VERSICODE);
+
+                pesanversi      = json.optString(TAG_VERSIPESAN_CEK, "");
+                warningversi    = json.optString(TAG_VERSIWARNING, "");
+                versiygbaru     = json.optString(TAG_VERSIBARU, "");
+
+                return String.valueOf(code);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "0";
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String code) {
+            loading_sembunyi();
+
+            switch (code) {
+                case "1": // versi terbaru
+
+                    break;
+
+                case "405": // info
+                    jikainfo(pesanversi);
+                    break;
+
+                case "404": // maintenance
+                    jikamaintenance(pesanversi);
+                    break;
+
+                case "405404": // info + maintenance
+                    jikamaintenancedaninfo(pesanversi);
+                    break;
+
+                case "101": // wajib update
+                    info_download(pesanversi, warningversi);
+                    break;
+
+                default:
+                    Toast.makeText(
+                            getApplicationContext(),
+                            "Gagal cek versi",
+                            Toast.LENGTH_LONG
+                    ).show();
+                    break;
+            }
+        }
     }
 
+    //dialog untuk cek versi
+    private void jikainfo(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message)
+                .setTitle(warningversi)
+                .setCancelable(false)
+                .setIcon(R.drawable.ic_info_outline_24dp)
+                .setPositiveButton("Ok",
+                        (dialog, id) -> dialog.dismiss());
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    private void jikamaintenance(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message)
+                .setTitle(warningversi)
+                .setCancelable(false)
+                .setIcon(R.drawable.ic_warning_black)
+                .setPositiveButton("Terima Kasih",
+                        (dialog, id) -> {
+                            dialog.dismiss();
+                            finish();
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    private void jikamaintenancedaninfo(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message)
+                .setTitle(warningversi)
+                .setCancelable(false)
+                .setIcon(R.drawable.ic_warning_black)
+                .setPositiveButton("Terima Kasih",
+                        (dialog, id) -> dialog.dismiss());
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+    //------------------------------------------------------------------------------------
     private void download_informasi_versi(String pesan) {
         AlertDialog.Builder ad = new AlertDialog.Builder(this);
         ad.setTitle("Informasi");
@@ -569,8 +701,7 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
             String Cek = cek_versi_apk;
             try {
 
-                new Download_Aplikasi().execute(Koneksi.download_apk + "e-Sppd.v"
-                       + URLEncoder.encode(Cek, "UTF-8")+".apk");
+//                new Download_Aplikasi().execute(Koneksi.download_apk + "e-Sppd.v"+ URLEncoder.encode(Cek, "UTF-8")+".apk");
 
             } catch (Exception ex) {
                 // TODO Auto-generated catch block
@@ -609,10 +740,10 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
         alert.show();
     }
 
-    private void info_download(String message) {
+    private void info_download(String message, String warningversi) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message)
-                .setTitle("Tersedia Versi Terbaru !!!")
+                .setTitle(warningversi)
                 .setCancelable(false)
                 .setIcon(R.drawable.ic_file_download_black)
                 .setPositiveButton("Download",
@@ -621,9 +752,9 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
                             //e-Sppd.v"+kirim_versi+".apk
                             //String kirim_versi = cek_versi_apk.getText().toString();
                             //String kirim_versi = "1.3.2";
-                            String Cek = cek_versi_apk;
+//                            String Cek = cek_versi_apk;
                             try {
-                                  new Download_Aplikasi().execute(Koneksi.download_apk + "e-Sppd.v" + URLEncoder.encode(Cek, "UTF-8")+".apk");
+                                  new down_apk().execute(Koneksi.download_apk + "e-Sppd.v" + URLEncoder.encode(versiygbaru, "UTF-8")+".apk");
                             } catch (Exception ex) {
                                 // TODO Auto-generated catch block
                                 ex.printStackTrace();
@@ -645,16 +776,13 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
                             in.addCategory(Intent.CATEGORY_BROWSABLE);
                             in.setData(Uri.parse(Koneksi.URL_WEBSITE));
                             startActivity(in);
-
                         });
         AlertDialog alert = builder.create();
         alert.show();
     }
 
     @SuppressLint("StaticFieldLeak")
-    private class Download_Aplikasi extends AsyncTask<String, String, String>
-
-    {
+    private class Download_Aplikasi extends AsyncTask<String, String, String> {
         @Override
         @SuppressWarnings("deprecation")
         protected void onPreExecute() {
@@ -743,21 +871,359 @@ public class MainActivityBaru_Petugas extends AppCompatActivity
             super.onPostExecute(file_url);
         }
     }
-
-    @Override
-    public Dialog onCreateDialog(int id) {
-        //String kirim_versi = cek_versi_apk.getText().toString();
-        if (id == progress_DOWNLOAD) {
-            progresdialog = new ProgressDialog(this);
-            progresdialog.setMessage("Downloading file...\ne-Sppd.v" + cek_versi_apk + ".apk");
-            progresdialog.setIndeterminate(false);
-            progresdialog.setMax(100);
-            progresdialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            progresdialog.setCancelable(false);
-            progresdialog.show();
-            return progresdialog;
+    @SuppressLint("StaticFieldLeak")
+    private class down_apkx extends AsyncTask<String, String, String> {
+        @Override
+        @SuppressWarnings("deprecation")
+        protected void onPreExecute() {
+            super.onPreExecute();
+            showDialog(progress_DOWNLOAD);
         }
-        return null;
+
+        @RequiresApi(api = Build.VERSION_CODES.O)
+        @Override
+        protected String doInBackground(String... f_url) {
+            int count;
+            String responseString = null;
+            try {
+
+                URL url = new URL(f_url[0]);
+
+                URLConnection connection = url.openConnection();
+                connection.connect();
+
+                int lenghOfFile = connection.getContentLength();
+                InputStream input = new BufferedInputStream(url.openStream(),
+                        8192);
+
+                @SuppressLint("SdCardPath")
+                OutputStream output = Files.newOutputStream(Paths.get("/sdcard/Download/e-Sppd.v" + versiygbaru + ".apk"));
+                byte[] data = new byte[1024];
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    publishProgress("" + (int) ((total * 100) / lenghOfFile));
+                    output.write(data, 0, count);
+                }
+                output.flush();
+                output.close();
+                input.close();
+            } catch (ClientProtocolException e) { 	// 2
+                responseString = e.toString();		//
+            } catch (IOException e) {				//
+                responseString = e.toString();		//3
+            }										//
+            return responseString;					//4
+        }
+
+        @Override
+        protected void onProgressUpdate(String... progress) {
+            downloaddiMAIN.setProgress(Integer.parseInt(progress[0]));
+            progressdownload = Arrays.toString(progress);
+            Log.e(TAG, "Respon Download:" + Arrays.toString(progress));
+        }
+
+        @Override
+        @SuppressWarnings("deprecation")
+        protected void onPostExecute(String file_url) {
+            dismissDialog(progress_DOWNLOAD);
+            Log.e(TAG, "Respon Download:" + file_url);
+
+            String pesan1 = "java.net.SocketException: recvfrom failed: ETIMEDOUT (Connection timed out)";
+            String pesan2 = "java.net.UnknownHostException: Unable to resolve host";
+            String pesan3 = "javax.net.ssl.SSLException: Read error: ssl=0x7037e39e88: I/O error during system call, Software caused connection abort";
+
+            Toast.makeText(MainActivityBaru_Petugas.this, progressdownload, Toast.LENGTH_LONG).show();
+
+            if (file_url != null) {
+
+                if (progressdownload.contains("[100]")){
+                    String pesan  = "Download E-SPPD V"+versiygbaru+" Sukses\nSilahkan di Instal Ulang di FOLDER DOWNLOAD\n\nJika masih bingung tata cara penginstalan Aplikasi E-SPPD, Silahkan Hubungi IPDE ext: 146";
+                    showprogress_download(pesan);
+                }else{
+                    String pesan  = "Download Gagal";
+                    showprogress_download(pesan);
+                }
+                if ((file_url.contains(pesan2)) || (file_url.contains(pesan1)) || (file_url.contains(pesan3))) {
+                    String info_pesan1 = "Tidak Ada Koneksi Internet\n" +
+                            "Pastikan Wi-fi atau Data Seluler aktif dan lancar, lalu coba lagi";
+                    showAlert(info_pesan1);
+                }else if (file_url.contains("Permission denied")) {
+                    Toast.makeText(MainActivityBaru_Petugas.this, "Diperlukan Ijin Mengakses Penyimpanan\nPergi Ke Pengaturan->Manajemen Aplikasi->E-SPPD->Ijin Aplikasi->Aktifkan", Toast.LENGTH_LONG).show();
+                }else {
+                    refresh();
+                }
+            }else{
+                refresh();
+            }
+            super.onPostExecute(file_url);
+        }
+    }
+    @SuppressLint("StaticFieldLeak")
+    private class down_apkXX extends AsyncTask<String, Integer, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            downloaddiMAIN = new ProgressDialog(MainActivityBaru_Petugas.this);
+            downloaddiMAIN.setTitle("Download Aplikasi");
+            downloaddiMAIN.setMessage("Sedang mengunduh...");
+            downloaddiMAIN.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            downloaddiMAIN.setIndeterminate(false);
+            downloaddiMAIN.setMax(100);
+            downloaddiMAIN.setCancelable(false);
+            downloaddiMAIN.show();
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.O)
+        @Override
+        protected String doInBackground(String... f_url) {
+            String responseString = null;
+            int count;
+
+            try {
+                URL url = new URL(f_url[0]);
+                URLConnection connection = url.openConnection();
+                connection.connect();
+
+                int lengthOfFile = connection.getContentLength();
+
+                InputStream input = new BufferedInputStream(url.openStream());
+                OutputStream output = Files.newOutputStream(
+                        Paths.get(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)
+                                + "/e-Sppd.v" + versiygbaru + ".apk")
+                );
+
+                byte[] data = new byte[1024];
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    int progress = (int) ((total * 100) / lengthOfFile);
+                    publishProgress(progress);
+                    output.write(data, 0, count);
+                }
+
+                output.flush();
+                output.close();
+                input.close();
+
+            } catch (Exception e) {
+                responseString = e.toString();
+            }
+
+            return responseString;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... progress) {
+            if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
+                downloaddiMAIN.setProgress(progress[0]);
+            }
+            progressdownload = String.valueOf(progress[0]);
+            Log.e(TAG, "Progress Download: " + progress[0] + "%");
+        }
+
+        @Override
+        protected void onPostExecute(String file_url) {
+
+            if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
+                downloaddiMAIN.dismiss();
+                downloaddiMAIN = null;
+            }
+
+            String pesan1 = "ETIMEDOUT";
+            String pesan2 = "UnknownHostException";
+            String pesan3 = "SSLException";
+
+            if (file_url == null) {
+
+                if ("100".equals(progressdownload)) {
+                    String pesan = "Download E-SPPD V" + versiygbaru +
+                            " berhasil.\n\nFile tersimpan di folder Download aplikasi.";
+                    showprogress_download(pesan);
+                } else {
+                    showprogress_download("Download gagal");
+                }
+
+            } else {
+
+                if (file_url.contains(pesan1) ||
+                        file_url.contains(pesan2) ||
+                        file_url.contains(pesan3)) {
+
+                    showAlert(
+                            "Tidak ada koneksi internet.\n" +
+                                    "Periksa WiFi atau data seluler lalu coba lagi."
+                    );
+
+                } else if (file_url.contains("Permission denied")) {
+
+                    Toast.makeText(
+                            MainActivityBaru_Petugas.this,
+                            "Izin penyimpanan diperlukan.\nAktifkan di pengaturan aplikasi.",
+                            Toast.LENGTH_LONG
+                    ).show();
+
+                } else {
+                    refresh();
+                }
+            }
+
+            super.onPostExecute(file_url);
+        }
+    }
+    @SuppressLint("StaticFieldLeak")
+    private class down_apk extends AsyncTask<String, Integer, String> {
+
+        private Uri fileUri;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            downloaddiMAIN = new ProgressDialog(MainActivityBaru_Petugas.this);
+            downloaddiMAIN.setTitle("Download Aplikasi");
+            downloaddiMAIN.setMessage("Sedang mengunduh...");
+            downloaddiMAIN.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            downloaddiMAIN.setIndeterminate(false);
+            downloaddiMAIN.setMax(100);
+            downloaddiMAIN.setCancelable(false);
+            downloaddiMAIN.show();
+        }
+
+        @Override
+        protected String doInBackground(String... f_url) {
+            String error = null;
+            int count;
+
+            try {
+                URL url = new URL(f_url[0]);
+                URLConnection connection = url.openConnection();
+                connection.connect();
+
+                int lengthOfFile = connection.getContentLength();
+
+                // ===== MediaStore.Files (Universal) =====
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.MediaColumns.DISPLAY_NAME,
+                        "e-Sppd.v" + versiygbaru + ".apk");
+                values.put(MediaStore.MediaColumns.MIME_TYPE,
+                        "application/vnd.android.package-archive");
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    values.put("relative_path", Environment.DIRECTORY_DOWNLOADS);
+                }
+
+                fileUri = getContentResolver().insert(
+                        MediaStore.Files.getContentUri("external"), values);
+
+                if (fileUri == null) {
+                    return "Gagal membuat file Download";
+                }
+
+                InputStream input = new BufferedInputStream(url.openStream());
+                OutputStream output = getContentResolver().openOutputStream(fileUri);
+
+                if (output == null) {
+                    return "Gagal membuka OutputStream";
+                }
+
+                byte[] data = new byte[1024];
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    int progress = (int) ((total * 100) / lengthOfFile);
+                    publishProgress(progress);
+                    output.write(data, 0, count);
+                }
+
+                output.flush();
+                output.close();
+                input.close();
+
+            } catch (Exception e) {
+                error = e.toString();
+            }
+
+            return error;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... progress) {
+            if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
+                downloaddiMAIN.setProgress(progress[0]);
+            }
+            progressdownload = String.valueOf(progress[0]);
+            Log.e(TAG, "Progress Download: " + progress[0] + "%");
+        }
+
+        @Override
+        protected void onPostExecute(String error) {
+
+            if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
+                downloaddiMAIN.dismiss();
+                downloaddiMAIN = null;
+            }
+
+            if (error == null && "100".equals(progressdownload)) {
+
+                String pesan =
+                        "Download E-SPPD V" + versiygbaru + " berhasil.\n\n" +
+                                "File tersimpan di folder Download.\n" +
+                                "Silakan install ulang aplikasi.";
+
+                showprogress_download(pesan);
+
+            } else if (error != null) {
+
+                if (error.contains("UnknownHost") ||
+                        error.contains("ETIMEDOUT") ||
+                        error.contains("SSLException")) {
+
+                    showAlert(
+                            "Tidak ada koneksi internet.\n" +
+                                    "Periksa Wi-Fi atau data seluler lalu coba lagi."
+                    );
+
+                } else if (error.contains("Permission denied")) {
+
+                    Toast.makeText(
+                            MainActivityBaru_Petugas.this,
+                            "Izin penyimpanan diperlukan.\nAktifkan di pengaturan aplikasi.",
+                            Toast.LENGTH_LONG
+                    ).show();
+
+                } else {
+                    showAlert("Download gagal:\n" + error);
+                }
+
+            } else {
+                showAlert("Download tidak selesai");
+            }
+
+            super.onPostExecute(error);
+        }
+    }
+
+
+    private void showprogress_download(String a) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(a)
+                .setTitle("Status")
+                .setCancelable(false)
+                .setIcon(R.drawable.ic_info_outline_24dp)
+                .setPositiveButton("Ok",
+                        (dialog, id) -> {
+                            dialog.dismiss();
+                            finish();
+                            startActivity(getIntent());
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
     private void info_maintenance(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

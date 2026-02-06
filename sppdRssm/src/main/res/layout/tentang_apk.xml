@@ -73,7 +73,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:contentDescription="@string/todo"
-                app:srcCompat="@drawable/simrs" />
+                app:srcCompat="@drawable/simrsxx" />
 
             <TextView
                 android:id="@+id/text"

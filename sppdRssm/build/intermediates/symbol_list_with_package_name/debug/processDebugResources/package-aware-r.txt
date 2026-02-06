@@ -1397,6 +1397,7 @@ drawable logo_splash
 drawable logo_splash2
 drawable logo_splash3
 drawable logobaru
+drawable logorssm
 drawable logosimbol1
 drawable logosimbol2
 drawable logosplash
@@ -1457,7 +1458,7 @@ drawable search_user
 drawable selesai
 drawable side_nav_bar
 drawable silahkan_register
-drawable simrs
+drawable simrsxx
 drawable soedono
 drawable solusi_koneksi
 drawable solusi_koneksi1
@@ -1480,6 +1481,7 @@ font default_font
 font default_font_2
 font default_regular
 font font_insomnia
+font poppins_regular
 id ALT
 id Button1
 id Button2
@@ -1507,7 +1509,6 @@ id View14
 id View15
 id View2
 id abcde
-id acara
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1682,7 +1683,6 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
-id daerah_tujuan
 id dark
 id decor_content_parent
 id default_activity_button
@@ -1697,7 +1697,6 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
-id dsr_sppt
 id e_cari
 id edit_acara
 id edit_daerah_tujuan
@@ -1803,7 +1802,6 @@ id grsreg1
 id grsreg2
 id grsreg3
 id grsregtengah
-id grssampai
 id grstentang
 id grstentang2
 id grstentang3
@@ -1823,7 +1821,6 @@ id home
 id homeAsUp
 id horizontal
 id horizontalScrollView1
-id hsl_rapat
 id icon
 id icon_button
 id icon_group
@@ -1922,7 +1919,6 @@ id infolagi13
 id infolagi9
 id informasi1
 id informasi2
-id ins_yg_kunjungi
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1940,7 +1936,6 @@ id ket_lama_perjalanan
 id ko
 id kritik
 id labeled
-id lain
 id largeLabel
 id laylistrecent
 id layoutDots
@@ -1963,7 +1958,6 @@ id list_view_baru
 id list_view_pegawai
 id listtampil_namapeg
 id listupdate
-id masalah
 id masked
 id media_actions
 id menampilkan_nomor_sppd
@@ -1997,7 +1991,6 @@ id never
 id nip_lokal
 id nip_pegawai
 id nippegwdit
-id nm_petugas
 id nmkota
 id no_kiri
 id nomorbiaya_1
@@ -2013,7 +2006,6 @@ id nomorbiaya_8
 id nomorbiaya_9
 id none
 id normal
-id nosj
 id note
 id notification_background
 id notification_main_column
@@ -2036,7 +2028,6 @@ id pencr_reg
 id pengatur_layout
 id penomoran
 id percent
-id petugas
 id pilihanupload
 id pin
 id plain
@@ -2076,7 +2067,6 @@ id row_nomorspt_pegawai_spt
 id row_reg_passprofil
 id rowtextnip
 id rupiah
-id saran
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -2218,26 +2208,13 @@ id textnomor_sppd
 id textpass_baru
 id textreg
 id textsatusplash
-id texttglsajas
 id textview_grandtotal_riil
 id textview_informasi_riil
 id tgl
 id tgl_kritik
-id tgl_pelaksanaan
 id tgl_sembunyi
-id tgl_spt
 id tgl_utama
 id time
-id titikduasppt_1
-id titikduasppt_10
-id titikduasppt_2
-id titikduasppt_3
-id titikduasppt_4
-id titikduasppt_5
-id titikduasppt_6
-id titikduasppt_7
-id titikduasppt_8
-id titikduasppt_9
 id title
 id titleDividerNoCustom
 id title_template

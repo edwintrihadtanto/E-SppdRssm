@@ -21,10 +21,10 @@ public class Welcome extends Fragment {
 
         view = (RelativeLayout) inflater.inflate(R.layout.welcome, container, false);
         int[] images = {
-                R.drawable.simrs,
-                R.drawable.simrs,
-                R.drawable.simrs,
-                R.drawable.simrs
+                R.drawable.simrsxx,
+                R.drawable.logorssm,
+                R.drawable.simrsxx,
+                R.drawable.logorssm
         };
         v_flipper = view.findViewById(R.id.v_flipper);
 
