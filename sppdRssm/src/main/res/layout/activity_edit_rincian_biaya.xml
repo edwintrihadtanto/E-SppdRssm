@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textdetailisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rincian"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <EditText
+                    android:id="@+id/edtRincian"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/entry_detail_rincian_biaya"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_below="@+id/textdetailisi"
+                    android:importantForAutofill="no"/>
+
+                <TextView
+                    android:id="@+id/textdetailjumlah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/biaya"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/edtRincian"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <EditText
+                    android:id="@+id/edtJumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/entry_biaya"
+                    android:inputType="number"
+                    android:layout_below="@+id/textdetailjumlah"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/txtTanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:layout_below="@+id/edtJumlah"/>
+
+                <ImageView
+                    android:id="@+id/imgBukti"
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/todo"
+                    android:background="#DDDDDD"
+                    android:layout_below="@+id/txtTanggal"/>
+
+                <Button
+                    android:id="@+id/btn_simpanrincian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/circle_simpan"
+                    android:text="@string/simpan_rincian"
+                    android:padding="5dp"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_below="@+id/imgBukti"
+                    />
+
+                <Button
+                    android:id="@+id/btn_hapusrincian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/circle_hapus"
+                    android:drawableStart="@drawable/ic_delete_black"
+                    android:layout_toEndOf="@+id/btn_simpanrincian"
+                    android:text="@string/hapus"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_below="@+id/imgBukti"
+                    />
+
+                <Button
+                    android:id="@+id/btn_pilihgambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/circle_upload"
+                    android:drawableStart="@drawable/ic_photo_camera"
+                    android:layout_toEndOf="@+id/btn_hapusrincian"
+                    android:text="@string/upload"
+                    android:padding="5dp"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_below="@+id/imgBukti"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

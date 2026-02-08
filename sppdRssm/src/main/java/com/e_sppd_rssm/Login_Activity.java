@@ -51,19 +51,14 @@ import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.apache.http.client.ClientProtocolException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.HashMap;
 
 //import koneksi.JSONParser;
@@ -130,7 +125,8 @@ public class Login_Activity extends AppCompatActivity {
 	CardView cardView_btnlogin, cardView_register, cardview_lupapass;
 	String info = "© ESPPD 2017-2026,\nDeveloped by I.T.I.S.I - RSSM";
 	String versinya = BuildConfig.VERSION_NAME;
-	@Override
+	@SuppressLint("SetTextI18n")
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login_activity);
@@ -156,8 +152,8 @@ public class Login_Activity extends AppCompatActivity {
 		develpe.setText(info);
 
 //		String versi = "3.0"; //JANGAN LUPA VERSI INI DIRUBAH SESUAI UPDATENYA
-		cek_versi_apk.setText(versinya);
-		kirim_versi = cek_versi_apk.getText().toString();
+		cek_versi_apk.setText("V. " + versinya);
+		kirim_versi = versinya; //cek_versi_apk.getText().toString();
 		//edit_nip.setText("303-03081992-052017-8776");
 		//edit_pass.setText("edwin");
 		//edit_nip.setText("12345");
@@ -475,7 +471,7 @@ public class Login_Activity extends AppCompatActivity {
         @Override
 		protected String doInBackground(Void... voids) {
 
-			String versiApk = cek_versi_apk.getText().toString().trim();
+			String versiApk = versinya; //cek_versi_apk.getText().toString().trim();
 			Java_Connection jc = new Java_Connection();
 
 			try {
@@ -661,98 +657,6 @@ public class Login_Activity extends AppCompatActivity {
 			return download;
 		}
 		return null;
-	}
-	
-	//@SuppressLint("SdCardPath")
-	@SuppressLint("StaticFieldLeak")
-	private class down_apkXXX extends AsyncTask<String, String, String> {
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPreExecute() {
-			super.onPreExecute();
-			showDialog(progress_DOWNLOAD);
-		}
-
-		@RequiresApi(api = Build.VERSION_CODES.O)
-		@Override
-		protected String doInBackground(String... f_url) {
-			int count;
-			String responseString = null; 											// 1 
-			//String kirim_versi = cek_versi_apk.getText().toString();
-			try {
-
-				URL url = new URL(f_url[0]);
-
-				URLConnection connection = url.openConnection();
-				connection.connect();
-
-				int lenghOfFile = connection.getContentLength();
-				InputStream input = new BufferedInputStream(url.openStream(),
-						8192);
-
-				@SuppressLint("SdCardPath")
-				OutputStream output = Files.newOutputStream(Paths.get("/sdcard/Download/e-Sppd.v" + versiygbaru + ".apk"));
-				byte[] data = new byte[1024];
-				long total = 0;
-
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					publishProgress("" + (int) ((total * 100) / lenghOfFile));
-					output.write(data, 0, count);
-				}
-				output.flush();
-				output.close();
-				input.close();
-			} catch (ClientProtocolException e) { 	// 2
-				responseString = e.toString();		//
-			} catch (IOException e) {				//	
-				responseString = e.toString();		//3
-			}										//
-			return responseString;					//4
-		}
-
-		@Override
-		protected void onProgressUpdate(String... progress) {
-			download.setProgress(Integer.parseInt(progress[0]));
-			progressdownload = Arrays.toString(progress);
-			Log.e(TAG, "Respon Download:" + Arrays.toString(progress));
-		}
-
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPostExecute(String file_url) {
-			dismissDialog(progress_DOWNLOAD);
-			Log.e(TAG, "Respon Download:" + file_url);
-
-			String pesan1 = "java.net.SocketException: recvfrom failed: ETIMEDOUT (Connection timed out)";
-			String pesan2 = "java.net.UnknownHostException: Unable to resolve host";
-			String pesan3 = "javax.net.ssl.SSLException: Read error: ssl=0x7037e39e88: I/O error during system call, Software caused connection abort";
-
-			Toast.makeText(Login_Activity.this, progressdownload, Toast.LENGTH_LONG).show();
-
-			if (file_url != null) {
-
-				if (progressdownload.contains("[100]")){
-					String pesan  = "Download E-SPPD V"+versiygbaru+" Sukses\nSilahkan di Instal Ulang di FOLDER DOWNLOAD\n\nJika masih bingung tata cara penginstalan Aplikasi E-SPPD, Silahkan Hubungi IPDE ext: 146";
-					showprogress_download(pesan);
-				}else{
-					String pesan  = "Download Gagal";
-					showprogress_download(pesan);
-				}
-				if ((file_url.contains(pesan2)) || (file_url.contains(pesan1)) || (file_url.contains(pesan3))) {
-					String info_pesan1 = "Tidak Ada Koneksi Internet\n" +
-							"Pastikan Wi-fi atau Data Seluler aktif dan lancar, lalu coba lagi";
-					show_warning(info_pesan1);
-				}else if (file_url.contains("Permission denied")) {
-					Toast.makeText(Login_Activity.this, "Diperlukan Ijin Mengakses Penyimpanan\nPergi Ke Pengaturan->Manajemen Aplikasi->E-SPPD->Ijin Aplikasi->Aktifkan", Toast.LENGTH_LONG).show();
-				}else {
-					refresh();
-				}
-			}else{
-				refresh();
-			}
-			super.onPostExecute(file_url);
-		}
 	}
 
 	@SuppressLint("StaticFieldLeak")
@@ -1069,7 +973,7 @@ public class Login_Activity extends AppCompatActivity {
 
 			String nippegawai   = edit_nip.getText().toString().trim();
 			String passpegawai  = edit_pass.getText().toString().trim();
-			String versiApk     = cek_versi_apk.getText().toString().trim();
+			String versiApk     = versinya; //cek_versi_apk.getText().toString().trim();
 
 			try {
 				HashMap<String, String> params = new HashMap<>();

@@ -129,8 +129,8 @@
     <string name="notifikasi" translatable="false">Notifikasi</string>
     <string name="tentang_aplikasi" translatable="false">Tentang Aplikasi</string>
     <string name="keluar" translatable="false">Keluar</string>
-    <string name="haven_t_password" translatable="false">Haven\'t  Password ?</string>
-    <string name="call_us_nforgot_password" translatable="false">Call Us !!!\n Forgot Password</string>
+    <string name="haven_t_password" translatable="false">Sign Up</string>
+    <string name="call_us_nforgot_password" translatable="false">Bantuan</string>
     <string name="nip_npk_pegawai" translatable="false">NIP/NPK Pegawai :</string>
     <string name="nip_npk_pegawai2" translatable="false">NIP/NPK Pegawai</string>
     <string name="jabatan_pegawai" translatable="false">Jabatan Pegawai :</string>
@@ -138,10 +138,10 @@
     <string name="password_baru" translatable="false">Password Baru :</string>
     <string name="masukkan_password_anda" translatable="false">Masukkan Password Baru Anda</string>
     <string name="register_password" translatable="false">Register Password</string>
-    <string name="pencarian_data_pegawai" translatable="false">Pencarian Data Pegawai :</string>
+    <string name="pencarian_data_pegawai" translatable="false">Pencarian Data Pegawai</string>
     <string name="entry_nip_npk_pegawai" translatable="false">Entry NIP/NPK Pegawai</string>
     <string name="cari" translatable="false">Cari</string>
-    <string name="simpan_password" translatable="false">SIMPAN PASSWORD</string>
+    <string name="simpan_password" translatable="false">Simpan Password</string>
     <string name="masukkan_alamat_email_anda" translatable="false">Masukkan Alamat Email Anda</string>
     <string name="alamat_email" translatable="false">Alamat Email</string>
     <string name="data_profil" translatable="false">Data Profil</string>
@@ -152,7 +152,7 @@
     <string name="jabatan_instansi" translatable="false">Jabatan / Instansi :</string>
     <string name="golongan" translatable="false">Golongan :</string>
     <string name="password" translatable="false">Password :</string>
-    <string name="password_baru_min_5_karakter" translatable="false">Password Baru (Min. 5 Karakter)</string>
+    <string name="password_baru_min_5_karakter" translatable="false">Entry Password Baru (Min. 5 Karakter)</string>
     <string name="simpan_password_baru" translatable="false">Simpan Password Baru</string>
     <string name="nama_pegawai2" translatable="false">Nama Pegawai</string>
     <string name="email" translatable="false">Email :</string>
@@ -182,10 +182,22 @@
     <string name="refresh_profil">Refresh Profil</string>
     <string name="ambil_foto_profil">Foto Profil</string>
     <string name="input_password">Input Password</string>
-    <string name="input_email">Input Email</string>
+    <string name="input_email">Entry Alamat Email</string>
     <string name="tombol_kembali_register">Tombol Kembali Register</string>
     <string name="tombol_refresh_register">Tombol Refresh Register</string>
     <string name="unit_kerja">Unit Kerja</string>
-    <string name="input_unit_kerja">Input Unit Kerja</string>
+    <string name="input_unit_kerja">Entry Unit Kerja</string>
+    <string name="informasi_sppd">INFORMASI SPPD</string>
+    <string name="nip">NIP</string>
+    <string name="no_sppd">No. SPPD</string>
+    <string name="tgl_sppd">Tgl. SPPD</string>
+    <string name="rincian_biaya">RINCIAN BIAYA</string>
+    <string name="rincian">Rincian :</string>
+    <string name="entry_detail_rincian_biaya">Entry Detail Rincian Biaya</string>
+    <string name="biaya">Biaya :</string>
+    <string name="entry_biaya">Entry Biaya</string>
+    <string name="simpan_rincian">👉 Simpan Rincian</string>
+    <string name="hapus">  Hapus</string>
+    <string name="upload">  Upload</string>
 
 </resources>

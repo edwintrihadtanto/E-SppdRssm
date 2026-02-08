@@ -89,12 +89,12 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 		img_showpass_profil1	= findViewById(R.id.img_showpass_profil1);
 		img_showpass_profil2	= findViewById(R.id.img_showpass_profil2);
 
-		Glide.with(Profil.this)
-				// LOAD URL DARI LOKAL DRAWABLE
-				.load(R.drawable.loading_ring)
-				.asGif()
-				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
-				.into(img_refresh);
+//		Glide.with(Profil.this)
+//				// LOAD URL DARI LOKAL DRAWABLE
+//				.load(R.drawable.loading_ring)
+//				.asGif()
+//				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
+//				.into(img_refresh);
 		
 		imgedit_email1.setOnClickListener(v -> {
 			imgedit_email1.setVisibility(View.GONE);
@@ -174,7 +174,8 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 		btn_batal.setOnClickListener(this);
 	}
 
-	public void isi_text() {
+	@SuppressLint("SetTextI18n")
+    public void isi_text() {
 		update_nip.setText(nipp);
 		update_namapeg.setText(namap);
 		update_jabatan.setText(jabatanp);
@@ -183,9 +184,11 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 		update_unit.setText(unitkerjap);
 		if (passwordp != null) {
 			if (passwordp.isEmpty()){
-				update_reg_pass.setText(null);
+//				update_reg_pass.setText(null);
+				update_reg_pass.setText("Silahkan Update Password!");
 			}else {
-				update_reg_pass.setText(passwordp);
+//				update_reg_pass.setText(passwordp);
+				update_reg_pass.setText("Silahkan Update Password!");
 			}
 		}
 		/*
@@ -229,9 +232,9 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 		btn_change.setVisibility(View.VISIBLE);
 	}
 
-	public void kembali_activity(View view){
-		super.onBackPressed();
-	}
+//	public void kembali_activity(View view){
+//		super.onBackPressed();
+//	}
 
 	@SuppressLint("NonConstantResourceId")
 	@Override
@@ -663,27 +666,28 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 	}
 
 	public void refresh_profil(View view) {
-
-        view.startAnimation(anim_putar);
-        anim_putar.setAnimationListener(new Animation.AnimationListener() {
-
-            @SuppressLint("UnsafeIntentLaunch")
-			@Override
-            public void onAnimationStart(Animation animation) {
-                finish();
-                startActivity(getIntent());
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-
-            }
-        });
+		finish();
+		startActivity(getIntent());
+//        view.startAnimation(anim_putar);
+//        anim_putar.setAnimationListener(new Animation.AnimationListener() {
+//
+//            @SuppressLint("UnsafeIntentLaunch")
+//			@Override
+//            public void onAnimationStart(Animation animation) {
+//                finish();
+//                startActivity(getIntent());
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//
+//            }
+//        });
 	}
 
 	public void loading_sembunyi() {

@@ -3,21 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <View
-        android:id="@+id/actionbar_profil1"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/list_item_title" />
+    android:layout_height="match_parent"
+    android:background="#EFEEEE">
 
     <View
         android:id="@+id/actionbar_profil"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="2dp"
-        android:layout_below="@+id/actionbar_profil1"
+        android:layout_height="180dp"
         android:background="@drawable/circle" />
 
     <TextView
@@ -27,29 +19,30 @@
         android:gravity="center"
         android:visibility="gone" />
 
-    <Button
-        android:id="@+id/btn_back_profil"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="5dp"
-        android:background="@drawable/ic_back2"
-        android:contentDescription="@string/tombol_kembali_profil"
-        android:onClick="kembali_activity" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_back_profil"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:background="@drawable/ic_back2"-->
+<!--        android:contentDescription="@string/tombol_kembali_profil"-->
+<!--        android:onClick="kembali_activity" />-->
 
     <ImageView
         android:id="@+id/btn_refresh_profil"
-        android:layout_width="48dp"
+        android:layout_width="35dp"
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="5dp"
         android:contentDescription="@string/refresh_profil"
-        android:onClick="refresh_profil" />
+        android:onClick="refresh_profil"
+        android:src="@drawable/ic_refresh_black_24dp"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <RelativeLayout
         android:id="@+id/RelativeLayoutlist_profil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_back_profil"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -58,10 +51,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="15dp"
+            android:layout_margin="20dp"
             android:src="@drawable/icontaktau"
-            app:civ_border_color="#000000"
-            app:civ_circle_background_color="#000000" />
+            app:civ_border_color="#ffffff"
+            app:civ_circle_background_color="#0081C7" />
 
         <ImageView
             android:layout_width="100dp"
@@ -74,7 +67,7 @@
 
         <Button
             android:id="@+id/btn_change"
-            android:layout_width="320dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgprof"
             android:layout_margin="10dp"
@@ -82,14 +75,15 @@
             android:visibility="visible"
             android:background="@drawable/circle_gantipass"
             android:drawableTop="@drawable/ic_swap_horiz_black"
-            android:textColor="@color/white"
+            android:textColor="@color/hitam"
             android:layout_centerInParent="true"
             android:textStyle="normal|bold"
+            android:fontFamily="@font/poppins_regular"
             android:soundEffectsEnabled="true"/>
 
         <Button
             android:id="@+id/btn_batal"
-            android:layout_width="320dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgprof"
             android:layout_margin="10dp"
@@ -98,7 +92,8 @@
             android:drawableTop="@drawable/ic_swap_horiz_black"
             android:visibility="gone"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/poppins_regular"
             android:textStyle="normal|bold" />
 
     </RelativeLayout>
@@ -106,9 +101,11 @@
     <View
         android:id="@+id/idview"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
         android:layout_below="@+id/RelativeLayoutlist_profil"
-        android:background="@color/white" />
+        android:background="@color/hitam" />
+
     <ScrollView
         android:id="@+id/scrl"
         android:layout_width="match_parent"
@@ -120,18 +117,20 @@
             <RelativeLayout
                 android:id="@+id/rellllllalal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
 
                 <TextView
                     android:id="@+id/text_nip"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/nomor_induk_pegawai"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/update_nip"
@@ -141,10 +140,10 @@
                     android:layout_below="@+id/text_nip"
                     android:enabled="false"
                     android:gravity="right|center"
-                    android:layout_marginEnd="30dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="RtlHardcoded" />
 
                 <TextView
@@ -152,11 +151,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_below="@+id/update_nip"
-                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/nama_pegawai"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/update_namapeg"
@@ -165,11 +165,11 @@
                     android:layout_alignStart="@+id/text_namapeg"
                     android:layout_below="@+id/text_namapeg"
                     android:gravity="right|center"
-                    android:layout_marginEnd="30dp"
                     android:enabled="false"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="RtlHardcoded" />
 
                 <TextView
@@ -177,11 +177,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_below="@+id/update_namapeg"
-                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/jabatan_instansi"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/update_jabatan"
@@ -190,11 +191,11 @@
                     android:layout_alignStart="@+id/text_jabatan"
                     android:layout_below="@+id/text_jabatan"
                     android:gravity="right|center"
-                    android:layout_marginEnd="30dp"
                     android:enabled="false"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="RtlHardcoded" />
 
                 <TextView
@@ -202,11 +203,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_below="@+id/update_jabatan"
-                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/golongan"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
 
                 <TextView
                     android:id="@+id/update_golongan"
@@ -216,10 +218,10 @@
                     android:layout_below="@+id/text_golongan"
                     android:enabled="false"
                     android:gravity="right"
-                    android:layout_marginRight="30dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="RtlHardcoded" />
 
                 <TextView
@@ -227,11 +229,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_below="@+id/update_golongan"
-                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/unit_kerja"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
 
                 <EditText
                     android:id="@+id/update_unit"
@@ -240,11 +243,12 @@
                     android:layout_alignStart="@+id/text_unit"
                     android:layout_below="@+id/text_unit"
                     android:gravity="right"
-                    android:layout_marginEnd="30dp"
                     android:hint="@string/input_unit_kerja"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
+                    android:textColorHint="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="Autofill,LabelFor,RtlHardcoded"
                     android:inputType="textEmailAddress"
                     />
@@ -277,11 +281,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_below="@+id/update_unit"
-                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/email"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
 
                 <EditText
                     android:id="@+id/update_email"
@@ -290,11 +295,12 @@
                     android:layout_alignStart="@+id/text_email"
                     android:layout_below="@+id/text_email"
                     android:gravity="right"
-                    android:layout_marginEnd="30dp"
                     android:hint="@string/input_email"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
+                    android:textColorHint="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="Autofill,LabelFor,RtlHardcoded"
                     android:inputType="textEmailAddress"
                     />
@@ -327,9 +333,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_below="@+id/update_email"
-                    android:layout_marginStart="30dp"
                     android:text="@string/password"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -339,14 +344,14 @@
                     android:layout_height="48dp"
                     android:layout_below="@+id/text_pass"
                     android:layout_alignLeft="@+id/text_pass"
-                    android:layout_marginRight="30dp"
                     android:enabled="false"
                     android:gravity="right|center"
                     android:hint="@string/input_password"
                     android:inputType="textPassword"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="RtlHardcoded,TextViewEdits" />
 
                 <ImageView
@@ -375,17 +380,16 @@
                 <EditText
                     android:id="@+id/update_reg_pass_ulangi"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_alignStart="@+id/text_pass"
                     android:layout_below="@+id/update_reg_pass"
                     android:hint="@string/password_baru_min_5_karakter"
                     android:gravity="right|center"
-                    android:layout_marginEnd="30dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/grey"
+                    android:textColor="@color/hitam"
+                    android:textColorHint="@color/hitam"
                     android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:visibility="gone"
+                    android:visibility="visible"
+                    android:fontFamily="@font/poppins_regular"
                     tools:ignore="Autofill,RtlHardcoded"
                     android:inputType="text"
                      />
@@ -400,10 +404,11 @@
                     android:layout_marginLeft="30dp"
                     android:layout_alignParentEnd="true"
                     android:text="@string/simpan_password_baru"
-                    android:textColor="@color/white"
+                    android:textColor="@color/hitam"
                     android:textStyle="normal|bold"
                     android:background="@drawable/circle_gantipass"
                     android:drawableTop="@drawable/ic_save_2"
+                    android:fontFamily="@font/poppins_regular"
                     android:visibility="gone" />
 
                 <View
@@ -414,9 +419,9 @@
 
                 <ViewFlipper
                     android:id="@+id/viewFlippermainactivity"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp"
-                    android:layout_below="@+id/actionbar3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/btn_update_pass"
                     android:layout_alignParentBottom="true">
                 </ViewFlipper>
             </RelativeLayout>
@@ -427,12 +432,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:background="@color/white"/>
+        android:layout_centerInParent="true"/>
     <View
         android:id="@+id/grsprofil1"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/grsprofilttengah"
         android:background="@drawable/circle_reg_v1"/>
@@ -440,7 +444,7 @@
     <View
         android:id="@+id/grsprofil2"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/grsprofilttengah"
         android:background="@drawable/circle_reg_v2"/>
@@ -472,7 +476,7 @@
             android:textSize="15sp"
             android:textColor="@color/hitam"
             android:textStyle="bold|italic"
-            android:fontFamily="@font/default_font"
+            android:fontFamily="@font/poppins_regular"
             android:layout_margin="10dp"/>
 
     </RelativeLayout>

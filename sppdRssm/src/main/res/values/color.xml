@@ -12,8 +12,8 @@
     <color name="list_divider"              >#272727    </color>
     <color name="counter_text_bg"           >#501d0505</color>
     <color name="counter_text_color"        >#bf7878</color>
-    <color name="blue"                      >#60FFFFFF  </color>
-    <color name="grey"                      >#EEEEEE</color>
+    <color name="blue"                      >#03A9F4</color>
+    <color name="grey"                      >#60FFFFFF</color>
     <color name="biru_laut"                 >#43A047</color>
     <color name="primary"                   >#E43F3F    </color>
     <color name="primary_dark"              >#E12929    </color>
@@ -64,7 +64,7 @@
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#d1395c</color>
     <color name="dot_dark_screen2">#14a895</color>
-    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen3">#0C68CC</color>
     <color name="dot_dark_screen4">#a854d4</color>
  	<color name="dot_dark_screen5">#d1395c</color>
  	

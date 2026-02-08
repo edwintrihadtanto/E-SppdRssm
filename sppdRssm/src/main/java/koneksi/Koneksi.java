@@ -20,7 +20,7 @@ import java.io.InputStreamReader;
 
 /** @noinspection ALL*/
 public class Koneksi {
-	private final static String TAG = "Koneksi_ESPPD";
+	private final static String TAG = "KoneksiESPPD";
 	public static final String URL_WEBSITE = "https://apprssm.rssoedono.jatimprov.go.id/esppd/";
     //private static final String URL_SERVER = "https://sppdrssm.rssoedonomadiun.co.id/sppd_rssm_apk/";
 	private static final String URL_SERVER = "https://apprssm.rssoedono.jatimprov.go.id/esppd/sppd_rssm_apk/";
@@ -40,7 +40,7 @@ public class Koneksi {
 	public static final String tampil_daftar_edit_rincian 			= "tampil_daftar_edit_rincian.php";
 	public static final String tampil_daftar_edit_riil 				= "tampil_daftar_edit_riil.php";
 	public static final String IMAGE_DIRECTORY_NAME 				= "../Bukti E-SPPD";
-    public static final String FILE_UPLOAD_URL 						= URL_SERVER + "temp/Upload_Terbaru.php";
+
 	public static final String hapus_data_per_riil					= URL_SERVER + "hapus_file/hapus_data_per_riil.php";
 	public static final String update_riil							= URL_SERVER + "update_riil.php";
 	public static final String tambah_uraian_riil					= URL_SERVER + "tambah_uraian_riil.php";
@@ -54,7 +54,7 @@ public class Koneksi {
 	public static final String hapus_data_rincian					= URL_SERVER + "hapus_file/hapus_rincian.php";
 	public static final String hapus_data_per_uraian			    = URL_SERVER + "hapus_file/hapus_data_per_uraian.php";
     public static final String hapus_data_per_uraian_laporan	    = URL_SERVER + "hapus_file/hapus_data_per_uraian_laporan.php";
-    public static final String update_rincian_biaya 		        = URL_SERVER + "update_rincian_biaya.php";
+//    public static final String update_rincian_biaya 		        = URL_SERVER + "update_rincian_biaya.php";
     public static final String posting_url                          = URL_SERVER + "posting_url.php";
 
 	public static final String download_spt 		                = URL_SERVER + "prints/print_spt.php";
@@ -80,6 +80,12 @@ public class Koneksi {
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
 	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php/";
+	public static final String list_datarincian 					= URL_SERVERNEW + "rincian/list_datarincian.php";
+	public static final String update_rincian_biaya 		        = URL_SERVERNEW + "rincian/update_rincian_biaya.php/";
+	public static final String hapus_rincian_biaya 		        	= URL_SERVERNEW + "rincian/hapus_rincian_biaya.php/";
+	public static final String simpan_rincian_biaya 		        = URL_SERVERNEW + "rincian/simpan_rincian_biaya.php/";
+	public static final String FILE_UPLOAD_URL 						= URL_SERVER + "temp/Upload_Terbaru.php/";
+	public static final String FolderUpload 						= URL_SERVERNEW + "upload/";
 	public Koneksi() {
 		super();
 	}

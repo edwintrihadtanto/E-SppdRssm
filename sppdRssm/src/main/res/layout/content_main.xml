@@ -39,12 +39,13 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="5dp"
         android:contentDescription="@string/refreshmenu"
+        android:onClick="refresh"
         android:src="@drawable/ic_refresh_black_24dp"
-        android:onClick="refresh" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btn_ic_menusamping"
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_margin="5dp"

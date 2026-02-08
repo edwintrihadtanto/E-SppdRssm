@@ -46,11 +46,20 @@
             </intent-filter>
         </activity>
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <activity android:name="com.e_sppd_rssm.Daftar_Laporan_Per_Petugas" />
         <activity android:name="com.e_sppd_rssm.History" />
-        <activity android:name="com.e_sppd_rssm.Laporan_Rincian_Biaya_Perj_Dinas" />
-        <activity android:name="com.e_sppd_rssm.Edit_Laporan_Rincian_Biaya" />
+        <activity android:name="com.e_sppd_rssm.List_DataRincian" />
+        <activity android:name="com.e_sppd_rssm.Edit_Rincian_Biaya" />
         <activity android:name="com.e_sppd_rssm.Edit_Laporan_Riil" />
 
         <activity android:name="com.e_sppd_rssm.Tentang_Aplikasi" android:theme="@style/AppTheme"/>

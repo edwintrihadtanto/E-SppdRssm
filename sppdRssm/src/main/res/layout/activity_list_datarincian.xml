@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/grslogtengahlistrincian"
+        android:background="@drawable/circle_reg_v3"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/grslogtengahlistrincian"
+        android:background="@drawable/circle_reg_v4"/>
+
+    <View
+        android:id="@+id/grslogtengahlistrincian"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/grslogtengahlistrincian" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- ================= CARD INFO SPPD ================= -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/list_item_title2"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/judulrincian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/informasi_sppd"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/hitam"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <Button
+                        android:id="@+id/btn_refresh"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/ic_refresh_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/textnippegwdit"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/judulrincian"
+                        android:text="@string/nip"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                    <TextView
+                        android:id="@+id/titikduanip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/titikdua"
+                        android:layout_below="@+id/judulrincian"
+                        android:layout_toEndOf="@+id/textnippegwdit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                    <TextView
+                        android:id="@+id/nippegwdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/titikduanip"
+                        android:layout_below="@+id/judulrincian"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                    <TextView
+                        android:id="@+id/text_lamp_sppd"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textnippegwdit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/no_sppd"
+                        android:textColor="@color/hitam"
+                        android:textSize="18sp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/titikduasppd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/titikdua"
+                        android:layout_below="@+id/textnippegwdit"
+                        android:layout_toEndOf="@+id/textnippegwdit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                    <TextView
+                        android:id="@+id/edit_lamp_sppd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/titikduasppd"
+                        android:layout_below="@+id/textnippegwdit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                    <TextView
+                        android:id="@+id/text_tgl_lamp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_lamp_sppd"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/tgl_sppd"
+                        android:textColor="@color/hitam"
+                        android:textSize="18sp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/titikduatgl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/titikdua"
+                        android:layout_below="@+id/text_lamp_sppd"
+                        android:layout_toEndOf="@+id/text_tgl_lamp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                    <TextView
+                        android:id="@+id/edit_tgl_lamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/titikduatgl"
+                        android:layout_below="@+id/text_lamp_sppd"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18sp"
+                        android:textColor="@color/hitam"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= CARD LIST RINCIAN ================= -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rincian_biaya"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingBottom="6dp"/>
+
+                    <ListView
+                        android:id="@+id/listRincianBiaya"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        tools:ignore="NestedScrolling" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnTambahRincian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Rincian"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

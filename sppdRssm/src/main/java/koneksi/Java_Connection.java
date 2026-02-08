@@ -73,23 +73,7 @@ public class Java_Connection {
 
 		return response.toString();
 	}
-	/*private String getPostDataString(HashMap<String, String> params)
-			throws UnsupportedEncodingException {
 
-		StringBuilder result = new StringBuilder();
-		boolean first = true;
-
-		for (Map.Entry<String, String> entry : params.entrySet()) {
-			if (!first) result.append("&");
-			first = false;
-
-			result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
-			result.append("=");
-			result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
-		}
-
-		return result.toString();
-	}*/
 	private String getPostDataString(HashMap<String, String> params)
 			throws UnsupportedEncodingException {
 
@@ -114,7 +98,6 @@ public class Java_Connection {
 
 		return result.toString();
 	}
-
 
 	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
 	public String sendGetRequest(String requestURL) {
@@ -172,6 +155,77 @@ public class Java_Connection {
 		}
 
 		return response.toString();
+	}
+
+	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+	public String sendMultipart(
+			String requestURL,
+			HashMap<String, String> params,
+			File file,
+			String fileParam
+	) {
+		String boundary = "===" + System.currentTimeMillis() + "===";
+		String LINE_FEED = "\r\n";
+
+		try {
+			URL url = new URL(requestURL);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setUseCaches(false);
+			conn.setDoOutput(true);
+			conn.setDoInput(true);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
+
+			DataOutputStream out = new DataOutputStream(conn.getOutputStream());
+
+			// TEXT PARAMS
+			for (String key : params.keySet()) {
+				out.writeBytes("--" + boundary + LINE_FEED);
+				out.writeBytes("Content-Disposition: form-data; name=\"" + key + "\"" + LINE_FEED);
+				out.writeBytes(LINE_FEED);
+				out.writeBytes(params.get(key));
+				out.writeBytes(LINE_FEED);
+			}
+
+			// FILE
+			if (file != null && file.exists()) {
+				out.writeBytes("--" + boundary + LINE_FEED);
+				out.writeBytes(
+						"Content-Disposition: form-data; name=\"" + fileParam +
+								"\"; filename=\"" + file.getName() + "\"" + LINE_FEED
+				);
+				out.writeBytes("Content-Type: image/jpeg" + LINE_FEED);
+				out.writeBytes(LINE_FEED);
+
+				FileInputStream fis = new FileInputStream(file);
+				byte[] buffer = new byte[4096];
+				int bytesRead;
+				while ((bytesRead = fis.read(buffer)) != -1) {
+					out.write(buffer, 0, bytesRead);
+				}
+				fis.close();
+				out.writeBytes(LINE_FEED);
+			}
+
+			out.writeBytes("--" + boundary + "--" + LINE_FEED);
+			out.flush();
+			out.close();
+
+			InputStream is = conn.getResponseCode() == HttpURLConnection.HTTP_OK
+					? conn.getInputStream()
+					: conn.getErrorStream();
+
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while ((line = br.readLine()) != null) sb.append(line);
+			br.close();
+
+			return sb.toString();
+
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 }

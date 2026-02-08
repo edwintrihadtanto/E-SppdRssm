@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- CACHE INTERNAL (INI YANG KAMU PAKAI) -->
+    <cache-path
+        name="cache"
+        path="." />
+
+    <!-- FILES INTERNAL -->
+    <files-path
+        name="bukti_sppd"
+        path="Bukti Upload SPPD/" />
+
+    <!-- JAGA-JAGA -->
+    <external-cache-path
+        name="external_cache"
+        path="." />
+
+    <external-files-path
+        name="external_files"
+        path="Pictures" />
+
+</paths>
