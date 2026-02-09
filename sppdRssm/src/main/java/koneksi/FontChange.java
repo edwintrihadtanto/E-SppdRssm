@@ -14,7 +14,7 @@ public class FontChange extends Application {
     public void onCreate() {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/FTY_STRATEGYCIDE_NCV.ttf")
+                .setDefaultFontPath("fonts/Poppins_ExtraBold.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );

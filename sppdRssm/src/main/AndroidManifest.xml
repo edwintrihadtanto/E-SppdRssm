@@ -59,7 +59,6 @@
         <activity android:name="com.e_sppd_rssm.List_DataRiil" />
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
 
-        <activity android:name="com.e_sppd_rssm.Edit_Laporan_Riil" />
 
         <activity android:name="com.e_sppd_rssm.Tentang_Aplikasi" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Profil" android:theme="@style/AppTheme"/>

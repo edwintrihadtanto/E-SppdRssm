@@ -5,36 +5,24 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 
 import com.e_sppd.rssm.R;
 
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.HashMap;
 
-import kamera.FileUtil;
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
@@ -72,7 +60,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
             btnHapus.setVisibility(View.GONE);
 
         } else {
-            id_riil  = i.getStringExtra("id_rincian");
+            id_riil  = i.getStringExtra("id_riil");
             edtRincianRiil.setText(i.getStringExtra("rincian"));
             edtJumlahRiil.setText(i.getStringExtra("jumlah"));
             txtTanggalRiil.setText(i.getStringExtra("tgl"));
@@ -92,8 +80,8 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
         });
 
         btnHapus.setOnClickListener((View v) -> new AlertDialog.Builder(Edit_Rincian_BiayaRiil.this)
-                .setTitle("Hapus Rincian")
-                .setMessage("Yakin ingin menghapus rincian ini?")
+                .setTitle("Hapus Riil Biaya")
+                .setMessage("Yakin ingin menghapus biaya riil ini?")
                 .setPositiveButton("Hapus", (d, w) -> new HapusRiil(Edit_Rincian_BiayaRiil.this).execute())
                 .setNegativeButton("Batal", null)
                 .show());
@@ -123,14 +111,14 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
 
             try {
                 HashMap<String, String> params = new HashMap<>();
-                params.put("id_rincian", id_riil);
+                params.put("id_riil", id_riil);
                 params.put("uraian", edtRincianRiil.getText().toString());
                 params.put("jml", edtJumlahRiil.getText().toString());
                 params.put("nomor_surat_sppd", nosppd);
                 params.put("nip", nip);
 
                 String response = jc.sendPostRequest(
-                        Koneksi.update_rincian_biaya,
+                        Koneksi.update_riil_biaya,
                         params
                 );
 
@@ -170,7 +158,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             pd = new ProgressDialog(activity);
-            pd.setMessage("Menghapus rincian...");
+            pd.setMessage("Menghapus riil biaya...");
             pd.setCancelable(false);
             pd.show();
         }
@@ -180,10 +168,10 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
         protected String doInBackground(Void... voids) {
             try {
                 HashMap<String, String> params = new HashMap<>();
-                params.put("id_rincian", id_riil);
+                params.put("id_riil", id_riil);
 
                 String res = jc.sendPostRequest(
-                        Koneksi.hapus_rincian_biaya,
+                        Koneksi.hapus_riil_biaya,
                         params
                 );
 
@@ -223,7 +211,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             pd = new ProgressDialog(activity);
-            pd.setMessage("Menyimpan rincian...");
+            pd.setMessage("Menyimpan riil biaya...");
             pd.setCancelable(false);
             pd.show();
         }
@@ -239,7 +227,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
                 params.put("jml", edtJumlahRiil.getText().toString());
 
                 String res = jc.sendPostRequest(
-                        Koneksi.simpan_rincian_biaya,
+                        Koneksi.simpan_riil_biaya,
                         params
                 );
 

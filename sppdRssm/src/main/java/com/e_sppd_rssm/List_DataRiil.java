@@ -275,7 +275,7 @@ public class List_DataRiil extends AppCompatActivity {
             Intent i = new Intent(List_DataRiil.this, Edit_Rincian_BiayaRiil.class);
             i.putExtra("nosppd", d.get("no_sppd"));
             i.putExtra("nippegawai", d.get("nip"));
-            i.putExtra("id_rincian", d.get("id_rincian"));
+            i.putExtra("id_riil", d.get("id_riil"));
             i.putExtra("rincian", d.get("rincian"));
             i.putExtra("jumlah", d.get("jumlah"));
             i.putExtra("tgl", d.get("tgl"));

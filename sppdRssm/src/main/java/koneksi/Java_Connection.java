@@ -10,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -226,6 +227,104 @@ public class Java_Connection {
 		} catch (Exception e) {
 			return null;
 		}
+	}
+
+	public boolean downloadFile(
+			String fileURL,
+			File outputFile
+	) {
+		HttpURLConnection conn = null;
+		InputStream is = null;
+		FileOutputStream fos = null;
+
+		try {
+			URL url = new URL(fileURL);
+			conn = (HttpURLConnection) url.openConnection();
+			conn.setConnectTimeout(15000);
+			conn.setReadTimeout(15000);
+			conn.setRequestMethod("GET");
+
+			// header aman
+			conn.setRequestProperty("User-Agent", "Mozilla/5.0");
+			conn.setRequestProperty("Accept", "application/pdf");
+
+			int responseCode = conn.getResponseCode();
+			if (responseCode != HttpURLConnection.HTTP_OK) {
+				return false;
+			}
+
+			is = conn.getInputStream();
+			fos = new FileOutputStream(outputFile);
+
+			byte[] buffer = new byte[4096];
+			int len;
+			while ((len = is.read(buffer)) != -1) {
+				fos.write(buffer, 0, len);
+			}
+
+			fos.flush();
+			return true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				if (is != null) is.close();
+				if (fos != null) fos.close();
+			} catch (Exception ignored) {}
+			if (conn != null) conn.disconnect();
+		}
+	}
+
+	@RequiresApi(api = Build.VERSION_CODES.O)
+    public boolean downloadFileWithProgress(
+			String requestURL,
+			File targetFile,
+			ProgressCallback callback
+	) {
+		HttpURLConnection conn = null;
+
+		try {
+			URL url = new URL(requestURL);
+			conn = (HttpURLConnection) url.openConnection();
+			conn.connect();
+
+			int fileLength = conn.getContentLength();
+
+			InputStream input = new BufferedInputStream(conn.getInputStream());
+			OutputStream output = Files.newOutputStream(targetFile.toPath());
+
+			byte[] data = new byte[4096];
+			long total = 0;
+			int count;
+
+			while ((count = input.read(data)) != -1) {
+				total += count;
+				output.write(data, 0, count);
+
+				if (fileLength > 0 && callback != null) {
+					int progress = (int) (total * 100 / fileLength);
+					callback.onProgress(progress);
+				}
+			}
+
+			output.flush();
+			output.close();
+			input.close();
+
+			return true;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			if (conn != null) conn.disconnect();
+		}
+	}
+
+	public interface ProgressCallback {
+		void onProgress(int percent);
 	}
 
 }

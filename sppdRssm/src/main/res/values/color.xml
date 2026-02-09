@@ -17,7 +17,7 @@
     <color name="biru_laut"                 >#43A047</color>
     <color name="primary"                   >#E43F3F    </color>
     <color name="primary_dark"              >#E12929    </color>
-    <color name="primary_darker"            >#ddff00    </color>
+    <color name="primary_darker"            >#00BBFF</color>
     <color name="accent"                    >#FFFFFF    </color>
     <color name="black"                     >#26ffd501  </color>
     <color name="jet"                       >#222222    </color>

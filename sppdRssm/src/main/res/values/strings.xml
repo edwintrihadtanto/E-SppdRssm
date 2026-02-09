@@ -197,7 +197,7 @@
     <string name="biaya">Biaya :</string>
     <string name="entry_biaya">Entry Biaya</string>
     <string name="simpan_rincian">👉 Simpan Rincian</string>
-    <string name="hapus">  Hapus</string>
+    <string name="hapus">❌ Hapus</string>
     <string name="upload">  Upload</string>
     <string name="rincian_biaya_riil">Rincian Biaya Riil</string>
     <string name="refresh">Refresh</string>
@@ -205,5 +205,6 @@
     <string name="rincian_riil">Rincian Riil</string>
     <string name="entry_detail_rincian_biaya_riil">Entry Detail Rincian Biaya Riil</string>
     <string name="entry_biaya_riil">Entry Biaya Riil</string>
+    <string name="download">Download</string>
 
 </resources>

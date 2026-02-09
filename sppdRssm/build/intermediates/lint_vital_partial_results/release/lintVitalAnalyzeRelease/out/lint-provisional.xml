@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.1" type="conditional_incidents">
+
+    <incident
+        id="UnspecifiedImmutableFlag"
+        severity="fatal"
+        message="Missing `PendingIntent` mutability flag">
+        <fix-alternatives>
+            <fix-replace
+                description="Add FLAG_IMMUTABLE (preferred)"
+                replacement="PendingIntent.FLAG_ONE_SHOT | android.app.PendingIntent.FLAG_IMMUTABLE"
+                shortenNames="true"
+                reformat="value">
+                <range
+                    file="${:sppdRssm*release*MAIN*sourceProvider*0*javaDir*0}/koneksi/MyFirebaseMessagingService.java"
+                    startOffset="1571"
+                    endOffset="1598"/>
+            </fix-replace>
+            <fix-replace
+                description="Add FLAG_MUTABLE"
+                replacement="PendingIntent.FLAG_ONE_SHOT | android.app.PendingIntent.FLAG_MUTABLE"
+                shortenNames="true"
+                reformat="value">
+                <range
+                    file="${:sppdRssm*release*MAIN*sourceProvider*0*javaDir*0}/koneksi/MyFirebaseMessagingService.java"
+                    startOffset="1571"
+                    endOffset="1598"/>
+            </fix-replace>
+        </fix-alternatives>
+        <location
+            file="${:sppdRssm*release*MAIN*sourceProvider*0*javaDir*0}/koneksi/MyFirebaseMessagingService.java"
+            line="46"
+            column="17"
+            startOffset="1571"
+            endLine="46"
+            endColumn="44"
+            endOffset="1598"/>
+    </incident>
+
+</incidents>

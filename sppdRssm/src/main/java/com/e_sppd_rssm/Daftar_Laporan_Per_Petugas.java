@@ -51,7 +51,6 @@ import koneksi.Koneksi;
 public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 	private static final String TAG = "DaftarPetugas";
 	private ListView listView, list_notif;
-//	private Koneksi Koneksi_Server;
 	private List<Daftar_String> list, listpost;
 	private List_Daftar_SPT_per_nip adapter;
 	public List_Informasi informasi;
@@ -287,23 +286,18 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 //	}
 	
 	private void menampilkan_nama_pegawai() {
-//		if (!connected(Daftar_Laporan_Per_Petugas.this)) {
-//			String pesan = "Tidak ada sambungan Internet.\nPastikan Wi-fi atau Data Seluler aktif, lalu coba lagi";
-//			showAlert(pesan);
-//		} else {
-			informasi = new List_Informasi(getApplicationContext(), listpost);
-			list_notif.setAdapter(informasi);
+		informasi = new List_Informasi(getApplicationContext(), listpost);
+		list_notif.setAdapter(informasi);
 
-			adapter = new List_Daftar_SPT_per_nip(getApplicationContext(), list);						
-			listView.setAdapter(adapter);
-			listView.setOnItemClickListener((parent, view, pos, id) -> {
-				// TODO Auto-generated method stub
-				selectedList = (Daftar_String) adapter.getItem(pos);
-				tampil_pilihan_menu();
-				Snackbar.make(view, "Jangan Lupa ( Posting SPT & SPPD ),\nyang sudah terselesaikan ya....", Snackbar.LENGTH_LONG)
-						.setAction("Snackbar", null).show();
-			});
-		//}
+		adapter = new List_Daftar_SPT_per_nip(getApplicationContext(), list);
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener((parent, view, pos, id) -> {
+			// TODO Auto-generated method stub
+			selectedList = (Daftar_String) adapter.getItem(pos);
+			tampil_pilihan_menu();
+			Snackbar.make(view, "Jangan Lupa ( Posting SPT & SPPD ),\nyang sudah terselesaikan ya....", Snackbar.LENGTH_LONG)
+					.setAction("Snackbar", null).show();
+		});
 	}
 
 	private boolean terkoneksi_roaming(Context mContext) {

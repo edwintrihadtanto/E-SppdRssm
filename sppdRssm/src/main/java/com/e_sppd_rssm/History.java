@@ -1,17 +1,20 @@
 package com.e_sppd_rssm;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Environment;
 import android.view.View;
-import android.view.Window;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -19,778 +22,477 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.e_sppd.rssm.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.net.URLConnection;
+import java.io.File;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import koneksi.Daftar_String;
-import koneksi.Koneksi;
+import androidx.core.content.FileProvider;
 
-//import koneksi.JSONParser;
+import koneksi.Java_Connection;
+import koneksi.Koneksi;
 
 public class History extends AppCompatActivity {
 	private static final String TAG = "History";
-	private ListView listView;
-	private Koneksi Koneksi_Server;
-	private List<Daftar_String> list;
-	private List_History_SPT_per_nip adapter;
-	private TextView nip_lokal;
-	private ProgressDialog loading;
-	private Daftar_String selectedList;
-
-	private static final int progress_bar_type_spt 		= 0;
-	private static final int progress_bar_type_sppd 	= 1;
-	private static final int progress_bar_type_lap_perj = 2;
-	private static final int progress_bar_type_rincian 	= 3;
-	private static final int progress_bar_type_riil 	= 4;
-
+	ListView listHistory;
+	ArrayList<HashMap<String, String>> dataHistory;
+	ProgressDialog progressDialog;
 	RelativeLayout laylistrecent;
-	String pesan = "Download Berhasil\nSilahkan BUKA di FOLDER DOWNLOAD";
-	// NOTE :
-	// History.java dan Daftar Laporan Perjalana Dinas.java saling berhubungan
-	// pada layout listview
-	public ImageView bantuan;
+	String nippegawai;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list_tampil_detail_history);
-		nip_lokal 		= findViewById(R.id.nip_lokal);
 		laylistrecent 	= findViewById(R.id.laylistrecent);
-		bantuan 		= findViewById(R.id.bantuan_history);
-		TextView info_button5	= findViewById(R.id.info_button5);
+		listHistory 	= findViewById(R.id.list_history);
+		dataHistory     = new ArrayList<>();
+
 		Bundle b = getIntent().getExtras();
-		String transfer_nip = null;
 		if (b != null) {
-			transfer_nip = b.getString("transfer_nip");
+			nippegawai = b.getString("transfer_nip");
 		}
-		nip_lokal.setText(transfer_nip);
-		Koneksi_Server = new Koneksi();
-		listView = findViewById(R.id.list_history);
 
-		list = new ArrayList<>();
 		new Tampil_history().execute();
-
-		bantuan.setOnClickListener(v -> {
-		//String pesan = "Sipp Mantap";
-		//showAlert(pesan);
-			Intent i;
-			i = new Intent(History.this,
-					Tampil_Bantuan.class);
-			startActivity(i);
-		});
-		String welcome = "Pilih Salah Satu Daftar Dibawah Ini, Untuk menampilkan MENU PILIHAN";
-		String welcome2 = "Data yang ditampilkan di HISTORY adalah Data SPT dan SPPD beserta isinya yang sudah Anda Posting di Halaman Daftar SPT dan SPPD";
-		info_pesan(welcome2);
-		info_button5.setText(welcome);
+		showErrorSnackbar("Pilih salah satu history untuk mengunduh laporan.");
 	}
-	private void info_pesan(String message) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(message)
-				.setTitle("Informasi")
-				.setCancelable(false)
-				.setIcon(R.drawable.ic_info_outline_24dp)
-				.setPositiveButton("Mengerti",
-						(dialog, id) -> dialog.dismiss());
-		AlertDialog alert = builder.create();
-		alert.show();
+
+	private void showErrorSnackbar(String message) {
+		View rootView = findViewById(android.R.id.content);
+		Snackbar.make(rootView, message, Snackbar.LENGTH_INDEFINITE)
+				.setAction("OK", v -> {})
+				.show();
+	}
+	private boolean isInternetAvailable() {
+		ConnectivityManager cm =
+				(ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+		if (cm != null) {
+			NetworkInfo ni = cm.getActiveNetworkInfo();
+			return ni != null && ni.isConnected();
+		}
+		return false;
 	}
 	@SuppressLint("StaticFieldLeak")
-	private class Tampil_history extends AsyncTask<String, Void, String> {
-
+    private class Tampil_history extends AsyncTask<Void, Void, String> {
+		ProgressDialog loading;
+		Java_Connection jc = new Java_Connection();
+		String errorMessage = null;
 		@Override
 		protected void onPreExecute() {
-			loading = new ProgressDialog(History.this);
-			loading.setMessage("Loading ...");
-			loading.setIndeterminate(false);
-			loading.setCancelable(false);
-			loading.show();
-		}
 
-		@Override
-		protected String doInBackground(String... params) {
-
-			/* Mengirimkan request ke server dan memproses JSON response */
-			String nip_pegawai = nip_lokal.getText().toString().trim();
-			//String Cek = String.valueOf(nip_pegawai);
-			String url;
-
-			// Super PENTINGGGGGGGGGGGGGGGGGGGGGG PUOOLLLLLLLLLL
-			// Barokallah Alhamdulilah KETEMU CARANE MENGATASI
-			// DATA NIP YANG BERSIFAT VARCHAR DENGAN SPASI BANYAK
-			try {
-
-				url = Koneksi_Server
-						.sendGetRequest(Koneksi.tampil_daftar_sppd_per_nip_HISTORY
-								+ "?nip_pegawai="
-								+ URLEncoder.encode(nip_pegawai, "UTF-8"));
-
-				list = proses_pengambilan_data(url);
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if (!isInternetAvailable()) {
+				errorMessage = "❌ Koneksi internet tidak tersedia";
+				cancel(true);
+				return;
 			}
 
-			return null;
+			loading = ProgressDialog.show(
+					History.this,
+					"",
+					"Mengambil rincian biaya riil...",
+					false
+			);
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+		protected String doInBackground(Void... voids) {
+
+			try {
+				String nip = nippegawai.trim();
+
+				if (nip.trim().isEmpty()) {
+					errorMessage = "NIP Kosong";
+					return null;
+				}
+
+				String url = Koneksi.list_history
+						+ "?nip_pegawai="
+						+ URLEncoder.encode(nip, "UTF-8");
+
+				return jc.sendGetRequest(url);
+
+			} catch (NullPointerException e) {
+				errorMessage = "❌ Data tidak lengkap (NullPointer)";
+				return null;
+
+			} catch (Exception e) {
+				errorMessage = "❌ Gagal terhubung ke server";
+				return null;
+			}
 		}
 
 		@Override
 		protected void onPostExecute(String result) {
-			loading.dismiss();
-			runOnUiThread(History.this::menampilkan_nama_pegawai);
+
+			if (loading != null && loading.isShowing()) {
+				loading.dismiss();
+			}
+
+			if (result != null) {
+				parsingJSON(result);
+				setAdapter();
+			} else {
+				showErrorSnackbar(errorMessage);
+			}
+		}
+	}
+	private void tampilkanError(String pesan) {
+
+		if (pesan == null) {
+			pesan = "Terjadi kesalahan tidak diketahui";
 		}
 
+		Toast.makeText(
+				History.this,
+				pesan,
+				Toast.LENGTH_LONG
+		).show();
+	}
+	private void parsingJSON(String json) {
+
+		try {
+			if (json == null) {
+				tampilkanError("Respon server kosong");
+				return;
+			}
+
+			JSONObject obj = new JSONObject(json);
+
+			// ❌ backend balikin error
+			if (!obj.has("tampilkan_data")) {
+				tampilkanError("Format respon tidak sesuai");
+				return;
+			}
+
+			JSONArray arr = obj.getJSONArray("tampilkan_data");
+
+			if (arr == null || arr.length() == 0) {
+				tampilkanError("Data History tidak ditemukan!");
+				return;
+			}
+
+			dataHistory.clear();
+
+			for (int i = 0; i < arr.length(); i++) {
+				JSONObject o = arr.getJSONObject(i);
+
+				HashMap<String, String> map = new HashMap<>();
+				map.put("nomor_urut", o.optString("nomor_urut", ""));
+				map.put("id_sppd", o.optString("id_sppd", ""));
+				map.put("id_spt", o.optString("id_spt", ""));
+				map.put("nomor_spt", o.optString("nomor_spt", ""));
+				map.put("nomor_surat_sppd", o.optString("nomor_surat_sppd", ""));
+				map.put("nip", o.optString("nip", ""));
+				map.put("biaya_perj", o.optString("biaya_perj", ""));
+				map.put("tgl_brngkt", o.optString("tgl_brngkt", ""));
+				map.put("tgl_kembali", o.optString("tgl_kembali", ""));
+				map.put("lama_perj", o.optString("lama_perj", ""));
+				map.put("tgl_surat_masuk", o.optString("tgl_surat_masuk", ""));
+				map.put("status_laporan_petugas", o.optString("status_laporan_petugas", ""));
+				map.put("status_riil", o.optString("status_riil", ""));
+				map.put("status_rincian_biaya", o.optString("status_rincian_biaya", ""));
+				map.put("status_post", o.optString("status_post", ""));
+
+				dataHistory.add(map);
+			}
+
+		} catch (Exception e) {
+			tampilkanError("Gagal membaca data server");
+		}
+	}
+	private void setAdapter() {
+
+		listHistory.setAdapter(new BaseAdapter() {
+
+			@Override
+			public int getCount() {
+				return dataHistory == null ? 0 : dataHistory.size();
+			}
+
+			@Override
+			public Object getItem(int i) {
+				return dataHistory.get(i);
+			}
+
+			@Override
+			public long getItemId(int i) {
+				return i;
+			}
+
+			@RequiresApi(api = Build.VERSION_CODES.O)
+            @SuppressLint("SetTextI18n")
+			@Override
+			public View getView(int i, View v, ViewGroup parent) {
+
+				if (v == null) {
+					v = getLayoutInflater()
+							.inflate(R.layout.row_list_detail_history, parent, false);
+				}
+				TextView no       	  = v.findViewById(R.id.txtNo);
+				TextView nospt  	  = v.findViewById(R.id.txtNospt);
+				TextView nosppd    	  = v.findViewById(R.id.txtNosppd);
+				TextView tanggal      = v.findViewById(R.id.txtTanggal);
+				TextView lama 		  = v.findViewById(R.id.txtLama);
+
+				TextView badgeLap     = v.findViewById(R.id.badgeLap);
+				TextView badgeRincian = v.findViewById(R.id.badgeRincian);
+				TextView badgeRiil    = v.findViewById(R.id.badgeRiil);
+
+				HashMap<String, String> d = dataHistory.get(i);
+
+				no.setText(d.get("nomor_urut"));
+				nospt.setText("SPT " + d.get("nomor_spt"));
+				nosppd.setText("SPPD " + d.get("nomor_surat_sppd"));
+
+				tanggal.setText(d.get("tgl_brngkt") + " → " + d.get("tgl_kembali"));
+				lama.setText(d.get("lama_perj") + " hari");
+
+				setBadge(badgeLap, "Laporan", d.get("status_laporan_petugas"));
+				setBadge(badgeRincian, "Rincian", d.get("status_rincian_biaya"));
+				setBadge(badgeRiil, "Riil", d.get("status_riil"));
+
+				RelativeLayout rootRow = v.findViewById(R.id.rootRow);
+				ImageView btnDownload = v.findViewById(R.id.btnDownload);
+
+				rootRow.setOnClickListener(view -> {
+					Toast.makeText(History.this,
+							"Klik ikon ⬇ untuk mengunduh dokumen",
+							Toast.LENGTH_SHORT).show();
+				});
+
+				// klik icon download
+				btnDownload.setOnClickListener(view -> {
+
+					String[] menu = {
+							"Download Laporan",
+							"Download SPT",
+							"Download SPPD",
+							"Download Rincian Biaya",
+							"Download Pengeluaran Riil"
+					};
+
+					AlertDialog.Builder builder = new AlertDialog.Builder(History.this);
+					builder.setTitle("Pilih dokumen yang akan diunduh");
+					builder.setItems(menu, (dialog, which) -> {
+
+						switch (which) {
+							case 0:
+								download(d, 1); // Laporan
+								break;
+							case 1:
+								download(d, 2); // SPT
+								break;
+							case 2:
+								download(d, 3); // SPPD
+								break;
+							case 3:
+								download(d, 4); // Rincian
+								break;
+							case 4:
+								download(d, 5); // Riil
+								break;
+						}
+					});
+
+					builder.show();
+				});
+
+				return v;
+			}
+		});
 	}
 
-	public void refresh(View view) {
+	@RequiresApi(api = Build.VERSION_CODES.O)
+    private void download(HashMap<String, String> d, int code) {
+
+		String idSpt 	= d.get("id_spt");
+		String idSppd 	= d.get("id_sppd");
+		String noSpt 	= d.get("nomor_spt");
+		String nip   	= d.get("nip");
+
+		String status;
+		String url;
+		String folderName;
+		String filePrefix;
+
+		// 🔥 TENTUKAN PARAMETER BERDASARKAN CODE
+		try {
+			switch (code) {
+
+				case 1: // LAPORAN
+					status = d.get("status_laporan_petugas");
+					if (status == null || status.contains("BELUM")) {
+						toast("Anda belum memiliki Laporan Perjalanan Dinas");
+						return;
+					}
+					url = Koneksi.download_lap_perj
+							+ "?no_spt=" + URLEncoder.encode(noSpt, "UTF-8")
+							+ "&&nip=" + URLEncoder.encode(nip, "UTF-8");
+					folderName = "Laporan";
+					filePrefix = "Laporan";
+					break;
+
+				case 2: // SPT
+					url = Koneksi.download_spt
+							+ "?id_spt=" + URLEncoder.encode(idSpt, "UTF-8");
+					folderName = "SPT";
+					filePrefix = "SPT";
+					break;
+
+				case 3: // SPPD
+					url = Koneksi.download_sppd
+							+ "?id_sppd=" + URLEncoder.encode(idSppd, "UTF-8");
+					folderName = "SPPD";
+					filePrefix = "SPPD";
+					break;
+
+				case 4: // RINCIAN
+					url = Koneksi.download_rincian
+							+ "?id_sppd=" + URLEncoder.encode(idSppd, "UTF-8");
+					folderName = "Rincian";
+					filePrefix = "Rincian";
+					break;
+
+				case 5: // RIIL
+					url = Koneksi.download_riil
+							+ "?id_sppd=" + URLEncoder.encode(idSppd, "UTF-8");
+					folderName = "Riil";
+					filePrefix = "Riil";
+					break;
+
+				default:
+					toast("Kode download tidak dikenal");
+					return;
+			}
+
+			// 🔒 URL FINAL
+//			url = url
+//					+ "?no_spt=" + URLEncoder.encode(noSpt, "UTF-8")
+//					+ "&&nip=" + URLEncoder.encode(nip, "UTF-8");
+
+		} catch (Exception e) {
+			toast("Parameter download tidak valid");
+			return;
+		}
+
+		// 📁 FOLDER
+		File folder = new File(
+				Environment.getExternalStoragePublicDirectory(
+						Environment.DIRECTORY_DOWNLOADS
+				),
+				"eSPPD/" + folderName
+		);
+		if (!folder.exists()) folder.mkdirs();
+
+		// 🔥 NAMA FILE AMAN
+		String safeName = noSpt.replace("/", "_");
+		File pdf = new File(folder, filePrefix + "_" + safeName + ".pdf");
+
+		// 🧠 CACHE
+		if (pdf.exists()) {
+			toast("File sudah ada");
+			openPdf(pdf);
+			return;
+		}
+
+		// ⏳ PROGRESS
+		showProgress("Mengunduh " + filePrefix);
+
+		String finalUrl = url;
+		new Thread(() -> {
+
+			Java_Connection jc = new Java_Connection();
+
+			boolean sukses = jc.downloadFileWithProgress(
+					finalUrl,
+					pdf,
+					progress -> runOnUiThread(() ->
+							progressDialog.setProgress(progress)
+					)
+			);
+
+			runOnUiThread(() -> {
+				hideProgress();
+				if (sukses) {
+					toast(filePrefix + " berhasil diunduh");
+					openPdf(pdf);
+				} else {
+					toast("Download gagal");
+				}
+			});
+
+		}).start();
+	}
+
+	@SuppressLint("SetTextI18n")
+    private void setBadge(TextView tv, String label, String status) {
+
+		if (status == null || status.trim().isEmpty()) {
+			status = "BELUM";
+		}
+
+		// 🔴 INI KUNCI: teks + konteks
+		tv.setText(label + " : " + status);
+
+		if ("SUDAH".equalsIgnoreCase(status)) {
+			tv.setBackgroundResource(R.drawable.badge_sudah);
+		} else {
+			tv.setBackgroundResource(R.drawable.badge_belum);
+		}
+
+		tv.setVisibility(View.VISIBLE);
+	}
+
+	public void refreshhistory(View view) {
 		finish();
 		startActivity(getIntent());
 	}
 
-	private List<Daftar_String> proses_pengambilan_data(String response) {
-		List<Daftar_String> list_Daftar_String = new ArrayList<>();
+	private void showProgress(String title) {
+		progressDialog = new ProgressDialog(this);
+		progressDialog.setTitle(title);
+		progressDialog.setMessage("Mengunduh file...");
+		progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		progressDialog.setIndeterminate(false);
+		progressDialog.setCancelable(false);
+		progressDialog.show();
+	}
+	private void hideProgress() {
+		if (progressDialog != null && progressDialog.isShowing()) {
+			progressDialog.dismiss();
+		}
+	}
+	private void openPdf(File file) {
+
+		Uri uri = FileProvider.getUriForFile(
+				this,
+				getPackageName() + ".provider",
+				file
+		);
+
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		intent.setDataAndType(uri, "application/pdf");
+		intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
 		try {
-			JSONObject jsonObj = new JSONObject(response);
-			JSONArray jsonArray = jsonObj.getJSONArray("tampil_daftar_sppd");
-			Log.d(TAG, "data lengt: " + jsonArray.length());
-			Daftar_String mhs;
-			for (int i = 0; i < jsonArray.length(); i++) {
-				JSONObject obj = jsonArray.getJSONObject(i);
-				mhs = new Daftar_String();
-				mhs.setid_sppd(obj.getString("id_sppd"));
-				mhs.setid_spt(obj.getString("id_spt"));
-				mhs.setnomor_SPT(obj.getString("nomor_spt"));
-				mhs.setnomor_SPPD(obj.getString("nomor_surat_sppd"));
-				mhs.setnip(obj.getString("nip"));
-				mhs.setnama_pegawai(obj.getString("nama_pegawai"));
-				mhs.setjabatan(obj.getString("jabatan"));
-				mhs.setgolongan(obj.getString("golongan"));
-				mhs.setbiaya_perj(obj.getString("biaya_perj"));
-				mhs.setmaksud_perj(obj.getString("maksud_perj"));
-				mhs.setalat_angkutan(obj.getString("alat_angkutan"));
-				mhs.settempat_brngkt(obj.getString("tempat_brngkt"));
-				mhs.settempat_tujuan(obj.getString("tempat_tujuan"));
-				mhs.setlama_perj(obj.getString("lama_perj"));
-				mhs.settgl_brngkt(obj.getString("tgl_brngkt"));
-				mhs.settgl_kembali(obj.getString("tgl_kembali"));
-				mhs.settambh_pengikut1(obj.getString("tambh_pengikut1"));
-				mhs.settambh_pengikut2(obj.getString("tambh_pengikut2"));
-				mhs.settambh_pengikut3(obj.getString("tambh_pengikut3"));
-				mhs.settambh_pengikut4(obj.getString("tambh_pengikut4"));
-				mhs.settambh_pengikut5(obj.getString("tambh_pengikut5"));
-				mhs.settgl_aktivitas(obj.getString("tanggal_aktivitas"));
-				mhs.setjam_aktivitas(obj.getString("waktu_aktivitas"));
-				mhs.setsurat_masuk_dari(obj.getString("surat_masuk_dari"));
-				mhs.settgl_surat_spt_masuk(obj.getString("tgl_surat_masuk"));
-				mhs.setakun_anggaran(obj.getString("akun_pembebanan_anggaran"));
-				mhs.setstatus_laporan_petugas(obj
-						.getString("status_laporan_petugas"));
-				mhs.setstatus_riil(obj.getString("status_riil"));
-				mhs.setstatus_rincian(obj.getString("status_rincian_biaya"));
-				mhs.setsts_postingan(obj.getString("status_post"));
-
-				list_Daftar_String.add(mhs);
-			}
-		} catch (JSONException e) {
-
-			if (e.getMessage() != null) {
-				Log.d(TAG, e.getMessage());
-			} else {
-				Toast.makeText(History.this, "Gagal Mengambil Data",
-						Toast.LENGTH_LONG).show();
-			}
-
-		}
-		return list_Daftar_String;
-	}
-
-	private void menampilkan_nama_pegawai() {
-		if (!terkoneksi(History.this)) {
-			Toast.makeText(History.this, "Not Connected", Toast.LENGTH_LONG)
-					.show();
-		} else {
-			adapter = new List_History_SPT_per_nip(getApplicationContext(),
-					list);
-			listView.setAdapter(adapter);
-			listView.setOnItemClickListener((parent, view, pos, id) -> {
-				// TODO Auto-generated method stub
-				selectedList = (Daftar_String) adapter.getItem(pos);
-				tampil_pilihan_menu_download();
-			});
+			startActivity(intent);
+		} catch (Exception e) {
+			Toast.makeText(this,
+					"Tidak ada aplikasi pembuka PDF",
+					Toast.LENGTH_LONG).show();
 		}
 	}
 
-	private boolean terkoneksi(Context mContext) {
-		ConnectivityManager cm = (ConnectivityManager) mContext
-				.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo netInfo = cm.getActiveNetworkInfo();
-		// Toast.makeText(getApplication(), "Koneksi Internet Tersedia",
-		// Toast.LENGTH_SHORT).show();
-		return netInfo != null && netInfo.isConnectedOrConnecting();
-
+	private void toast(String msg) {
+		Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
 	}
 
-	private void tampil_pilihan_menu_download() {
-		final Dialog dialog = new Dialog(this);
-		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		dialog.setContentView(R.layout.dialog_pilihan_download);
-
-		CardView btn_download_lap_perj 	= dialog.findViewById(R.id.btn_download_lap_perj);
-		CardView btn_download_spt 		= dialog.findViewById(R.id.btn_download_spt);
-		CardView btn_download_sppd 		= dialog.findViewById(R.id.btn_download_sppd);
-		CardView btn_download_rincian 	= dialog.findViewById(R.id.btn_download_rincian);
-		CardView btn_download_riil 		= dialog.findViewById(R.id.btn_download_riil);
-
-		dialog.show();
-
-		btn_download_lap_perj.setOnClickListener(v -> {
-			dialog.dismiss();
-			String no_spt 			= selectedList.getnomor_SPT();
-			String nip 				= selectedList.getnip();
-			String cek_status_lap 	= selectedList.getstatus_laporan_petugas();
-			String Cek 				= String.valueOf(no_spt);
-			String Cek_Nip 			= String.valueOf(nip);
-
-			if (cek_status_lap.contains("BELUM")) {
-				Toast.makeText(
-						History.this,
-						"Download Gagal \nAnda Tidak Punya Laporan Perjalanan Dinas",
-						Toast.LENGTH_LONG).show();
-			} else {
-				try {
-					//new DownloadFile_SPT().execute(Koneksi.download_lap_perj + "?no_spt=" + URLEncoder.encode(Cek, "UTF-8") + "&&" + "nip=" + URLEncoder.encode(Cek_Nip, "UTF-8"));
-					new DownloadFile_Laporan_perj().execute(Koneksi.download_lap_perj + "?no_spt="
-									+ URLEncoder.encode(Cek, "UTF-8")
-									+ "&&" + "nip="
-									+ URLEncoder.encode(Cek_Nip, "UTF-8"));
-
-				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-
-		});
-
-		// + "?no_hp=" + tampil_aturidkaryawan + "&&"
-		// + "tanggal=" + tanggal);
-
-		btn_download_spt.setOnClickListener(v -> {
-			dialog.dismiss();
-			String id_spt = selectedList.getid_spt();
-			String Cek = String.valueOf(id_spt);
-			try {
-				new DownloadFile_SPT().execute(Koneksi.download_spt + "?id_spt=" + URLEncoder.encode(Cek, "UTF-8"));
-
-				//new DownloadFile_SPT().execute(download_spt + "?id_spt=" + URLEncoder.encode(Cek, "UTF-8"));
-
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		});
-
-		btn_download_sppd.setOnClickListener(v -> {
-			dialog.dismiss();
-			String id_sppd = selectedList.getid_sppd();
-			String Cek = String.valueOf(id_sppd);
-
-			try {
-
-				new DownloadFile_SPPD().execute(Koneksi.download_sppd + "?id_sppd="
-						+ URLEncoder.encode(Cek, "UTF-8"));
-
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		});
-
-		btn_download_rincian.setOnClickListener(v -> {
-			String cek_status_lap_rincian = selectedList
-					.getstatus_rincian();
-			String id_sppd = selectedList.getid_sppd();
-			String Cek = String.valueOf(id_sppd);
-
-			if (cek_status_lap_rincian.contains("BELUM")) {
-				Toast.makeText(
-						History.this,
-						"Download Gagal \nAnda Tidak Punya Laporan Perincian Biaya",
-						Toast.LENGTH_LONG).show();
-			}else{
-
-				// Toast.makeText(History.this,
-				// "Maaf, Masih dalam Tahap Pengembangan \n\nSilahkan Beri Feedback Anda Mengenai Aplikasi e-SPPD"
-				// ,Toast.LENGTH_LONG).show();
-				try {
-
-					new DownloadFile_Rincian_Biaya()
-							.execute(Koneksi.download_rincian + "?id_sppd="
-									+ URLEncoder.encode(Cek, "UTF-8"));
-
-				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-			}
-
-		});
-
-		btn_download_riil.setOnClickListener(v -> {
-			String cek_status_lap_riil = selectedList.getstatus_riil();
-			String id_sppd = selectedList.getid_sppd();
-			String Cek = String.valueOf(id_sppd);
-
-			if (cek_status_lap_riil.contains("BELUM")) {
-				Toast.makeText(
-						History.this,
-						"Download Gagal \nAnda Tidak Punya Laporan Pengeluaran Riil",
-						Toast.LENGTH_LONG).show();
-			} else {
-
-				// Toast.makeText(History.this,
-				// "Maaf, Masih dalam Tahap Pengembangan \n\nSilahkan Beri Feedback Anda Mengenai Aplikasi e-SPPD"
-				// ,Toast.LENGTH_LONG).show();
-				try {
-
-					new DownloadFile_Pengeluaran_Riil()
-							.execute(Koneksi.download_riil + "?id_sppd="
-									+ URLEncoder.encode(Cek, "UTF-8"));
-
-				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					Toast.makeText(
-							History.this,
-							"Maaf, Anda Gagal Mendownload Laporan Pengeluaran Riil",
-							Toast.LENGTH_LONG).show();
-				}
-			}
-
-		});
-
-	}
-
-	@Override
-	public Dialog onCreateDialog(int id) {
-		String id_spt = selectedList.getid_spt();
-		String id_sppd = selectedList.getid_sppd();
-		switch (id) {
-		case progress_bar_type_lap_perj:
-			loading = new ProgressDialog(this);
-			loading.setMessage("Sedang Mengunduh Lap. Perjalanan Dinas ...\nNama File : laporan_perjalanan_dinas_"+ id_spt + ".pdf");
-			loading.setIndeterminate(false);
-			loading.setMax(100);
-			loading.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			loading.setCancelable(false);
-			loading.show();
-			return loading;
-
-		case progress_bar_type_spt:
-			loading = new ProgressDialog(this);
-			loading.setMessage("Sedang Mengunduh SPT ...\nNama File : laporan_surat_perintah_tugas_"+ id_spt + ".pdf");
-			loading.setIndeterminate(false);
-			loading.setMax(100);
-			loading.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			loading.setCancelable(false);
-			loading.show();
-			return loading;
-
-		case progress_bar_type_sppd:
-			loading = new ProgressDialog(this);
-			loading.setMessage("Sedang Mengunduh SPPD ...\nNama File : laporan_sppd_"+ id_sppd + ".pdf");
-			loading.setIndeterminate(false);
-			loading.setMax(100);
-			loading.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			loading.setCancelable(false);
-			loading.show();
-			return loading;
-
-		case progress_bar_type_rincian:
-			loading = new ProgressDialog(this);
-			loading.setMessage("Sedang Mengunduh Lap. Rincian Biaya ...\nNama File : laporan_rincian_biaya_"+ id_sppd + ".pdf");
-			loading.setIndeterminate(false);
-			loading.setMax(100);
-			loading.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			loading.setCancelable(false);
-			loading.show();
-			return loading;
-
-		case progress_bar_type_riil:
-			loading = new ProgressDialog(this);
-			loading.setMessage("Sedang Mengunduh Lap. Rincian Riil ...\nNama File : laporan_pengeluaran_riil_"+ id_sppd + ".pdf");
-			loading.setIndeterminate(false);
-			loading.setMax(100);
-			loading.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			loading.setCancelable(false);
-			loading.show();
-			return loading;
-		default:
-
-			return null;
-		}
-	}
-
-	@SuppressLint({"SdCardPath", "StaticFieldLeak"})
-	class DownloadFile_SPT extends AsyncTask<String, String, String>
-
-	{
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPreExecute() {
-			super.onPreExecute();
-			showDialog(progress_bar_type_spt);
-		}
-
-		@Override
-		protected String doInBackground(String... f_url) {
-			int count;
-			String id_spt = selectedList.getid_spt();
-
-			try {
-
-				URL url = new URL(f_url[0]);
-
-				URLConnection connection = url.openConnection();
-				connection.connect();
-
-				int lenghOfFile = connection.getContentLength();
-				InputStream input = new BufferedInputStream(url.openStream(),
-						8192);
-
-				OutputStream output = new FileOutputStream(
-						"/sdcard/Download/laporan_surat_perintah_tugas_" + id_spt + ".pdf");
-				byte[] data = new byte[1024];
-				long total = 0;
-
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					publishProgress("" + (int) ((total * 100) / lenghOfFile));
-					output.write(data, 0, count);
-				}
-				output.flush();
-				output.close();
-				input.close();
-			} catch (Exception e) {
-				Log.e("Error Download SPT: ", e.getMessage());
-			}
-			return null;
-		}
-
-		@Override
-		protected void onProgressUpdate(String... progress) {
-			loading.setProgress(Integer.parseInt(progress[0]));
-		}
-
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPostExecute(String file_url) {
-			dismissDialog(progress_bar_type_spt);
-			String ambil_id = selectedList.getid_spt();
-			showAlert(pesan+"\nNama File : laporan_surat_perintah_tugas_"+ambil_id+".pdf");
-			//finish();
-			//startActivity(getIntent());
-		}
-	}
-	
-	@SuppressLint({"SdCardPath", "StaticFieldLeak"})
-	class DownloadFile_SPPD extends AsyncTask<String, String, String>
-	{
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPreExecute() {
-			super.onPreExecute();
-			showDialog(progress_bar_type_sppd);
-		}
-
-		@Override
-		protected String doInBackground(String... f_url) {
-			int count;
-			String id_sppd = selectedList.getid_sppd();
-
-			try {
-				// KURANG GETS POST
-				URL url = new URL(f_url[0]);
-
-				URLConnection connection = url.openConnection();
-				connection.connect();
-
-				int lenghOfFile = connection.getContentLength();
-				InputStream input = new BufferedInputStream(url.openStream(),
-						8192);
-
-				OutputStream output = new FileOutputStream(
-						"/sdcard/Download/laporan_sppd_" + id_sppd + ".pdf");
-				byte[] data = new byte[1024];
-				long total = 0;
-
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					publishProgress("" + (int) ((total * 100) / lenghOfFile));
-					output.write(data, 0, count);
-				}
-				output.flush();
-				output.close();
-				input.close();
-			} catch (Exception e) {
-				Log.e("Error Download SPPD : ", e.getMessage());
-			}
-			return null;
-		}
-
-		@Override
-		protected void onProgressUpdate(String... progress) {
-			loading.setProgress(Integer.parseInt(progress[0]));
-		}
-
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPostExecute(String file_url) {
-			dismissDialog(progress_bar_type_sppd);
-			String ambil_id = selectedList.getid_sppd();
-			showAlert(pesan+"\nNama File : laporan_sppd_"+ambil_id+".pdf");
-			//finish();
-			//startActivity(getIntent());
-			// String imagePath =
-			// Environment.getExternalStorageDirectory().toString() +
-			// "/prints_spt.pdf";
-			// laylistrecent.setBackgroundDrawable(Drawable.createFromPath(imagePath));
-		}
-	}
-
-	@SuppressLint({"SdCardPath", "StaticFieldLeak"})
-	class DownloadFile_Laporan_perj extends AsyncTask<String, String, String>
-
-	{
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPreExecute() {
-			super.onPreExecute();
-			showDialog(progress_bar_type_lap_perj);
-		}
-
-		@Override
-		protected String doInBackground(String... f_url) {
-			int count;
-			String ambil_sptnnip = selectedList.getid_spt();
-
-			try {
-
-				// KURANG GETS POST
-
-				URL url = new URL(f_url[0]);
-
-				URLConnection connection = url.openConnection();
-				connection.connect();
-
-				int lenghOfFile = connection.getContentLength();
-				InputStream input = new BufferedInputStream(url.openStream(),
-						8192);
-
-				OutputStream output = new FileOutputStream(
-						"/sdcard/Download/laporan_perjalanan_dinas_"
-								+ ambil_sptnnip + ".pdf");
-				byte[] data = new byte[1024];
-				long total = 0;
-
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					publishProgress("" + (int) ((total * 100) / lenghOfFile));
-					output.write(data, 0, count);
-				}
-				output.flush();
-				output.close();
-				input.close();
-			} catch (Exception e) {
-				Log.e("Er Down Perj:", e.getMessage());
-			}
-			return null;
-		}
-
-		@Override
-		protected void onProgressUpdate(String... progress) {
-			loading.setProgress(Integer.parseInt(progress[0]));
-		}
-
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPostExecute(String file_url) {
-			dismissDialog(progress_bar_type_lap_perj);
-			String ambil_sptnnip = selectedList.getid_spt();
-			showAlert(pesan+"\nNama File : laporan_perjalanan_dinas_"+ambil_sptnnip+".pdf");
-			//finish();
-			//startActivity(getIntent());
-		}
-	}
-
-	@SuppressLint({"SdCardPath", "StaticFieldLeak"})
-	class DownloadFile_Rincian_Biaya extends AsyncTask<String, String, String>
-
-	{
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPreExecute() {
-			super.onPreExecute();
-			showDialog(progress_bar_type_rincian);
-		}
-
-		@Override
-		protected String doInBackground(String... f_url) {
-			int count;
-			String id_sppd = selectedList.getid_sppd();
-
-			try {
-
-				// KURANG GETS POST
-
-				URL url = new URL(f_url[0]);
-
-				URLConnection connection = url.openConnection();
-				connection.connect();
-
-				int lenghOfFile = connection.getContentLength();
-				InputStream input = new BufferedInputStream(url.openStream(),
-						8192);
-
-				OutputStream output = new FileOutputStream(
-						"/sdcard/Download/laporan_rincian_biaya_" + id_sppd
-								+ ".pdf");
-				byte[] data = new byte[1024];
-				long total = 0;
-
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					publishProgress("" + (int) ((total * 100) / lenghOfFile));
-					output.write(data, 0, count);
-				}
-				output.flush();
-				output.close();
-				input.close();
-			} catch (Exception e) {
-				Log.e("Er Down Rincian: ", e.getMessage());
-			}
-			return null;
-		}
-
-		@Override
-		protected void onProgressUpdate(String... progress) {
-			loading.setProgress(Integer.parseInt(progress[0]));
-		}
-
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPostExecute(String file_url) {
-			dismissDialog(progress_bar_type_rincian);
-			String ambil_id = selectedList.getid_sppd();
-			showAlert(pesan+"\nNama File : laporan_rincian_biaya_"+ambil_id+".pdf");
-		}
-	}
-
-	@SuppressLint({"SdCardPath", "StaticFieldLeak"})
-	class DownloadFile_Pengeluaran_Riil extends
-			AsyncTask<String, String, String>
-
-	{
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPreExecute() {
-			super.onPreExecute();
-			showDialog(progress_bar_type_riil);
-		}
-
-		@Override
-		protected String doInBackground(String... f_url) {
-			int count;
-			String id_sppd = selectedList.getid_sppd();
-
-			try {
-
-				// KURANG GETS POST
-
-				URL url = new URL(f_url[0]);
-
-				URLConnection connection = url.openConnection();
-				connection.connect();
-
-				int lenghOfFile = connection.getContentLength();
-				InputStream input = new BufferedInputStream(url.openStream(),
-						8192);
-
-				OutputStream output = new FileOutputStream(
-						"/sdcard/Download/laporan_pengeluaran_riil_" + id_sppd
-								+ ".pdf");
-				byte[] data = new byte[1024];
-				long total = 0;
-
-				while ((count = input.read(data)) != -1) {
-					total += count;
-					publishProgress("" + (int) ((total * 100) / lenghOfFile));
-					output.write(data, 0, count);
-				}
-				output.flush();
-				output.close();
-				input.close();
-			} catch (Exception e) {
-				Log.e("Err Down Riil:", e.getMessage());
-
-			}
-			return null;
-		}
-
-		@Override
-		protected void onProgressUpdate(String... progress) {
-			loading.setProgress(Integer.parseInt(progress[0]));
-		}
-
-		@Override
-		@SuppressWarnings("deprecation")
-		protected void onPostExecute(String file_url) {
-			dismissDialog(progress_bar_type_riil);
-			String ambil_id = selectedList.getid_sppd();
-			showAlert(pesan+"\nNama File : laporan_pengeluaran_riil_"+ambil_id+".pdf");
-			//finish();
-			//startActivity(getIntent());
-			// String imagePath =
-			// Environment.getExternalStorageDirectory().toString() +
-			// "/prints_spt.pdf";
-			// laylistrecent.setBackgroundDrawable(Drawable.createFromPath(imagePath));
-		}
-	}
-
-
-	private void showAlert(String message) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(message)
-				.setTitle("Successfully")
-				.setCancelable(false)
-				.setIcon(R.drawable.ic_check_circle_black_24dp)
-				.setPositiveButton("Ok",
-						(dialog, id) -> {
-							dialog.dismiss();
-							finish();
-							startActivity(getIntent());
-						});
-		AlertDialog alert = builder.create();
-		alert.show();
-	}
-	public void kembali_activity(View view){
-		super.onBackPressed();
-	}
 }

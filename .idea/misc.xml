@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EntryPointsManager">
     <list size="1">
@@ -59,7 +60,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.15036254882812503" />
+        <option name="scale" value="0.09440842787682334" />
       </ProjectState>
     </option>
   </component>

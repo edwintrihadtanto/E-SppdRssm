@@ -15,7 +15,6 @@ public class GIFView extends View {
     private InputStream gifInputStream;
     private Movie gifMovie;
     private int movieWidth, movieHeight;
-    private long movieDuration;
     private long mMovieStart;
 
     public GIFView(Context context) {
@@ -42,25 +41,12 @@ public class GIFView extends View {
         gifMovie = Movie.decodeStream(gifInputStream);
         movieWidth = gifMovie.width();
         movieHeight = gifMovie.height();
-        movieDuration = gifMovie.duration();
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec,
                              int heightMeasureSpec) {
         setMeasuredDimension(movieWidth, movieHeight);
-    }
-
-    public int getMovieWidth(){
-        return movieWidth;
-    }
-
-    public int getMovieHeight(){
-        return movieHeight;
-    }
-
-    public long getMovieDuration(){
-        return movieDuration;
     }
 
     @Override
