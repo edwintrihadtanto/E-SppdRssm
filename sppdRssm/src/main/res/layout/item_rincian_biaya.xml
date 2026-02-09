@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
@@ -52,17 +53,38 @@
             android:fontFamily="@font/poppins_regular"
             android:paddingTop="4dp"/>
 
-        <!-- Tanggal -->
-        <TextView
-            android:id="@+id/txtTanggal"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2017-08-16"
-            android:fontFamily="@font/poppins_regular"
-            android:textSize="12sp"
-            android:textStyle="italic"
-            android:textColor="#00EEF2"/>
+            android:orientation="horizontal"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/txtTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:drawableStart="@drawable/ic_time_white"
+                android:text="2017-08-16"
+                android:textColor="#00EEF2"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/txtinfopembuat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:paddingEnd="8dp"
+                android:gravity="end"
+                android:drawableEnd="@drawable/ic_user_white"
+                android:textColor="#F2C200"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:fontFamily="@font/poppins_regular"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
 
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

@@ -73,6 +73,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="6dp"
+                    android:textStyle="bold|italic"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/kuning"
                     android:layout_below="@+id/edtJumlah"/>
 
                 <ImageView

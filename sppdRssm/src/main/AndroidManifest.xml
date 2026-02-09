@@ -10,10 +10,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<!--    <uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
-<!--    <uses-permission android:name="android.permission.READ_PROFILE" />-->
-<!--    <uses-permission android:name="android.permission.READ_CONTACTS" />-->
-<!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -60,6 +56,9 @@
         <activity android:name="com.e_sppd_rssm.History" />
         <activity android:name="com.e_sppd_rssm.List_DataRincian" />
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_Biaya" />
+        <activity android:name="com.e_sppd_rssm.List_DataRiil" />
+        <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
+
         <activity android:name="com.e_sppd_rssm.Edit_Laporan_Riil" />
 
         <activity android:name="com.e_sppd_rssm.Tentang_Aplikasi" android:theme="@style/AppTheme"/>

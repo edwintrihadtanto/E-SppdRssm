@@ -80,10 +80,16 @@ public class Koneksi {
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
 	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php/";
+	/*RINCIAN BIAYA*/
 	public static final String list_datarincian 					= URL_SERVERNEW + "rincian/list_datarincian.php";
 	public static final String update_rincian_biaya 		        = URL_SERVERNEW + "rincian/update_rincian_biaya.php/";
 	public static final String hapus_rincian_biaya 		        	= URL_SERVERNEW + "rincian/hapus_rincian_biaya.php/";
 	public static final String simpan_rincian_biaya 		        = URL_SERVERNEW + "rincian/simpan_rincian_biaya.php/";
+	/*RINCIAN BIAYA RIIL*/
+	public static final String list_datariil 						= URL_SERVERNEW + "riil/list_datariil.php";
+	public static final String update_riil_biaya 		        	= URL_SERVERNEW + "riil/update_riil_biaya.php/";
+	public static final String hapus_riil_biaya 		        	= URL_SERVERNEW + "riil/hapus_riil_biaya.php/";
+	public static final String simpan_riil_biaya 		        	= URL_SERVERNEW + "riil/simpan_riil_biaya.php/";
 	public static final String FILE_UPLOAD_URL 						= URL_SERVER + "temp/Upload_Terbaru.php/";
 	public static final String FolderUpload 						= URL_SERVERNEW + "upload/";
 	public Koneksi() {

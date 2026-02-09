@@ -134,7 +134,7 @@
     <View
         android:id="@+id/grslist2"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/grslisttengah"
         android:background="@drawable/circle_reg_v1"/>
@@ -142,7 +142,7 @@
     <View
         android:id="@+id/grslist3"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/grslisttengah"
         android:background="@drawable/circle_reg_v2"/>

@@ -46,7 +46,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
     static final int REQ_GALERI = 10;
     static final int REQ_KAMERA = 20;
     Button btnSimpan, btnHapus, btnPilih;
-    String id_rincian, nosppd, nip, mode;
+    String id_rincian, nosppd, nip, pembuat, mode;
 
     @Override
     protected void onCreate(Bundle b) {
@@ -82,11 +82,11 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
             edtRincian.setText(i.getStringExtra("rincian"));
             edtJumlah.setText(i.getStringExtra("jumlah"));
             txtTanggal.setText(i.getStringExtra("tgl"));
-
+            pembuat = i.getStringExtra("pembuat");
             String namaFile = i.getStringExtra("bukti");
             /*Toast.makeText(this, namaFile, Toast.LENGTH_LONG).show();*/
-            if (namaFile.isEmpty()){
-//                btnHapus.setVisibility(View.GONE);
+            if (pembuat.equals("1")){
+                btnHapus.setVisibility(View.GONE);
                 btnSimpan.setVisibility(View.GONE);
                 btnPilih.setVisibility(View.GONE);
                 imgBukti.setImageResource(R.drawable.no_bukti);

@@ -12,6 +12,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -29,6 +31,7 @@ import org.json.JSONObject;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
@@ -40,25 +43,30 @@ public class List_DataRincian extends AppCompatActivity {
     ListView listRincianBiaya;
     ArrayList<HashMap<String, String>> dataRincian;
     Button btnRefresh, btnTambah;
-
+    Animation anim_hilang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_datarincian);
-        nippegwdit = findViewById(R.id.nippegwdit);
-        edit_lamp_sppd = findViewById(R.id.edit_lamp_sppd);
-        edit_tgl_lamp = findViewById(R.id.edit_tgl_lamp);
-        btnRefresh = findViewById(R.id.btn_refresh);
-        btnTambah = findViewById(R.id.btnTambahRincian);
+        anim_hilang     = AnimationUtils.loadAnimation(this, R.anim.anim_menghilang);
+        nippegwdit      = findViewById(R.id.nippegwdit);
+        edit_lamp_sppd  = findViewById(R.id.edit_lamp_sppd);
+        edit_tgl_lamp   = findViewById(R.id.edit_tgl_lamp);
+        btnRefresh      = findViewById(R.id.btn_refresh);
+        btnTambah       = findViewById(R.id.btnTambahRincian);
         listRincianBiaya = findViewById(R.id.listRincianBiaya);
-        dataRincian = new ArrayList<>();
+        dataRincian     = new ArrayList<>();
 
         Tampil_data();
         new AmbilRincianAsync().execute();
 
-        btnRefresh.setOnClickListener(v -> new AmbilRincianAsync().execute());
+        btnRefresh.setOnClickListener(v -> {
+            v.startAnimation(anim_hilang);
+            new AmbilRincianAsync().execute();
+        });
 
         btnTambah.setOnClickListener(v -> {
+            v.startAnimation(anim_hilang);
             Intent i = new Intent(List_DataRincian.this, Edit_Rincian_Biaya.class);
 
             i.putExtra("mode", "tambah");
@@ -216,6 +224,8 @@ public class List_DataRincian extends AppCompatActivity {
                 map.put("jumlah", o.optString("jumlah", ""));
                 map.put("tgl", o.optString("tgl_pembuatan_rincian", ""));
                 map.put("bukti", o.optString("bukti_image", ""));
+                map.put("pembuat", o.optString("pembuat", ""));
+                map.put("judul_pembuat", o.optString("judul_pembuat", ""));
 
                 dataRincian.add(map);
             }
@@ -248,20 +258,25 @@ public class List_DataRincian extends AppCompatActivity {
             public View getView(int i, View v, ViewGroup parent) {
 
                 if (v == null) {
-                    v = getLayoutInflater()
-                            .inflate(R.layout.item_rincian_biaya, parent, false);
+                    v = getLayoutInflater().inflate(R.layout.item_rincian_biaya, parent, false);
                 }
                 TextView nomorurut  = v.findViewById(R.id.txtNomorUrut);
                 TextView rincian    = v.findViewById(R.id.txtRincianBiaya);
                 TextView jumlah     = v.findViewById(R.id.txtJumlah);
                 TextView tanggal    = v.findViewById(R.id.txtTanggal);
+                TextView infopembuat= v.findViewById(R.id.txtinfopembuat);
 
                 HashMap<String, String> d = dataRincian.get(i);
                 nomorurut.setText(d.get("nomorurut"));
                 rincian.setText(d.get("rincian"));
                 jumlah.setText("Rp. " + d.get("jumlah"));
                 tanggal.setText(d.get("tgl"));
-
+                if (Objects.equals(d.get("pembuat"), "0")){
+                    infopembuat.setVisibility(View.GONE);
+                }else{
+                    infopembuat.setVisibility(View.VISIBLE);
+                    infopembuat.setText(d.get("judul_pembuat"));
+                }
                 return v;
             }
         });
@@ -279,6 +294,7 @@ public class List_DataRincian extends AppCompatActivity {
             i.putExtra("jumlah", d.get("jumlah"));
             i.putExtra("tgl", d.get("tgl"));
             i.putExtra("bukti", d.get("bukti"));
+            i.putExtra("pembuat", d.get("pembuat"));
 //            startActivity(i);
             startActivityForResult(i, 100);
         });
