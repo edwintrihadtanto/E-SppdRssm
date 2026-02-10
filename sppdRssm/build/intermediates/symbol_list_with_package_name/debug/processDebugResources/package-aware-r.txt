@@ -1213,6 +1213,7 @@ drawable card_bg
 drawable centang
 drawable chatgptrssm
 drawable circle
+drawable circle1
 drawable circle2
 drawable circle3
 drawable circle_cp
@@ -1304,6 +1305,7 @@ drawable ic_camera
 drawable ic_cancel_black
 drawable ic_cari
 drawable ic_chat
+drawable ic_check
 drawable ic_check_black
 drawable ic_check_circle_black_24dp
 drawable ic_close_black
@@ -1321,6 +1323,7 @@ drawable ic_downloadpdf
 drawable ic_edit_black
 drawable ic_edit_white
 drawable ic_email_black_24dp
+drawable ic_file
 drawable ic_file_download_black
 drawable ic_file_download_black_24dp
 drawable ic_help
@@ -1507,7 +1510,6 @@ id Button7
 id Button8
 id CTRL
 id FUNCTION
-id ImageView_Help
 id META
 id RelativeLayout4444
 id RelativeLayout_Registeratas
@@ -1578,7 +1580,6 @@ id action_text
 id actionbar
 id actionbar2
 id actionbar3
-id actionbar_daftarspt
 id actionbar_menuutamaatas
 id actionbar_menuutamaatas1
 id actionbar_profil
@@ -1607,7 +1608,6 @@ id bottom
 id btnDownload
 id btnTambahRiil
 id btnTambahRincian
-id btn_back
 id btn_batal
 id btn_browser
 id btn_cari
@@ -1739,8 +1739,6 @@ id frame_loading_utama
 id gambar_bukti
 id gambar_slide
 id garisbantuan
-id garisfeed
-id garisfeed1
 id ghost_view
 id gmbar_loading
 id gmbar_loading_login
@@ -1752,9 +1750,6 @@ id group_divider
 id groups
 id grs_tanda_tangan
 id grsbwh_row_list
-id grslist2
-id grslist3
-id grslisttengah
 id grslogtengah
 id grslogtengahlistriil
 id grslogtengahlistrincian
@@ -1885,7 +1880,6 @@ id listRincianBiaya
 id list_daftar_sppd
 id list_history
 id list_item
-id list_notif
 id list_view_activitysppd
 id list_view_baru
 id list_view_pegawai
@@ -1895,7 +1889,6 @@ id masked
 id media_actions
 id menampilkan_nomor_sppd
 id menampilkan_nomor_spt
-id menu
 id menu1
 id menu2
 id menu3
@@ -2118,7 +2111,6 @@ id textnomor_sppd
 id textpass_baru
 id textsatusplash
 id tgl
-id tgl_kritik
 id tgl_sembunyi
 id tgl_utama
 id tglsppd_riil
@@ -2158,7 +2150,10 @@ id txtNospt
 id txtRincianBiaya
 id txtTanggal
 id txtTitle
+id txt_jumlah_laporan
+id txt_jumlah_sppd
 id txt_presentasi
+id txt_sppd_selesai
 id txtinfopembuat
 id unchecked
 id uniform
@@ -2415,6 +2410,7 @@ string ambil_foto_profil
 string aplikasi_surat_perintah_perjalanan_dinas
 string app_name
 string appbar_scrolling_view_behavior
+string batal
 string batal_password
 string berikan_kritik_dan_saran
 string biaya
@@ -2564,6 +2560,8 @@ string saran_tindakan_laporan
 string search_menu_title
 string sedang_memuat
 string selamat_datang_di_aplikasi_sppd_rssm
+string silahkan_berikan_kritik_dan_saran_anda
+string simpan
 string simpan_password
 string simpan_password_baru
 string simpan_riil

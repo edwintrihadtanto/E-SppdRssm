@@ -1,149 +1,174 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
-        android:background="#FFFFFF" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/logo_rssm3x"
-        android:contentDescription="@string/todo" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#513A5249" />
-
-    <TextView
-        android:id="@+id/nip_lokal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:visibility="gone" />
-
-    <View
-        android:id="@+id/actionbar_daftarspt"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/list_item_title" />
-
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:layout_margin="2dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/actionbar_daftarspt"
-        android:background="@drawable/ic_arrow_back_black_24dp"
-        android:onClick="kembali_activity"/>
-
-    <TextView
-        android:id="@+id/menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/actionbar_daftarspt"
-        android:layout_alignTop="@+id/actionbar_daftarspt"
-        android:layout_toStartOf="@+id/ImageView_Help"
-        android:layout_toEndOf="@+id/btn_back"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:text="@string/daftar_spt_dan_sppd"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/ImageView_Help"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="3dp"
-        android:layout_toStartOf="@+id/btn_refresh_sppd"
-        android:contentDescription="@string/todo"
-        android:background="@drawable/ic_live_help_black_24dp" />
-
-    <Button
-        android:id="@+id/btn_refresh_sppd"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="3dp"
-        android:background="@drawable/ic_refresh_black_24dp"
-        android:onClick="refresh"
-        />
+    <!-- INFO NOTIF / STATISTIK -->
     <RelativeLayout
         android:id="@+id/layout_info_notif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/actionbar_daftarspt"
-        android:background="#806B3434"
-        android:orientation="vertical"
-        android:visibility="visible" >
+        android:padding="5dp">
 
-        <ListView
-            android:id="@+id/list_notif"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            >
-        </ListView>
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/kuning">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="5dp">
+
+                <!-- TOTAL SPPD -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_file"
+                        android:tint="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/txt_jumlah_sppd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total SPPD"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+                <!-- SELESAI -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_check"
+                        android:tint="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/txt_sppd_selesai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selesai"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_file"
+                        android:tint="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/txt_jumlah_laporan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laporan"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/btn_refresh_sppd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="5dp"
+        android:drawableTop="@drawable/ic_refresh_black_24dp"
+        android:fontFamily="@font/poppins_regular"
+        android:background="@drawable/circle_login"
+        android:layout_below="@+id/layout_info_notif"
+        android:onClick="refresh"/>
+
+    <!-- GARIS PEMBATAS -->
     <View
         android:id="@+id/actionbar2"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_below="@+id/layout_info_notif"
-        android:background="@color/white" />
+        android:layout_height="2dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@+id/btn_refresh_sppd"
+        android:background="@color/white"/>
 
+    <!-- LIST SPPD -->
     <RelativeLayout
         android:id="@+id/laylistrecent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/actionbar2"
-        android:background="#CB3F3E3E"
-        android:orientation="vertical" >
-        <ListView
-            android:id="@+id/list_daftar_sppd"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"             >
-        </ListView>
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <ListView
+                android:id="@+id/list_daftar_sppd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="8dp"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
-    <View
-        android:id="@+id/grslisttengah"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:background="@color/white"/>
-    <View
-        android:id="@+id/grslist2"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/grslisttengah"
-        android:background="@drawable/circle_reg_v1"/>
-
-    <View
-        android:id="@+id/grslist3"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/grslisttengah"
-        android:background="@drawable/circle_reg_v2"/>
 </RelativeLayout>

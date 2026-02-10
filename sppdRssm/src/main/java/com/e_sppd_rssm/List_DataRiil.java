@@ -24,6 +24,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.e_sppd.rssm.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -76,7 +77,12 @@ public class List_DataRiil extends AppCompatActivity {
             startActivityForResult(i, 100);
         });
     }
-
+    private void showPesanSnackbar(String message) {
+        View rootView = findViewById(android.R.id.content);
+        Snackbar.make(rootView, message, Snackbar.LENGTH_INDEFINITE)
+                .setAction("OK", v -> {})
+                .show();
+    }
     public void Tampil_dataRiil() {
 
         Intent i = getIntent();
@@ -182,6 +188,10 @@ public class List_DataRiil extends AppCompatActivity {
 
             JSONObject obj = new JSONObject(json);
 
+            String message  = obj.optString("message", "");
+            boolean status  = obj.optBoolean("status", false);
+            String info     = obj.optString("info", "");
+
             // ❌ backend balikin error
             if (!obj.has("tampilkan_data")) {
                 tampilkanError("Format respon tidak sesuai");
@@ -189,9 +199,12 @@ public class List_DataRiil extends AppCompatActivity {
             }
 
             JSONArray arr = obj.getJSONArray("tampilkan_data");
+            showPesanSnackbar(info);
+            tampilkanError(message);
 
             if (arr == null || arr.length() == 0) {
-                tampilkanError("Data Riil tidak ditemukan");
+                dataRiil.clear();
+                /*tampilkanError("Data Riil tidak ditemukan");*/
                 return;
             }
 

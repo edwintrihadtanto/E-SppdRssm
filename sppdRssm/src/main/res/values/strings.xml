@@ -70,12 +70,12 @@
     <string name="_e_sppd_" translatable="false">- E-SPPD -</string>
     <string name="suatu_sistem_berbasis_mobile_aplikasi_surat_perintah_perjalanan_dinas_sppd_pada_rumah_sakit_dr_soedomo_madiun" translatable="false">Merupakan salah satu sistem aplikasi berbasis mobile yang dikembangkan di Rumah Sakit dr. Soedono Madiun untuk keperluan perjalanan dinas dalam kota dan atau luar kota."</string>
     <string name="versi_1_1" translatable="false">versi 1.1</string>
-    <string name="created_by_edwin_ipde_design_" translatable="false">"Created by I.T.I.S.I Team Design"</string>
+    <string name="created_by_edwin_ipde_design_" translatable="false">"Crafted with ❤️ by Edwin IT Design"</string>
     <string name="feedback" translatable="false">feedback</string>
-    <string name="copyright_2017_by_ipde_rssm_" translatable="false">"Copyright © 2017 By I.T.I.S.I RSSM "</string>
+    <string name="copyright_2017_by_ipde_rssm_" translatable="false">"© 2017 s/d 2026 \n by Inst. Teknologi Informasi dan Sistem Informasi\n ❤️ RSU dr. Soedono Madiun\nProvinsi Jawa Timur "</string>
     <string name="tentang_aplikasi_sppd_rssm" translatable="false">Informasi Aplikasi</string>
     <string name="feedback_anda_" translatable="false">Kritik dan Saran Anda :</string>
-    <string name="kritik_dan_saran_anda_n_maks_150_kata" translatable="false">Kritik dan Saran Anda\nMaks. 150 Kata</string>
+    <string name="kritik_dan_saran_anda_n_maks_150_kata" translatable="false">Entry kritik dan saran Anda\nMaks. 150 Kata</string>
     <string name="_copy_sppd_2017_develop_ipde_rssm" translatable="false">© ESPPD 2017-2019, Developed by IPDE - RSSM</string>
     <string name="informasi_update_versi" translatable="false">Informasi Update Versi</string>
     <string name="versi_" translatable="false">"V. "</string>
@@ -141,7 +141,7 @@
     <string name="pencarian_data_pegawai" translatable="false">Pencarian Data Pegawai</string>
     <string name="entry_nip_npk_pegawai" translatable="false">Entry NIP/NPK Pegawai</string>
     <string name="cari" translatable="false">Cari</string>
-    <string name="simpan_password" translatable="false">Simpan Password</string>
+    <string name="simpan_password" translatable="false">👉 Simpan Password</string>
     <string name="masukkan_alamat_email_anda" translatable="false">Masukkan Alamat Email Anda</string>
     <string name="alamat_email" translatable="false">Alamat Email</string>
     <string name="data_profil" translatable="false">Data Profil</string>
@@ -206,5 +206,8 @@
     <string name="entry_detail_rincian_biaya_riil">Entry Detail Rincian Biaya Riil</string>
     <string name="entry_biaya_riil">Entry Biaya Riil</string>
     <string name="download">Download</string>
+    <string name="silahkan_berikan_kritik_dan_saran_anda">Silahkan Berikan Kritik dan Saran Anda</string>
+    <string name="simpan">Simpan</string>
+    <string name="batal">Batal</string>
 
 </resources>

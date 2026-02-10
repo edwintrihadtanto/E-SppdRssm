@@ -54,49 +54,63 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 	private List<Daftar_String> list, listpost;
 	private List_Daftar_SPT_per_nip adapter;
 	public List_Informasi informasi;
-	private TextView nip_lokal;
 	private ProgressDialog loading;
 	public ImageView bantuan;
 	private Daftar_String selectedList;
 	private static final int progress_bar_type_spt 	= 0; 
 	private static final int progress_bar_type_sppd = 1;
 	String transfer_nip = null;
+	String nipLokal;
 	RelativeLayout laylistrecent;
 	Daftar_String mhs, jml ;
+
+	private TextView txt_jumlah_sppd;
+	private TextView txt_sppd_selesai;
+	private TextView txt_jumlah_laporan;
+	private int totalSppd = 0;
+	private int sppdSelesai = 0;
+	private int sppdLaporan = 0;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.list_tampil_detail_datasppd);
-		nip_lokal 		= findViewById(R.id.nip_lokal);
+
 		laylistrecent 	= findViewById(R.id.laylistrecent);
 		//---------------
 		listView 		= findViewById(R.id.list_daftar_sppd);
 		list 			= new ArrayList<>();
 		//---------------
-		list_notif 		= findViewById(R.id.list_notif);
+//		list_notif 		= findViewById(R.id.list_notif);
 		listpost 		= new ArrayList<>();
-		bantuan 		= findViewById(R.id.ImageView_Help);
-
-		bantuan.setOnClickListener(v -> {
-			Intent i;
-			i = new Intent(Daftar_Laporan_Per_Petugas.this, Tampil_Bantuan.class);
-			startActivity(i);
-		});
+//		bantuan 		= findViewById(R.id.ImageView_Help);
+		txt_jumlah_sppd     = findViewById(R.id.txt_jumlah_sppd);
+		txt_sppd_selesai    = findViewById(R.id.txt_sppd_selesai);
+		txt_jumlah_laporan  = findViewById(R.id.txt_jumlah_laporan);
+//		bantuan.setOnClickListener(v -> {
+//			Intent i;
+//			i = new Intent(Daftar_Laporan_Per_Petugas.this, Tampil_Bantuan.class);
+//			startActivity(i);
+//		});
 
 		Bundle b = getIntent().getExtras();
 
 		if (b != null) {
 			transfer_nip = b.getString("transfer_nip");
 		}
-		nip_lokal.setText(transfer_nip);
+		nipLokal = transfer_nip;
+
 		if (!terkoneksi_roaming(Daftar_Laporan_Per_Petugas.this)) {
 			String pesan = "Tidak ada sambungan Internet.\nPastikan Wi-fi atau Data Seluler aktif, lalu coba lagi";
 			showAlert(pesan);
 		}else{
 			new Load_Data().execute();
 		}
+
+
 	}
+
 
 	@SuppressLint("StaticFieldLeak")
     private class Load_Data extends AsyncTask<Void, Void, String> {
@@ -115,7 +129,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 		@Override
 		protected String doInBackground(Void... voids) {
 
-			String nip = nip_lokal.getText().toString().trim();
+			String nip = nipLokal.trim();
 
 			try {
 				String nipEncoded = URLEncoder.encode(nip, "UTF-8");
@@ -123,21 +137,24 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 				String urlList = Koneksi.list_sptsppd
 						+ "?nip_pegawai=" + nipEncoded;
 
-				String urlPosting = Koneksi.count_sptsppd
+				String urlPosting = Koneksi.count_sptsppdnew
 						+ "?nip_pegawai=" + nipEncoded;
 
 				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 
 					String responseList = jc.sendGetRequest(urlList);
-					String responsePosting = jc.sendGetRequest(urlPosting);
+					String responseStatistik = jc.sendGetRequest(urlPosting);
 
-					if (responseList == null || responsePosting == null) {
+					if (responseList == null ) {
 						Log.e("Load_Database", "RESPON NULL DARI SERVER");
 						return "SERVER_NULL";
 					}
 
-					listpost = proses_pengambilan_data_jmlh_postingan(responsePosting);
-					list     = proses_pengambilan_data(responseList);
+					if (responseStatistik != null) {
+						proses_pengambilan_data_statistik(responseStatistik);
+					}
+
+					list  = proses_pengambilan_data(responseList);
 				}
 
 			} catch (Exception e) {
@@ -164,6 +181,10 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 				return;
 			}
 
+			txt_jumlah_sppd.setText(String.valueOf(totalSppd));
+			txt_sppd_selesai.setText(String.valueOf(sppdSelesai));
+			txt_jumlah_laporan.setText(String.valueOf(sppdLaporan));
+
 			menampilkan_nama_pegawai();
 
 			String pesanawal =
@@ -174,6 +195,25 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 							"**Pilih Salah Satu Daftar SPT & SPPD berikut ini, untuk menampilkan MENU PILIHAN";
 
 			info_pesan(pesanawal);
+		}
+	}
+
+	private void proses_pengambilan_data_statistik(String response) {
+		try {
+			JSONObject json = new JSONObject(response);
+
+			if (!json.optBoolean("status")) {
+				return;
+			}
+
+			JSONObject statistik = json.getJSONObject("statistik");
+
+			totalSppd     = statistik.optInt("total_sppd", 0);
+			sppdSelesai   = statistik.optInt("sppd_selesai", 0);
+			sppdLaporan   = statistik.optInt("sppd_laporan", 0);
+
+		} catch (JSONException e) {
+			Log.e("STATISTIK", "Parsing error", e);
 		}
 	}
 
@@ -286,8 +326,8 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 //	}
 	
 	private void menampilkan_nama_pegawai() {
-		informasi = new List_Informasi(getApplicationContext(), listpost);
-		list_notif.setAdapter(informasi);
+//		informasi = new List_Informasi(getApplicationContext(), listpost);
+//		list_notif.setAdapter(informasi);
 
 		adapter = new List_Daftar_SPT_per_nip(getApplicationContext(), list);
 		listView.setAdapter(adapter);
@@ -407,10 +447,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 						selectedList.getlain_lain());
 				i.putExtra("tgl_pembuatan_laporan",
 						selectedList.gettgl_pembuatan_laporan());
-
-
 				startActivity(i);
-
 				}
 
 			});
@@ -425,7 +462,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 				String Cek = String.valueOf(id_spt);
 				try {
 
-					new DownloadFile_SPT().execute(Koneksi.download_spt + "?id_spt=" + URLEncoder.encode(Cek, "UTF-8"));
+					new DownloadFile_SPT().execute(Koneksi.downloadSPT + "?id_spt=" + URLEncoder.encode(Cek, "UTF-8"));
 
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
@@ -445,7 +482,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 
 				try {
 
-					new DownloadFile_SPPD().execute(Koneksi.download_sppd + "?id_sppd=" + URLEncoder.encode(Cek, "UTF-8"));
+					new DownloadFile_SPPD().execute(Koneksi.downloadSPPD + "?id_sppd=" + URLEncoder.encode(Cek, "UTF-8"));
 
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
@@ -979,7 +1016,5 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			// laylistrecent.setBackgroundDrawable(Drawable.createFromPath(imagePath));
 		}
 	}
-	public void kembali_activity(View view){
-		super.onBackPressed();
-	}
+
 }

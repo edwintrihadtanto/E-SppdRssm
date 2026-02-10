@@ -10,6 +10,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -24,6 +25,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.e_sppd.rssm.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -77,6 +79,12 @@ public class List_DataRincian extends AppCompatActivity {
         });
     }
 
+    private void showPesanSnackbar(String message) {
+        View rootView = findViewById(android.R.id.content);
+        Snackbar.make(rootView, message, Snackbar.LENGTH_INDEFINITE)
+                .setAction("OK", v -> {})
+                .show();
+    }
     public void Tampil_data() {
 
         Intent i = getIntent();
@@ -197,6 +205,10 @@ public class List_DataRincian extends AppCompatActivity {
 
             JSONObject obj = new JSONObject(json);
 
+            String message  = obj.optString("message", "");
+            boolean status  = obj.optBoolean("status", false);
+            String info     = obj.optString("info", "");
+
             // ❌ backend balikin error
             if (!obj.has("tampilkan_saja")) {
                 tampilkanError("Format respon tidak sesuai");
@@ -204,11 +216,15 @@ public class List_DataRincian extends AppCompatActivity {
             }
 
             JSONArray arr = obj.getJSONArray("tampilkan_saja");
+            showPesanSnackbar(info);
+            tampilkanError(message);
 
             if (arr == null || arr.length() == 0) {
-                tampilkanError("Data rincian tidak ditemukan");
+                dataRincian.clear();
                 return;
             }
+            Log.d("MESSAGE_BACKEND", message);
+            Log.d("RESPON_JSON", json);
 
             dataRincian.clear();
 
@@ -232,6 +248,7 @@ public class List_DataRincian extends AppCompatActivity {
 
         } catch (Exception e) {
             tampilkanError("Gagal membaca data server");
+            e.printStackTrace();
         }
     }
     private void setAdapter() {

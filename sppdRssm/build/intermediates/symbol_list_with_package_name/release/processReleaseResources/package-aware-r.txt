@@ -2118,7 +2118,6 @@ id textnomor_sppd
 id textpass_baru
 id textsatusplash
 id tgl
-id tgl_kritik
 id tgl_sembunyi
 id tgl_utama
 id tglsppd_riil

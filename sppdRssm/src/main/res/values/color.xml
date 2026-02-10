@@ -10,7 +10,7 @@
     <color name="list_background_pressed"   >#3333B5E5  </color>
     <color name="colordialog"               >#792d5149  </color>
     <color name="list_divider"              >#272727    </color>
-    <color name="counter_text_bg"           >#501d0505</color>
+    <color name="counter_text_bg"           >#501d0505 </color>
     <color name="counter_text_color"        >#bf7878</color>
     <color name="blue"                      >#03A9F4</color>
     <color name="grey"                      >#60FFFFFF</color>

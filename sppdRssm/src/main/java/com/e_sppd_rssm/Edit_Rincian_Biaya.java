@@ -105,7 +105,6 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                 new UpdateRincian(Edit_Rincian_Biaya.this).execute();
             }
         });
-//        btnSimpan.setOnClickListener(v -> new UpdateRincian(Edit_Rincian_Biaya.this).execute());
 
         btnHapus.setOnClickListener((View v) -> new AlertDialog.Builder(Edit_Rincian_Biaya.this)
                 .setTitle("Hapus Rincian")
@@ -116,7 +115,6 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
 
         btnPilih.setOnClickListener(v -> pilihGambar());
     }
-
     public static class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
 
         @SuppressLint("StaticFieldLeak")
@@ -355,27 +353,6 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         i.setType("image/*");
         startActivityForResult(i, REQ_GALERI);
     }
-
-    /*private void bukaKamera() {
-
-        File photoFile = new File(
-                getCacheDir(),
-                "kamera_" + System.currentTimeMillis() + ".jpg"
-        );
-
-        imageFile = photoFile;
-
-        imageUri = FileProvider.getUriForFile(
-                this,
-                getPackageName() + ".provider",
-                photoFile
-        );
-
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-        startActivityForResult(intent, REQ_KAMERA);
-    }*/
     private void bukaKamera() {
 
         File dir = new File(
@@ -442,21 +419,5 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
             Toast.makeText(this, "Gagal memproses gambar", Toast.LENGTH_SHORT).show();
         }
     }
-
-
-    private boolean cekUkuranFile(File f) {
-        long sizeKB = f.length() / 1024;
-
-        if (sizeKB > 1000) {
-            Toast.makeText(
-                    this,
-                    "Ukuran foto " + sizeKB + " KB, maksimal 1000 Kb / 1 Mb",
-                    Toast.LENGTH_LONG
-            ).show();
-            return false;
-        }
-        return true;
-    }
-
 }
 

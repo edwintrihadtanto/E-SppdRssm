@@ -57,11 +57,11 @@ public class Koneksi {
 //  public static final String update_rincian_biaya 		        = URL_SERVER + "update_rincian_biaya.php";
     public static final String posting_url                          = URL_SERVER + "posting_url.php";
 
-	public static final String download_spt 		                = URL_SERVER + "prints/print_spt.php";
-	public static final String download_sppd 	                    = URL_SERVER + "prints/print_sppd.php";
-	public static final String download_lap_perj					= URL_SERVER + "prints/print_laporan_perj_dinas.php";
-	public static final String download_rincian 					= URL_SERVER + "prints/print_rincian.php";
-	public static final String download_riil 						= URL_SERVER + "prints/print_riil.php";
+//	public static final String download_spt 		                = URL_SERVER + "prints/print_spt.php";
+//	public static final String download_sppd 	                    = URL_SERVER + "prints/print_sppd.php";
+//	public static final String download_lap_perj					= URL_SERVER + "prints/print_laporan_perj_dinas.php";
+//	public static final String download_rincian 					= URL_SERVER + "prints/print_rincian.php";
+//	public static final String download_riil 						= URL_SERVER + "prints/print_riil.php";
 
 	//ALAMAT BARU
 	public static final String LINK_UNTUK_LOGIN_TES					= URL_SERVERNEW + "loginapk.php/";
@@ -78,14 +78,17 @@ public class Koneksi {
 	public static final String list_history 						= URL_SERVERNEW + "sptsppd/list_history.php";
 	public static final String list_sptsppd 						= URL_SERVERNEW + "sptsppd/list_sptsppd.php";
 	public static final String count_sptsppd 						= URL_SERVERNEW + "sptsppd/count_sptsppd.php";
+	public static final String count_sptsppdnew						= URL_SERVERNEW + "sptsppd/count_sppdnew.php";
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
 	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php/";
+
 	/*RINCIAN BIAYA*/
 	public static final String list_datarincian 					= URL_SERVERNEW + "rincian/list_datarincian.php";
 	public static final String update_rincian_biaya 		        = URL_SERVERNEW + "rincian/update_rincian_biaya.php/";
 	public static final String hapus_rincian_biaya 		        	= URL_SERVERNEW + "rincian/hapus_rincian_biaya.php/";
 	public static final String simpan_rincian_biaya 		        = URL_SERVERNEW + "rincian/simpan_rincian_biaya.php/";
+
 	/*RINCIAN BIAYA RIIL*/
 	public static final String list_datariil 						= URL_SERVERNEW + "riil/list_datariil.php";
 	public static final String update_riil_biaya 		        	= URL_SERVERNEW + "riil/update_riil_biaya.php/";
@@ -93,6 +96,17 @@ public class Koneksi {
 	public static final String simpan_riil_biaya 		        	= URL_SERVERNEW + "riil/simpan_riil_biaya.php/";
 //	public static final String FILE_UPLOAD_URL 						= URL_SERVER + "temp/Upload_Terbaru.php/";
 	public static final String FolderUpload 						= URL_SERVERNEW + "upload/";
+
+	/*DOWNLOAD LAPORAN*/
+	public static final String downloadLapPerj						= URL_WEBSITE + "do_prints/Cetak_Laporan_Perj_Dinas.php";
+	public static final String downloadSPT							= URL_WEBSITE + "do_prints/Cetak_SPT.php";
+	public static final String downloadSPPD							= URL_WEBSITE + "do_prints/Cetak_SPPD.php";
+	public static final String downloadRincian						= URL_WEBSITE + "do_prints/Cetak_Rincian_Biaya.php";
+	public static final String downloadRiil							= URL_WEBSITE + "do_prints/Cetak_Riil.php";
+	public static final String downloadKwitansi						= URL_WEBSITE + "do_prints/Cetak_Kwitansi.php";
+	public static final String downloadDokumen						= URL_WEBSITE + "do_prints/Cetak_Dokument.php";
+	public static final String downloadMenginap						= URL_WEBSITE + "do_prints/Cetak_Pernyataan.php";
+	public static final String downloadTidakMenginap				= URL_WEBSITE + "do_prints/Cetak_PernyataanTidak.php";
 
 	public Koneksi() {
 		super();

@@ -7,7 +7,6 @@ import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -144,84 +143,6 @@ public class Register_Activity_Baru extends AppCompatActivity {
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	/*public class Cek_Data_Pegawai extends AsyncTask<String, String, String> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			loading_tampil();
-		}
-
-		@Override
-		protected String doInBackground(String... args) {
-
-//			int jikaSukses;
-			String responseString;
-			String e_cari_string 	= e_cari.getText().toString();
-
-			try {
-
-				List<NameValuePair> nippegawai = new ArrayList<>();
-				nippegawai.add(new BasicNameValuePair("nip", e_cari_string));
-
-				Log.d("req_register ", "Start");
-
-				JSONObject jsonObjectNya = classJsonParser.makeHttpRequest
-						(Koneksi.LINK_PENCARIAN, "POST", nippegawai);
-
-				Log.d("req_register ", jsonObjectNya.toString());
-
-//				jikaSukses 	= jsonObjectNya.getInt(TAG_BERHASIL);
-
-				nip 			= jsonObjectNya.getString(TAG_NIP);
-				nama_pegawai 	= jsonObjectNya.getString(TAG_NAMA_PEGAWAI);
-				jabatan 		= jsonObjectNya.getString(TAG_JABATAN);
-				golongan 		= jsonObjectNya.getString(TAG_GOLONGAN);
-				password		= jsonObjectNya.getString(TAG_PASSWORD);
-				email			= jsonObjectNya.getString(TAG_EMAIL);
-				pesannya 		= jsonObjectNya.getString(TAG_PESAN_DIALOG);
-				Log.i("pesan", jsonObjectNya.getString(TAG_PESAN));
-				return jsonObjectNya.getString(TAG_BERHASIL);
-
-			} catch (JSONException e) {
-				responseString = e.toString();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				responseString = e.toString();
-			}
-
-			return responseString;
-		}
-
-		@Override
-		protected void onPostExecute(String jawaban_json) {
-			//loading.dismiss();
-			loading_sembunyi();
-			Log.i("Cek_Data_Pegawai", "Hasil: " + jawaban_json);
-			Log.e("error", jawaban_json);
-			String error = "java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.json.JSONObject.toString()' on a null object reference";
-			if (jawaban_json.equals(error)){
-				Toast.makeText(Register_Activity_Baru.this, "Error Koneksi Server\nHubungi IT RSSM", Toast.LENGTH_LONG).show();
-				return;
-			}
-			pesan_cekdataregister(pesannya);
-			e_email.setEnabled(email.isEmpty());
-			if (jawaban_json.equals("1")){
-				passbaru.setEnabled(false);
-				simpan_pass.setVisibility(View.GONE);
-				data();
-			}else if (jawaban_json.equals("0")){
-				passbaru.setEnabled(true);
-				passbaru.requestFocus();
-				simpan_pass.setVisibility(View.VISIBLE);
-				data();
-			}else{
-				passbaru.setEnabled(false);
-				datakosong();
-			}
-
-		}
-	}*/
 	public class Cek_Data_Pegawai extends AsyncTask<Void, Void, String> {
 
 		@Override
@@ -309,73 +230,7 @@ public class Register_Activity_Baru extends AppCompatActivity {
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	/*public class Proses_Simpan_Password_Baru extends AsyncTask<String, String, String> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			loading = new ProgressDialog(Register_Activity_Baru.this);
-			loading.setMessage("Sedang memuat...");
-			loading.setIndeterminate(false);
-			loading.setIcon(R.drawable.ic_info_outline_24dp);
-			loading.setCancelable(false);
-			loading.show();
-		}
-
-		@Override
-		protected String doInBackground(String... args) {
-
-			int jikaSukses;
-			String responseString;
-			String nip 			= enip_pegawai.getText().toString();
-			String pasbaru 		= passbaru.getText().toString();
-			String emailbaru	= e_email.getText().toString();
-
-			try {
-
-				List<NameValuePair> nippegawai = new ArrayList<>();
-				nippegawai.add(new BasicNameValuePair("nippegawai", nip));
-				nippegawai.add(new BasicNameValuePair("password", pasbaru));
-				nippegawai.add(new BasicNameValuePair("email", emailbaru));
-
-				Log.d("req_register ", "Start");
-
-				JSONObject jsonObjectNya = classJsonParser.makeHttpRequest
-						(Koneksi.simpan_pass_baru, "POST", nippegawai);
-
-				Log.d("req_register ", jsonObjectNya.toString());
-
-				jikaSukses 	= jsonObjectNya.getInt(TAG_BERHASIL);
-
-				if (jikaSukses == 1) {
-					pesannya 		= jsonObjectNya.getString(TAG_PESAN_DIALOG);
-					Log.i("pesan sukses ", jsonObjectNya.getString(TAG_PESAN));
-					return jsonObjectNya.getString(TAG_BERHASIL);
-				}else{
-					pesannya 		= jsonObjectNya.getString(TAG_PESAN_DIALOG);
-					Log.i("pesan gagal ", jsonObjectNya.getString(TAG_PESAN));
-					return jsonObjectNya.getString(TAG_BERHASIL);
-				}
-			} catch (JSONException e) {
-				responseString = e.toString();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				responseString = e.toString();
-			}
-
-			return responseString;
-		}
-
-		@Override
-		protected void onPostExecute(String jawaban_json) {
-			loading.dismiss();
-			Log.e("Isinya", "jsonnya : " + jawaban_json);
-			Toast.makeText(Register_Activity_Baru.this, pesannya, Toast.LENGTH_LONG).show();
-
-		}
-	}*/
-
-	public class Proses_Simpan_Password_Baru extends AsyncTask<Void, Void, String> {
+    public class Proses_Simpan_Password_Baru extends AsyncTask<Void, Void, String> {
 
 		@Override
 		protected void onPreExecute() {
@@ -478,25 +333,6 @@ public class Register_Activity_Baru extends AppCompatActivity {
 
 	//KUMPULAN ONCLIK //-------------------------------------------------------
 
-	public void refresh(View view) {
-		view.startAnimation(anim_putar);
-		loading_tampil();
-		finish();
-		startActivity(getIntent());
-	}
-	public void kembali_activity(View view) {
-		Register_Activity_Baru.this.finish();
-		Intent i = new Intent(Register_Activity_Baru.this, Login_Activity.class);
-		startActivity(i);
-		finish();
-	}
-	@Override
-	public void onBackPressed() {
-		Register_Activity_Baru.this.finish();
-		Intent i = new Intent(Register_Activity_Baru.this, Login_Activity.class);
-		startActivity(i);
-		finish();
-	}
 	public void pencarian_data(View view) {
 		view.startAnimation(anim_hilang);
 		datakosong();

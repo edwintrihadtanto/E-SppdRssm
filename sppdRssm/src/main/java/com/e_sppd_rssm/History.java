@@ -60,7 +60,7 @@ public class History extends AppCompatActivity {
 		}
 
 		new Tampil_history().execute();
-		showErrorSnackbar("Pilih salah satu history untuk mengunduh laporan.");
+		showErrorSnackbar("Klik ikon ⬇ untuk mengunduh dokumen.\nHub. ITISI jika ada kendala.");
 	}
 
 	private void showErrorSnackbar(String message) {
@@ -272,11 +272,15 @@ public class History extends AppCompatActivity {
 				btnDownload.setOnClickListener(view -> {
 
 					String[] menu = {
-							"Download Laporan",
-							"Download SPT",
-							"Download SPPD",
-							"Download Rincian Biaya",
-							"Download Pengeluaran Riil"
+							"1. Download Laporan Perjalan Dinas",
+							"2. Download SPT",
+							"3. Download SPPD",
+							"4. Download Rincian Biaya",
+							"5. Download Pengeluaran Riil",
+							"6. Download Kwitansi",
+							"7. Download Dokumen",
+							"8. Download Pernyataan Tidak Menginap",
+							"9. Download Pernyataan Menginap"
 					};
 
 					AlertDialog.Builder builder = new AlertDialog.Builder(History.this);
@@ -298,6 +302,18 @@ public class History extends AppCompatActivity {
 								break;
 							case 4:
 								download(d, 5); // Riil
+								break;
+							case 5:
+								download(d, 6); // Kwitansi
+								break;
+							case 6:
+								download(d, 7); // Dokumen
+								break;
+							case 7:
+								download(d, 8); // Pernyataan Tidak Menginap
+								break;
+							case 8:
+								download(d, 9); // Pernyataan Menginap
 								break;
 						}
 					});
@@ -333,7 +349,7 @@ public class History extends AppCompatActivity {
 						toast("Anda belum memiliki Laporan Perjalanan Dinas");
 						return;
 					}
-					url = Koneksi.download_lap_perj
+					url = Koneksi.downloadLapPerj
 							+ "?no_spt=" + URLEncoder.encode(noSpt, "UTF-8")
 							+ "&&nip=" + URLEncoder.encode(nip, "UTF-8");
 					folderName = "Laporan";
@@ -341,34 +357,39 @@ public class History extends AppCompatActivity {
 					break;
 
 				case 2: // SPT
-					url = Koneksi.download_spt
+					url = Koneksi.downloadSPT
 							+ "?id_spt=" + URLEncoder.encode(idSpt, "UTF-8");
 					folderName = "SPT";
 					filePrefix = "SPT";
 					break;
 
 				case 3: // SPPD
-					url = Koneksi.download_sppd
+					url = Koneksi.downloadSPPD
 							+ "?id_sppd=" + URLEncoder.encode(idSppd, "UTF-8");
 					folderName = "SPPD";
 					filePrefix = "SPPD";
 					break;
 
 				case 4: // RINCIAN
-					url = Koneksi.download_rincian
+					url = Koneksi.downloadRincian
 							+ "?id_sppd=" + URLEncoder.encode(idSppd, "UTF-8");
 					folderName = "Rincian";
 					filePrefix = "Rincian";
 					break;
 
 				case 5: // RIIL
-					url = Koneksi.download_riil
+					url = Koneksi.downloadRiil
 							+ "?id_sppd=" + URLEncoder.encode(idSppd, "UTF-8");
 					folderName = "Riil";
 					filePrefix = "Riil";
 					break;
-
-				default:
+				case 6:
+                case 7:
+                case 8:
+                case 9:
+                    toast("On Progress, Tunggu update an terbaru aplikasi");
+					return;
+                default:
 					toast("Kode download tidak dikenal");
 					return;
 			}
