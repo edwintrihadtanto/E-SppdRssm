@@ -10,7 +10,7 @@
         android:id="@+id/actionbar_profil"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="@drawable/circle" />
+        android:background="@drawable/bg_header_modern" />
 
     <TextView
         android:id="@+id/nip_lokal"

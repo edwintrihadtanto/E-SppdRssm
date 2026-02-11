@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle"
     >
-    <solid android:color="@color/bg_screen3" />
+    <solid android:color="@color/hitam" />
     <corners android:bottomRightRadius="0dp"
         android:bottomLeftRadius="0dp"
         android:topLeftRadius="100dp"

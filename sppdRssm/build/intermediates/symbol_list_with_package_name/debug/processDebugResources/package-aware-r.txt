@@ -1199,6 +1199,7 @@ drawable badge_primary
 drawable badge_sudah
 drawable beberapa_menu
 drawable beberapa_menu1
+drawable bg_header_modern
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1583,7 +1584,6 @@ id actionbar3
 id actionbar_menuutamaatas
 id actionbar_menuutamaatas1
 id actionbar_profil
-id actionbar_tentang
 id actions
 id activity_chooser_view_content
 id add
@@ -1635,6 +1635,7 @@ id btn_ok
 id btn_panah
 id btn_pilihgambar
 id btn_posting
+id btn_postingall
 id btn_refresh
 id btn_refresh_history
 id btn_refresh_profil
@@ -1762,17 +1763,13 @@ id grsreg1
 id grsreg2
 id grsreg3
 id grsregtengah
-id grstentang
-id grstentang2
-id grstentang3
-id grstentang4
-id grstentang5
-id grstentang6
 id grsutama1
 id grsutama2
 id grsutamatlayoutatas
 id grsutamattengah
 id hanya_gambar
+id headerTentang2
+id header_tentang
 id historyversi
 id home
 id homeAsUp
@@ -1785,7 +1782,6 @@ id idview
 id ifRoom
 id image
 id imageView
-id imagetentang
 id img1
 id img1_inf
 id img1dialog
@@ -1864,6 +1860,7 @@ id labeled
 id largeLabel
 id laylistrecent
 id layoutButton
+id layoutButtonSPTSPPD
 id layoutDots
 id layout_info_notif
 id layout_register_lupa
@@ -1884,6 +1881,7 @@ id list_view_baru
 id list_view_pegawai
 id listtampil_namapeg
 id listupdate
+id logorssm
 id masked
 id media_actions
 id menampilkan_nomor_sppd
@@ -1949,7 +1947,6 @@ id re
 id relatasRegister
 id rell
 id rellllllalal
-id relrelrel
 id rfParent
 id right
 id right_icon
@@ -2040,13 +2037,11 @@ id test_bantuan
 id text
 id text1
 id text2
-id text4
-id text5
-id text6
-id text7
+id textDeskripsi
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textVersi
 id text_download_sppd
 id text_download_spt
 id text_dua
@@ -2400,6 +2395,7 @@ string action_settings
 string alamat_email
 string ambil_foto_profil
 string aplikasi_surat_perintah_perjalanan_dinas
+string aplikasi_surat_perintah_perjalanan_dinas_e_sppd_digunakan_untuk_mempermudah_pengelolaan_administrasi_perjalanan_dinas_secara_digital
 string app_name
 string appbar_scrolling_view_behavior
 string batal
@@ -2561,7 +2557,6 @@ string simpan_rincian
 string skip
 string start
 string status_bar_notification_info_overflow
-string suatu_sistem_berbasis_mobile_aplikasi_surat_perintah_perjalanan_dinas_sppd_pada_rumah_sakit_dr_soedomo_madiun
 string surat_perintah_perjalanan_dinas
 string tampilkan_password
 string tandatitik

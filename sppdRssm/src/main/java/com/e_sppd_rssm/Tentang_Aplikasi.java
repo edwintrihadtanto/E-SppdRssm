@@ -42,9 +42,8 @@ public class Tentang_Aplikasi extends AppCompatActivity {
         CardView historyVersi = findViewById(R.id.historyversi);
         CardView tutorial = findViewById(R.id.tutorial);
         CardView feedBack = findViewById(R.id.feedback);
-        TextView textVersion = findViewById(R.id.text5);
-        TextView judul = findViewById(R.id.text4);
-		judul.setText(R.string.suatu_sistem_berbasis_mobile_aplikasi_surat_perintah_perjalanan_dinas_sppd_pada_rumah_sakit_dr_soedomo_madiun);
+        TextView textVersion = findViewById(R.id.textVersi);
+
 		Bundle b = getIntent().getExtras();
         assert b != null;
         String transferan_nip = b.getString("transfer_nip");

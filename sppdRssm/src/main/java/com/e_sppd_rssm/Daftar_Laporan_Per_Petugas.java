@@ -49,7 +49,7 @@ import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
 public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
-	private static final String TAG = "DaftarPetugas";
+	private static final String TAG = "DaftarSPTSPPD";
 	private ListView listView, list_notif;
 	private List<Daftar_String> list, listpost;
 	private List_Daftar_SPT_per_nip adapter;
@@ -215,7 +215,6 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			Log.e("STATISTIK", "Parsing error", e);
 		}
 	}
-
 
 	public void refresh(View view) {
 		finish();

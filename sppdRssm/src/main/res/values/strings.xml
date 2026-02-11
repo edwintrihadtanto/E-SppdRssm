@@ -68,7 +68,6 @@
     <string name="input_nipLogin" translatable="false">NIP/NPK Lengkap Anda</string>
     <string name="aplikasi_surat_perintah_perjalanan_dinas" translatable="false">Sistem Informasi Elektronik\nSurat Perintah Perjalanan Dinas</string>
     <string name="_e_sppd_" translatable="false">- E-SPPD -</string>
-    <string name="suatu_sistem_berbasis_mobile_aplikasi_surat_perintah_perjalanan_dinas_sppd_pada_rumah_sakit_dr_soedomo_madiun" translatable="false">Merupakan salah satu sistem aplikasi berbasis mobile yang dikembangkan di Rumah Sakit dr. Soedono Madiun untuk keperluan perjalanan dinas dalam kota dan atau luar kota."</string>
     <string name="versi_1_1" translatable="false">versi 1.1</string>
     <string name="created_by_edwin_ipde_design_" translatable="false">"Crafted with ❤️ by Edwin IT Design"</string>
     <string name="feedback" translatable="false">feedback</string>
@@ -209,5 +208,6 @@
     <string name="silahkan_berikan_kritik_dan_saran_anda">Silahkan Berikan Kritik dan Saran Anda</string>
     <string name="simpan">Simpan</string>
     <string name="batal">Batal</string>
+    <string name="aplikasi_surat_perintah_perjalanan_dinas_e_sppd_digunakan_untuk_mempermudah_pengelolaan_administrasi_perjalanan_dinas_secara_digital">Aplikasi Surat Perintah Perjalanan Dinas (E-SPPD) digunakan untuk mempermudah pengelolaan administrasi perjalanan dinas secara digital.</string>
 
 </resources>

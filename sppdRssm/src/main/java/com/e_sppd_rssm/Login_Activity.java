@@ -315,7 +315,7 @@ public class Login_Activity extends AppCompatActivity {
 		//Intent i = new Intent(Login_Activity.this,Register_Activity.class);
 		Intent i = new Intent(Login_Activity.this,Register_Activity_Baru.class);
 		startActivity(i);
-		finish();
+//		finish();
 	}
 	public void ceklogin(View view) {
 		view.startAnimation(animAlpha);

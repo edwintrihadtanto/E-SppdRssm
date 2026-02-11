@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:ignore="VisualLintBounds">
+    tools:ignore="VisualLintBounds"
+    android:background="#F4F6F8">
 
     <View
         android:layout_width="match_parent"
@@ -33,7 +34,7 @@
         android:layout_margin="10dp"
         android:drawableTop="@drawable/ic_refresh_black_24dp"
         android:background="@drawable/circle_refresh2"
-        android:textColor="@color/hitam"
+        android:textColor="@color/white"
         android:layout_below="@+id/grslogtengahlistrincian"
         android:text="@string/refresh"
         android:onClick="refreshhistory"
@@ -50,7 +51,6 @@
             android:id="@+id/laylistrecent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:padding="10dp"
             android:orientation="vertical" >
 
