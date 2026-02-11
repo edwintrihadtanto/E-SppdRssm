@@ -19,7 +19,7 @@ public class Splash_Screen extends AwesomeSplash {
 		//menambahkan background
 		configSplash.setBackgroundColor(R.color.list_item_title);
 		configSplash.setAnimCircularRevealDuration(4000);
-		configSplash.setRevealFlagX(Flags.REVEAL_LEFT);
+		configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);
 		configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
 
 		//menambahkan logo
@@ -30,7 +30,7 @@ public class Splash_Screen extends AwesomeSplash {
 		//menambahkan title
 		configSplash.setTitleSplash("- E-SPPD -");
 
-		configSplash.setTitleTextColor(R.color.hitam);
+		configSplash.setTitleTextColor(R.color.white);
 		configSplash.setTitleFont("fonts/Poppins_ExtraBold.ttf");
 		configSplash.setTitleTextSize(55f);
 		configSplash.setAnimTitleDuration(5000);

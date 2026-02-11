@@ -78,7 +78,7 @@ public class Koneksi {
 	public static final String list_history 						= URL_SERVERNEW + "sptsppd/list_history.php";
 	public static final String list_sptsppd 						= URL_SERVERNEW + "sptsppd/list_sptsppd.php";
 	public static final String count_sptsppd 						= URL_SERVERNEW + "sptsppd/count_sptsppd.php";
-	public static final String count_sptsppdnew						= URL_SERVERNEW + "sptsppd/count_sppdnew.php";
+	public static final String count_sptsppdnew						= URL_SERVERNEW + "sptsppd/count_sptsppdnew.php";
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
 	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php/";

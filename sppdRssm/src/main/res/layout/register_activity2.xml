@@ -85,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/e_cari"
             android:background="@drawable/circle_download1"
-            android:drawableStart="@drawable/ic_touch_app_black_24dp"
             android:fontFamily="@font/poppins_regular"
             android:onClick="pencarian_data"
             android:layout_marginStart="10dp"

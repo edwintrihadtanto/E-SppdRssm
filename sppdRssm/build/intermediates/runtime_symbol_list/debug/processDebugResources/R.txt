@@ -1834,7 +1834,6 @@ int id imgedit_email2 0x7f0a0154
 int id imgedit_unit 0x7f0a0155
 int id imgedit_unit2 0x7f0a0156
 int id imgicon 0x7f0a0157
-int id imglogin2 0x7f0a0158
 int id imgprof 0x7f0a0159
 int id indicator 0x7f0a015a
 int id info 0x7f0a015b
@@ -1960,20 +1959,15 @@ int id rounded 0x7f0a01d4
 int id row_gol_pegawai_spt 0x7f0a01d5
 int id row_gollist 0x7f0a01d6
 int id row_golongan 0x7f0a01d7
-int id row_golonganprofil 0x7f0a01d8
 int id row_jab_pegawai_spt 0x7f0a01d9
 int id row_jabatan 0x7f0a01da
-int id row_jabatanprofil 0x7f0a01db
 int id row_jablist 0x7f0a01dc
 int id row_nama 0x7f0a01dd
 int id row_nama_peg 0x7f0a01de
 int id row_nama_pegawai_spt 0x7f0a01df
 int id row_namalist 0x7f0a01e0
-int id row_namapegprofil 0x7f0a01e1
 int id row_nip 0x7f0a01e2
-int id row_nipprofil 0x7f0a01e3
 int id row_nomorspt_pegawai_spt 0x7f0a01e4
-int id row_reg_passprofil 0x7f0a01e5
 int id rowtextnip 0x7f0a01e6
 int id rupiah 0x7f0a01e7
 int id save_image_matrix 0x7f0a01e8
@@ -2190,7 +2184,6 @@ int id viewsamping 0x7f0a02b7
 int id visible 0x7f0a02b8
 int id vlopisa 0x7f0a02b9
 int id vlupa1 0x7f0a02ba
-int id vrow 0x7f0a02bb
 int id vstatus1 0x7f0a02bc
 int id vstatus2 0x7f0a02bd
 int id vstatus3 0x7f0a02be
@@ -2325,7 +2318,6 @@ int layout row_edit_rincian 0x7f0d005d
 int layout row_informasi 0x7f0d005e
 int layout row_list_detail_datasppd 0x7f0d005f
 int layout row_list_detail_history 0x7f0d0060
-int layout row_list_nama_peg 0x7f0d0061
 int layout row_list_view_pegawai 0x7f0d0062
 int layout row_listview_activitysppd 0x7f0d0063
 int layout row_nama_pegawai 0x7f0d0064

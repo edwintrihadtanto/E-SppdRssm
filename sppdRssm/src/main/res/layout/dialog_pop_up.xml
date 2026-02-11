@@ -77,9 +77,8 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/monsoon"
                 android:textSize="15sp"
-                android:background="@color/list_item_title_gelap"
+                android:background="#C5E7E7E7"
                 android:fontFamily="@font/poppins_regular"
-                android:textStyle="bold"
                 tools:ignore="RtlHardcoded">
 
                 <requestFocus />

@@ -1835,7 +1835,6 @@ id imgedit_email2
 id imgedit_unit
 id imgedit_unit2
 id imgicon
-id imglogin2
 id imgprof
 id indicator
 id info
@@ -1961,20 +1960,15 @@ id rounded
 id row_gol_pegawai_spt
 id row_gollist
 id row_golongan
-id row_golonganprofil
 id row_jab_pegawai_spt
 id row_jabatan
-id row_jabatanprofil
 id row_jablist
 id row_nama
 id row_nama_peg
 id row_nama_pegawai_spt
 id row_namalist
-id row_namapegprofil
 id row_nip
-id row_nipprofil
 id row_nomorspt_pegawai_spt
-id row_reg_passprofil
 id rowtextnip
 id rupiah
 id save_image_matrix
@@ -2191,7 +2185,6 @@ id viewsamping
 id visible
 id vlopisa
 id vlupa1
-id vrow
 id vstatus1
 id vstatus2
 id vstatus3
@@ -2326,7 +2319,6 @@ layout row_edit_rincian
 layout row_informasi
 layout row_list_detail_datasppd
 layout row_list_detail_history
-layout row_list_nama_peg
 layout row_list_view_pegawai
 layout row_listview_activitysppd
 layout row_nama_pegawai

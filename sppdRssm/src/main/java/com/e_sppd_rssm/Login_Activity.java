@@ -188,7 +188,7 @@ public class Login_Activity extends AppCompatActivity {
 			Toast.makeText(Login_Activity.this, "Aplikasi E-SPPD Khusus Admin Tidak Bisa Digunakan\nSilahkan Hubungi Administrator",
 					Toast.LENGTH_LONG).show();
 		}else if (session_2) {
-			Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Petugas.class);
+			Intent intent = new Intent(Login_Activity.this, MainActivityUtama.class);
 			intent.putExtra(TAG_NIP, nip);
 			intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
 			intent.putExtra(TAG_JABATAN, jabatan);
@@ -1035,7 +1035,7 @@ public class Login_Activity extends AppCompatActivity {
 
 						Intent intent = new Intent(
 								Login_Activity.this,
-								MainActivityBaru_Petugas.class
+								MainActivityUtama.class
 						);
 
 						intent.putExtra(TAG_NIP, nip);

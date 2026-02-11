@@ -31,6 +31,7 @@ import java.io.File;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +41,6 @@ import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
 public class History extends AppCompatActivity {
-	private static final String TAG = "History";
 	ListView listHistory;
 	ArrayList<HashMap<String, String>> dataHistory;
 	ProgressDialog progressDialog;
@@ -262,11 +262,9 @@ public class History extends AppCompatActivity {
 				RelativeLayout rootRow = v.findViewById(R.id.rootRow);
 				ImageView btnDownload = v.findViewById(R.id.btnDownload);
 
-				rootRow.setOnClickListener(view -> {
-					Toast.makeText(History.this,
-							"Klik ikon ⬇ untuk mengunduh dokumen",
-							Toast.LENGTH_SHORT).show();
-				});
+				rootRow.setOnClickListener(view -> Toast.makeText(History.this,
+                        "Klik ikon ⬇ untuk mengunduh dokumen",
+                        Toast.LENGTH_SHORT).show());
 
 				// klik icon download
 				btnDownload.setOnClickListener(view -> {
@@ -395,11 +393,8 @@ public class History extends AppCompatActivity {
 			}
 
 			// 🔒 URL FINAL
-//			url = url
-//					+ "?no_spt=" + URLEncoder.encode(noSpt, "UTF-8")
-//					+ "&&nip=" + URLEncoder.encode(nip, "UTF-8");
 
-		} catch (Exception e) {
+        } catch (Exception e) {
 			toast("Parameter download tidak valid");
 			return;
 		}
@@ -414,7 +409,7 @@ public class History extends AppCompatActivity {
 		if (!folder.exists()) folder.mkdirs();
 
 		// 🔥 NAMA FILE AMAN
-		String safeName = noSpt.replace("/", "_");
+		String safeName = Objects.requireNonNull(noSpt).replace("/", "_");
 		File pdf = new File(folder, filePrefix + "_" + safeName + ".pdf");
 
 		// 🧠 CACHE

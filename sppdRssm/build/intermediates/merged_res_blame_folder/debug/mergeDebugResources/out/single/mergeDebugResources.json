@@ -16,12 +16,12 @@
         "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-pngs-20:\\drawable-ldpi\\ic_visibility_grey.png"
     },
     {
-        "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable-xxhdpi_ic_live_help_black_24dp.png.flat",
-        "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-pngs-20:\\drawable-xxhdpi\\ic_live_help_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable_ic_plus.png.flat",
         "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-main-26:\\drawable\\ic_plus.png"
+    },
+    {
+        "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable-xxhdpi_ic_live_help_black_24dp.png.flat",
+        "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-pngs-20:\\drawable-xxhdpi\\ic_live_help_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable-mdpi_ic_check_circle_black_24dp.png.flat",
@@ -1164,10 +1164,6 @@
         "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-main-26:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-debug-24:/layout_list_tampil_detail_datasppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-26:/layout/list_tampil_detail_datasppd.xml"
-    },
-    {
         "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable-xxhdpi_ic_check.png.flat",
         "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-pngs-20:\\drawable-xxhdpi\\ic_check.png"
     },
@@ -1402,6 +1398,10 @@
     {
         "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable_lupa2.png.flat",
         "source": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-main-26:\\drawable\\lupa2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-debug-24:/layout_dialog_pop_up.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-26:/layout/dialog_pop_up.xml"
     },
     {
         "merged": "C:\\Users\\rssm_\\.gradle\\daemon\\8.9\\com.e_sppd.rssm.sppdRssm-debug-24:\\drawable-ldpi_ic_visibility_black_24dp.png.flat",

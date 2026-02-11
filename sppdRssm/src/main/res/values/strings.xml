@@ -106,7 +106,7 @@
     <string name="ttd" translatable="false">TTD</string>
     <string name="nip_npk_petugas_laporan" translatable="false">NIP/NPK.</string>
     <string name="bukti" translatable="false">Bukti</string>
-    <string name="masuk" translatable="false">Log In</string>
+    <string name="masuk" translatable="false">🔒 Log In</string>
     <string name="klik_disini" translatable="false">Klik Disini</string>
     <string name="daftar_spt_dan_sppd" translatable="false">Daftar SPT dan SPPD</string>
     <string name="history_spt_dan_sppd" translatable="false">History SPT dan SPPD</string>
@@ -140,7 +140,7 @@
     <string name="register_password" translatable="false">Register Password</string>
     <string name="pencarian_data_pegawai" translatable="false">Pencarian Data Pegawai</string>
     <string name="entry_nip_npk_pegawai" translatable="false">Entry NIP/NPK Pegawai</string>
-    <string name="cari" translatable="false">Cari</string>
+    <string name="cari" translatable="false">🔎 Cari</string>
     <string name="simpan_password" translatable="false">👉 Simpan Password</string>
     <string name="masukkan_alamat_email_anda" translatable="false">Masukkan Alamat Email Anda</string>
     <string name="alamat_email" translatable="false">Alamat Email</string>

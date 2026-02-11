@@ -111,6 +111,12 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 
 	}
 
+	private void showPesanSnackbar(String message) {
+		View rootView = findViewById(android.R.id.content);
+		Snackbar.make(rootView, message, Snackbar.LENGTH_INDEFINITE)
+				.setAction("OK", v -> {})
+				.show();
+	}
 
 	@SuppressLint("StaticFieldLeak")
     private class Load_Data extends AsyncTask<Void, Void, String> {
@@ -186,22 +192,14 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			txt_jumlah_laporan.setText(String.valueOf(sppdLaporan));
 
 			menampilkan_nama_pegawai();
-
-			String pesanawal =
-					"Untuk Pembuatan\n" +
-							"1. Laporan Perjalanan Dinas,\n" +
-							"2. Perincian Biaya, dan\n" +
-							"3. Pengeluaran Riil\n\n" +
-							"**Pilih Salah Satu Daftar SPT & SPPD berikut ini, untuk menampilkan MENU PILIHAN";
-
-			info_pesan(pesanawal);
+			showPesanSnackbar("Silahkan Klik Salah Satu Daftar SPT & SPPD.");
 		}
 	}
 
 	private void proses_pengambilan_data_statistik(String response) {
+			Log.e("STATISTIK", response);
 		try {
 			JSONObject json = new JSONObject(response);
-
 			if (!json.optBoolean("status")) {
 				return;
 			}
@@ -211,6 +209,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			totalSppd     = statistik.optInt("total_sppd", 0);
 			sppdSelesai   = statistik.optInt("sppd_selesai", 0);
 			sppdLaporan   = statistik.optInt("sppd_laporan", 0);
+			String note = statistik.optString("note", "-");
 
 		} catch (JSONException e) {
 			Log.e("STATISTIK", "Parsing error", e);
@@ -619,22 +618,16 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 							startActivity(getIntent());
 
 						});
+				builder.setNegativeButton("Kembali",
+				(dialog, id) -> {
+					dialog.dismiss();
+					finish();
+					Daftar_Laporan_Per_Petugas.this.finish();
+				});
 		AlertDialog alert = builder.create();
 		alert.show();
 	}
 
-	private void info_pesan(String message) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(message)
-				.setTitle("Informasi")
-				.setCancelable(false)
-				.setIcon(R.drawable.ic_info_outline_24dp)
-				.setPositiveButton("Mengerti",
-						(dialog, id) -> dialog.dismiss());
-		AlertDialog alert = builder.create();
-		alert.show();
-	}
-	
 	private void showAlert_Khusus_Lap(String message) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(message)
