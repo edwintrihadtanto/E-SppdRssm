@@ -81,7 +81,10 @@ public class Koneksi {
 	public static final String count_sptsppdnew						= URL_SERVERNEW + "sptsppd/count_sptsppdnew.php";
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
-	public static final String insertupdate_data_laporan_petugas 	= URL_SERVERNEW + "simpan_lap_perj.php/";
+	/*LAPORAN PERJALANAN*/
+	public static final String load_data_laporan_petugas 			= URL_SERVERNEW + "laporan/loadData.php/";
+	public static final String simpanupdate_laporan_petugas 		= URL_SERVERNEW + "laporan/simpan_lap_perj.php/";
+	public static final String hapus_laporan_petugas 				= URL_SERVERNEW + "laporan/hapus_lap_perj.php/";
 
 	/*RINCIAN BIAYA*/
 	public static final String list_datarincian 					= URL_SERVERNEW + "rincian/list_datarincian.php";

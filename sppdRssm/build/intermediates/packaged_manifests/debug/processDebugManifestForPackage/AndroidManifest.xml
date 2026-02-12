@@ -74,7 +74,7 @@
         <activity android:name="com.e_sppd_rssm.List_DataRiil" />
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
         <activity
-            android:name="com.e_sppd_rssm.Pembuatan_Lap_Setelah_Perj_Dinas"
+            android:name="com.e_sppd_rssm.Edit_LaporanPerjalanan"
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.e_sppd_rssm.Register_Activity_Baru"

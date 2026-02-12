@@ -31,13 +31,13 @@
         android:id="@+id/btn_refresh_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:drawableTop="@drawable/ic_refresh_black_24dp"
-        android:background="@drawable/circle_refresh2"
-        android:textColor="@color/white"
         android:layout_below="@+id/grslogtengahlistrincian"
-        android:text="@string/refresh"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_refresh2"
+        android:drawableTop="@drawable/ic_refresh_black_24dp"
         android:onClick="refreshhistory"
+        android:text="@string/refresh"
+        android:textColor="#212121"
         tools:ignore="VisualLintButtonSize" />
 
     <androidx.cardview.widget.CardView
@@ -60,7 +60,7 @@
                 android:layout_height="match_parent" >
             </ListView>
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>d
 
     <View
         android:layout_width="match_parent"

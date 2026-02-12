@@ -61,7 +61,7 @@
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
 
 
-        <activity android:name="com.e_sppd_rssm.Pembuatan_Lap_Setelah_Perj_Dinas" android:theme="@style/AppTheme"/>
+        <activity android:name="com.e_sppd_rssm.Edit_LaporanPerjalanan" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Register_Activity_Baru" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Tentang_Aplikasi" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Profil" android:theme="@style/AppTheme"/>

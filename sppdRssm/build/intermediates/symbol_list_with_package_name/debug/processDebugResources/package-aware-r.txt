@@ -1578,7 +1578,6 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
 id action_text
-id actionbar
 id actionbar2
 id actionbar3
 id actionbar_menuutamaatas
@@ -1593,7 +1592,6 @@ id alertTitle
 id all
 id always
 id ambil_nip_pop
-id asa
 id async
 id atasssssss
 id auto
@@ -1606,10 +1604,11 @@ id bites
 id blocking
 id bottom
 id btnDownload
+id btnHapusLaporan
+id btnSimpanLaporan
 id btnTambahRiil
 id btnTambahRincian
 id btn_batal
-id btn_browser
 id btn_cari
 id btn_change
 id btn_cncl
@@ -1642,7 +1641,6 @@ id btn_refresh_profil
 id btn_refresh_sppd
 id btn_refresh_utama
 id btn_simpan
-id btn_simpan_lap_set_per_dinas
 id btn_simpan_pass
 id btn_simpanriil
 id btn_simpanrincian
@@ -1707,7 +1705,6 @@ id edit_tgl_dsr_sppt_
 id edit_tgl_lamp
 id edit_tgl_pelaksanaan_awal
 id edit_tgl_pelaksanaan_sampai
-id edit_tgl_ttd
 id editemail
 id editkritik
 id edtJumlah
@@ -1749,9 +1746,9 @@ id gmbr1
 id gone
 id group_divider
 id groups
-id grs_tanda_tangan
 id grsbwh_row_list
 id grslogtengah
+id grslogtengahlaporan
 id grslogtengahlistriil
 id grslogtengahlistrincian
 id grspnjngview
@@ -1913,7 +1910,6 @@ id nip_lokal
 id nip_pegawai
 id nippeg_riil
 id nippegwdit
-id nmkota
 id none
 id normal
 id nosppd_riil
@@ -1978,6 +1974,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scroll_form_laporan
 id scroll_reg
 id scrollable
 id search_badge
@@ -2013,7 +2010,6 @@ id src_over
 id standard
 id start
 id status_bar_latest_event_content
-id status_laporan_petugas
 id status_posting_biaya
 id status_posting_laporan
 id status_posting_riil
@@ -2031,7 +2027,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tampil_grstngh
-id tampil_niplagi
 id tampil_pertanyaan
 id test_bantuan
 id text
@@ -2100,7 +2095,6 @@ id textnomor_sppd
 id textpass_baru
 id textsatusplash
 id tgl
-id tgl_sembunyi
 id tgl_utama
 id tglsppd_riil
 id time
@@ -2141,6 +2135,7 @@ id txtTanggal
 id txtTitle
 id txt_jumlah_laporan
 id txt_jumlah_sppd
+id txt_kota_tanggal
 id txt_presentasi
 id txt_sppd_selesai
 id txtinfopembuat
@@ -2165,7 +2160,6 @@ id vertical
 id vgris
 id vgris2
 id vgris3
-id vietampil_niplagi
 id view
 id view1
 id view12345
@@ -2176,6 +2170,7 @@ id view_pager
 id viewatas
 id viewgaris
 id viewgaris2
+id viewnipTTD
 id viewsamping
 id visible
 id vlopisa

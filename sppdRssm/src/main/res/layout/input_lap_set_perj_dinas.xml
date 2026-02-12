@@ -1,244 +1,342 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F4F6F8">
 
-    <!-- Action Bar -->
     <View
-        android:id="@+id/actionbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/list_item_title" />
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/grslogtengahlaporan"
+        android:background="@drawable/circle_reg_v3"/>
 
-    <TextView
-        android:id="@+id/asa"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="@string/menu_laporan_perjalanan_dinas_e_sppd_rssm"
-        android:textColor="@color/hitam"
-        android:textStyle="bold" />
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/grslogtengahlaporan"
+        android:background="@drawable/circle_reg_v4"/>
 
-    <!-- FORM -->
+    <View
+        android:id="@+id/grslogtengahlaporan"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true"/>
+
     <ScrollView
+        android:id="@+id/scroll_form_laporan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/actionbar"
-        android:padding="16dp">
+        android:layout_below="@id/grslogtengahlaporan"
+        android:padding="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Informasi SPT -->
-
-            <TextView
-                android:id="@+id/status_laporan_petugas"
+            <!-- ================= INFORMASI SPT ================= -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:visibility="gone" />
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <TextView
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi SPT"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor SPT"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:id="@+id/edit_dsr_sppt_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal SPT"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:id="@+id/edit_tgl_dsr_sppt_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Pelaksanaan"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/edit_tgl_pelaksanaan_awal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  →  "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/edit_tgl_pelaksanaan_sampai"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/edit_lama_tgl_pelaksanaan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================= PETUGAS & TUJUAN ================= -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Informasi SPT"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <EditText
-                android:id="@+id/edit_dsr_sppt_1"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Petugas yang Ditugaskan"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/edit_tampil_nip_spt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tujuan dan Instansi"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/edit_daerah_tujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:id="@+id/edit_ins_yg_kunjungi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:id="@+id/edit_acara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================= HASIL & EVALUASI ================= -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nomor SPT"
-                android:enabled="false" />
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <EditText
-                android:id="@+id/edit_tgl_dsr_sppt_"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hasil dan Evaluasi"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/edit_hsl_rapat"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/_7_hasil_pertemuan_rapat"/>
+
+                    <EditText
+                        android:id="@+id/edit_masalah"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="top"
+                        android:hint="@string/masalah_temuan_laporan"
+                        android:inputType="textMultiLine" />
+
+                    <EditText
+                        android:id="@+id/edit_saran"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/_9_saran_tindakan"/>
+
+                    <EditText
+                        android:id="@+id/edit_lain_lain"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/lain_lain"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================= TANDA TANGAN ================= -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tanggal SPT"
-                android:enabled="false" />
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <!-- Pelaksanaan -->
-            <TextView
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Kota dan Tanggal -->
+                    <TextView
+                        android:id="@+id/txt_kota_tanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Madiun, 23-02-2026"
+                        android:gravity="end"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <!-- Ruang TTD -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="right|center"
+                        android:text="( Tanda Tangan )"
+                        android:textStyle="italic"/>
+
+                    <!-- Garis -->
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="end"
+                        android:background="#ffffff"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- Nama / NIP -->
+                    <TextView
+                        android:id="@+id/viewnipTTD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="6dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pelaksanaan"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:paddingTop="16dp" />
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
 
-            <EditText
-                android:id="@+id/edit_tgl_pelaksanaan_awal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Tanggal Mulai"
-                android:enabled="false" />
+                <Button
+                    android:id="@+id/btnSimpanLaporan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle_simpan"
+                    android:textColor="@color/hitam"
+                    android:text="✏️ Simpan" />
 
-            <EditText
-                android:id="@+id/edit_tgl_pelaksanaan_sampai"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Tanggal Selesai"
-                android:enabled="false" />
-
-            <EditText
-                android:id="@+id/edit_lama_tgl_pelaksanaan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Lama Hari"
-                android:enabled="false" />
-
-            <!-- Petugas -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Petugas"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:paddingTop="16dp" />
-
-            <EditText
-                android:id="@+id/edit_tampil_nip_spt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nama / NIP Petugas"
-                android:enabled="false" />
-
-            <!-- Tujuan -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tujuan Perjalanan"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:paddingTop="16dp" />
-
-            <EditText
-                android:id="@+id/edit_daerah_tujuan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Daerah Tujuan"
-                android:enabled="false" />
-
-            <EditText
-                android:id="@+id/edit_ins_yg_kunjungi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Instansi yang Dikunjungi"
-                android:enabled="false" />
-
-            <EditText
-                android:id="@+id/edit_acara"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Acara"
-                android:enabled="false" />
-
-            <!-- Hasil -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hasil dan Evaluasi"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:paddingTop="16dp" />
-
-            <EditText
-                android:id="@+id/edit_hsl_rapat"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:hint="Hasil Rapat"
-                android:gravity="top"
-                android:inputType="textMultiLine" />
-
-            <EditText
-                android:id="@+id/edit_masalah"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:hint="Masalah / Temuan"
-                android:gravity="top"
-                android:inputType="textMultiLine" />
-
-            <EditText
-                android:id="@+id/edit_saran"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:hint="Saran / Tindakan"
-                android:gravity="top"
-                android:inputType="textMultiLine" />
-
-            <EditText
-                android:id="@+id/edit_lain_lain"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:hint="Lain-lain"
-                android:gravity="top"
-                android:inputType="textMultiLine" />
-
-            <!-- TTD -->
-            <TextView
-                android:id="@+id/nmkota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/madiun_kota"
-                android:textStyle="bold"
-                android:paddingTop="16dp" />
-
-            <EditText
-                android:id="@+id/edit_tgl_ttd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Tanggal"
-                android:enabled="false" />
-
-            <Button
-                android:id="@+id/btn_browser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ttd" />
-
-            <View
-                android:id="@+id/grs_tanda_tangan"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/hitam"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:id="@+id/vietampil_niplagi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nip_npk_petugas_laporan"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tampil_niplagi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tgl_sembunyi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-
+                <Button
+                    android:id="@+id/btnHapusLaporan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hapus"
+                    android:background="@drawable/circle_hapus2"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="6dp"
+                    tools:ignore="SpeakableTextPresentCheck"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-    <!-- Button Simpan -->
-    <Button
-        android:id="@+id/btn_simpan_lap_set_per_dinas"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignParentEnd="true"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:background="@drawable/ic_ok"
-        android:contentDescription="@string/todo" />
+        android:layout_toStartOf="@+id/grslogtengahlaporan"
+        android:background="@drawable/circle_reg_v1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/grslogtengahlaporan"
+        android:background="@drawable/circle_reg_v2"/>
 
 </RelativeLayout>

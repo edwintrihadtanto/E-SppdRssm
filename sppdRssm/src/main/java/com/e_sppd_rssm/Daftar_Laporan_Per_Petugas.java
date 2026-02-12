@@ -352,17 +352,17 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 		dialog2.setContentView(R.layout.dialog_pilihan_daftar_petugas);
 		//String cek_nip_pembuat_lap 						= selectedList.getnip_pembuatlaporanperj();
 
-		CardView btn_gotoinput_lap_perj_dinas 				= dialog2.findViewById(R.id.btn_gotoinput_lap_perj_dinas);
-		CardView btn_gotocek_spt 							= dialog2.findViewById(R.id.btn_gotocek_spt);
-		CardView btn_gotocek_sppd 							= dialog2.findViewById(R.id.btn_gotocek_sppd);
-		CardView btn_gotoinputdaftar_pengeluaran_rincian 	= dialog2.findViewById(R.id.btn_gotoinputdaftar_pengeluaran_rincian);
-		CardView btn_gotoinputdaftar_pengeluaran_riil 		= dialog2.findViewById(R.id.btn_gotoinputdaftar_pengeluaran_riil);
-		CardView btn_posting 								= dialog2.findViewById(R.id.btn_posting);
+		CardView btnLaporan			= dialog2.findViewById(R.id.btn_gotoinput_lap_perj_dinas);
+		CardView btnDownloadSPT		= dialog2.findViewById(R.id.btn_gotocek_spt);
+		CardView btnDownloadSPPD	= dialog2.findViewById(R.id.btn_gotocek_sppd);
+		CardView btnRincianBiaya 	= dialog2.findViewById(R.id.btn_gotoinputdaftar_pengeluaran_rincian);
+		CardView btnBiayaRiil 		= dialog2.findViewById(R.id.btn_gotoinputdaftar_pengeluaran_riil);
+		CardView btnPosting 		= dialog2.findViewById(R.id.btn_posting);
 
 		dialog2.show();
 
 		//.setMagicButtonClickListener(new View.OnClickListener() {
-		btn_gotoinput_lap_perj_dinas.setOnClickListener(v -> {
+		btnLaporan.setOnClickListener(v -> {
 				String cek_laporanperjalanan 	= selectedList.getstatus_laporan_petugas();
 				String cek_nip_pembuat_lap 		= selectedList.getnip_pembuatlaporanperj();
 				String cek_nip_login			= selectedList.getnip();
@@ -384,73 +384,57 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 					}
 				}else{
 				dialog2.dismiss();
-				Daftar_Laporan_Per_Petugas.this.finish();
-				finish();
+//				Daftar_Laporan_Per_Petugas.this.finish();
+//				finish();
 				Intent i;
-				i = new Intent(Daftar_Laporan_Per_Petugas.this,
-						Pembuatan_Lap_Setelah_Perj_Dinas.class);
+				i = new Intent(Daftar_Laporan_Per_Petugas.this, Edit_LaporanPerjalanan.class);
 				i.putExtra("id_spt", selectedList.getid_spt());
 				i.putExtra("nomor_spt", selectedList.getnomor_SPT());
-				i.putExtra("nomor_surat_sppd", selectedList
-						.getnomor_SPPD());
+				i.putExtra("nomor_surat_sppd", selectedList.getnomor_SPPD());
 				i.putExtra("nip", selectedList.getnip());
 				i.putExtra("nama_pegawai", selectedList.getnama_pegawai());
 				i.putExtra("jabatan", selectedList.getjabatan());
 				i.putExtra("golongan", selectedList.getgolongan());
 				i.putExtra("biaya_perj", selectedList.getbiaya_perj());
 				i.putExtra("maksud_perj", selectedList.getmaksud_perj());
-				i.putExtra("alat_angkutan",
-						selectedList.getalat_angkutan());
-				i.putExtra("tempat_brngkt",
-						selectedList.gettempat_brngkt());
-				i.putExtra("tempat_tujuan",
-						selectedList.gettempat_tujuan());
+				i.putExtra("alat_angkutan",selectedList.getalat_angkutan());
+				i.putExtra("tempat_brngkt",selectedList.gettempat_brngkt());
+				i.putExtra("tempat_tujuan",selectedList.gettempat_tujuan());
 				i.putExtra("lama_perj", selectedList.getlama_perj());
 				i.putExtra("tgl_brngkt", selectedList.gettgl_brngkt());
 				i.putExtra("tgl_kembali", selectedList.gettgl_kembali());
-				i.putExtra("tambh_pengikut1",
-						selectedList.gettambh_pengikut1());
-				i.putExtra("tambh_pengikut2",
-						selectedList.gettambh_pengikut2());
-				i.putExtra("tambh_pengikut3",
-						selectedList.gettambh_pengikut3());
-				i.putExtra("tambh_pengikut4",
-						selectedList.gettambh_pengikut4());
-				i.putExtra("tambh_pengikut5",
-						selectedList.gettambh_pengikut5());
-				i.putExtra("tanggal_aktivitas",
-						selectedList.gettgl_aktivitas());
-				i.putExtra("waktu_aktivitas",
-						selectedList.getjam_aktivitas());
-				i.putExtra("akun_pembebanan_anggaran",
-						selectedList.getakun_anggaran());
-				i.putExtra("surat_masuk_dari",
-						selectedList.getsurat_masuk_dari());
-				i.putExtra("tgl_surat_masuk",
-						selectedList.gettgl_surat_spt_masuk());
-				i.putExtra("status_laporan_petugas",
-						selectedList.getstatus_laporan_petugas());
-				//------------------------
-				i.putExtra("nip_pembuatlaporanperj",
-						selectedList.getnip_pembuatlaporanperj());
-				i.putExtra("nomor_spt_laporanperj",
-						selectedList.getnomor_spt_laporanperj());
-				i.putExtra("hasil_pertemuan",
-						selectedList.gethasil_pertemuan());
-				i.putExtra("masalah",
-						selectedList.getmasalah());
-				i.putExtra("saran",
-						selectedList.getsaran());
-				i.putExtra("lain_lain",
-						selectedList.getlain_lain());
-				i.putExtra("tgl_pembuatan_laporan",
-						selectedList.gettgl_pembuatan_laporan());
+				i.putExtra("tambh_pengikut1",selectedList.gettambh_pengikut1());
+				i.putExtra("tambh_pengikut2",selectedList.gettambh_pengikut2());
+				i.putExtra("tambh_pengikut3",selectedList.gettambh_pengikut3());
+				i.putExtra("tambh_pengikut4",selectedList.gettambh_pengikut4());
+				i.putExtra("tambh_pengikut5",selectedList.gettambh_pengikut5());
+				i.putExtra("tanggal_aktivitas",selectedList.gettgl_aktivitas());
+				i.putExtra("waktu_aktivitas",selectedList.getjam_aktivitas());
+				i.putExtra("akun_pembebanan_anggaran",selectedList.getakun_anggaran());
+				i.putExtra("surat_masuk_dari",selectedList.getsurat_masuk_dari());
+				i.putExtra("tgl_surat_masuk",selectedList.gettgl_surat_spt_masuk());
+				i.putExtra("status_laporan_petugas",selectedList.getstatus_laporan_petugas());
+//				//------------------------
+//				i.putExtra("nip_pembuatlaporanperj",
+//						selectedList.getnip_pembuatlaporanperj());
+//				i.putExtra("nomor_spt_laporanperj",
+//						selectedList.getnomor_spt_laporanperj());
+//				i.putExtra("hasil_pertemuan",
+//						selectedList.gethasil_pertemuan());
+//				i.putExtra("masalah",
+//						selectedList.getmasalah());
+//				i.putExtra("saran",
+//						selectedList.getsaran());
+//				i.putExtra("lain_lain",
+//						selectedList.getlain_lain());
+//				i.putExtra("tgl_pembuatan_laporan",
+//						selectedList.gettgl_pembuatan_laporan());
 				startActivity(i);
 				}
 
 			});
 
-		btn_gotocek_spt.setOnClickListener(v -> {
+		btnDownloadSPT.setOnClickListener(v -> {
 			dialog2.dismiss();
 			if (!terkoneksi_roaming(Daftar_Laporan_Per_Petugas.this)) {
 				String pesan = "Tidak ada sambungan Internet.\nPastikan Wi-fi atau Data Seluler aktif, lalu coba lagi";
@@ -469,7 +453,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			}
 		});
 
-		btn_gotocek_sppd.setOnClickListener(v -> {
+		btnDownloadSPPD.setOnClickListener(v -> {
 			dialog2.dismiss();
 			if (!terkoneksi_roaming(Daftar_Laporan_Per_Petugas.this)) {
 				String pesan = "Tidak ada sambungan Internet.\nPastikan Wi-fi atau Data Seluler aktif, lalu coba lagi";
@@ -489,8 +473,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			}
 		});
 
-		btn_gotoinputdaftar_pengeluaran_rincian
-				.setOnClickListener(v -> {
+		btnRincianBiaya.setOnClickListener(v -> {
 					String cek_status_rincian = selectedList.getstatus_rincian();
 					String cek_laporanperjalanan = selectedList.getstatus_laporan_petugas();
 					if (cek_laporanperjalanan.isEmpty()||cek_laporanperjalanan.contains("null")) {
@@ -522,7 +505,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 
 				});
 
-		btn_gotoinputdaftar_pengeluaran_riil.setOnClickListener(v -> {
+		btnBiayaRiil.setOnClickListener(v -> {
 			String cek_laporanperjalanan = selectedList.getstatus_laporan_petugas();
 			String cek_riil = selectedList.getstatus_riil();
 			if (cek_laporanperjalanan.isEmpty()||cek_laporanperjalanan.contains("null")) {
@@ -551,7 +534,7 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 			}
 		});
 
-		btn_posting.setOnClickListener(v -> {
+		btnPosting.setOnClickListener(v -> {
 			String cek_status_lap_rincian = selectedList
 					.getstatus_laporan_petugas();
 			String cek_status_rincian = selectedList.getstatus_rincian();
@@ -648,73 +631,51 @@ public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 				.setPositiveButton("Edit Data",
 						(dialog, id) -> {
 							dialog.dismiss();
-							finish();
-							Daftar_Laporan_Per_Petugas.this.finish();
+//							finish();
+//							Daftar_Laporan_Per_Petugas.this.finish();
 							Intent i ;
-							i = new Intent(Daftar_Laporan_Per_Petugas.this,
-									Pembuatan_Lap_Setelah_Perj_Dinas.class);
-							i.putExtra("id_spt", selectedList.getid_spt()
-									);
-							i.putExtra("nomor_spt", selectedList.getnomor_SPT()
-									);
-							i.putExtra("nomor_surat_sppd", selectedList
-									.getnomor_SPPD());
+							i = new Intent(Daftar_Laporan_Per_Petugas.this, Edit_LaporanPerjalanan.class);
+							i.putExtra("id_spt", selectedList.getid_spt());
+							i.putExtra("nomor_spt", selectedList.getnomor_SPT());
+							i.putExtra("nomor_surat_sppd", selectedList.getnomor_SPPD());
 							i.putExtra("nip", selectedList.getnip());
-							i.putExtra("nama_pegawai", selectedList
-									.getnama_pegawai());
-							i.putExtra("jabatan", selectedList.getjabatan()
-									);
-							i.putExtra("golongan", selectedList.getgolongan()
-									);
-							i.putExtra("biaya_perj", selectedList.getbiaya_perj()
-									);
+							i.putExtra("nama_pegawai", selectedList.getnama_pegawai());
+							i.putExtra("jabatan", selectedList.getjabatan());
+							i.putExtra("golongan", selectedList.getgolongan());
+							i.putExtra("biaya_perj", selectedList.getbiaya_perj());
 							i.putExtra("maksud_perj", selectedList.getmaksud_perj());
-							i.putExtra("alat_angkutan",
-									selectedList.getalat_angkutan());
-							i.putExtra("tempat_brngkt",
-									selectedList.gettempat_brngkt());
-							i.putExtra("tempat_tujuan",
-									selectedList.gettempat_tujuan());
+							i.putExtra("alat_angkutan",selectedList.getalat_angkutan());
+							i.putExtra("tempat_brngkt",selectedList.gettempat_brngkt());
+							i.putExtra("tempat_tujuan",selectedList.gettempat_tujuan());
 							i.putExtra("lama_perj", selectedList.getlama_perj());
 							i.putExtra("tgl_brngkt", selectedList.gettgl_brngkt());
 							i.putExtra("tgl_kembali", selectedList.gettgl_kembali());
-							i.putExtra("tambh_pengikut1",
-									selectedList.gettambh_pengikut1());
-							i.putExtra("tambh_pengikut2",
-									selectedList.gettambh_pengikut2());
-							i.putExtra("tambh_pengikut3",
-									selectedList.gettambh_pengikut3());
-							i.putExtra("tambh_pengikut4",
-									selectedList.gettambh_pengikut4());
-							i.putExtra("tambh_pengikut5",
-									selectedList.gettambh_pengikut5());
-							i.putExtra("tanggal_aktivitas",
-									selectedList.gettgl_aktivitas());
-							i.putExtra("waktu_aktivitas",
-									selectedList.getjam_aktivitas());
-							i.putExtra("akun_pembebanan_anggaran",
-									selectedList.getakun_anggaran());
-							i.putExtra("surat_masuk_dari",
-									selectedList.getsurat_masuk_dari());
-							i.putExtra("tgl_surat_masuk",
-									selectedList.gettgl_surat_spt_masuk());
-							i.putExtra("status_laporan_petugas",
-									selectedList.getstatus_laporan_petugas());
+							i.putExtra("tambh_pengikut1",selectedList.gettambh_pengikut1());
+							i.putExtra("tambh_pengikut2",selectedList.gettambh_pengikut2());
+							i.putExtra("tambh_pengikut3",selectedList.gettambh_pengikut3());
+							i.putExtra("tambh_pengikut4",selectedList.gettambh_pengikut4());
+							i.putExtra("tambh_pengikut5",selectedList.gettambh_pengikut5());
+							i.putExtra("tanggal_aktivitas",selectedList.gettgl_aktivitas());
+							i.putExtra("waktu_aktivitas",selectedList.getjam_aktivitas());
+							i.putExtra("akun_pembebanan_anggaran",selectedList.getakun_anggaran());
+							i.putExtra("surat_masuk_dari",selectedList.getsurat_masuk_dari());
+							i.putExtra("tgl_surat_masuk",selectedList.gettgl_surat_spt_masuk());
+							i.putExtra("status_laporan_petugas",selectedList.getstatus_laporan_petugas());
 							//------------------------
-							i.putExtra("nip_pembuatlaporanperj",
-									selectedList.getnip_pembuatlaporanperj());
-							i.putExtra("nomor_spt_laporanperj",
-									selectedList.getnomor_spt_laporanperj());
-							i.putExtra("hasil_pertemuan",
-									selectedList.gethasil_pertemuan());
-							i.putExtra("masalah",
-									selectedList.getmasalah());
-							i.putExtra("saran",
-									selectedList.getsaran());
-							i.putExtra("lain_lain",
-									selectedList.getlain_lain());
-							i.putExtra("tgl_pembuatan_laporan",
-									selectedList.gettgl_pembuatan_laporan());
+//							i.putExtra("nip_pembuatlaporanperj",
+//									selectedList.getnip_pembuatlaporanperj());
+//							i.putExtra("nomor_spt_laporanperj",
+//									selectedList.getnomor_spt_laporanperj());
+//							i.putExtra("hasil_pertemuan",
+//									selectedList.gethasil_pertemuan());
+//							i.putExtra("masalah",
+//									selectedList.getmasalah());
+//							i.putExtra("saran",
+//									selectedList.getsaran());
+//							i.putExtra("lain_lain",
+//									selectedList.getlain_lain());
+//							i.putExtra("tgl_pembuatan_laporan",
+//									selectedList.gettgl_pembuatan_laporan());
 
 
 							startActivity(i);

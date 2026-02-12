@@ -85,11 +85,11 @@
     <string name="_3_nama_petugas" translatable="false">3. Nama Petugas</string>
     <string name="_4_daerah_tujuan" translatable="false">4. Daerah Tujuan</string>
     <string name="_5_instansi_yang_dikunjungi" translatable="false">5. Instansi yang dikunjungi</string>
-    <string name="_6_acara" translatable="false">6. Acara</string>
-    <string name="_7_hasil_pertemuan_rapat" translatable="false">7. Hasil Pertemuan / Rapat</string>
-    <string name="_8_masalah_temuan" translatable="false">8. Masalah / Temuan</string>
-    <string name="_9_saran_tindakan" translatable="false">9. Saran Tindakan</string>
-    <string name="_10_lain_lain" translatable="false">10. Lain - lain</string>
+    <string name="_6_acara" translatable="false">Acara</string>
+    <string name="_7_hasil_pertemuan_rapat" translatable="false">Pertemuan / Rapat</string>
+    <string name="_8_masalah_temuan" translatable="false">Masalah / Temuan</string>
+    <string name="_9_saran_tindakan" translatable="false">Saran / Tindakan</string>
+    <string name="_10_lain_lain" translatable="false">Lain - lain</string>
     <string name="menu_laporan_perjalanan_dinas_e_sppd_rssm" translatable="false">Laporan Perjalanan Dinas E-SPPD</string>
     <string name="nama_petugas" translatable="false">Nama Petugas</string>
     <string name="menu_utama_sppd_rssm" translatable="false" />
@@ -102,7 +102,7 @@
     <string name="madiun_kota" translatable="false">Madiun,</string>
     <string name="tgl_bulan_tahun" translatable="false">Tgl-Bulan-Tahun</string>
     <string name="petugas_nama" translatable="false">Petugas,</string>
-    <string name="ttd" translatable="false">TTD</string>
+    <string name="ttd" translatable="false">🎯 TTD</string>
     <string name="nip_npk_petugas_laporan" translatable="false">NIP/NPK.</string>
     <string name="bukti" translatable="false">Bukti</string>
     <string name="masuk" translatable="false">🔒 Log In</string>
@@ -209,5 +209,5 @@
     <string name="simpan">Simpan</string>
     <string name="batal">Batal</string>
     <string name="aplikasi_surat_perintah_perjalanan_dinas_e_sppd_digunakan_untuk_mempermudah_pengelolaan_administrasi_perjalanan_dinas_secara_digital">Aplikasi Surat Perintah Perjalanan Dinas (E-SPPD) digunakan untuk mempermudah pengelolaan administrasi perjalanan dinas secara digital.</string>
-
+<!--✏️🚨 ❌ 👉-->
 </resources>
