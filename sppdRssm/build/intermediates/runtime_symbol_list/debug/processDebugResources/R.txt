@@ -1750,6 +1750,8 @@ int id grslogtengah 0x7f0a00f7
 int id grslogtengahlaporan 0x7f0a00f8
 int id grslogtengahlistriil 0x7f0a00f9
 int id grslogtengahlistrincian 0x7f0a00fa
+int id grslogtengahriil 0x7f0a02ab
+int id grslogtengahrincian 0x7f0a02ac
 int id grspnjngview 0x7f0a00fb
 int id grspnjngview_lagi 0x7f0a00fc
 int id grsprofil1 0x7f0a00fd

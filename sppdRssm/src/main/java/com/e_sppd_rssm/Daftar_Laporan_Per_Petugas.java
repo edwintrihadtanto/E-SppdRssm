@@ -50,7 +50,7 @@ import koneksi.Koneksi;
 
 public class Daftar_Laporan_Per_Petugas extends AppCompatActivity {
 	private static final String TAG = "DaftarSPTSPPD";
-	private ListView listView, list_notif;
+	private ListView listView;
 	private List<Daftar_String> list, listpost;
 	private List_Daftar_SPT_per_nip adapter;
 	public List_Informasi informasi;

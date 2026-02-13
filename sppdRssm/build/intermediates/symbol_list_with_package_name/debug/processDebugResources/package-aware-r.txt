@@ -1751,6 +1751,8 @@ id grslogtengah
 id grslogtengahlaporan
 id grslogtengahlistriil
 id grslogtengahlistrincian
+id grslogtengahriil
+id grslogtengahrincian
 id grspnjngview
 id grspnjngview_lagi
 id grsprofil1

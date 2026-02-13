@@ -38,7 +38,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 	private ProgressDialog ProgressDialog1;
 
 	private EditText hasilRapat, hasilMasalah, hasilSaran, hasilLainnya;
-	private Button simpanLaporan;
+	private Button simpanLaporan, hapusLaporan;
 	int tahun, bulan, hari;
 //	JSONParser classJsonParser = new JSONParser();
 	private static final String TAG_BERHASIL 	= "success";
@@ -87,9 +87,8 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 
 		simpanLaporan.setOnClickListener(v -> {
             // TODO Auto-generated method stub
-            String hasil_pertemuan 	= getIntent().getStringExtra("hasil_pertemuan");
             if ((idLaporanSPPD.isEmpty()) && (stsLaporan.contains("BELUM"))){
-                pertanyaan_simpan();
+                pertanyaanSIMPAN();
             }else {
                 pertanyaan_edit_laporan();
             }
@@ -97,11 +96,8 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 
 		hapusLaporan.setOnClickListener(v -> {
 			// TODO Auto-generated method stub
-			String hasil_pertemuan 	= getIntent().getStringExtra("hasil_pertemuan");
-			if ((idLaporanSPPD.isEmpty()) && (stsLaporan.contains("BELUM"))){
-				pertanyaan_simpan();
-			}else {
-				pertanyaan_edit_laporan();
+			if (idLaporanSPPD.isEmpty()){
+				pertanyaanHAPUS();
 			}
 		});
 	}
@@ -156,7 +152,145 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				.setAction("OK", v -> {})
 				.show();
 	}
+	private void pertanyaanSIMPAN() {
+		AlertDialog.Builder ad = new AlertDialog.Builder(this);
+		ad.setTitle("Informasi");
+		ad.setMessage("Simpan laporan perjalanan dinas ?");
+		ad.setIcon(R.drawable.ic_warning_black);
+		ad.setPositiveButton("Simpan", (dialog, which) -> {
+			//	String cek_lain_lain = edit_lain_lain.getText().toString();
+			if (hasilRapat.getText().toString().isEmpty()) {
+				String pesan = "Form masih kosong";
+				show_alert(pesan);
+			} else {
+				new Simpan_Laporan_Perjalanan_Dinas().execute();
+			}
 
+		});
+		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
+		ad.show();
+	}
+	private void pertanyaanHAPUS() {
+		AlertDialog.Builder ad = new AlertDialog.Builder(this);
+		ad.setTitle("Peringatan");
+		ad.setMessage("Hapus laporan perjalanan dinas ?");
+		ad.setIcon(R.drawable.ic_warning_black);
+		ad.setPositiveButton("Simpan", (dialog, which) -> {
+			//	String cek_lain_lain = edit_lain_lain.getText().toString();
+			if (idLaporanSPPD.isEmpty()) {
+				String pesan = "Id Laporan SPPD tidak diketahui!";
+				show_alert(pesan);
+			} else {
+				new Hapus_Laporan_Perj_Dinas().execute();
+			}
+
+		});
+		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
+		ad.show();
+	}
+	private void pertanyaan_edit_laporan() {
+		AlertDialog.Builder ad = new AlertDialog.Builder(this);
+		ad.setTitle("Informasi");
+		ad.setMessage("Simpan Perubahan Laporan Perjalanan Dinas ?");
+		ad.setIcon(R.drawable.ic_warning_black);
+		ad.setPositiveButton("Simpan", (dialog, which) -> {
+			if (hasilRapat.getText().toString().isEmpty()) {
+				String pesan = "Isian laporan perjalanan dinas tidak boleh kosong";
+				showSnackbar(pesan);
+			} else {
+				dialog.dismiss();
+				new Edit_Laporan_Perj_Dinas().execute();
+			}
+
+		});
+		ad.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+			}
+		});
+		ad.show();
+	}
+	@SuppressLint("StaticFieldLeak")
+	public class LoadLaporan extends AsyncTask<Void, Void, JSONObject> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			ProgressDialog1 = new ProgressDialog(Edit_LaporanPerjalanan.this);
+			ProgressDialog1.setMessage("Memuat data laporan...");
+			ProgressDialog1.setCancelable(false);
+			ProgressDialog1.show();
+		}
+
+		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+		@Override
+		protected JSONObject doInBackground(Void... voids) {
+
+			try {
+				HashMap<String, String> params = new HashMap<>();
+				params.put("noSPT", nomor_spt.trim());
+				params.put("nip", nip.trim());
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.load_data_laporan_petugas,
+						params
+				);
+
+				if (response == null) return null;
+
+				Log.d("LOAD_LAPORAN", response);
+
+				return new JSONObject(response);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+
+		@SuppressLint("SetTextI18n")
+        @Override
+		protected void onPostExecute(JSONObject json) {
+
+			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
+				ProgressDialog1.dismiss();
+			}
+
+			if (json == null) {
+				show_alert("Gagal memuat data laporan");
+				return;
+			}
+
+			try {
+				int success = json.getInt("success");
+
+				if (success == 1) {
+
+					JSONObject data = json.getJSONObject("data");
+					idLaporanSPPD = data.getString("idLaporan");
+					hasilRapat.setText(data.getString("hasil_pertemuan"));
+					hasilMasalah.setText(data.getString("masalah"));
+					hasilSaran.setText(data.getString("saran"));
+					hasilLainnya.setText(data.getString("lain_lain"));
+
+					String tgl = data.getString("tgl_pembuatan_laporan");
+					tglSekarang = tgl;
+					tgl_ttd.setText("Madiun, " + tgl);
+
+					Log.d(TAG, String.valueOf(data));
+
+				} else {
+					show_alert(json.getString("message"));
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				show_alert("Terjadi kesalahan parsing data");
+			}
+		}
+	}
 	@SuppressLint("StaticFieldLeak")
     public class Simpan_Laporan_Perjalanan_Dinas extends AsyncTask<Void, Void, String> {
 		Java_Connection jc = new Java_Connection();
@@ -257,48 +391,6 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				);
 			}
 		}
-	}
-	private void pertanyaan_simpan() {
-		AlertDialog.Builder ad = new AlertDialog.Builder(this);
-		ad.setTitle("Informasi");
-		ad.setMessage("Simpan laporan perjalanan dinas ?");
-		ad.setIcon(R.drawable.ic_warning_black);
-		ad.setPositiveButton("Simpan", (dialog, which) -> {
-        //	String cek_lain_lain = edit_lain_lain.getText().toString();
-            if (hasilRapat.getText().toString().isEmpty()) {
-                String pesan = "Form masih kosong";
-                show_alert(pesan);
-            } else {
-                new Simpan_Laporan_Perjalanan_Dinas().execute();
-            }
-
-        });
-		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
-		ad.show();
-	}
-	private void pertanyaan_edit_laporan() {
-		AlertDialog.Builder ad = new AlertDialog.Builder(this);
-		ad.setTitle("Informasi");
-		ad.setMessage("Simpan Perubahan Laporan Perjalanan Dinas ?");
-		ad.setIcon(R.drawable.ic_warning_black);
-		ad.setPositiveButton("Simpan", (dialog, which) -> {
-            //String cek_lain_lain = edit_lain_lain.getText().toString();
-            if (hasilRapat.getText().toString().isEmpty()) {
-                String pesan = "Hasil Rapat Tidak Boleh Kosong";
-                show_alert(pesan);
-            } else {
-                dialog.dismiss();
-                new Edit_Laporan_Perj_Dinas().execute();
-            }
-
-        });
-		ad.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				dialog.dismiss();
-			}
-		});
-		ad.show();
 	}
 	@SuppressLint("StaticFieldLeak")
     public class Edit_Laporan_Perj_Dinas extends AsyncTask<Void, Void, String> {
@@ -433,86 +525,6 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 			}
 		}
 	}
-	@SuppressLint("StaticFieldLeak")
-	public class LoadLaporan extends AsyncTask<Void, Void, JSONObject> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			ProgressDialog1 = new ProgressDialog(Edit_LaporanPerjalanan.this);
-			ProgressDialog1.setMessage("Memuat data laporan...");
-			ProgressDialog1.setCancelable(false);
-			ProgressDialog1.show();
-		}
-
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-		@Override
-		protected JSONObject doInBackground(Void... voids) {
-
-			try {
-				HashMap<String, String> params = new HashMap<>();
-				params.put("noSPT", nomor_spt.trim());
-				params.put("nip", nip.trim());
-
-				Java_Connection jc = new Java_Connection();
-				String response = jc.sendPostRequest(
-						Koneksi.load_data_laporan_petugas,
-						params
-				);
-
-				if (response == null) return null;
-
-				Log.d("LOAD_LAPORAN", response);
-
-				return new JSONObject(response);
-
-			} catch (Exception e) {
-				e.printStackTrace();
-				return null;
-			}
-		}
-
-		@Override
-		protected void onPostExecute(JSONObject json) {
-
-			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
-				ProgressDialog1.dismiss();
-			}
-
-			if (json == null) {
-				show_alert("Gagal memuat data laporan");
-				return;
-			}
-
-			try {
-				int success = json.getInt("success");
-
-				if (success == 1) {
-
-					JSONObject data = json.getJSONObject("data");
-					idLaporanSPPD = data.getString("idLaporan");
-					hasilRapat.setText(data.getString("hasil_pertemuan"));
-					hasilMasalah.setText(data.getString("masalah"));
-					hasilSaran.setText(data.getString("saran"));
-					hasilLainnya.setText(data.getString("lain_lain"));
-
-					String tgl = data.getString("tgl_pembuatan_laporan");
-					tglSekarang = tgl;
-					tgl_ttd.setText("Madiun, " + tgl);
-
-					Log.d(TAG, String.valueOf(data));
-
-				} else {
-					show_alert(json.getString("message"));
-				}
-
-			} catch (Exception e) {
-				e.printStackTrace();
-				show_alert("Terjadi kesalahan parsing data");
-			}
-		}
-	}
-
 	private void show_alert2(String pesan) {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		ad.setTitle("Informasi");

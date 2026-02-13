@@ -12,6 +12,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -172,7 +173,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             pd = new ProgressDialog(activity);
-            pd.setMessage("Menyimpan perubahan...");
+            pd.setMessage("Menyimpan perubahan rincian...");
             pd.setCancelable(false);
             pd.show();
         }
@@ -180,7 +181,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
-
+            String response = null;
             try {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("id_rincian", id_rincian);
@@ -188,8 +189,6 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                 params.put("jml", edtJumlah.getText().toString());
                 params.put("nomor_surat_sppd", nosppd);
                 params.put("nip", nip);
-
-                String response;
 
                 if (imageFile != null && imageFile.exists()) {
                     response = jc.sendMultipart(
@@ -205,13 +204,18 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                     );
                 }
 
-                if (response == null) return null;
+                if (response == null) return "false|Server tidak merespon";
 
-                JSONObject json = new JSONObject(response);
-                return json.getString("pesan");
+                JSONObject json = new JSONObject(response.trim());
+                boolean status = json.getBoolean("status");
+                String pesan = json.getString("pesan");
+
+                return status + "|" + pesan;
 
             } catch (Exception e) {
-                return null;
+                Log.e("JSON_ERROR_UPDATE", "RAW RESPONSE = " + response);
+                e.printStackTrace();
+                return "false|Response tidak valid dari server";
             }
         }
 
@@ -220,9 +224,17 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
             pd.dismiss();
 
             if (hasil != null) {
-                Toast.makeText(activity, hasil, Toast.LENGTH_LONG).show();
-                activity.setResult(Activity.RESULT_OK);
-                activity.finish(); // ⬅️ balik ke list
+
+                String[] parts = hasil.split("\\|", 2);
+                boolean status = Boolean.parseBoolean(parts[0]);
+                String pesan = parts[1];
+
+                Toast.makeText(activity, pesan, Toast.LENGTH_LONG).show();
+
+                if (status) {
+                    activity.setResult(Activity.RESULT_OK);
+                    activity.finish();
+                }
             }
         }
     }
@@ -294,7 +306,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             pd = new ProgressDialog(activity);
-            pd.setMessage("Menyimpan rincian...");
+            pd.setMessage("Menyimpan rincian biaya.");
             pd.setCancelable(false);
             pd.show();
         }
@@ -302,6 +314,8 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
+            String res = null;
+
             try {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("nosppd", nosppd);
@@ -309,20 +323,25 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                 params.put("uraian", edtRincian.getText().toString());
                 params.put("jml", edtJumlah.getText().toString());
 
-                String res = jc.sendMultipart(
+                res = jc.sendMultipart(
                         Koneksi.simpan_rincian_biaya,
                         params,
-                        imageFile,      // FILE FOTO
-                        "bukti"         // NAMA FIELD DI PHP
+                        imageFile,
+                        "bukti"
                 );
 
-                if (res == null) return null;
+                if (res == null) return "Server tidak merespon";
 
-                JSONObject json = new JSONObject(res);
-                return json.getString("pesan");
+                JSONObject json = new JSONObject(res.trim());
+                boolean status = json.getBoolean("status");
+                String pesan = json.getString("pesan");
+
+                return status + "|" + pesan;
 
             } catch (Exception e) {
-                return null;
+                Log.e("JSON_ERROR", "RAW RESPONSE = " + res);
+                e.printStackTrace();
+                return "Response tidak valid dari server";
             }
         }
 
@@ -330,10 +349,19 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         protected void onPostExecute(String hasil) {
             pd.dismiss();
             if (hasil != null) {
-                Toast.makeText(activity, hasil, Toast.LENGTH_LONG).show();
-                activity.setResult(Activity.RESULT_OK);
-                activity.finish();
+
+                String[] parts = hasil.split("\\|", 2);
+                boolean status = Boolean.parseBoolean(parts[0]);
+                String pesan = parts[1];
+
+                Toast.makeText(activity, pesan, Toast.LENGTH_LONG).show();
+
+                if (status) {
+                    activity.setResult(Activity.RESULT_OK);
+                    activity.finish();
+                }
             }
+
         }
     }
 
@@ -412,8 +440,13 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                     500     // limit 500 KB
             );
 
-            imgBukti.setImageURI(Uri.fromFile(imageFile));
+            /*imgBukti.setImageURI(Uri.fromFile(imageFile));*/
+            imgBukti.setImageDrawable(null);   // clear dulu
+            imgBukti.invalidate();
+            Bitmap bitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
+            imgBukti.setImageBitmap(bitmap);
 
+            Log.d("IMG_PATH", imageFile.getAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(this, "Gagal memproses gambar", Toast.LENGTH_SHORT).show();

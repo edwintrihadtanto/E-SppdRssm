@@ -176,6 +176,9 @@ public class Java_Connection {
 			conn.setDoInput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
+			conn.setRequestProperty("User-Agent", "Mozilla/5.0");
+			conn.setRequestProperty("Accept", "application/json");
+			conn.setRequestProperty("Connection", "close");
 
 			DataOutputStream out = new DataOutputStream(conn.getOutputStream());
 
@@ -212,6 +215,9 @@ public class Java_Connection {
 			out.flush();
 			out.close();
 
+			int responseCode = conn.getResponseCode();
+			Log.e("UPLOAD_DEBUG", "Response Code = " + responseCode);
+
 			InputStream is = conn.getResponseCode() == HttpURLConnection.HTTP_OK
 					? conn.getInputStream()
 					: conn.getErrorStream();
@@ -221,7 +227,7 @@ public class Java_Connection {
 			String line;
 			while ((line = br.readLine()) != null) sb.append(line);
 			br.close();
-
+			Log.e("UPLOAD_DEBUG", "Response Body = " + sb.toString());
 			return sb.toString();
 
 		} catch (Exception e) {
