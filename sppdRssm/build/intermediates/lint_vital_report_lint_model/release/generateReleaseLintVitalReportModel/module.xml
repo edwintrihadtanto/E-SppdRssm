@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="D:\Workspace\E-SppdRssm\sppdRssm"
+    name=":sppdRssm"
+    type="APP"
+    maven="E-SppdRssm:sppdRssm:"
+    agpVersion="8.3.1"
+    buildFolder="build"
+    bootClassPath="D:\SDK_Workspace\Sdk\platforms\android-28\android.jar;D:\SDK_Workspace\Sdk\platforms\android-28\optional\org.apache.http.legacy.jar;D:\SDK_Workspace\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-28"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

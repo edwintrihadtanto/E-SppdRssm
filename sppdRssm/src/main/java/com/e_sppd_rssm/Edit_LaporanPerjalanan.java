@@ -2,7 +2,6 @@ package com.e_sppd_rssm;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.apache.commons.logging.LogFactory;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -33,24 +31,22 @@ import koneksi.Java_Connection;
 import koneksi.Koneksi;
 public class Edit_LaporanPerjalanan extends AppCompatActivity {
 	private static final String TAG = "LAPORAN";
-	private static final org.apache.commons.logging.Log log = LogFactory.getLog(Edit_LaporanPerjalanan.class);
 	private final Handler handler = new Handler();
 	private ProgressDialog ProgressDialog1;
 
 	private EditText hasilRapat, hasilMasalah, hasilSaran, hasilLainnya;
-	private Button simpanLaporan, hapusLaporan;
+
 	int tahun, bulan, hari;
 //	JSONParser classJsonParser = new JSONParser();
 	private static final String TAG_BERHASIL 	= "success";
 	private static final String TAG_PESAN 		= "message";
 	TextView noSPT, tglBerangkat, tglSampai, lamaperjalanan, nama_petugas, kotatujuan, acratujuan, acara, tglSPT, nipTTD, tgl_ttd;
-	String nomor_spt, nip, nama, lama_perj, tgl_brngkt, tgl_kembali, daerah_tujuan, instansi_yg_dikunjungi, acaraSPPD, tgl_surat_masuk,
-			hasil_pertemuan, masalah, saran, lain_lain, tgl_pembuatan_laporan, stsLaporan, tglSekarang;
+	String nomor_spt, nip, nama, lama_perj, tgl_brngkt, tgl_kembali, daerah_tujuan, instansi_yg_dikunjungi, acaraSPPD, tgl_surat_masuk, stsLaporan, tglSekarang;
 	String idLaporanSPPD = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.input_lap_set_perj_dinas);
+		setContentView(R.layout.activity_laporansppd);
 		handler.postDelayed(runnable, 1000);
 
 		nipTTD 					= findViewById(R.id.viewnipTTD);
@@ -68,8 +64,8 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		hasilMasalah 			= findViewById(R.id.edit_masalah);
 		hasilSaran 				= findViewById(R.id.edit_saran);
 		hasilLainnya 			= findViewById(R.id.edit_lain_lain);
-		simpanLaporan			= findViewById(R.id.btnSimpanLaporan);
-		hapusLaporan 			= findViewById(R.id.btnHapusLaporan);
+        Button simpanlaporan 	= findViewById(R.id.btnSimpanLaporan);
+		Button hapuslaporan 	= findViewById(R.id.btnHapusLaporan);
 
 		final Calendar c 	= Calendar.getInstance();
 		tahun 				= c.get(Calendar.YEAR);
@@ -85,7 +81,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 			showSnackbar("Silahkan Isi Data Laporan Perjalanan Dinas Anda");
 		}
 
-		simpanLaporan.setOnClickListener(v -> {
+		simpanlaporan.setOnClickListener(v -> {
             // TODO Auto-generated method stub
             if ((idLaporanSPPD.isEmpty()) && (stsLaporan.contains("BELUM"))){
                 pertanyaanSIMPAN();
@@ -94,12 +90,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
             }
         });
 
-		hapusLaporan.setOnClickListener(v -> {
-			// TODO Auto-generated method stub
-			if (idLaporanSPPD.isEmpty()){
-				pertanyaanHAPUS();
-			}
-		});
+		hapuslaporan.setOnClickListener(v -> pertanyaanHAPUS());
 	}
 
 	@SuppressLint("SetTextI18n")
@@ -116,20 +107,22 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		tgl_surat_masuk 			= getIntent().getStringExtra("tgl_surat_masuk");
 		stsLaporan 					= getIntent().getStringExtra("status_laporan_petugas");
 
-		//String nip_pembuatlaporanperj 	= getIntent().getStringExtra("nip_pembuatlaporanperj");
-		//String nomor_spt_laporanperj 		= getIntent().getStringExtra("nomor_spt_laporanperj");
-//		String hasil_pertemuan 				= getIntent().getStringExtra("hasil_pertemuan");
-//		String masalah 						= getIntent().getStringExtra("masalah");
-//		String saran 						= getIntent().getStringExtra("saran");
-//		String lain_lain 					= getIntent().getStringExtra("lain_lain");
-//		String hasilTglLaporan 				= getIntent().getStringExtra("tgl_pembuatan_laporan");
+		/*
+		String nip_pembuatlaporanperj 		= getIntent().getStringExtra("nip_pembuatlaporanperj");
+		String nomor_spt_laporanperj 		= getIntent().getStringExtra("nomor_spt_laporanperj");
+		String hasil_pertemuan 				= getIntent().getStringExtra("hasil_pertemuan");
+		String masalah 						= getIntent().getStringExtra("masalah");
+		String saran 						= getIntent().getStringExtra("saran");
+		String lain_lain 					= getIntent().getStringExtra("lain_lain");
+		String hasilTglLaporan 				= getIntent().getStringExtra("tgl_pembuatan_laporan");
+		*/
 
 		noSPT.setText(nomor_spt);
 		tglSPT.setText(tgl_surat_masuk);
 		nama_petugas.setText(nama);
 		tglBerangkat.setText(tgl_brngkt);
 		tglSampai.setText(tgl_kembali);
-		lamaperjalanan.setText(lama_perj + " Hari");
+		lamaperjalanan.setText("Waktu : " +lama_perj + " Hari");
 		kotatujuan.setText(daerah_tujuan);
 		acratujuan.setText(instansi_yg_dikunjungi);
 		acara.setText(acaraSPPD);
@@ -170,7 +163,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
 		ad.show();
 	}
-	private void pertanyaanHAPUS() {
+	private void pertanyaanHAPUS() {//
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		ad.setTitle("Peringatan");
 		ad.setMessage("Hapus laporan perjalanan dinas ?");
@@ -203,12 +196,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 			}
 
 		});
-		ad.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				dialog.dismiss();
-			}
-		});
+		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
 		ad.show();
 	}
 	@SuppressLint("StaticFieldLeak")
@@ -343,15 +331,11 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				Log.d("Info", response);
 
 				JSONObject json = new JSONObject(response);
-				int berhasil = json.getInt(TAG_BERHASIL);
+//				int berhasil = json.getInt(TAG_BERHASIL);
 
-				if (berhasil == 1) {
-					return json.getString(TAG_PESAN);
-				} else {
-					return json.getString(TAG_PESAN);
-				}
+                return json.getString(TAG_PESAN);
 
-			} catch (Exception e) {
+            } catch (Exception e) {
 				e.printStackTrace();
 				return e.toString();
 			}
@@ -435,15 +419,11 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				Log.d(TAG, response);
 
 				JSONObject json = new JSONObject(response);
-				int berhasil = json.getInt(TAG_BERHASIL);
+//				int berhasil = json.getInt(TAG_BERHASIL);
 
-				if (berhasil == 1) {
-					return json.getString(TAG_PESAN);
-				} else {
-					return json.getString(TAG_PESAN);
-				}
+                return json.getString(TAG_PESAN);
 
-			} catch (Exception e) {
+            } catch (Exception e) {
 				e.printStackTrace();
 				return e.toString();
 			}
@@ -462,28 +442,26 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		}
 	}
 	@SuppressLint("StaticFieldLeak")
-    public class Hapus_Laporan_Perj_Dinas extends AsyncTask<Void, Void, String> {
+	public class Hapus_Laporan_Perj_Dinas extends AsyncTask<Void, Void, String> {
 
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			ProgressDialog1 = new ProgressDialog(
-					Edit_LaporanPerjalanan.this);
+			ProgressDialog1 = new ProgressDialog(Edit_LaporanPerjalanan.this);
 			ProgressDialog1.setMessage("Sedang menghapus laporan..");
-			ProgressDialog1.setIndeterminate(false);
 			ProgressDialog1.setCancelable(false);
 			ProgressDialog1.show();
 		}
 
 		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-		@Override
+        @Override
 		protected String doInBackground(Void... voids) {
 
 			try {
 				HashMap<String, String> params = new HashMap<>();
 
-				params.put("idlaporan", nomor_spt.trim());
-				params.put("ambil_nomor_spt", nomor_spt.trim());
+				params.put("idlaporan", idLaporanSPPD.trim());
+				params.put("noSPT", nomor_spt.trim());
 				params.put("nip", nip.trim());
 
 				Java_Connection jc = new Java_Connection();
@@ -493,19 +471,14 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				);
 
 				if (response == null) {
-					return null;
+					return "Server tidak merespon";
 				}
-
-				Log.d(TAG, response);
 
 				JSONObject json = new JSONObject(response);
-				int berhasil = json.getInt(TAG_BERHASIL);
 
-				if (berhasil == 1) {
-					return json.getString(TAG_PESAN);
-				} else {
-					return json.getString(TAG_PESAN);
-				}
+//				boolean success = json.getBoolean("success");   // ✔ sesuai backend baru
+
+                return json.getString("message");
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -525,6 +498,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 			}
 		}
 	}
+
 	private void show_alert2(String pesan) {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		ad.setTitle("Informasi");
@@ -556,9 +530,10 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 			// TODO Auto-generated method stub
 			Calendar c1 = Calendar.getInstance();
 
-			SimpleDateFormat tgl_skrng = new SimpleDateFormat("d MMMM yyyy");
-			SimpleDateFormat tgl_skrng2 = new SimpleDateFormat("yyyy-M-d");
-			String strtgl_skrng = tgl_skrng.format(c1.getTime());
+//			SimpleDateFormat tgl_skrng = new SimpleDateFormat("d MMMM yyyy");
+//			SimpleDateFormat tgl_skrng2 = new SimpleDateFormat("yyyy-M-d");
+			SimpleDateFormat tgl_skrng2 = new SimpleDateFormat("d-M-yyyy");
+//			String strtgl_skrng = tgl_skrng.format(c1.getTime());
 			String strtgl_skrng2 = tgl_skrng2.format(c1.getTime());
 			tglSekarang = strtgl_skrng2;
 			tgl_ttd.setText("Madiun, "+strtgl_skrng2);

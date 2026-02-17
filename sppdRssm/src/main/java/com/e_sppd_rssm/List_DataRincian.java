@@ -206,7 +206,7 @@ public class List_DataRincian extends AppCompatActivity {
             JSONObject obj = new JSONObject(json);
 
             String message  = obj.optString("message", "");
-            boolean status  = obj.optBoolean("status", false);
+//            boolean status  = obj.optBoolean("status", false);
             String info     = obj.optString("info", "");
 
             // ❌ backend balikin error

@@ -37,7 +37,7 @@
         android:drawableTop="@drawable/ic_refresh_black_24dp"
         android:onClick="refreshhistory"
         android:text="@string/refresh"
-        android:textColor="#212121"
+        android:textColor="@color/white"
         tools:ignore="VisualLintButtonSize" />
 
     <androidx.cardview.widget.CardView
@@ -60,7 +60,7 @@
                 android:layout_height="match_parent" >
             </ListView>
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>d
+    </androidx.cardview.widget.CardView>
 
     <View
         android:layout_width="match_parent"

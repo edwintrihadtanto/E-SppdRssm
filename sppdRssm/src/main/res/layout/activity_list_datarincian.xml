@@ -185,6 +185,7 @@
                     <!-- Container tombol -->
                     <LinearLayout
                         android:id="@+id/layoutButton"
+                        style="?android:attr/buttonBarStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/juduldetailrncian"
@@ -194,20 +195,22 @@
 
                         <Button
                             android:id="@+id/btnTambahRincian"
+                            style="?android:attr/buttonBarButtonStyle"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:drawableTop="@drawable/ic_add_circle"
                             android:background="@drawable/circle_tambah"
                             android:textColor="@color/hitam"
-                            android:text="Tambah Rincian"/>
+                            android:text="@string/tambah_rincian" />
 
                         <Button
                             android:id="@+id/btn_refresh"
+                            style="?android:attr/buttonBarButtonStyle"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Refresh"
+                            android:text="@string/refresh"
                             android:drawableTop="@drawable/ic_refresh_black_24dp"
                             android:background="@drawable/circle_refresh"
                             android:textColor="@color/white"

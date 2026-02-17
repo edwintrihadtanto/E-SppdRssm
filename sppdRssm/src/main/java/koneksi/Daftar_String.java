@@ -22,6 +22,7 @@ public class Daftar_String {
 	private String tambh_pengikut5;
 
 	private String tgl_aktivitas;
+	private String waktu_dibuat;
 	private String jam_aktivitas;
 	private String nomor_SPT;
 	private String nomor_SPPD;
@@ -71,7 +72,7 @@ public class Daftar_String {
 			String tempat_tujuan, String lama_perj, String tgl_brngkt,
 			String tgl_kembali, String tambh_pengikut1, String tambh_pengikut2,
 			String tambh_pengikut3, String tambh_pengikut4,
-			String tambh_pengikut5, String tgl_aktivitas, String jam_aktivitas,
+			String tambh_pengikut5, String tgl_aktivitas, String waktu_dibuat, String jam_aktivitas,
 			String nomor_SPT, String nomor_SPPD, String jml_petugas,
 			String tgl_dikeluarkan, String lokasi_dikeluarkan,
 			String akun_anggaran, String surat_masuk_dari,
@@ -104,6 +105,7 @@ public class Daftar_String {
 		this.tambh_pengikut4 		= tambh_pengikut4;
 		this.tambh_pengikut5 		= tambh_pengikut5;
 		this.tgl_aktivitas 			= tgl_aktivitas;
+		this.waktu_dibuat 			= waktu_dibuat;
 		this.jam_aktivitas 			= jam_aktivitas;
 		this.nomor_SPT 				= nomor_SPT;
 		this.nomor_SPPD 			= nomor_SPPD;
@@ -183,10 +185,6 @@ public class Daftar_String {
 	// -----------------
 	public String getpass() {
 		return pass;
-	}
-
-	public void setpass(String pass) {
-		this.pass = pass;
 	}
 
 	// -----------------
@@ -310,11 +308,15 @@ public class Daftar_String {
 	public String gettgl_aktivitas() {
 		return tgl_aktivitas;
 	}
-
 	public void settgl_aktivitas(String tgl_aktivitas) {
 		this.tgl_aktivitas = tgl_aktivitas;
 	}
-
+	public String getwaktu_dibuat() {
+		return waktu_dibuat;
+	}
+	public void setwaktu_dibuat(String waktu_dibuat) {
+		this.waktu_dibuat = waktu_dibuat;
+	}
 	// -----------------
 	public String getjam_aktivitas() {
 		return jam_aktivitas;

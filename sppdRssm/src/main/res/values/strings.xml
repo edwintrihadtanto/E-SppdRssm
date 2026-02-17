@@ -121,7 +121,7 @@
     <string name="daftar_rincian_biaya_bukti" translatable="false">Daftar Rincian Biaya + Bukti</string>
     <string name="daftar_pengeluaran_riil" translatable="false">Daftar Pengeluaran Riil</string>
     <string name="tandatitik" translatable="false">:</string>
-    <string name="informasi_data_sppd" translatable="false">- INFORMASI DATA SPPD -</string>
+    <string name="informasi_data_sppd" translatable="false">Informasi SPT</string>
     <string name="halaman_utama" translatable="false">Halaman Utama</string>
     <string name="histori_spt_dan_sppd" translatable="false">Histori SPT dan SPPD</string>
     <string name="profil_pegawai" translatable="false">Profil Pegawai</string>
@@ -190,7 +190,7 @@
     <string name="nip">NIP</string>
     <string name="no_sppd">No. SPPD</string>
     <string name="tgl_sppd">Tgl. SPPD</string>
-    <string name="rincian_biaya">RINCIAN BIAYA</string>
+    <string name="rincian_biaya">RINCIAN BIAYA + BUKTI</string>
     <string name="rincian">Rincian :</string>
     <string name="entry_detail_rincian_biaya">Entry Detail Rincian Biaya</string>
     <string name="biaya">Biaya :</string>
@@ -198,7 +198,7 @@
     <string name="simpan_rincian">👉 Simpan Rincian</string>
     <string name="hapus">❌ Hapus</string>
     <string name="upload">  Upload</string>
-    <string name="rincian_biaya_riil">Rincian Biaya Riil</string>
+    <string name="rincian_biaya_riil">RINCIAN BIAYA RIIL</string>
     <string name="refresh">Refresh</string>
     <string name="simpan_riil">👉 Simpan Riil</string>
     <string name="rincian_riil">Rincian Riil</string>
@@ -208,6 +208,24 @@
     <string name="silahkan_berikan_kritik_dan_saran_anda">Silahkan Berikan Kritik dan Saran Anda</string>
     <string name="simpan">Simpan</string>
     <string name="batal">Batal</string>
+    <string name="batal_alert">❌ Batal</string>
     <string name="aplikasi_surat_perintah_perjalanan_dinas_e_sppd_digunakan_untuk_mempermudah_pengelolaan_administrasi_perjalanan_dinas_secara_digital">Aplikasi Surat Perintah Perjalanan Dinas (E-SPPD) digunakan untuk mempermudah pengelolaan administrasi perjalanan dinas secara digital.</string>
-<!--✏️🚨 ❌ 👉-->
+    <string name="nomor_spt">Nomor SPT :</string>
+    <string name="tanggal_spt">Tanggal SPT :</string>
+    <string name="tanggal_pelaksanaan">Tanggal Pelaksanaan</string>
+    <string name="panah_kekanan"> → </string>
+    <string name="petugas_yang_ditugaskan">Petugas yang Ditugaskan</string>
+    <string name="tujuan_dan_instansi">Tujuan dan Instansi</string>
+    <string name="hasil_dan_evaluasi">Hasil dan Evaluasi</string>
+    <string name="lokasitandatangan">Madiun, 23-02-2026</string>
+    <string name="tanda_tangan">( Tanda Tangan )</string>
+    <string name="simpanlaporan">✏️ Simpan</string>
+    <string name="tambah_riil">Tambah Riil</string>
+    <string name="tambah_rincian">Tambah Rincian</string>
+    <string name="posting_semua">Posting Semua</string>
+    <string name="nol">0</string>
+    <string name="total_sppd">Total SPPD</string>
+    <string name="selesai_posting">Selesai/Posting</string>
+    <string name="laporan">Laporan</string>
+    <!--✏️🚨 ❌ 👉 👍-->
 </resources>

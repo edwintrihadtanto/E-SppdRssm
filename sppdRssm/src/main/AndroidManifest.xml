@@ -53,13 +53,13 @@
         </provider>
 
         <activity android:name="com.e_sppd_rssm.MainActivityUtama" android:theme="@style/AppTheme"/>
-        <activity android:name="com.e_sppd_rssm.Daftar_Laporan_Per_Petugas" />
+        <activity android:name="com.e_sppd_rssm.List_DataSppd" />
         <activity android:name="com.e_sppd_rssm.History" />
         <activity android:name="com.e_sppd_rssm.List_DataRincian" />
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_Biaya" />
         <activity android:name="com.e_sppd_rssm.List_DataRiil" />
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
-
+        <activity android:name="com.e_sppd_rssm.List_Notif" />
 
         <activity android:name="com.e_sppd_rssm.Edit_LaporanPerjalanan" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Register_Activity_Baru" android:theme="@style/AppTheme"/>

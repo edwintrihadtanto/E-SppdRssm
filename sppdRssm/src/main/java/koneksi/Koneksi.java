@@ -55,7 +55,7 @@ public class Koneksi {
 //	public static final String hapus_data_per_uraian			    = URL_SERVER + "hapus_file/hapus_data_per_uraian.php";
 //  public static final String hapus_data_per_uraian_laporan	    = URL_SERVER + "hapus_file/hapus_data_per_uraian_laporan.php";
 //  public static final String update_rincian_biaya 		        = URL_SERVER + "update_rincian_biaya.php";
-    public static final String posting_url                          = URL_SERVER + "posting_url.php";
+//    public static final String posting_url                          = URL_SERVER + "posting_url.php";
 
 //	public static final String download_spt 		                = URL_SERVER + "prints/print_spt.php";
 //	public static final String download_sppd 	                    = URL_SERVER + "prints/print_sppd.php";
@@ -78,7 +78,6 @@ public class Koneksi {
 	public static final String list_history 						= URL_SERVERNEW + "sptsppd/list_history.php";
 	public static final String list_sptsppd 						= URL_SERVERNEW + "sptsppd/list_sptsppd.php";
 	public static final String count_sptsppd 						= URL_SERVERNEW + "sptsppd/count_sptsppd.php";
-	public static final String count_sptsppdnew						= URL_SERVERNEW + "sptsppd/count_sptsppdnew.php";
 	public static final String download_apk 						= URL_WEBSITE + "Download_Apk/";
 
 	/*LAPORAN PERJALANAN*/
@@ -111,6 +110,8 @@ public class Koneksi {
 	public static final String downloadMenginap						= URL_WEBSITE + "do_prints/Cetak_Pernyataan.php";
 	public static final String downloadTidakMenginap				= URL_WEBSITE + "do_prints/Cetak_PernyataanTidak.php";
 
+	public static final String postingSPTSPPD                       = URL_SERVERNEW + "postingSPTSPPD.php/";
+	public static final String posting_AllSPTSPPD                   = URL_SERVERNEW + "postingSemua.php";
 	public Koneksi() {
 		super();
 	}
