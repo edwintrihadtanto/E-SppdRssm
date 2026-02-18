@@ -795,6 +795,7 @@
     <string name="batal">Batal</string>
     <string name="batal_alert">❌ Batal</string>
     <string name="batal_password" translatable="false">Batal Password</string>
+    <string name="belum_dibaca">Belum dibaca</string>
     <string name="berikan_kritik_dan_saran" translatable="false">Berikan Kritik dan Saran</string>
     <string name="biaya">Biaya :</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
@@ -962,6 +963,7 @@
     <string name="skip" translatable="false">Lewati</string>
     <string name="start" translatable="false">Selesai</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="sudah_dibaca">Sudah dibaca</string>
     <string name="surat_perintah_perjalanan_dinas" translatable="false">Surat Perintah Perjalanan Dinas</string>
     <string name="tambah_riil">Tambah Riil</string>
     <string name="tambah_rincian">Tambah Rincian</string>
@@ -981,6 +983,7 @@
     <string name="tombol_kembali_register">Tombol Kembali Register</string>
     <string name="tombol_menu_awal">Tombol Menu Awal</string>
     <string name="tombol_refresh_register">Tombol Refresh Register</string>
+    <string name="total_notifikasi">Total Notifikasi</string>
     <string name="total_sppd">Total SPPD</string>
     <string name="ttd" translatable="false">🎯 TTD</string>
     <string name="tujuan_dan_instansi">Tujuan dan Instansi</string>

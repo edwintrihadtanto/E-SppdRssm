@@ -518,13 +518,9 @@ public class MainActivityUtama extends AppCompatActivity
                 .setTitle(warningversi)
                 .setCancelable(false)
                 .setIcon(R.drawable.ic_download_sppd)
-                .setPositiveButton("Download",
+                .setPositiveButton("✅ Download",
                         (dialog, id) -> {
                             dialog.dismiss();
-                            //e-Sppd.v"+kirim_versi+".apk
-                            //String kirim_versi = cek_versi_apk.getText().toString();
-                            //String kirim_versi = "1.3.2";
-//                            String Cek = cek_versi_apk;
                             try {
                                   new down_apk().execute(Koneksi.download_apk + "e-Sppd.v" + URLEncoder.encode(versiygbaru, "UTF-8")+".apk");
                             } catch (Exception ex) {
@@ -537,7 +533,6 @@ public class MainActivityUtama extends AppCompatActivity
                             dialog.dismiss();
                             MainActivityUtama.this.finish();
                             finish();
-
                         })
                 .setNeutralButton("Masuk Website",
                         (dialog, id) -> {
@@ -867,7 +862,7 @@ public class MainActivityUtama extends AppCompatActivity
                 return;
             }
             this.doubleBackToExitPressedOnce = true;
-            makeText(this, "Klik Tombol Kembali Dua Kali (2x) Untuk Keluar Dari Aplikasi E-SPPD", LENGTH_SHORT).show();
+            makeText(this, "Tekan tombol kembali [2x] untuk keluar aplikasi.", LENGTH_SHORT).show();
             new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
         }
 

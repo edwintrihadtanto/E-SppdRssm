@@ -308,6 +308,10 @@
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-hdpi/ic_user_white.png"
     },
     {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-hdpi_ic_123.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-hdpi/ic_123.png"
+    },
+    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-mdpi_ic_search_black_24dp.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-mdpi/ic_search_black_24dp.png"
     },
@@ -536,6 +540,10 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-25:/drawable/back_hijau.png"
     },
     {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xhdpi_ic_123.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xhdpi/ic_123.png"
+    },
+    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable_icon_home.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-25:/drawable/icon_home.png"
     },
@@ -562,6 +570,10 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-hdpi_ic_save_2.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-hdpi/ic_save_2.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-mdpi_ic_123.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-mdpi/ic_123.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xxhdpi_ic_vpn_key_black_24dp.png.flat",
@@ -674,6 +686,10 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xhdpi_ic_visibility_off_white.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xhdpi/ic_visibility_off_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-ldpi_ic_123.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-ldpi/ic_123.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xhdpi_ic_check.png.flat",
@@ -984,6 +1000,10 @@
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xxxhdpi/ic_add_circle.png"
     },
     {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-anydpi-v21_ic_123.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-anydpi-v21/ic_123.xml"
+    },
+    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable_register_button.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-25:/drawable/register_button.png"
     },
@@ -1154,6 +1174,10 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xxxhdpi_ic_user_white.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xxxhdpi/ic_user_white.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/layout_activity_list_notif.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-25:/layout/activity_list_notif.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xhdpi_ic_touch_app_black_24dp.png.flat",
@@ -1722,6 +1746,10 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xxhdpi_ic_playlist_add_black_24dp.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xxhdpi/ic_playlist_add_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xxxhdpi_ic_123.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xxxhdpi/ic_123.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable_ic_plus.png.flat",
@@ -2654,6 +2682,10 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-ldpi_ic_navigate_next_black_24dp.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-ldpi/ic_navigate_next_black_24dp.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xxhdpi_ic_123.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-pngs-20:/drawable-xxhdpi/ic_123.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-24:/drawable-xhdpi_ic_file_download_black.png.flat",

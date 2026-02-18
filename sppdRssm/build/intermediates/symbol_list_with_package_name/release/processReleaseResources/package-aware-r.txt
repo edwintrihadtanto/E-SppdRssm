@@ -1294,6 +1294,7 @@ drawable hijau_background
 drawable hijau_background_transparan
 drawable history
 drawable hitam
+drawable ic_123
 drawable ic_add_circle
 drawable ic_arrow_back_black_24dp
 drawable ic_assignment_black_24dp
@@ -1580,6 +1581,7 @@ id action_settings
 id action_text
 id actionbar2
 id actionbar3
+id actionbarNotif
 id actionbar_menuutamaatas
 id actionbar_menuutamaatas1
 id actionbar_profil
@@ -1637,6 +1639,7 @@ id btn_posting
 id btn_postingall
 id btn_refresh
 id btn_refresh_history
+id btn_refresh_notif
 id btn_refresh_profil
 id btn_refresh_sppd
 id btn_refresh_utama
@@ -1748,6 +1751,7 @@ id groups
 id grsbwh_row_list
 id grslogtengah
 id grslogtengahlaporan
+id grslogtengahlistnotif
 id grslogtengahlistriil
 id grslogtengahlistrincian
 id grslogtengahriil
@@ -1851,6 +1855,7 @@ id labeled
 id largeLabel
 id laylistrecent
 id layoutButton
+id layoutButtonNotif
 id layoutButtonSPTSPPD
 id layoutDots
 id layout_info_notif
@@ -1864,6 +1869,7 @@ id line3
 id listMode
 id listRiilBiaya
 id listRincianBiaya
+id list_daftar_notif
 id list_daftar_sppd
 id list_history
 id list_item
@@ -2029,7 +2035,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textVersi
-id textView
 id text_download_sppd
 id text_download_spt
 id text_dua
@@ -2110,8 +2115,11 @@ id txtRincianBiaya
 id txtTanggal
 id txtTitle
 id txt_jumlah_laporan
+id txt_jumlah_notif
 id txt_jumlah_sppd
 id txt_kota_tanggal
+id txt_notif_belum
+id txt_notif_terbca
 id txt_presentasi
 id txt_sppd_selesai
 id txtinfopembuat
@@ -2220,6 +2228,7 @@ layout activity_laporansppd
 layout activity_list_datariil
 layout activity_list_datarincian
 layout activity_list_datasppd
+layout activity_list_notif
 layout activity_main
 layout activity_main_lib
 layout activity_main_petugas
@@ -2370,6 +2379,7 @@ string appbar_scrolling_view_behavior
 string batal
 string batal_alert
 string batal_password
+string belum_dibaca
 string berikan_kritik_dan_saran
 string biaya
 string bottom_sheet_behavior
@@ -2537,6 +2547,7 @@ string simpanlaporan
 string skip
 string start
 string status_bar_notification_info_overflow
+string sudah_dibaca
 string surat_perintah_perjalanan_dinas
 string tambah_riil
 string tambah_rincian
@@ -2556,6 +2567,7 @@ string tombol_kembali_profil
 string tombol_kembali_register
 string tombol_menu_awal
 string tombol_refresh_register
+string total_notifikasi
 string total_sppd
 string ttd
 string tujuan_dan_instansi

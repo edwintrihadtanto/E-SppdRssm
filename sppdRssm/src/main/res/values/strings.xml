@@ -227,5 +227,8 @@
     <string name="total_sppd">Total SPPD</string>
     <string name="selesai_posting">Selesai/Posting</string>
     <string name="laporan">Laporan</string>
-    <!--✏️🚨 ❌ 👉 👍-->
+    <string name="total_notifikasi">Total Notifikasi</string>
+    <string name="sudah_dibaca">Sudah dibaca</string>
+    <string name="belum_dibaca">Belum dibaca</string>
+    <!--✏️🚨 ❌ 👉 👍 🔥-->
 </resources>

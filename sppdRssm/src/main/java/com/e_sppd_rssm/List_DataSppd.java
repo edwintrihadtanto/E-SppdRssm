@@ -46,17 +46,15 @@ public class List_DataSppd extends AppCompatActivity {
 	private ListView listView;
 	private List<Daftar_String> list;
     private ProgressDialog loading;
-	String transfer_nip = null;
-	String nipLokal, totalsppd;
-	RelativeLayout laylistrecent;
-
 	private TextView txt_jumlah_sppd;
 	private TextView txt_sppd_selesai;
 	private TextView txt_jumlah_laporan;
 	private int totalSppd = 0;
 	private int sppdSelesai = 0;
 	private int sppdLaporan = 0;
-
+	String transfer_nip = null;
+	String nipLokal, totalsppd;
+	RelativeLayout laylistrecent;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -161,32 +159,28 @@ public class List_DataSppd extends AppCompatActivity {
         @Override
 		protected void onPostExecute(String result) {
 			loading.dismiss();
+			txt_jumlah_sppd.setText(String.valueOf(totalSppd));
+			txt_sppd_selesai.setText(String.valueOf(sppdSelesai));
+			txt_jumlah_laporan.setText(String.valueOf(sppdLaporan));
 
 			if ("SERVER_NULL".equals(result)) {
 				Toast.makeText(List_DataSppd.this,
-						"Server tidak merespon atau diblok firewall",
+						"⚠ Server tidak merespon atau diblok firewall",
 						Toast.LENGTH_LONG).show();
 				return;
 			}
 
 			if (result != null) {
 				Toast.makeText(List_DataSppd.this,
-						"Error: " + result,
+						"⚠ Error : " + result,
 						Toast.LENGTH_LONG).show();
 				return;
 			}
 
 			if (list == null || list.isEmpty()) {
-				Toast.makeText(List_DataSppd.this,
-						"Tidak ada ditemukan data SPPD",
-						Toast.LENGTH_LONG).show();
+				showPesanSnackbar("❌ Tidak ditemukan data SPPD!");
 				return;
 			}
-
-			txt_jumlah_sppd.setText(String.valueOf(totalSppd));
-			txt_sppd_selesai.setText(String.valueOf(sppdSelesai));
-			txt_jumlah_laporan.setText(String.valueOf(sppdLaporan));
-
 			menampilkan_nama_pegawai();
 		}
 	}
