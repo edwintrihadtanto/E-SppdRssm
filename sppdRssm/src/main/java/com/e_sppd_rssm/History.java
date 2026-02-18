@@ -96,7 +96,7 @@ public class History extends AppCompatActivity {
 			loading = ProgressDialog.show(
 					History.this,
 					"",
-					"Mengambil rincian biaya riil...",
+					"Sedang memuat data history sppd...",
 					false
 			);
 		}

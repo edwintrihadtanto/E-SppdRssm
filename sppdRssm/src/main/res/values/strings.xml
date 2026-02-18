@@ -230,5 +230,7 @@
     <string name="total_notifikasi">Total Notifikasi</string>
     <string name="sudah_dibaca">Sudah dibaca</string>
     <string name="belum_dibaca">Belum dibaca</string>
+    <string name="history_versi">History Versi</string>
+    <string name="scrollviewhis">scrollviewhis</string>
     <!--✏️🚨 ❌ 👉 👍 🔥-->
 </resources>

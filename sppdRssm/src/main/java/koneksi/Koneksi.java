@@ -1,22 +1,5 @@
 package koneksi;
 
-import android.util.Log;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 
 /** @noinspection ALL*/
 public class Koneksi {
@@ -97,7 +80,9 @@ public class Koneksi {
 	public static final String hapus_riil_biaya 		        	= URL_SERVERNEW + "riil/hapus_riil_biaya.php/";
 	public static final String simpan_riil_biaya 		        	= URL_SERVERNEW + "riil/simpan_riil_biaya.php/";
 //	public static final String FILE_UPLOAD_URL 						= URL_SERVER + "temp/Upload_Terbaru.php/";
+	public static final String history_versi 		        		= URL_SERVERNEW + "history_versi.php/";
 	public static final String FolderUpload 						= URL_SERVERNEW + "upload/";
+	public static final String tutorial 							= "https://apprssm.rssoedono.jatimprov.go.id/esppd/Download_Apk/tutorial.pdf";
 
 	/*DOWNLOAD LAPORAN*/
 	public static final String downloadLapPerj						= URL_WEBSITE + "do_prints/Cetak_Laporan_Perj_Dinas.php";

@@ -51,6 +51,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+        <activity android:name="koneksi.PdfViewerActivity"/>
 
         <activity android:name="com.e_sppd_rssm.MainActivityUtama" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.List_DataSppd" />
@@ -60,6 +61,7 @@
         <activity android:name="com.e_sppd_rssm.List_DataRiil" />
         <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
         <activity android:name="com.e_sppd_rssm.List_Notif" />
+        <activity android:name="com.e_sppd_rssm.HistoryVersiSimpleActivity" />
 
         <activity android:name="com.e_sppd_rssm.Edit_LaporanPerjalanan" android:theme="@style/AppTheme"/>
         <activity android:name="com.e_sppd_rssm.Register_Activity_Baru" android:theme="@style/AppTheme"/>

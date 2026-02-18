@@ -19,14 +19,14 @@ public class Tampil_Bantuan extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tutorial);
 	
-		Button1 = (Button) findViewById(R.id.Button1); //Data Tidak Bisa Tampil
-		Button2 = (Button) findViewById(R.id.Button2); //Tidak Bisa Posting
-		Button3 = (Button) findViewById(R.id.Button3); //Cara-Cara Posting
-		Button4 = (Button) findViewById(R.id.Button4); //Menampilkan Menu Pilihan
-		Button5 = (Button) findViewById(R.id.Button5); //Cara Regristrasi
-		Button6 = (Button) findViewById(R.id.Button6); //Cara Ganti Password
-		Button7 = (Button) findViewById(R.id.Button7); //Lupa Password
-		Button8 = (Button) findViewById(R.id.Button8); //Edit Laporan
+		Button1 = findViewById(R.id.Button1); //Data Tidak Bisa Tampil
+		Button2 = findViewById(R.id.Button2); //Tidak Bisa Posting
+		Button3 = findViewById(R.id.Button3); //Cara-Cara Posting
+		Button4 = findViewById(R.id.Button4); //Menampilkan Menu Pilihan
+		Button5 = findViewById(R.id.Button5); //Cara Regristrasi
+		Button6 = findViewById(R.id.Button6); //Cara Ganti Password
+		Button7 = findViewById(R.id.Button7); //Lupa Password
+		Button8 = findViewById(R.id.Button8); //Edit Laporan
 		
 		Button1.setOnClickListener(new View.OnClickListener() {
 			

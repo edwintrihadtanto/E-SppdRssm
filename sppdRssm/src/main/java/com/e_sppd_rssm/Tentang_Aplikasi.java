@@ -29,6 +29,8 @@ import java.util.HashMap;
 import bantuan_tutorial.Tutorial_Ke2;
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
+import koneksi.PdfViewerActivity;
+
 public class Tentang_Aplikasi extends AppCompatActivity {
     private final Handler handler = new Handler();
 	String nippegawai, tglkritik;
@@ -57,7 +59,7 @@ public class Tentang_Aplikasi extends AppCompatActivity {
 
 		historyVersi.setOnClickListener(v -> {
 			// TODO Auto-generated method stub
-			/*popUp();*/
+			startActivity(new Intent(Tentang_Aplikasi.this, HistoryVersiSimpleActivity.class));
 		});
 
 		feedBack.setOnClickListener(v -> {
@@ -67,9 +69,12 @@ public class Tentang_Aplikasi extends AppCompatActivity {
 
 		tutorial.setOnClickListener(v -> {
             // TODO Auto-generated method stub
-            Intent i;
+            /*Intent i;
             i = new Intent(Tentang_Aplikasi.this, Tutorial_Ke2.class);
-            startActivity(i);
+            startActivity(i);*/
+			Intent i = new Intent(Tentang_Aplikasi.this, PdfViewerActivity.class);
+			i.putExtra("pdf_url",Koneksi.tutorial);
+			startActivity(i);
         });
 
 	}
