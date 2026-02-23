@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -28,8 +27,6 @@ import config_swipe.PrefManager;
 
 
 public class Tutorial_Ke2 extends AppCompatActivity {
-
-
 	private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
@@ -53,19 +50,17 @@ public class Tutorial_Ke2 extends AppCompatActivity {
       // }
  
         // Making notification bar transparent
-        if (Build.VERSION.SDK_INT >= 16) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
- 
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+
         setContentView(R.layout.activity_welcome);
  
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        btnSkip = (Button) findViewById(R.id.btn_skip);
-        btnNext = (Button) findViewById(R.id.btn_next);
+        viewPager = findViewById(R.id.view_pager);
+        dotsLayout = findViewById(R.id.layoutDots);
+        btnSkip = findViewById(R.id.btn_skip);
+        btnNext = findViewById(R.id.btn_next);
  
-        btn_panah 	= (ImageView) findViewById(R.id.btn_panah);
-        btn_ok 		= (ImageView) findViewById(R.id.btn_ok);
+        btn_panah 	= findViewById(R.id.btn_panah);
+        btn_ok 		= findViewById(R.id.btn_ok);
  
         // layouts of all welcome sliders
         // add few more layouts if you want
@@ -87,54 +82,42 @@ public class Tutorial_Ke2 extends AppCompatActivity {
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
         mFlipping=1;
         viewPager.startLayoutAnimation();
-        btnSkip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              //  launchHomeScreen();
-            	finish();
-            
-            }
+        btnSkip.setOnClickListener(v -> {
+          //  launchHomeScreen();
+            finish();
+
         });
  
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
-                int current = getItem(+1);
-                if (current < layouts.length) {
-                    // move to next screen
-                    viewPager.setCurrentItem(current);
-                } else {
-                  // launchHomeScreen();
-                	finish();
-                	
-                }
+        btnNext.setOnClickListener(v -> {
+            // checking for last page
+            // if last page home screen will be launched
+            int current = getItem();
+            if (current < layouts.length) {
+                // move to next screen
+                viewPager.setCurrentItem(current);
+            } else {
+              // launchHomeScreen();
+                finish();
+
             }
         });
         
-        btn_ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              //  launchHomeScreen();
-            	finish();
-            
-            }
+        btn_ok.setOnClickListener(v -> {
+          //  launchHomeScreen();
+            finish();
+
         });
-        btn_panah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
-                int current = getItem(+1);
-                if (current < layouts.length) {
-                    // move to next screen
-                    viewPager.setCurrentItem(current);
-                } else {
-                  // launchHomeScreen();
-                	finish();
-                	
-                }
+        btn_panah.setOnClickListener(v -> {
+            // checking for last page
+            // if last page home screen will be launched
+            int current = getItem();
+            if (current < layouts.length) {
+                // move to next screen
+                viewPager.setCurrentItem(current);
+            } else {
+              // launchHomeScreen();
+                finish();
+
             }
         });
     }
@@ -158,8 +141,8 @@ public class Tutorial_Ke2 extends AppCompatActivity {
             dots[currentPage].setTextColor(colorsActive[currentPage]);
     }
  
-    private int getItem(int i) {
-        return viewPager.getCurrentItem() + i;
+    private int getItem() {
+        return viewPager.getCurrentItem() + 1;
     }
  
     private void launchHomeScreen() { // MENAMPILKAN AKTIVITY SETELAH PROSES TUTORIAL SELESAI
@@ -207,11 +190,9 @@ public class Tutorial_Ke2 extends AppCompatActivity {
      */
     @SuppressLint("NewApi") 
     private void changeStatusBarColor() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.TRANSPARENT);
-        }
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.TRANSPARENT);
     }
  
     /**
