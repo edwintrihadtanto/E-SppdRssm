@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.e_sppd.rssm.R;
 
@@ -50,7 +51,7 @@ public class HistoryVersiSimpleActivity extends AppCompatActivity {
         finish();
         return true;
     }
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint({"ResourceAsColor", "SetTextI18n"})
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void loadHistory() {
         progressBar.setVisibility(View.VISIBLE);
@@ -79,7 +80,7 @@ public class HistoryVersiSimpleActivity extends AppCompatActivity {
                 }
 
                 JSONArray historyArray = json.getJSONArray("history");
-
+                Typeface typeface = ResourcesCompat.getFont(this, R.font.poppins_regular);
                 runOnUiThread(() -> {
                     progressBar.setVisibility(View.GONE);
 
@@ -87,34 +88,27 @@ public class HistoryVersiSimpleActivity extends AppCompatActivity {
                         for (int i = 0; i < historyArray.length(); i++) {
                             JSONObject item = historyArray.getJSONObject(i);
 
-                            LinearLayout card = new LinearLayout(this);
-                            card.setOrientation(LinearLayout.VERTICAL);
-                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                                    LinearLayout.LayoutParams.MATCH_PARENT,
-                                    LinearLayout.LayoutParams.WRAP_CONTENT
-                            );
-                            params.setMargins(0, 0, 0, 24);
-                            card.setLayoutParams(params);
-                            card.setPadding(24, 24, 24, 24);
-                            card.setBackgroundResource(R.drawable.card_background);
+                            LinearLayout card = getLayout();
 
                             TextView versi = new TextView(this);
                             versi.setText("Versi: " + item.getString("versi"));
                             versi.setTextSize(16);
                             versi.setTextColor(R.color.hitam);
-                            versi.setTypeface(null, Typeface.BOLD);
+                            versi.setTypeface(typeface, Typeface.BOLD);
                             card.addView(versi);
 
                             TextView tanggal = new TextView(this);
                             tanggal.setText("Tanggal Rilis: " + item.getString("tanggal_rilis"));
                             tanggal.setTextSize(14);
                             tanggal.setTextColor(R.color.hitam);
+                            tanggal.setTypeface(typeface);
                             card.addView(tanggal);
 
                             TextView fitur = new TextView(this);
                             fitur.setText("Fitur: " + item.getString("fitur"));
                             fitur.setTextSize(14);
                             fitur.setTextColor(R.color.hitam);
+                            fitur.setTypeface(typeface);
                             card.addView(fitur);
 
                             /*container.addView(card);*/
@@ -136,6 +130,33 @@ public class HistoryVersiSimpleActivity extends AppCompatActivity {
         }).start();
     }
 
+    private LinearLayout getLayout() {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.setMargins(0, 0, 0, 24);
+        card.setLayoutParams(params);
+        card.setPadding(24, 24, 24, 24);
+        card.setBackgroundResource(R.drawable.card_background);
+        return card;
+    }
+
+    private LinearLayout getLinearLayout() {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.setMargins(0, 0, 0, 24);
+        card.setLayoutParams(params);
+        card.setPadding(24, 24, 24, 24);
+        card.setBackgroundResource(R.drawable.card_background);
+        return card;
+    }
     private void addCardWithFadeIn(LinearLayout card) {
         // Set initial alpha ke 0 (invisible)
         card.setAlpha(0f);

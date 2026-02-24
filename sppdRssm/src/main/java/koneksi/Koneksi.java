@@ -82,7 +82,7 @@ public class Koneksi {
 //	public static final String FILE_UPLOAD_URL 						= URL_SERVER + "temp/Upload_Terbaru.php/";
 	public static final String history_versi 		        		= URL_SERVERNEW + "history_versi.php/";
 	public static final String FolderUpload 						= URL_SERVERNEW + "upload/";
-	public static final String tutorial 							= "https://apprssm.rssoedono.jatimprov.go.id/esppd/Download_Apk/tutorial.pdf";
+	public static final String tutorial 							= URL_WEBSITE + "Download_Apk/tutorial.pdf";
 
 	/*DOWNLOAD LAPORAN*/
 	public static final String downloadLapPerj						= URL_WEBSITE + "do_prints/Cetak_Laporan_Perj_Dinas.php";

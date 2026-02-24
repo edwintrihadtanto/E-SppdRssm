@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -28,11 +27,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -61,7 +58,6 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.HashMap;
 
-//import koneksi.JSONParser;
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
 import koneksi.PermissionHelper;
@@ -90,18 +86,6 @@ public class Login_Activity extends AppCompatActivity {
 	public final static String TAG_EMAIL 		= "email";
 	private static final int progress_DOWNLOAD 	= 0;
 	public  static final int RequestPermissionCode_StorageCamera  = 11 ;
-
-	private final String[] daftarversiaplikasi={
-			"Versi 4.0",
-			"Versi 3.0",
-			"Versi 2.1",
-			"Versi 2.0",
-			"Versi 1.3.3",
-			"Versi 1.3.2",
-			"Versi 1.3.1",
-			"Versi 1.2",
-			"Versi 1.1",
-			"Versi 1.0"};
 	private String nip, nama_pegawai, jabatan, golongan, unit, password, email, kirim_versi;
 	public static final String my_shared_preferences = "my_shared_preferences";
 	public static final String session_status_level1 = "session_status_level1";
@@ -1123,8 +1107,8 @@ public class Login_Activity extends AppCompatActivity {
 	private void infodialogback() {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 		ad.setTitle("Informasi");
-		ad.setMessage("Anda akan Keluar ?");
-		ad.setIcon(R.drawable.ic_info_outline_24dp);
+		ad.setMessage("Keluar dari login aplikasi ?");
+		ad.setIcon(R.drawable.ic_warning_black);
 		ad.setPositiveButton("Ya", (dialog, which) -> {
 			Login_Activity.this.finish();
 			finish();
@@ -1132,129 +1116,6 @@ public class Login_Activity extends AppCompatActivity {
 		ad.setNegativeButton("Tidak", (dialog, which) ->
 				dialog.dismiss());
 		ad.show();
-	}
-
-	private void tampilinformasi() {
-		final Dialog dialog = new Dialog(this);
-		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		dialog.setContentView(R.layout.dialog_informasi_update_versi);
-
-		listView	 = dialog.findViewById(R.id.listupdate);
-		arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, daftarversiaplikasi);
-		listView.setAdapter(arrayAdapter);
-
-		listView.setOnItemClickListener((parent, view, position, id) -> {
-			String message="Anda Memilih "+((TextView)view).getText();
-			String ambil = ((TextView)view).getText().toString();
-
-			String versikedelapan = "Versi 2.1";
-			String versiketujuh = "Versi 2.0";
-			String versikeenam 	= "Versi 1.3.3";
-			String versikelima 	= "Versi 1.3.2";
-			String versikeempat = "Versi 1.3.1";
-			String versiketiga 	= "Versi 1.2";
-			String versikedua 	= "Versi 1.1";
-			String versipertama = "Versi 1.0";
-			if (ambil.equals(versipertama)){
-				String isinya="- Aplikasi E-SPDD merupakan Aplikasi Pertama berbasis Mobile yang memiliki fungsi untuk mempermudah kinerja pegawai dalam pembuatan Laporan SPPD, Laporan Rincian Perjalanan Dinas, serta Laporan Rincian Perjalanan Dinas\n";
-				info_versi(isinya);
-			}else if (ambil.equals(versikedua)){
-				String isinya="- Memperbaiki masalah bugs laporan pada versi sebelumnya\n";
-				info_versi(isinya);
-			}else if (ambil.equals(versiketiga)){
-				String isinya="Memperbaiki masalah bugs register pada versi sebelumnya\n";
-				info_versi(isinya);
-			}else if (ambil.equals(versikeempat)){
-				String isinya="- Memperbaiki masalah bugs uploads foto pada versi sebelumnya\n";
-				info_versi(isinya);
-			}else if (ambil.equals(versikelima)){
-				String isinya="- Memperbaiki masalah bugs downloads laporan pada versi sebelumnya\n";
-				info_versi(isinya);
-			}else if (ambil.equals(versikeenam)){
-				String isinya= "- Memperbaiki masalah bugs pada versi sebelumnya\n" +
-						"- Penambahan Fitur Baru Kamera\n" +
-						"- Design Baru\n" +
-						"- Fungsi-fungsi Baru\n" +
-						"- Dapat Melakukan Edit Data Rincian dan Rill Biaya\n";
-				info_versi(isinya);
-			}else if (ambil.equals(versiketujuh)){
-				String isinya= "- Tampilan Baru, Lebih Simple dan Mudah Pengoperasian\n" +
-						"- Penambahan Fitur Calling Problem\n" +
-						"- Memperbaiki Permasalahan Beberapa Bugs Dari Versi Sebelumnya\n" +
-						"- Penambahan Session Login, dimana Pengguna Tidak Diperlukan Login Lagi\n" +
-						"- Penambahan Tombol Hapus Pada Sesi Pembuatan Laporan Perincian Biaya";
-				info_versi(isinya);
-
-			}else if (ambil.equals(versikedelapan)){
-				String a= "Versi 2.1  Comming Soon";
-				Toast.makeText(getApplicationContext(), a,
-						Toast.LENGTH_LONG).show();
-				String isinya= "::: Berdasarkan Kritik dan Saran Dari Pengguna Aplikasi E-SPPD :::\n" +
-						"- Penggabungan Laporan Perjalanan Dinas Berkelompok sehingga " +
-						"Hanya Perlu Membuat Satu Laporan Perjalanan Dinas Dalam (SPT Yang Berkelompok)\n" +
-						"- Penambahan Tutorial Video Pengoperasian Aplikasi E-SPPD";
-				info_versi_commingsoon(isinya);
-			}else{
-				String isinya= "Tidak Ada Informasi Versi";
-				info_versi(isinya);
-			}
-			Toast.makeText(getApplicationContext(), message,
-					Toast.LENGTH_LONG).show();
-		});
-		dialog.show();
-	}
-
-	public void setticker(LinearLayout parent_layout, String text,
-						  Context Login) {
-		if (!text.isEmpty()) {
-
-			TextView view = new TextView(Login);
-			view.setText(text);
-
-			view.setTextColor(Color.BLACK);
-			view.setTextSize(23.5F);
-
-			Context context = view.getContext(); // gets the context of the view
-
-			// measures the unconstrained size of the view
-			// before it is drawn in the layout
-			view.measure(View.MeasureSpec.UNSPECIFIED,
-					View.MeasureSpec.UNSPECIFIED);
-
-			// takes the unconstrained width of the view
-			float width = view.getMeasuredWidth();
-			float height = view.getMeasuredHeight();
-
-			// gets the screen width
-			@SuppressWarnings("deprecation")
-			float screenWidth = ((AppCompatActivity) context).getWindowManager()
-					.getDefaultDisplay().getWidth();
-
-			view.setLayoutParams(new LinearLayout.LayoutParams((int) width,
-					(int) height, 1f));
-
-			System.out.println("width and screenwidth are" + width + "/"
-					+ screenWidth + "///" + view.getMeasuredWidth());
-
-			// performs the calculation
-			float toXDelta = width - (screenWidth - 0);
-
-			// sets toXDelta to -300 if the text width is smaller that the
-			// screen size
-			if (toXDelta < 0) {
-				toXDelta = 0 - screenWidth;// -300;
-			} else {
-				toXDelta = 0 - screenWidth - toXDelta;// -300 - toXDelta;
-			}
-			// Animation parameters
-			Animation mAnimation = new TranslateAnimation(screenWidth, toXDelta, 0, 0);
-			mAnimation.setDuration(15000);
-			mAnimation.setRepeatMode(Animation.RESTART);
-			mAnimation.setRepeatCount(Animation.INFINITE);
-
-			view.setAnimation(mAnimation);
-			parent_layout.addView(view);
-		}
 	}
 
 	public void onRequestPermissionsResult(int RC, @NonNull String[] per, @NonNull int[] PResult) {

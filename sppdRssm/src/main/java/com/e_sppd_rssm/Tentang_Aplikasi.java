@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.TooltipCompat;
 import androidx.cardview.widget.CardView;
 
 import com.e_sppd.rssm.BuildConfig;
@@ -45,6 +46,10 @@ public class Tentang_Aplikasi extends AppCompatActivity {
         CardView tutorial = findViewById(R.id.tutorial);
         CardView feedBack = findViewById(R.id.feedback);
         TextView textVersion = findViewById(R.id.textVersi);
+
+		TooltipCompat.setTooltipText(historyVersi, "Lihat riwayat versi aplikasi");
+		TooltipCompat.setTooltipText(tutorial, "Buka panduan penggunaan aplikasi");
+		TooltipCompat.setTooltipText(feedBack, "Kirim kritik dan saran");
 
 		Bundle b = getIntent().getExtras();
         assert b != null;
