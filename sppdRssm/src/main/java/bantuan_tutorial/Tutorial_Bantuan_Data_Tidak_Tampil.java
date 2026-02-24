@@ -22,7 +22,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.e_sppd.rssm.R;
-import com.e_sppd_rssm.Login_Activity;
+import com.fungsiutama.Login_Activity;
 
 import config_swipe.PrefManager;
 

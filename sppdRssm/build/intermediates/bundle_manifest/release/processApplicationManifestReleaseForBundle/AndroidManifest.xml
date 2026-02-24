@@ -5,7 +5,7 @@
     android:versionName="4.0" >
 
     <uses-sdk
-        android:minSdkVersion="18"
+        android:minSdkVersion="21"
         android:targetSdkVersion="28" />
 
     <uses-feature
@@ -21,11 +21,15 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
+    <permission
+        android:name="com.e_sppd.rssm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.e_sppd.rssm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
     <application
-        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:debuggable="true"
         android:extractNativeLibs="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -34,7 +38,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.e_sppd_rssm.Splash_Screen"
+            android:name="com.fungsiutama.Splash_Screen"
             android:exported="true"
             android:launchMode="standard" >
             <intent-filter>
@@ -44,7 +48,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.e_sppd_rssm.Login_Activity"
+            android:name="com.fungsiutama.Login_Activity"
             android:exported="true"
             android:theme="@style/AppTheme" >
             <intent-filter>
@@ -66,30 +70,30 @@
 
         <activity android:name="koneksi.PdfViewerActivity" />
         <activity
-            android:name="com.e_sppd_rssm.MainActivityUtama"
+            android:name="com.fungsiutama.MainActivityUtama"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.e_sppd_rssm.List_DataSppd" />
-        <activity android:name="com.e_sppd_rssm.History" />
-        <activity android:name="com.e_sppd_rssm.List_DataRincian" />
-        <activity android:name="com.e_sppd_rssm.Edit_Rincian_Biaya" />
-        <activity android:name="com.e_sppd_rssm.List_DataRiil" />
-        <activity android:name="com.e_sppd_rssm.Edit_Rincian_BiayaRiil" />
-        <activity android:name="com.e_sppd_rssm.List_Notif" />
-        <activity android:name="com.e_sppd_rssm.HistoryVersiSimpleActivity" />
+        <activity android:name="com.fungsiutama.List_DataSppd" />
+        <activity android:name="com.fungsiutama.History" />
+        <activity android:name="com.fungsiutama.List_DataRincian" />
+        <activity android:name="com.fungsiutama.Edit_Rincian_Biaya" />
+        <activity android:name="com.fungsiutama.List_DataRiil" />
+        <activity android:name="com.fungsiutama.Edit_Rincian_BiayaRiil" />
+        <activity android:name="com.fungsiutama.List_Notif" />
+        <activity android:name="com.fungsiutama.HistoryVersiSimpleActivity" />
         <activity
-            android:name="com.e_sppd_rssm.Edit_LaporanPerjalanan"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name="com.e_sppd_rssm.Register_Activity_Baru"
+            android:name="com.fungsiutama.Edit_LaporanPerjalanan"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.e_sppd_rssm.Tentang_Aplikasi"
+            android:name="com.fungsiutama.Register_Activity_Baru"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.e_sppd_rssm.Profil"
+            android:name="com.fungsiutama.Tentang_Aplikasi"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.e_sppd_rssm.Tampil_Bantuan"
+            android:name="com.fungsiutama.Profil"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.Tampil_Bantuan"
             android:theme="@style/AppTheme" />
         <activity
             android:name="bantuan_tutorial.Tutorial"
@@ -200,6 +204,41 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.e_sppd.rssm.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.e_sppd.rssm.sppdRssm-mergeReleaseResources-42:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\rssm_\\.gradle\\caches\\8.9\\transforms\\348e96839a69e9084e51d7d247ce68b6\\transformed\\material-1.13.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        }
+    ]
+}

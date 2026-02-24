@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -22,7 +21,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.e_sppd.rssm.R;
-import com.e_sppd_rssm.Login_Activity;
+import com.fungsiutama.Login_Activity;
 
 import config_swipe.PrefManager;
 
