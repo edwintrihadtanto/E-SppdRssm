@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "E:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\472c4d61\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "E:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\472c4d61\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "rssm::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86_64",
+      "artifactName": "rssm",
+      "output": "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\build\\intermediates\\cxx\\RelWithDebInfo\\472c4d61\\obj\\x86_64\\librssm.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "E:\\SDK\\ndk\\29.0.14206865\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "E:\\SDK\\ndk\\29.0.14206865\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

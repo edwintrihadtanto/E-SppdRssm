@@ -1,0 +1,15 @@
+# ninja log v5
+0	86	7943008456097925	CMakeFiles/rssm.dir/rssm.cpp.o	60f712d2da4982cb
+87	261	7943008457223800	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/4x2a1n2u/obj/arm64-v8a/librssm.so	1780c2ab163f39d6
+0	11	0	clean	8962b3a4fdabe0d
+0	117	7943012990686656	CMakeFiles/rssm.dir/rssm.cpp.o	60f712d2da4982cb
+117	889	7943012997885226	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/4x2a1n2u/obj/arm64-v8a/librssm.so	1780c2ab163f39d6
+0	13	0	clean	8962b3a4fdabe0d
+8	1288	7943037728975490	CMakeFiles/rssm.dir/rssm.cpp.o	60f712d2da4982cb
+1288	3799	7943037755365436	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/4x2a1n2u/obj/arm64-v8a/librssm.so	1780c2ab163f39d6
+0	9	0	clean	8962b3a4fdabe0d
+0	9	0	clean	8962b3a4fdabe0d
+0	8	0	clean	8962b3a4fdabe0d
+0	10	0	clean	8962b3a4fdabe0d
+1	954	7943906355719260	CMakeFiles/rssm.dir/rssm.cpp.o	60f712d2da4982cb
+955	1785	7943906363584230	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/4x2a1n2u/obj/arm64-v8a/librssm.so	1780c2ab163f39d6

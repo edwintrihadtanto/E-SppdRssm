@@ -11,7 +11,7 @@
         android:layout_marginRight="5dp"
         android:gravity="left|center_vertical"
         android:text="Nomor SPT :"
-        android:textColor="@color/white"
+        android:textColor="@color/hitam"
         android:textSize="14sp"
         android:textStyle="bold|normal" />
 
@@ -22,7 +22,7 @@
         android:layout_marginRight="5dp"
         android:layout_toRightOf="@+id/fdcd"
         android:gravity="left|center_vertical"
-        android:textColor="@color/kuning"
+        android:textColor="@color/hitam"
         android:textSize="14sp"
         android:textStyle="bold|italic" />
 
@@ -44,7 +44,7 @@
         android:layout_marginRight="5dp"
         android:gravity="center|center_vertical"
         android:text="Nama Pegawai"
-        android:textColor="@color/white"
+        android:textColor="@color/hitam"
         android:textSize="17sp"
         android:textStyle="bold|italic" />
 

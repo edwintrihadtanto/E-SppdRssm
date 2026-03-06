@@ -1,1450 +1,1458 @@
 [
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_back2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_back2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_plus.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_plus.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_swap_horiz_red.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_swap_horiz_red.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logowarna.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logowarna.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_refresh3.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/refresh3.gif"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gnti_pass3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gnti_pass3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logosimbol2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logosimbol2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_background.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/background.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_user.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_user.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_file.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_file.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_check.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_check.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lupa1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lupa1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icontaktau.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icontaktau.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/menu_activity_main_drawer.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/menu/activity_main_drawer.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_login_button.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/login_button.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_menu_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_menu_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_splash2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_splash2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pop_up.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pop_up.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_list_view_pegawai.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/list_view_pegawai.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_alur1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/alur1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hijau.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/hijau.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_rssm_gif.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_rssm_gif.gif"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_refresh2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_refresh2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_register_button.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/register_button.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_swap_horiz_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_swap_horiz_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_selesai.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/selesai.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg5.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg5.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_profils.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/profils.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_posting.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_posting.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_slide_in_right.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/slide_in_right.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_file_download_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_file_download_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_app_bar_main.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/app_bar_main.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_kotaknama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_kotaknama.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_lock_icon.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/lock_icon.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_gantipass.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_gantipass.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_rssm_gif3.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_rssm_gif3.gif"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_search_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_search_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_simpan2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_simpan2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_badge_primary.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/badge_primary.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg2_2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg2_2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menu_pilihan1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menu_pilihan1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_keterangan.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_keterangan.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur4.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_home.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_home.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tdktampildata4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tdktampildata4.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_alpha.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/alpha.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_viewutamaframe.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_viewutamaframe.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/menu_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/menu/main.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_simpan.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_simpan.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_progress.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_progress.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_centang.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/centang.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hijau_background_transparan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/hijau_background_transparan.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor1_1_1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor1_1_1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/animator_welcome_anim_dua.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/animator/welcome_anim_dua.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_visibility_white.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_visibility_white.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_content_copy_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_content_copy_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_cara_menampilkan_menu_pilihan1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/cara_menampilkan_menu_pilihan1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg4.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_list_notif.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_list_notif.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_trans.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_trans.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_empat_gambar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/empat_gambar.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_tutorial.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_tutorial.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_transparan_baru.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/transparan_baru.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tdktampildata3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tdktampildata3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_rssm_gif2.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_rssm_gif2.gif"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_view_activitysppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_view_activitysppd.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_tambah.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_tambah.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_solusi_koneksi.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/solusi_koneksi.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gnti_pass2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gnti_pass2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_list_datariil.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_list_datariil.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_silahkan_register.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/silahkan_register.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_menu_pilihan2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/menu_pilihan2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_tambah.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_tambah.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_lock_open_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_lock_open_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-mdpi/ic_launcher_foreground.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_welcometutor.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/welcometutor.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_downloadstatus.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_downloadstatus.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_beberapa_menu1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/beberapa_menu1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_hapus.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_hapus.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logosplash.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logosplash.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide4.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_background2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/background2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_person_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_person_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_menghilang.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_menghilang.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_alur3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/alur3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_dftar_riil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_dftar_riil.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_login_activity.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/login_activity.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_laporansppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_laporansppd.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_tutorial.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_tutorial.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_loading_ring.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/loading_ring.gif"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_register_activity2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/register_activity2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_tutorial.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/tutorial.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_file_download_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_file_download_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hijau_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/hijau_background.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_anim_kekanan.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/anim_kekanan.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_slide_out_left.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/slide_out_left.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_gif.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_gif.gif"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_anim_memutar.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/anim_memutar.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_inputdatasppd.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/inputdatasppd.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_file_download_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_file_download_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_transparan_baru2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/transparan_baru2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pilihan_daftar_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pilihan_daftar_petugas.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_list_profil.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/list_profil.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_main.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_progress.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_progress.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_visibility_off_grey.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_off_grey.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_visibility_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_visibility_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_img_not_found.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/img_not_found.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_anim_menghilang.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/anim_menghilang.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_edit_rincian.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_edit_rincian.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_menusamping2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_menusamping2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg6.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg6.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gnti_pass1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gnti_pass1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_warning_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_warning_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font-v26_default_font.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font-v26/default_font.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_simpan.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_simpan.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slide1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slide1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_cara_menampilkan_menu_pilihan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/cara_menampilkan_menu_pilihan.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gnti_pass4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gnti_pass4.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_lakilaki.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_lakilaki.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_check_circle_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_check_circle_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor1_1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor1_1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_help.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_help.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_selesai.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/selesai.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_time.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_time.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_save_2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_save_2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_image_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_image_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_daftrrincian.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_daftrrincian.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_download_progress.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_download_progress.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor6.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor6.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_input1coba.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_input1coba.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_splash.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_splash.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_lupa_password.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_lupa_password.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_camera.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_camera.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_save_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_save_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_lakilaki.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_lakilaki.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_4.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_tunjuk2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/tunjuk2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_lock.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_lock.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_side_nav_bar.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/side_nav_bar.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/animator_translate.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/animator/translate.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_gantipass2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_gantipass2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_email_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_email_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_iconbantuan.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/iconbantuan.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_cnth1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/cnth1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_edit_rincian_biaya.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_edit_rincian_biaya.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_inputlapperj.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_inputlapperj.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_content_main.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/content_main.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_search_user.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/search_user.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_visibility_off_white.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_visibility_off_white.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor5.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor5.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_jdlpenyebab1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/jdlpenyebab1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_splash_welcome.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/splash_welcome.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_download2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_download2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_user_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_user_white.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_list_tampil_nama_peg.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/list_tampil_nama_peg.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_back_hijau.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/back_hijau.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_date_range_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_date_range_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_welcome.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/welcome.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_hijau.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/hijau.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_anim_kekiri.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/anim_kekiri.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur5.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur5.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_user_white.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_user_white.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_cari.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_cari.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_lupa2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/lupa2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_logout.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_logout.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_content.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_content.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_aladin.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/aladin.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_assignment_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_assignment_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_solusi_koneksi.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/solusi_koneksi.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_bg_dialog_rounded.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/bg_dialog_rounded.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_menampilkan_menu_2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/menampilkan_menu_2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_info_outline_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_info_outline_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_listview_activitysppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_listview_activitysppd.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_back.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_back.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_search_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_search_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor5.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor5.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor6.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor6.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_image_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_image_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_tampil_detail_history.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_tampil_detail_history.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_input2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_input2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_solusi_koneksi1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/solusi_koneksi1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_no_bukti.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/no_bukti.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_launcher_background.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_input_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_input_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_inputdatasppd.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/inputdatasppd.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_ok.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_ok.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_badge_post.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/badge_post.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_img_not_found.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/img_not_found.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_chat.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_chat.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_transparan_baru.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/transparan_baru.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_vpn_key_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_vpn_key_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_login.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_login.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg4.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_beberapa_menu1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/beberapa_menu1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_refresh.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/refresh.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_tampil_data_sppd_berdasarkan_spt.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_tampil_data_sppd_berdasarkan_spt.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_list_datasppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_list_datasppd.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_bg_header_modern.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/bg_header_modern.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_reg_v1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_reg_v1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gnti_pass5.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass5.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gnti_pass.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gnti_pass.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_badge_belum.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/badge_belum.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_tentang_apk.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/tentang_apk.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_download_spt.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_download_spt.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logosplash.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logosplash.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_dftar_riil.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_dftar_riil.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/xml_file_paths.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/xml/file_paths.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_info.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_info.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_slide_satu.jpg.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/slide_satu.jpg"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_informasi_update_versi.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_informasi_update_versi.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor1_1_1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor1_1_1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_reg_v2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_reg_v2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_profil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_profil.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_penyebab2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/penyebab2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lap_perj_dinas.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lap_perj_dinas.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_informasi.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_informasi.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_inputdataspt.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/inputdataspt.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_beberapa_menu.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/beberapa_menu.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_pilihanmenu.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/pilihanmenu.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_list_notif.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_list_notif.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_hijau_background_transparan.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/hijau_background_transparan.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_main_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_main_petugas.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slide4.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slide4.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_informasi_update_versi.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_informasi_update_versi.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_anim_berputar.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/anim_berputar.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor7.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor7.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_download1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_download1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_satu_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/satu_gambar.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_edit_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_edit_white.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gmbr_transparan.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gmbr_transparan.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_username.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_username.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_viewutama_info.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_viewutama_info.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_badge_sudah.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/badge_sudah.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_login.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_login.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_nama_pegawai.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_nama_pegawai.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_check_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_check_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_arti_logo.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/arti_logo.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_edit_rincian_biaya_riil.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_edit_rincian_biaya_riil.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_no_bukti.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/no_bukti.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_picture.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_picture.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logout.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logout.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/menu_activity_main_drawer.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/menu/activity_main_drawer.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_inputdataspt.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/inputdataspt.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_add_circle.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_add_circle.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_pilihan_download.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_pilihan_download.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lima_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lima_gambar.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_default_regular.ttf.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/default_regular.ttf"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_pdf_viewer.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_pdf_viewer.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_gnti_pass5.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/gnti_pass5.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_tampil_activity_sppd_berdasarkan_spt.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_tampil_activity_sppd_berdasarkan_spt.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_slide_satu.jpg.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/slide_satu.jpg"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_password.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_password.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_plus_image.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/plus_image.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_edit_rincian_biaya_riil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_edit_rincian_biaya_riil.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_solusi_koneksi1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/solusi_koneksi1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm3x.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm3x.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout-v21_row_list_detail_history.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout-v21/row_list_detail_history.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tunjuk2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tunjuk2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_poppins_regular.ttf.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/poppins_regular.ttf"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pilihan_download.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pilihan_download.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_dua_gambar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/dua_gambar.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_reload.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_reload.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slide5.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slide5.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_cara_menampilkan_menu_pilihan1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/cara_menampilkan_menu_pilihan1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_default_font.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/default_font.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_edit_riil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_edit_riil.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_visibility_grey.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_visibility_grey.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide5.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide5.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_save_3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_save_3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_daftrrincian.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_daftrrincian.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_default_font.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/default_font.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_search_icon.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/search_icon.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_splash.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_splash.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/animator_translate.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/animator/translate.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tentang.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tentang.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_rssm_trans.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_rssm_trans.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_view_pegawai.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_view_pegawai.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_lock.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_lock.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_navigate_before_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_navigate_before_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_lupa1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/lupa1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_live_help_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_live_help_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_search_user.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/search_user.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_edit_rincian_biaya.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_edit_rincian_biaya.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_menu_pilihan1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/menu_pilihan1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_reg_v4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_reg_v4.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_menampilkan_menu_1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/menampilkan_menu_1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_upload.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_upload.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor4.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor4.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_nama_pegawai.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_nama_pegawai.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_kekiri.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_kekiri.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_tunjuk.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/tunjuk.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lupa2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lupa2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_no_image.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/no_image.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_register_button.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/register_button.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_lock_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_lock_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_background2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/background2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_input1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_input1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide_gambar_utama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide_gambar_utama.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_picture.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_picture.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_plus_image.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/plus_image.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/menu_main.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/menu/main.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_visibility_off_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_off_white.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_bg_header_modern.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/bg_header_modern.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_refresh.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/refresh.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/xml_provider_paths.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/xml/provider_paths.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logosimbol1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logosimbol1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_splash3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_splash3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_multi_login.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/multi_login.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_alur2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/alur2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_vpn_key_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_vpn_key_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_no_upload.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/no_upload.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_daftaratasppd.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/daftaratasppd.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_chat.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_chat.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_call_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_call_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_posting.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_posting.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_time.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_time.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_kotaknama.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_kotaknama.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout-v21_row_list_detail_datasppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout-v21/row_list_detail_datasppd.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_edit_rincian.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_edit_rincian.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_hapus3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_hapus3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_cnth1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/cnth1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_pop_up.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_pop_up.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_no_image.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/no_image.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_cp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_cp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ucapan.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ucapan.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_download2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_download2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slide_gambar_utama.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slide_gambar_utama.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_reg_v3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_reg_v3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_save.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_save.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor1_1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor1_1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_downloadpdf.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_downloadpdf.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg5.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg5.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_close_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_close_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_list_tampil_data_sppd_berdasarkan_spt.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/list_tampil_data_sppd_berdasarkan_spt.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_camera.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_camera.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_nav_header_main.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/nav_header_main.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tiga_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tiga_gambar.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/animator_welcome_anim_satu.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/animator/welcome_anim_satu.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lock_icon.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lock_icon.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_cara_menampilkan_menu_pilihan.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/cara_menampilkan_menu_pilihan.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_alpha.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/alpha.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_profil.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_profil.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hitam.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/hitam.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_badge_sudah.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/badge_sudah.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_pilihanmenu.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/pilihanmenu.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_assignment_turned.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_assignment_turned.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_menusamping2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_menusamping2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_lupa_password.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_lupa_password.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_loading_blue.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/loading_blue.gif"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_save_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_save_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_download_spt.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_download_spt.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg8.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg8.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_splash2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_splash2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_back_hijau.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/back_hijau.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_badge_belum.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/badge_belum.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_check_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_check_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_download_sppd.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_download_sppd.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gnti_pass2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_pdf_viewer.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_pdf_viewer.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pertanyaan_cek_no_spt.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pertanyaan_cek_no_spt.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_history_versi_simple.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_history_versi_simple.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_jdlpenyebab1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/jdlpenyebab1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_anim_berputarrepeat.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/anim_berputarrepeat.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_check_circle_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_check_circle_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_background.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/background.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_refresh2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/refresh2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_empat_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/empat_gambar.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_informasi.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_informasi.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icontaktau.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icontaktau.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/xml_file_paths.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/xml/file_paths.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_input2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_input2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_assignment_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_assignment_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_info.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_info.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_info_outline_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_info_outline_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_download1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_download1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xhdpi/ic_launcher_foreground.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_123.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_123.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_galery.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/galery.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_transparan_baru2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/transparan_baru2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_rssm3x.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_rssm3x.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_reg_v2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_reg_v2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_navigate_before_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_navigate_before_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_touch_app_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_touch_app_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_tutorial.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/tutorial.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_dua_gambar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/dua_gambar.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_hapus.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_hapus.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_time_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_time_white.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_pilihanmenu_baru.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/pilihanmenu_baru.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tunjuk.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tunjuk.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_profil.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/profil.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_delete_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_delete_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_check.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_check.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_laporansppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_laporansppd.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gnti_pass1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_silahkan_register.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/silahkan_register.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_card_background.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/card_background.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_list_view_pegawai.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_list_view_pegawai.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_calender.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_calender.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout-v21_row_list_detail_datasppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout-v21/row_list_detail_datasppd.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_login_button.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/login_button.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_save_2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_save_2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_youtube_searched_for_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_youtube_searched_for_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_list_datasppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_list_datasppd.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg7.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg7.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_visibility_white.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_white.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_touch_app_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_touch_app_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout-v21_row_list_detail_history.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout-v21/row_list_detail_history.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_cancel_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_cancel_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_hijau_background.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/hijau_background.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_cp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_cp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_lock_open_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_lock_open_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_aplikasi.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_aplikasi.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_list_datarincian.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_list_datarincian.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_arrow_back_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_arrow_back_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_input1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_input1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_default_font_2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/default_font_2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_viewutama.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_viewutama.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_lap_perj_dinas.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/lap_perj_dinas.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_berputar.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_berputar.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_save.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_save.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_swap_horiz_red.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_swap_horiz_red.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logo_aplikasi.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logo_aplikasi.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_history_versi_simple.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_history_versi_simple.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_lupa1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_lupa1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_visibility_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_background3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/background3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_welcometutor.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/welcometutor.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_swap_horiz_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_swap_horiz_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_viewutama_info.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_viewutama_info.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_card_bg.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/card_bg.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_copyright.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/copyright.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_reg_v3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_reg_v3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gmbr_transparan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gmbr_transparan.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_badge_post.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/badge_post.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_input_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_input_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg6.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg6.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_keluar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_keluar.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_download.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_download.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_satu_gambar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/satu_gambar.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_visibility_grey.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_grey.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_login_activity2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/login_activity2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_visibility_off_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_off_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_refresh_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_refresh_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_content_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/content_main.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/anim_slide_out_left.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/anim/slide_out_left.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_ok.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_ok.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_chatgptrssm.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/chatgptrssm.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gnti_pass4.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass4.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_tentang.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/tentang.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_listview_activitysppd.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_listview_activitysppd.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/animator_welcome_anim_dua.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/animator/welcome_anim_dua.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_keterangan.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_keterangan.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_email_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_email_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg2_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg2_2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_pilihan_daftar_petugas.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_pilihan_daftar_petugas.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_panah.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/panah.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_dftr_perj_dinas.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/dftr_perj_dinas.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_font_insomnia.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/font_insomnia.ttf"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_welcome.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_welcome.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_back2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_back2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/animator_fade_in.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/animator/fade_in.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_home.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_home.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_content.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_content.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_arrow_back_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_arrow_back_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_edit_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_edit_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_merah_posting.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/merah_posting.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_hapus2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_hapus2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_register_activity2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/register_activity2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_warning_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_warning_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_edit_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_edit_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logout.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logout.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_tiga_gambar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/tiga_gambar.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_assignment_turned.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_assignment_turned.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_wanita.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_wanita.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_soedono.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/soedono.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_hitam.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/hitam.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_date_range_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_date_range_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_tampil_activity_sppd_berdasarkan_spt.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_tampil_activity_sppd_berdasarkan_spt.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_gantipass2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_gantipass2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logorssm.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logorssm.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_viewutamaframe.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_viewutamaframe.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_refresh.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_refresh.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_splash3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_splash3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_list_tampil_detail_history.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/list_tampil_detail_history.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ucapan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ucapan.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_merah_posting.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/merah_posting.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_notifications_none_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_notifications_none_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_simrsxx.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/simrsxx.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_search_icon.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/search_icon.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_aladin.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/aladin.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_close_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_close_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_hapus2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_hapus2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_row_edit_riil.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/row_edit_riil.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_iconbantuan.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/iconbantuan.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_live_help_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_live_help_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_gif2.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_gif2.gif"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/menu_activity_main_drawer_petugas.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/menu/activity_main_drawer_petugas.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/menu_activity_main_drawer_petugas.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/menu/activity_main_drawer_petugas.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_gantipass.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_gantipass.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_ext.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_ext.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_list_view_activitysppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/list_view_activitysppd.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gnti_pass.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_item_rincian_biaya.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/item_rincian_biaya.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_menusamping.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_menusamping.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-hdpi/ic_launcher_foreground.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_side_nav_bar.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/side_nav_bar.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_alur5.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/alur5.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_photo_camera.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_photo_camera.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_123.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_123.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_history.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/history.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logobaru.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logobaru.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_download_sppd.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_download_sppd.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_panah.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/panah.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_cancel_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_cancel_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_soedono.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/soedono.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_tentang.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_tentang.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_multi_login.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/multi_login.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg8.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg8.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_input1coba.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_input1coba.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_kekanan.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_kekanan.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slide3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slide3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_pilihanmenu_baru.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/pilihanmenu_baru.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_slide_tiga.jpg.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/slide_tiga.jpg"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_list_view_pegawai.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_list_view_pegawai.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_calender.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_calender.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_download3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_download3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_list_datarincian.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_list_datarincian.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_close_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_close_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logosimbol1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logosimbol1.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_default_regular.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/default_regular.ttf"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_default_bold.ttf.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/default_bold.ttf"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_penyebab2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/penyebab2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_file_download_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_file_download_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_no_upload.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/no_upload.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_alur4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/alur4.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_profils.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/profils.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_merah.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/merah.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_keluar.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_keluar.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_lima_gambar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/lima_gambar.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/xml_provider_paths.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/xml/provider_paths.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_menampilkan_menu_3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/menampilkan_menu_3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_username.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_username.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font-v26_default_font.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font-v26/default_font.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_ext.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_ext.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_centang.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/centang.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_mode_edit.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_mode_edit.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ripple_row.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ripple_row.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_edit_white.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_edit_white.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg7.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg7.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_beberapa_menu.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/beberapa_menu.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_poppins_regular.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/poppins_regular.ttf"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_refresh2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_refresh2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_download4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_download4.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_file.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_file.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/xml_network_security_config.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/xml/network_security_config.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_tdktampildata4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/tdktampildata4.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_galery.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/galery.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ripple_row.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ripple_row.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_merah.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/merah.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/font_font_insomnia.ttf.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/font/font_insomnia.ttf"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_main.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_main.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_add_circle.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_add_circle.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_berputarrepeat.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_berputarrepeat.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_back.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_back.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_default_font_2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/default_font_2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_viewutama.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_viewutama.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_simpan2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_simpan2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_activity_main_petugas.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/activity_main_petugas.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_plus.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/plus.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_password.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_password.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_refresh.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_refresh.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_download4.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_download4.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_profil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/profil.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_reload.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_reload.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_delete_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_delete_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_inputlapperj.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_inputlapperj.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_list_datariil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_list_datariil.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_hapus3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_hapus3.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_refresh_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_refresh_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_plus.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/plus.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menu_pilihan2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menu_pilihan2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_close_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_close_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_profil.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_profil.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slidenomor7.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slidenomor7.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_mode_edit.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_mode_edit.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_menampilkan_menu_4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/menampilkan_menu_4.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_downloadstatus.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_downloadstatus.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_photo_camera.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_photo_camera.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_slide_in_right.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/slide_in_right.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_tdktampildata3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/tdktampildata3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_wanita.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_wanita.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/animator_fade_in.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/animator/fade_in.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/xml_network_security_config.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/xml/network_security_config.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_dftr_perj_dinas.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/dftr_perj_dinas.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_time_white.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_time_white.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_save_3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_save_3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_badge_primary.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/badge_primary.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor4.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor4.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_dialog_pertanyaan_cek_no_spt.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/dialog_pertanyaan_cek_no_spt.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_reg_v1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_reg_v1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_plus.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_plus.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_help.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_help.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur1.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur1.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_playlist_add_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_playlist_add_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_download3.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_download3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_splash_welcome.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/splash_welcome.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_welcome.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_welcome.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_card_background.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/card_background.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logorssm.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logorssm.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_logosimbol2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/logosimbol2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_youtube_searched_for_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_youtube_searched_for_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_background3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/background3.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_lock_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_lock_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_reg2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/reg2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_gif3.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_gif3.gif"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_reg_v4.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_reg_v4.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_memutar.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_memutar.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle_upload.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle_upload.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_refresh3.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/refresh3.gif"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_logout.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_logout.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_menu_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_menu_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_tampil_nama_peg.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_tampil_nama_peg.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_arti_logo.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/arti_logo.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_loading_ring.gif.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/loading_ring.gif"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_visibility_off_grey.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_visibility_off_grey.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_menusamping.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_menusamping.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logobaru.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logobaru.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_downloadpdf.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_downloadpdf.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_lupa1.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_lupa1.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_navigate_next_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_navigate_next_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_login_activity.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/login_activity.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_content_copy_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_content_copy_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_playlist_add_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_playlist_add_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_person_black.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_person_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_visibility_off_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_visibility_off_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_tentang_apk.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/tentang_apk.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_circle1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/circle1.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_default_bold.ttf.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/default_bold.ttf"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_cari.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_cari.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_simrsxx.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/simrsxx.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_item_rincian_biaya.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/item_rincian_biaya.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_user.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_user.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_card_bg.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/card_bg.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide2.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_copyright.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/copyright.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_gnti_pass3.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass3.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_history.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/history.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_app_bar_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/app_bar_main.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_notifications_none_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_notifications_none_black_24dp.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_refresh2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/refresh2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_slide2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/slide2.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_slide_tiga.jpg.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/slide_tiga.jpg"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_download.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_download.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/animator_welcome_anim_satu.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/animator/welcome_anim_satu.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_daftaratasppd.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/daftaratasppd.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_chatgptrssm.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/chatgptrssm.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/layout_welcome.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/layout/welcome.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_icon_tentang.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/icon_tentang.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_nav_header_main.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/nav_header_main.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-44:/drawable_ic_call_black.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-45:/drawable/ic_call_black.xml"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logowarna.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logowarna.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_navigate_next_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_navigate_next_black_24dp.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg2.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg2.png"
     }
 ]

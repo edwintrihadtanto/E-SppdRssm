@@ -1596,6 +1596,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -2653,6 +2657,8 @@ dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -3715,6 +3721,7 @@ drawable badge_primary
 drawable badge_sudah
 drawable beberapa_menu
 drawable beberapa_menu1
+drawable bg_dialog_rounded
 drawable bg_header_modern
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3883,6 +3890,9 @@ drawable ic_navigate_before_black_24dp
 drawable ic_navigate_next_black_24dp
 drawable ic_notifications_none_black_24dp
 drawable ic_ok
+drawable ic_other_sign_in
+drawable ic_passkey
+drawable ic_password
 drawable ic_person_black
 drawable ic_photo_camera
 drawable ic_picture
@@ -3931,6 +3941,7 @@ drawable inputdataspt
 drawable jdlpenyebab1
 drawable lap_perj_dinas
 drawable lima_gambar
+drawable loading_blue
 drawable loading_ring
 drawable lock_icon
 drawable login_button
@@ -4113,14 +4124,12 @@ id META
 id NO_DEBUG
 id RelativeLayout4444
 id RelativeLayout_Registeratas
-id RelativeLayout_logintengah
 id RelativeLayoutlist_profil
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id ScrollView_loginatas
 id TOP_END
 id TOP_START
 id View
@@ -4129,7 +4138,6 @@ id View13
 id View14
 id View15
 id View2
-id abcde
 id above
 id accelerate
 id accessibility_action_clickable_span
@@ -4236,6 +4244,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btnDownload
 id btnEdit
 id btnHapusLaporan
@@ -4282,18 +4295,15 @@ id btn_simpanrincian
 id btn_skip
 id btn_text
 id btn_update_pass
+id btnlogin
 id buttonPanel
 id cache_measures
 id callMeasure
 id calligraphy_tag_id
 id cancel_action
 id cancel_button
-id cardView_btnlogin
 id cardView_kotaknama
-id cardView_register
-id cardview_lupapass
 id carryVelocity
-id cek_versi_apk
 id center
 id centerCrop
 id centerInside
@@ -4342,7 +4352,6 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
-id develp
 id dialog_button
 id dimensions
 id direct
@@ -4403,9 +4412,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expandable_button
 id expanded_menu
-id ext
-id ext1
-id ext2
 id fade
 id fdcd
 id feedback
@@ -4436,11 +4442,11 @@ id gambar_slide
 id garisbantuan
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gmbar_loading
 id gmbar_loading_login
 id gmbar_loading_register
 id gmbar_loading_utama
-id gmbr1
 id gone
 id graph
 id graph_wrap
@@ -4459,9 +4465,6 @@ id grsprofil1
 id grsprofil2
 id grsprofilttengah
 id grsreg1
-id grsreg2
-id grsreg3
-id grsregtengah
 id grsutama1
 id grsutama2
 id grsutamatlayoutatas
@@ -4522,8 +4525,6 @@ id img_utama
 id img_welcome
 id img_welcome1
 id img_welcome23
-id imgcp1
-id imgcp2
 id imgdialog1
 id imgdialog2
 id imgdialog3
@@ -4541,7 +4542,6 @@ id indeterminate
 id indicator
 id info
 id infoRow
-id info_lupatext
 id informasi1
 id informasi2
 id invisible
@@ -4594,6 +4594,7 @@ id list_view_baru
 id list_view_pegawai
 id listtampil_namapeg
 id listupdate
+id loadingOverlay
 id logorssm
 id m3_side_sheet
 id marquee
@@ -4743,6 +4744,7 @@ id position
 id postLayout
 id pressed
 id progressBar
+id progressBarCenter
 id progressBar_history
 id progress_circular
 id progress_horizontal
@@ -4751,7 +4753,6 @@ id ratio
 id re
 id rectangles
 id relatasRegister
-id rell
 id rellllllalal
 id report_drawn
 id retreat
@@ -4792,6 +4793,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scroll_form_laporan
+id scroll_login
 id scroll_reg
 id scrollable
 id search_badge
@@ -4906,11 +4908,8 @@ id text_tgl_lamp
 id text_tiga
 id text_unit
 id textbiasainfo
-id textcp
 id textcp1
 id textcp2
-id textcp_nama1
-id textcp_nama2
 id textdetailisi
 id textdetailjumlah
 id textedit_jmlriil
@@ -4926,7 +4925,6 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id textjabatan
-id textmasuklogin
 id textnama_pegawai
 id textnip_pegawai
 id textnippegwdit
@@ -4971,9 +4969,12 @@ id txtNo
 id txtNomorUrut
 id txtNosppd
 id txtNospt
+id txtProgress
 id txtRincianBiaya
 id txtTanggal
 id txtTitle
+id txt_bantuan
+id txt_creator
 id txt_jumlah_laporan
 id txt_jumlah_notif
 id txt_jumlah_sppd
@@ -4981,7 +4982,9 @@ id txt_kota_tanggal
 id txt_notif_belum
 id txt_notif_terbca
 id txt_presentasi
+id txt_signup
 id txt_sppd_selesai
+id txt_version
 id txtinfopembuat
 id unchecked
 id uniform
@@ -5002,9 +5005,6 @@ id v3
 id v_flipper
 id vertical
 id vertical_only
-id vgris
-id vgris2
-id vgris3
 id view
 id view1
 id view12345
@@ -5025,7 +5025,6 @@ id viewsamping
 id visible
 id visible_removing_fragment_view_tag
 id vlopisa
-id vlupa1
 id waktu_dibuat
 id waves
 id webView
@@ -5173,6 +5172,8 @@ layout activity_main_petugas
 layout activity_pdf_viewer
 layout activity_welcome
 layout app_bar_main
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout content_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -5190,6 +5191,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_download_progress
 layout dialog_informasi_update_versi
 layout dialog_lupa_password
 layout dialog_pertanyaan_cek_no_spt
@@ -5208,7 +5210,6 @@ layout list_tampil_nama_peg
 layout list_view_activitysppd
 layout list_view_pegawai
 layout login_activity
-layout login_activity2
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -5320,6 +5321,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw firebase_common_keep
 string _10_lain_lain
 string _146_ipde
 string _1_dasar_spt
@@ -5366,6 +5368,8 @@ string acara
 string action_settings
 string alamat_email
 string ambil_foto_profil
+string android_credentials_TYPE_PASSWORD_CREDENTIAL
+string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
 string aplikasi_surat_perintah_perjalanan_dinas
 string aplikasi_surat_perintah_perjalanan_dinas_e_sppd_digunakan_untuk_mempermudah_pengelolaan_administrasi_perjalanan_dinas_secara_digital
@@ -5417,6 +5421,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
 string copyright_2017_by_ipde_rssm_
 string created_by_edwin_ipde_design_
 string daerah_tujuan
@@ -5446,6 +5451,9 @@ string exposed_dropdown_menu_content_description
 string ext
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string fcm_fallback_notification_channel_label
 string feedback
 string feedback_anda_
@@ -6330,6 +6338,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_Hidden
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog
@@ -6407,6 +6416,7 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_PlayCore_Transparent
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -7108,6 +7118,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml file_paths
+xml image_share_filepaths
 xml m3_button_group_child_size_change
 xml m3_split_button_inner_corner_size_state_list
 xml m3expressive_button_shape_state_list

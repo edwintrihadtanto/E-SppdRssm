@@ -51,7 +51,7 @@ public class Koneksi {
 	public static final String LINK_PENCARIAN						= URL_SERVERNEW + "cek_data_register.php/";
 	public static final String simpan_pass_baru						= URL_SERVERNEW + "sv_pass_baru.php/";
 	public static final String CEK_VERSI 							= URL_SERVERNEW + "cek_versi.php/";
-	public static final String FCM_TOKEN 							= URL_SERVERNEW + "sc_fcmtoken.php/";
+	public static final String FCM_TOKEN 							= URL_SERVERNEW + "token/get_token.php/";
 	public static final String update_pass 							= URL_SERVERNEW + "profil/update_pass.php/";
 	public static final String update_email							= URL_SERVERNEW + "profil/update_email.php/";
 	public static final String update_unit							= URL_SERVERNEW + "profil/update_unit.php/";

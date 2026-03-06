@@ -811,6 +811,10 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <color name="browser_actions_bg_grey">#F5F5F5</color>
+    <color name="browser_actions_divider_color">#1E000000</color>
+    <color name="browser_actions_text_color">#DE000000</color>
+    <color name="browser_actions_title_color">#646464</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="call_notification_answer_color">#1d873b</color>
@@ -1420,6 +1424,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">23dp</dimen>
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
+    <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
+    <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -2430,6 +2436,7 @@
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
+    <item name="glide_custom_view_target_tag" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
@@ -2581,7 +2588,7 @@
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
     <string name="_10_lain_lain" translatable="false">Lain - lain</string>
-    <string name="_146_ipde" translatable="false">146 [ IPDE ]</string>
+    <string name="_146_ipde" translatable="false">146 [ ITISI ]</string>
     <string name="_1_dasar_spt" translatable="false">1. Dasar SPT</string>
     <string name="_262_tu_umum" translatable="false">262 [ TU/UMUM ]</string>
     <string name="_3_nama_petugas" translatable="false">3. Nama Petugas</string>
@@ -2626,6 +2633,8 @@
     <string name="action_settings" translatable="false">Settings</string>
     <string name="alamat_email" translatable="false">Alamat Email</string>
     <string name="ambil_foto_profil">Foto Profil</string>
+    <string name="android.credentials.TYPE_PASSWORD_CREDENTIAL">Password</string>
+    <string name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">Passkey</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="aplikasi_surat_perintah_perjalanan_dinas" translatable="false">Sistem Informasi Elektronik\nSurat Perintah Perjalanan Dinas</string>
     <string name="aplikasi_surat_perintah_perjalanan_dinas_e_sppd_digunakan_untuk_mempermudah_pengelolaan_administrasi_perjalanan_dinas_secara_digital">Aplikasi Surat Perintah Perjalanan Dinas (E-SPPD) digunakan untuk mempermudah pengelolaan administrasi perjalanan dinas secara digital.</string>
@@ -2677,6 +2686,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="copy_toast_msg">Link copied to clipboard</string>
     <string name="copyright_2017_by_ipde_rssm_" translatable="false">"© 2017 s/d 2026 \n by Inst. Teknologi Informasi dan Sistem Informasi\n ❤️ RSU dr. Soedono Madiun\nProvinsi Jawa Timur "</string>
     <string name="created_by_edwin_ipde_design_" translatable="false">"Crafted with ❤️ by Edwin IT Design"</string>
     <string name="daerah_tujuan" translatable="false">Daerah Tujuan</string>
@@ -2692,7 +2702,7 @@
     <string name="download_laporan_rincian_biaya" translatable="false">Download Laporan Rincian Biaya</string>
     <string name="download_laporan_sppd" translatable="false">Download Laporan SPPD</string>
     <string name="download_laporan_spt" translatable="false">Download Laporan SPT</string>
-    <string name="edwin" translatable="false">/ Edwin</string>
+    <string name="edwin" translatable="false">by Edwin - IT ITISI</string>
     <string name="elektronik_surat_perintah_perjalanan_dinas" translatable="false">Elektronik Surat Perintah Perjalanan Dinas</string>
     <string name="email" translatable="false">Email :</string>
     <string name="entry_biaya">Entry Biaya</string>
@@ -2708,6 +2718,9 @@
     <string name="ext" translatable="false">Ext :</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="fallback_menu_item_copy_link">Copy link</string>
+    <string name="fallback_menu_item_open_in_browser">Open in browser</string>
+    <string name="fallback_menu_item_share_link">Share link</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="feedback" translatable="false">feedback</string>
     <string name="feedback_anda_" translatable="false">Kritik dan Saran Anda :</string>
@@ -2733,7 +2746,7 @@
     <string name="https_rssoedono_jatimprov_go_id" translatable="false">https://rssoedono.jatimprov.go.id</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="informasi_data_sppd" translatable="false">Informasi SPT</string>
-    <string name="informasi_lupa_password" translatable="false">Informasi Lupa Password</string>
+    <string name="informasi_lupa_password" translatable="false">Informasi</string>
     <string name="informasi_sppd">INFORMASI SPPD</string>
     <string name="informasi_update_versi" translatable="false">Informasi Update Versi</string>
     <string name="input_email">Entry Alamat Email</string>
@@ -2752,7 +2765,7 @@
     <string name="laporan_perjalanan_dinas" translatable="false">Laporan Perjalanan Dinas</string>
     <string name="login" translatable="false">Masuk</string>
     <string name="lokasitandatangan">Madiun, 23-02-2026</string>
-    <string name="lupa_password_nsilahkan_hubungi_admin_ipde" translatable="false">Lupa Password Silahkan Hubungi Admin IPDE</string>
+    <string name="lupa_password_nsilahkan_hubungi_admin_ipde" translatable="false">Bantuan silahkan hubungi</string>
     <string name="m3_exceed_max_badge_text_suffix" translatable="false"><ns2:g example="Some te" id="part of a long text">%1$s</ns2:g><ns2:g example="…" id="suffix">%2$s</ns2:g></string>
     <string description="Content description for a loading indicator [CHAR LIMIT=NONE]" name="m3_loading_indicator_content_description">
     Loading
@@ -2921,7 +2934,7 @@
     <string name="refresh_profil">Refresh Profil</string>
     <string name="refreshmenu">Refresh</string>
     <string name="register_password" translatable="false">Register Password</string>
-    <string name="reski" translatable="false">/ Reski</string>
+    <string name="reski" translatable="false">by Reski - IT ITISI</string>
     <string name="rincian">Rincian :</string>
     <string name="rincian_biaya">RINCIAN BIAYA + BUKTI</string>
     <string name="rincian_biaya_riil">RINCIAN BIAYA RIIL</string>
@@ -3008,11 +3021,11 @@
         
         <item name="colorPrimary">@color/list_item_title_gelap</item>
         <item name="colorPrimaryDark">@color/list_item_title</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:statusBarColor">@color/list_item_title</item>
+        <item name="android:navigationBarColor">@color/hitam</item>
     </style>
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -7804,6 +7817,10 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
   </style>
+    <style name="Theme.Hidden" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
     <style name="Theme.Material3.Dark" parent="Base.Theme.Material3.Dark"/>
     <style name="Theme.Material3.Dark.BottomSheetDialog" parent="Base.Theme.Material3.Dark.BottomSheetDialog"/>
     <style name="Theme.Material3.Dark.Dialog" parent="Base.Theme.Material3.Dark.Dialog"/>
@@ -7949,6 +7966,14 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
   </style>
+    <style name="Theme.PlayCore.Transparent" parent="android:Theme">
+<item name="android:windowIsTranslucent">true</item>
+<item name="android:windowBackground">@android:color/transparent</item>
+<item name="android:windowContentOverlay">@null</item>
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowIsFloating">true</item>
+<item name="android:backgroundDimEnabled">false</item>
+</style>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>

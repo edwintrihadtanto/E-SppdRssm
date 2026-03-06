@@ -1,21 +1,26 @@
 package com.fungsiutama;
 
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.makeText;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.Html;
@@ -24,27 +29,26 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
+import androidx.core.view.WindowCompat;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -57,6 +61,9 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.HashMap;
+import java.util.Objects;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
@@ -71,6 +78,7 @@ public class Login_Activity extends AppCompatActivity {
 	private static final String TAG_PESAN_CEK	= "pesan";
 	private static final String TAG_WARNING		= "warning";
 	private static final String TAG_VERSIBARU	= "versiygbaru";
+	private static final String TAG_LINK	    = "link";
 
 	private static final String TAG_SUKSES2 	= "success";
 	private static final String TAG_PESAN2 		= "message";
@@ -84,60 +92,70 @@ public class Login_Activity extends AppCompatActivity {
 	public final static String TAG_UNIT 		= "unit";
 	public final static String TAG_PASSWORD 	= "password";
 	public final static String TAG_EMAIL 		= "email";
-	private static final int progress_DOWNLOAD 	= 0;
 	public  static final int RequestPermissionCode_StorageCamera  = 11 ;
 	private String nip, nama_pegawai, jabatan, golongan, unit, password, email, kirim_versi;
 	public static final String my_shared_preferences = "my_shared_preferences";
 	public static final String session_status_level1 = "session_status_level1";
 	public static final String session_status_level2 = "session_status_level2";
-	public String pesan, warning, versiygbaru;
-	private ProgressDialog downloaddiMAIN;
-	private String progressdownload = "";
+	public String pesan, warning, versiygbaru, linkupdate;
+	private Dialog dialogDownload;
+	private ProgressBar progressBar;
+	private TextView txtProgress;
+	boolean doubleBackToExitPressedOnce = false;
+	private final ExecutorService executor = Executors.newSingleThreadExecutor();
+	private final Handler mainHandler = new Handler(Looper.getMainLooper());
 	PermissionHelper permissionHelper;
 	ImageView img_showpass_login1, img_showpass_login2, gmbar_loading_login;
 	EditText edit_pass, edit_nip;
-	ProgressDialog  download;
-//	JSONParser classJsonParser = new JSONParser();
-	TextView cek_versi_apk, develpe;
-	ListView listView;
-	ArrayAdapter<String> arrayAdapter;
+	TextView cek_versi_apk, develpe, txt_signup, txt_bantuan;
+
 	SharedPreferences sharedpreferences;
 	Boolean session_1 = false;
 	Boolean session_2 = false;
 	Animation animAlpha, animkekiri, animkekanan;
 	RelativeLayout frame_loading_login;
-	CardView cardView_btnlogin, cardView_register, cardview_lupapass;
-	String info = "© ESPPD 2017-2026,\nDeveloped by I.T.I.S.I - RSSM";
-	String versinya = BuildConfig.VERSION_NAME;
+	CardView btnlogin;
+	private Uri fileUri;
+	String info = "© ESPPD 2017-2026,\nCrafted with ❤ by ITISI - RSUD dr. Soedono";
+	String versinya = null;
 	@SuppressLint("SetTextI18n")
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		WindowCompat.setDecorFitsSystemWindows(getWindow(), true);
 		setContentView(R.layout.login_activity);
 		Permission_AksesCameradanStorage();
 		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		permissionHelper = new PermissionHelper(this);
 
-		animAlpha 	= AnimationUtils.loadAnimation(this, R.anim.anim_menghilang);
+        try {
+            versinya = getPackageManager()
+                    .getPackageInfo(getPackageName(), 0)
+                    .versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        animAlpha 	= AnimationUtils.loadAnimation(this, R.anim.anim_menghilang);
 		animkekiri 	= AnimationUtils.loadAnimation(this, R.anim.anim_kekiri);
 		animkekanan = AnimationUtils.loadAnimation(this, R.anim.anim_kekanan);
 		gmbar_loading_login = findViewById(R.id.gmbar_loading_login);
 		frame_loading_login = findViewById(R.id.frame_loading_login);
 		edit_pass 			= findViewById(R.id.edit_pass);
 		edit_nip 			= findViewById(R.id.edit_nip);
-		cek_versi_apk		= findViewById(R.id.cek_versi_apk);
-		cardView_btnlogin 	= findViewById(R.id.cardView_btnlogin);
-		cardView_register 	= findViewById(R.id.cardView_register);
-		cardview_lupapass 	= findViewById(R.id.cardview_lupapass);
+		cek_versi_apk		= findViewById(R.id.txt_version);
+		btnlogin 			= findViewById(R.id.btnlogin);
+		txt_signup 			= findViewById(R.id.txt_signup);
+		txt_bantuan 		= findViewById(R.id.txt_bantuan);
 
-		develpe				= findViewById(R.id.develp);
+		develpe				= findViewById(R.id.txt_creator);
 		img_showpass_login1 = findViewById(R.id.img_showpass_login1);
 		img_showpass_login2 = findViewById(R.id.img_showpass_login2);
 		develpe.setText(info);
 
 //		String versi = "3.0"; //JANGAN LUPA VERSI INI DIRUBAH SESUAI UPDATENYA
 		cek_versi_apk.setText("V. " + versinya);
-		kirim_versi = versinya; //cek_versi_apk.getText().toString();
+//		kirim_versi = versinya; //cek_versi_apk.getText().toString();
 		//edit_nip.setText("303-03081992-052017-8776");
 		//edit_pass.setText("edwin");
 		//edit_nip.setText("12345");
@@ -157,21 +175,7 @@ public class Login_Activity extends AppCompatActivity {
 		password		= sharedpreferences.getString(TAG_PASSWORD, null);
 		email			= sharedpreferences.getString(TAG_EMAIL, null);
 		Log.e(TAG, String.valueOf(session_1));
-		if (session_1) {
-//			Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Admin.class);
-//			intent.putExtra(TAG_NIP, nip);
-//			intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
-//			intent.putExtra(TAG_JABATAN, jabatan);
-//			intent.putExtra(TAG_GOLONGAN, golongan);
-//			intent.putExtra(TAG_UNIT, unit);
-//			intent.putExtra(TAG_PASSWORD, password);
-//			intent.putExtra(TAG_EMAIL, email);
-//			intent.putExtra(versi, kirim_versi);
-//			finish();
-//			startActivity(intent);
-			Toast.makeText(Login_Activity.this, "Aplikasi E-SPPD Khusus Admin Tidak Bisa Digunakan\nSilahkan Hubungi Administrator",
-					Toast.LENGTH_LONG).show();
-		}else if (session_2) {
+		if (session_2) {
 			Intent intent = new Intent(Login_Activity.this, MainActivityUtama.class);
 			intent.putExtra(TAG_NIP, nip);
 			intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
@@ -180,9 +184,12 @@ public class Login_Activity extends AppCompatActivity {
 			intent.putExtra(TAG_UNIT, unit);
 			intent.putExtra(TAG_PASSWORD, password);
 			intent.putExtra(TAG_EMAIL, email);
-			intent.putExtra(versi, kirim_versi);
+			intent.putExtra(versi, versinya);
 			finish();
 			startActivity(intent);
+		}else if (session_1){
+			Toast.makeText(Login_Activity.this, "Aplikasi e-SPPD khusus admin sementara tidak bisa di gunakan\nSilahkan Hubungi TIM IT untuk Hak Akses",
+					Toast.LENGTH_LONG).show();
 		}
 
 		img_showpass_login1.setOnClickListener(v -> {
@@ -237,9 +244,28 @@ public class Login_Activity extends AppCompatActivity {
 			}
 		});
 
+		getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+			@Override
+			public void handleOnBackPressed() {
 
+				if (doubleBackToExitPressedOnce) {
+					setEnabled(false);   // penting agar tidak loop
+					getOnBackPressedDispatcher().onBackPressed();
+					return;
+				}
+
+				doubleBackToExitPressedOnce = true;
+				Toast.makeText(Login_Activity.this,
+						"Tekan tombol kembali [2x] untuk keluar aplikasi.",
+						Toast.LENGTH_SHORT).show();
+
+				new Handler(Looper.getMainLooper()).postDelayed(
+						() -> doubleBackToExitPressedOnce = false,
+						2000
+				);
+			}
+		});
 	}
-
 	private void lupa_password() {
 		final Dialog dialog = new Dialog(this);
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -259,28 +285,39 @@ public class Login_Activity extends AppCompatActivity {
 			startActivity(new Intent(Intent.ACTION_DIAL,Uri.parse(toDial2)));
 		});
 		dialog.show();
+		Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+		dialog.getWindow().setLayout(
+				ViewGroup.LayoutParams.WRAP_CONTENT,
+				ViewGroup.LayoutParams.WRAP_CONTENT
+		);
 	}
-
-
 	public void validasi_nip(EditText editText) {
 
 		edit_nip.setError(null);
-		// length 0 means there is no text
+
 		if (edit_nip.length() == 0) {
-			editText.setError(Html
-					.fromHtml("<font color='red'>NIP/NPK Tidak Boleh Kosong</font>"));
+			editText.setError(
+					Html.fromHtml(
+							"NIP Tidak Boleh Kosong",
+							Html.FROM_HTML_MODE_LEGACY
+					)
+			);
 		}
 	}
 
 	public void validasi_pass(EditText editText) {
 
 		edit_pass.setError(null);
+
 		if (edit_pass.length() == 0) {
-			editText.setError(Html
-					.fromHtml("<font color='red'>Password Tidak Boleh Kosong</font>"));
+			editText.setError(
+					Html.fromHtml(
+							"Password Tidak Boleh Kosong",
+							Html.FROM_HTML_MODE_LEGACY
+					)
+			);
 		}
 	}
-	
 	private boolean terkoneksi_roaming(Context mContext) {
 		ConnectivityManager cm = (ConnectivityManager) mContext
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -288,16 +325,17 @@ public class Login_Activity extends AppCompatActivity {
 		return netInfo != null && netInfo.isConnectedOrConnecting();
 
 	}
-	public void gotolupapassword (View view){
-
+	public void bantuan (View view){
 		lupa_password();
-		view.startAnimation(animkekanan);
+//		view.startAnimation(animkekanan);
+		view.startAnimation(animAlpha);
 	}
 
-	public void gotoregister (View view){
-		view.startAnimation(animkekiri);
-		//Intent i = new Intent(Login_Activity.this,Register_Activity.class);
-		Intent i = new Intent(Login_Activity.this,Register_Activity_Baru.class);
+
+	public void signup (View view){
+//		view.startAnimation(animkekiri);
+		view.startAnimation(animAlpha);
+		Intent i = new Intent(Login_Activity.this, Register_Activity.class);
 		startActivity(i);
 //		finish();
 	}
@@ -331,134 +369,23 @@ public class Login_Activity extends AppCompatActivity {
 					Toast.LENGTH_LONG).show();
 
         } else {
-
-			new Cek_Versi_Dulu().execute();
+			cekVersiDulu();
 		}
+
 
 	}
 
-	@SuppressLint("StaticFieldLeak")
-	/*public class Cek_Versi_Dulu extends AsyncTask<String, String, String> {
+	private void cekVersiDulu() {
 
+		showLoading();
+		String versiApk = versinya;
+		executor.execute(() -> {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			loading_tampil();
-		}
-
-		@Override
-		protected String doInBackground(String... args) {
-			int jikaSukses;
-
-			String Versi_Apk = cek_versi_apk.getText().toString();
-			String responseString;
-			try {
-
-				List<NameValuePair> versi = new ArrayList<>();
-				versi.add(new BasicNameValuePair("versi_apk", Versi_Apk));
-				Log.d("Proses Cek Versi!", "dimulai");
-				JSONObject jsonObjectNya = classJsonParser.makeHttpRequest(Koneksi.CEK_VERSI, "POST", versi);
-
-				Log.d("Prosess Login...", jsonObjectNya.toString());
-				jikaSukses = jsonObjectNya.getInt(TAG_CODE);
-
-				if (jikaSukses == 1) { // VERSI APK Sudah Terbaru
-
-					pesan = jsonObjectNya.getString(TAG_PESAN_CEK);
-					Log.e("pesan:", jsonObjectNya.getString(TAG_PESAN_CEK));
-					return jsonObjectNya.getString(TAG_CODE);
-
-				}else if (jikaSukses == 405) { //Butuh Info Saja
-
-					pesan 	= jsonObjectNya.getString(TAG_PESAN_CEK);
-					warning = jsonObjectNya.getString(TAG_WARNING);
-
-					Log.e("pesan:", jsonObjectNya.getString(TAG_PESAN_CEK));
-					return jsonObjectNya.getString(TAG_CODE);
-
-				}else if (jikaSukses == 404) { //Butuh Maintenance Saja
-
-					pesan 	= jsonObjectNya.getString(TAG_PESAN_CEK);
-					warning = jsonObjectNya.getString(TAG_WARNING);
-
-					Log.e("pesan:", jsonObjectNya.getString(TAG_PESAN_CEK));
-					return jsonObjectNya.getString(TAG_CODE);
-
-				}else if (jikaSukses == 405404) { //Butuh Info dan Maintenance
-
-					pesan 	= jsonObjectNya.getString(TAG_PESAN_CEK);
-					warning = jsonObjectNya.getString(TAG_WARNING);
-
-					Log.e("pesan:", jsonObjectNya.getString(TAG_PESAN_CEK));
-					return jsonObjectNya.getString(TAG_CODE);
-
-				}else if (jikaSukses == 101) { //DIBUTUHKAN PEMBARUAN KE VERSI YANG BARU
-
-					pesan 		= jsonObjectNya.getString(TAG_PESAN_CEK);
-					versiygbaru = jsonObjectNya.getString(TAG_VERSIBARU);
-					warning 	= jsonObjectNya.getString(TAG_WARNING);
-
-					Log.e("pesan:", jsonObjectNya.getString(TAG_PESAN_CEK));
-					return jsonObjectNya.getString(TAG_CODE);
-
-				} else {
-
-					Log.d("pesan",jsonObjectNya.getString(TAG_PESAN_CEK));
-					return jsonObjectNya.getString(TAG_CODE);
-					
-				}
-			} catch (JSONException e) {
-				responseString = e.toString();					
-			} catch (Exception e){
-				responseString = e.toString();
-			}
-
-			return responseString;
-		}
-
-		@Override
-		protected void onPostExecute(String code) {
-			loading_sembunyi();
-			//1, 405, 404, 405404, 101
-			switch (code) {
-				case "1": //versiterbaru
-					new Login_APK().execute();
-					break;
-				case "405": //info
-					jikainfo(pesan);
-					break;
-				case "404": //maintenance
-					jikamaintenance(pesan);
-					break;
-				case "405404": //info dan maintenance
-					jikamaintenancedaninfo(pesan);
-					break;
-				case "101": //perpermbaruan versi atau download
-					info_download(pesan);
-					break;
-			}
-
-        }
-
-	}*/
-
-	public class Cek_Versi_Dulu extends AsyncTask<Void, Void, String> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			loading_tampil();
-		}
-
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-        @Override
-		protected String doInBackground(Void... voids) {
-
-			String versiApk = versinya; //cek_versi_apk.getText().toString().trim();
+			String code = "0";
 			Java_Connection jc = new Java_Connection();
 
 			try {
+
 				HashMap<String, String> params = new HashMap<>();
 				params.put("versi_apk", versiApk);
 
@@ -469,93 +396,75 @@ public class Login_Activity extends AppCompatActivity {
 						params
 				);
 
-				if (response == null) {
-					return "0"; // gagal / tidak ada respon
+				if (response != null) {
+
+					Log.d("CEK_VERSI", "RESPON = " + response);
+
+					JSONObject json = new JSONObject(response);
+
+					int kode = json.getInt(TAG_CODE);
+
+					pesan = json.optString(TAG_PESAN_CEK, "");
+					warning = json.optString(TAG_WARNING, "");
+					versiygbaru = json.optString(TAG_VERSIBARU, "");
+					linkupdate = json.optString(TAG_LINK, "");
+
+					code = String.valueOf(kode);
 				}
-
-				Log.d("CEK_VERSI", "RESPON = " + response);
-
-				JSONObject json = new JSONObject(response);
-				int code = json.getInt(TAG_CODE);
-
-				pesan = json.optString(TAG_PESAN_CEK, "");
-				warning = json.optString(TAG_WARNING, "");
-				versiygbaru = json.optString(TAG_VERSIBARU, "");
-
-				return String.valueOf(code);
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				return "0";
 			}
-		}
 
-		@Override
-		protected void onPostExecute(String code) {
-			loading_sembunyi();
+			String finalCode = code;
 
-			switch (code) {
-				case "1": // versi terbaru
-					new Login_APK().execute();
-					break;
+			mainHandler.post(() -> {
 
-				case "405": // info
-					jikainfo(pesan);
-					break;
+				hideLoading();
 
-				case "404": // maintenance
-					jikamaintenance(pesan);
-					break;
+				switch (finalCode) {
 
-				case "405404": // info + maintenance
-					jikamaintenancedaninfo(pesan);
-					break;
+					case "1": // versi terbaru
+						loginAPK();
+						break;
 
-				case "101": // wajib update
-					info_download(pesan);
-					break;
+					case "405": // info
+						jikainfo(pesan);
+						break;
 
-				default:
-					Toast.makeText(
-							getApplicationContext(),
-							"Gagal cek versi",
-							Toast.LENGTH_LONG
-					).show();
-					break;
-			}
-		}
+					case "404": // maintenance
+						jikamaintenance(pesan);
+						break;
+
+					case "405404": // info + maintenance
+						jikamaintenancedaninfo(pesan);
+						break;
+
+					case "101": // wajib update
+						info_download(pesan);
+						break;
+
+					default:
+						Toast.makeText(
+								getApplicationContext(),
+								"Gagal cek versi",
+								Toast.LENGTH_LONG
+						).show();
+						break;
+				}
+
+			});
+
+		});
+
 	}
 
-	private void info_versi_commingsoon(String message) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(message)
-				.setTitle("Comming Soon")
-				.setCancelable(false)
-				.setIcon(R.drawable.ic_warning_black)
-				.setPositiveButton("Bye Bye",
-						(dialog, id) -> dialog.dismiss());
-		AlertDialog alert = builder.create();
-		alert.show();
-	}
-	private void info_versi(String message) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(message)
-				.setTitle("Informasi Versi")
-				.setCancelable(false)
-				.setIcon(R.drawable.ic_info_outline_24dp)
-				.setPositiveButton("Terima Kasih",
-						(dialog, id) -> dialog.dismiss());
-		AlertDialog alert = builder.create();
-		alert.show();
-	}
-
-	//dialog untuk cek versi
 	private void jikainfo(String message) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(message)
 				.setTitle(warning)
 				.setCancelable(false)
-				.setIcon(R.drawable.ic_info_outline_24dp)
+				.setIcon(R.drawable.ic_warning_black)
 				.setPositiveButton("Ok",
 						(dialog, id) -> dialog.dismiss());
 		AlertDialog alert = builder.create();
@@ -589,123 +498,104 @@ public class Login_Activity extends AppCompatActivity {
 		alert.show();
 	}
 
-	//------------------------------------------------------------------------------------
-
-	/** @noinspection CatchMayIgnoreException*/
 	private void info_download(String message) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(message)
 				.setTitle(warning)
 				.setCancelable(false)
-				.setIcon(R.drawable.ic_download_sppd)
-				.setPositiveButton("Masuk Website",
+				.setIcon(R.drawable.ic_download)
+				.setPositiveButton("✅ Update",
 						(dialog, id) -> {
 							dialog.dismiss();
 							Intent in = new Intent();
 							in.setAction(Intent.ACTION_VIEW);
 							in.addCategory(Intent.CATEGORY_BROWSABLE);
-							in.setData(Uri.parse(Koneksi.URL_WEBSITE));
+							in.setData(Uri.parse(linkupdate));
 							startActivity(in);
 						})
-				.setNegativeButton("Download",
+				.setNeutralButton("Download",
 						(dialog, id) -> {
 							try {
-								new down_apk().execute(Koneksi.download_apk + "e-Sppd.v"
-										+ URLEncoder.encode(versiygbaru, "UTF-8")+".apk");
+								String linkupdate = Koneksi.download_apk + "e-Sppd.v" + URLEncoder.encode(versiygbaru, "UTF-8")+".apk";
+								downloadApk(linkupdate);
 							} catch (Exception ex) {
-								// TODO Auto-generated catch block
 								ex.getMessage();
-//								ex.printStackTrace();
 							}
 						})
-
-				.setNeutralButton("Keluar",
+				.setNegativeButton("❌ Nanti",
 						(dialog, id) -> {
 							dialog.dismiss();
-							Login_Activity.this.finish();
-							finish();
+							hideLoading();
 						});
 		AlertDialog alert = builder.create();
 		alert.show();
 	}
 
-	protected Dialog onCreateDialog(int id) {
-		if (id == progress_DOWNLOAD) {
-			download = new ProgressDialog(this);
-			download.setMessage("Downloading file...\ne-Sppd.v" + versiygbaru + ".apk");
-			download.setIndeterminate(false);
-			download.setMax(100);
-			download.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			download.setCancelable(false);
-			download.show();
-			return download;
-		}
-		return null;
-	}
+	@SuppressLint("SetTextI18n")
+    public void downloadApk(String urlDownload) {
 
-	@SuppressLint("StaticFieldLeak")
-    private class down_apk extends AsyncTask<String, Integer, String> {
+		showDownloadDialog();
 
-		private Uri fileUri;
+		executor.execute(() -> {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-
-			downloaddiMAIN = new ProgressDialog(Login_Activity.this);
-			downloaddiMAIN.setTitle("Download Aplikasi");
-			downloaddiMAIN.setMessage("Sedang mengunduh...");
-			downloaddiMAIN.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-			downloaddiMAIN.setIndeterminate(false);
-			downloaddiMAIN.setMax(100);
-			downloaddiMAIN.setCancelable(false);
-			downloaddiMAIN.show();
-		}
-
-		@Override
-		protected String doInBackground(String... f_url) {
 			String error = null;
-			int count;
 
 			try {
-				URL url = new URL(f_url[0]);
+
+				URL url = new URL(urlDownload);
 				URLConnection connection = url.openConnection();
 				connection.connect();
 
 				int lengthOfFile = connection.getContentLength();
 
-				// ===== MediaStore.Files (Universal) =====
 				ContentValues values = new ContentValues();
 				values.put(MediaStore.MediaColumns.DISPLAY_NAME,
 						"e-Sppd.v" + versiygbaru + ".apk");
 				values.put(MediaStore.MediaColumns.MIME_TYPE,
 						"application/vnd.android.package-archive");
 
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-					values.put("relative_path", Environment.DIRECTORY_DOWNLOADS);
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+					values.put(MediaStore.MediaColumns.RELATIVE_PATH,
+							Environment.DIRECTORY_DOWNLOADS);
 				}
 
 				fileUri = getContentResolver().insert(
 						MediaStore.Files.getContentUri("external"), values);
 
 				if (fileUri == null) {
-					return "Gagal membuat file Download";
+					error = "Gagal membuat file download";
+					throw new Exception(error);
 				}
 
 				InputStream input = new BufferedInputStream(url.openStream());
 				OutputStream output = getContentResolver().openOutputStream(fileUri);
 
-				if (output == null) {
-					return "Gagal membuka OutputStream";
-				}
-
 				byte[] data = new byte[1024];
+				int count;
 				long total = 0;
 
 				while ((count = input.read(data)) != -1) {
+
 					total += count;
-					int progress = (int) ((total * 100) / lengthOfFile);
-					publishProgress(progress);
+
+					int progress = 0;
+
+					if (lengthOfFile > 0) {
+						progress = (int) ((total * 100) / lengthOfFile);
+					}
+
+					int finalProgress = progress;
+
+					mainHandler.post(() -> {
+
+						if (progressBar != null)
+							progressBar.setProgress(finalProgress);
+
+						if (txtProgress != null)
+							txtProgress.setText(finalProgress + "%");
+
+					});
+
 					output.write(data, 0, count);
 				}
 
@@ -717,249 +607,63 @@ public class Login_Activity extends AppCompatActivity {
 				error = e.toString();
 			}
 
-			return error;
-		}
+			String finalError = error;
 
-		@Override
-		protected void onProgressUpdate(Integer... progress) {
-			if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
-				downloaddiMAIN.setProgress(progress[0]);
-			}
-			progressdownload = String.valueOf(progress[0]);
-			Log.e(TAG, "Progress Download: " + progress[0] + "%");
-		}
+			mainHandler.post(() -> {
 
-		@Override
-		protected void onPostExecute(String error) {
+				if (dialogDownload != null && dialogDownload.isShowing()) {
+					dialogDownload.dismiss();
+				}
 
-			if (downloaddiMAIN != null && downloaddiMAIN.isShowing()) {
-				downloaddiMAIN.dismiss();
-				downloaddiMAIN = null;
-			}
+				if (finalError == null) {
+					String pesan =
+							"Download E-SPPD V" + versiygbaru + " berhasil.\n\n" +
+									"File tersimpan di folder Download.\n" +
+									"Silakan install ulang aplikasi.";
 
-			if (error == null && "100".equals(progressdownload)) {
-
-				String pesan =
-						"Download E-SPPD V" + versiygbaru + " berhasil.\n\n" +
-								"File tersimpan di folder Download.\n" +
-								"Silakan install ulang aplikasi.";
-
-				showprogress_download(pesan);
-
-			} else if (error != null) {
-
-				if (error.contains("UnknownHost") ||
-						error.contains("ETIMEDOUT") ||
-						error.contains("SSLException")) {
-
-					show_warning(
-							"Tidak ada koneksi internet.\n" +
-									"Periksa Wi-Fi atau data seluler lalu coba lagi."
-					);
-
-				} else if (error.contains("Permission denied")) {
-
-					Toast.makeText(
-							Login_Activity.this,
-							"Izin penyimpanan diperlukan.\nAktifkan di pengaturan aplikasi.",
-							Toast.LENGTH_LONG
-					).show();
-
+					showprogress_download(pesan);
 				} else {
-                    showErrorSnackbar("Download gagal: " + error);
-                }
-
-			} else {
-				showErrorSnackbar("Download tidak selesai");
-			}
-
-			super.onPostExecute(error);
-		}
+					showErrorSnackbar("Download gagal: " + finalError);
+				}
+			});
+		});
 	}
-
 	private void showErrorSnackbar(String message) {
 		View rootView = findViewById(android.R.id.content);
 		Snackbar.make(rootView, message, Snackbar.LENGTH_LONG)
 				.setAction("OK", v -> {})
 				.show();
 	}
-	@SuppressLint("UnsafeIntentLaunch")
+
 	private void showprogress_download(String a) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(a)
 				.setTitle("Informasi")
 				.setCancelable(false)
-				.setIcon(R.drawable.ic_info_outline_24dp)
+				.setIcon(R.drawable.ic_warning_black)
 				.setPositiveButton("Ok",
 						(dialog, id) -> {
 							dialog.dismiss();
 							finish();
-							startActivity(getIntent());
 						});
 		AlertDialog alert = builder.create();
 		alert.show();
 	}
 
-	@SuppressLint("StaticFieldLeak")
-	/*public class Login_APK extends AsyncTask<String, String, String> {
+	private void loginAPK() {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-//			loading = new ProgressDialog(Login_Activity.this);
-//			loading.setMessage("Sedang Memuat...");
-//			loading.setIndeterminate(false);
-//			loading.setIcon(R.drawable.ic_info_outline_24dp);
-//			loading.setCancelable(false);
-//			loading.show();
-			loading_tampil();
-		}
+		showLoading();
 
-		@Override
-		protected String doInBackground(String... args) {
-		
-			int jikaSukses;
-			int cek_level;
+		String nippegawai  = edit_nip.getText().toString().trim();
+		String passpegawai = edit_pass.getText().toString().trim();
+		String versiApk    = versinya;
 
-			String responseString;
-			String nippegawai 	= edit_nip.getText().toString();
-			String passpwgawai 	= edit_pass.getText().toString();
-			String Kirim_Cek_Versi_APK = cek_versi_apk.getText().toString();
+		executor.execute(() -> {
+
+			String jawaban_json;
 
 			try {
-			
-				List<NameValuePair> namaDanPassword = new ArrayList<>();
-				namaDanPassword.add(new BasicNameValuePair("nip", nippegawai));
-				namaDanPassword.add(new BasicNameValuePair("pass", passpwgawai));
-				namaDanPassword.add(new BasicNameValuePair("versi", Kirim_Cek_Versi_APK));
-				
-				Log.d("Login!", "dimulai");
-			
-				JSONObject jsonObjectNya = classJsonParser.makeHttpRequest
-						(Koneksi.LINK_UNTUK_LOGIN_TES, "POST", namaDanPassword);
-			
-				Log.d("Coba login", jsonObjectNya.toString());
 
-				jikaSukses 				  = jsonObjectNya.getInt(TAG_SUKSES2);
-
-				if (jikaSukses == 1) {
-					cek_level 	= jsonObjectNya.getInt(Security_Level);
-
-					nip 			= jsonObjectNya.getString(TAG_NIP);
-					nama_pegawai 	= jsonObjectNya.getString(TAG_NAMA_PEGAWAI);
-					jabatan 		= jsonObjectNya.getString(TAG_JABATAN);
-					golongan 		= jsonObjectNya.getString(TAG_GOLONGAN);
-					unit 			= jsonObjectNya.getString(TAG_UNIT);
-					password		= jsonObjectNya.getString(TAG_PASSWORD);
-					email			= jsonObjectNya.getString(TAG_EMAIL);
-					Log.d("pesan:", jsonObjectNya.toString());
-
-					if (cek_level == 1) {
-
-						String pesan = "Untuk Dapat Menggunakan Aplikasi E-SPPD Dengan Menggunakan\nUser :"+nip+
-								"Password :"+password+"\nAnda Perlu Menghubungi Pihak Administrator Untuk Mendapatkan Hak Akses Aplikasi E-SPPD";
-						info(pesan);
-*//*
-						SharedPreferences.Editor editor = sharedpreferences.edit();
-						editor.putBoolean(session_status_level1, true);
-						editor.putString(TAG_NIP, nip);
-						editor.putString(TAG_NAMA_PEGAWAI, nama_pegawai);
-						editor.putString(versi, kirim_versi);
-						editor.commit();
-
-						Intent intent = new Intent(Login_Activity.this,
-								MainActivityBaru_Admin.class);
-						//intent.putExtra(nippegawai, nip);
-
-						intent.putExtra(TAG_NIP, nip);
-						intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
-						intent.putExtra(versi, kirim_versi);
-						finish();
-						startActivity(intent);
-						*//*
-					}else if (cek_level == 2) {
-
-							SharedPreferences.Editor editor = sharedpreferences.edit();
-							editor.putBoolean(session_status_level2, true);
-							editor.putString(TAG_NIP, nip);
-							editor.putString(TAG_NAMA_PEGAWAI, nama_pegawai);
-							editor.putString(TAG_JABATAN, jabatan);
-							editor.putString(TAG_GOLONGAN, golongan);
-							editor.putString(TAG_UNIT, unit);
-							editor.putString(TAG_PASSWORD, password);
-							editor.putString(TAG_EMAIL, email);
-							editor.putString(versi, kirim_versi);
-							editor.apply();
-
-							Intent intent = new Intent(Login_Activity.this, MainActivityBaru_Petugas.class);
-							intent.putExtra(TAG_NIP, nip);
-							intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
-							intent.putExtra(TAG_JABATAN, jabatan);
-							intent.putExtra(TAG_GOLONGAN, golongan);
-							intent.putExtra(TAG_UNIT, unit);
-							intent.putExtra(TAG_PASSWORD, password);
-							intent.putExtra(TAG_EMAIL, email);
-							intent.putExtra(versi, kirim_versi);
-							finish();
-							startActivity(intent);
-					}
-
-					return jsonObjectNya.getString(TAG_PESAN2);
-				} else {
-					Log.d("Login_nya Gagal!",
-							jsonObjectNya.getString(TAG_PESAN2));
-					return jsonObjectNya.getString(TAG_PESAN2);
-				}
-			} catch (JSONException e) {
-				responseString = e.toString();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				responseString = e.toString();
-			}
-
-			return responseString;
-		}
-
-		@Override
-		protected void onPostExecute(String jawaban_json) {
-			//loading.dismiss();
-			loading_sembunyi();
-			Log.i(TAG, "Respon Login " + jawaban_json);
-			String pesan1 = "java.lang.RuntimeException: Can't create handler inside thread";
-			String nippegawai 	= edit_nip.getText().toString();
-			String passpwgawai 	= edit_pass.getText().toString();
-				if (jawaban_json != null) {
-					if (jawaban_json.contains(pesan1)) {
-						String pesan = "Untuk Dapat Menggunakan Aplikasi E-SPPD Dengan Menggunakan\nUser :" + nippegawai +
-								"\nPassword :" + passpwgawai + "\nAnda Perlu Menghubungi Pihak Administrator Untuk " +
-								"Mendapatkan Hak Akses Aplikasi E-SPPD";
-						info(pesan);
-					}else{
-						Toast.makeText(getApplicationContext(), jawaban_json, Toast.LENGTH_LONG).show();
-					}
-				}
-
-		}
-
-	}*/
-
-	public class Login_APK extends AsyncTask<Void, Void, String> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			loading_tampil();
-		}
-
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-        @Override
-		protected String doInBackground(Void... voids) {
-
-			String nippegawai   = edit_nip.getText().toString().trim();
-			String passpegawai  = edit_pass.getText().toString().trim();
-			String versiApk     = versinya; //cek_versi_apk.getText().toString().trim();
-
-			try {
 				HashMap<String, String> params = new HashMap<>();
 				params.put("nip", nippegawai);
 				params.put("pass", passpegawai);
@@ -974,93 +678,99 @@ public class Login_Activity extends AppCompatActivity {
 				);
 
 				if (response == null) {
-					return "Gagal terhubung ke server";
-				}
-
-				Log.d("LOGIN", "RESPON = " + response);
-
-				JSONObject jsonObjectNya = new JSONObject(response);
-				int jikaSukses = jsonObjectNya.getInt(TAG_SUKSES2);
-
-				if (jikaSukses == 1) {
-
-					int cek_level = jsonObjectNya.getInt(Security_Level);
-
-					nip           = jsonObjectNya.getString(TAG_NIP);
-					nama_pegawai  = jsonObjectNya.getString(TAG_NAMA_PEGAWAI);
-					jabatan       = jsonObjectNya.getString(TAG_JABATAN);
-					golongan      = jsonObjectNya.getString(TAG_GOLONGAN);
-					unit          = jsonObjectNya.getString(TAG_UNIT);
-					password      = jsonObjectNya.getString(TAG_PASSWORD);
-					email         = jsonObjectNya.getString(TAG_EMAIL);
-
-					if (cek_level == 1) {
-
-						String pesan = "Untuk Dapat Menggunakan Aplikasi E-SPPD Dengan Menggunakan\n" +
-								"User : " + nip +
-								"\nPassword : " + password +
-								"\nAnda Perlu Menghubungi Pihak Administrator Untuk Mendapatkan Hak Akses Aplikasi E-SPPD";
-
-						runOnUiThread(() -> info(pesan));
-
-					} else if (cek_level == 2) {
-
-						SharedPreferences.Editor editor = sharedpreferences.edit();
-						editor.putBoolean(session_status_level2, true);
-						editor.putString(TAG_NIP, nip);
-						editor.putString(TAG_NAMA_PEGAWAI, nama_pegawai);
-						editor.putString(TAG_JABATAN, jabatan);
-						editor.putString(TAG_GOLONGAN, golongan);
-						editor.putString(TAG_UNIT, unit);
-						editor.putString(TAG_PASSWORD, password);
-						editor.putString(TAG_EMAIL, email);
-						editor.putString(versi, versiApk);
-						editor.apply();
-
-						Intent intent = new Intent(
-								Login_Activity.this,
-								MainActivityUtama.class
-						);
-
-						intent.putExtra(TAG_NIP, nip);
-						intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
-						intent.putExtra(TAG_JABATAN, jabatan);
-						intent.putExtra(TAG_GOLONGAN, golongan);
-						intent.putExtra(TAG_UNIT, unit);
-						intent.putExtra(TAG_PASSWORD, password);
-						intent.putExtra(TAG_EMAIL, email);
-						intent.putExtra(versi, versiApk);
-
-						finish();
-						startActivity(intent);
-					}
-
-					return jsonObjectNya.getString(TAG_PESAN2);
-
+					jawaban_json = "Gagal terhubung ke server";
 				} else {
-					return jsonObjectNya.getString(TAG_PESAN2);
+
+					Log.d("LOGIN", "RESPON = " + response);
+
+					JSONObject jsonObjectNya = new JSONObject(response);
+					int jikaSukses = jsonObjectNya.getInt(TAG_SUKSES2);
+
+					if (jikaSukses == 1) {
+
+						int cek_level = jsonObjectNya.getInt(Security_Level);
+
+						nip           = jsonObjectNya.getString(TAG_NIP);
+						nama_pegawai  = jsonObjectNya.getString(TAG_NAMA_PEGAWAI);
+						jabatan       = jsonObjectNya.getString(TAG_JABATAN);
+						golongan      = jsonObjectNya.getString(TAG_GOLONGAN);
+						unit          = jsonObjectNya.getString(TAG_UNIT);
+						password      = jsonObjectNya.getString(TAG_PASSWORD);
+						email         = jsonObjectNya.getString(TAG_EMAIL);
+
+						if (cek_level == 1) {
+
+							mainHandler.post(() -> {
+								String pesan = "Hubungi administrator untuk Hak Akses Aplikasi e-SPPD!";
+								info(pesan);
+							});
+
+						} else if (cek_level == 2) {
+
+							mainHandler.post(() -> {
+
+								SharedPreferences.Editor editor = sharedpreferences.edit();
+								editor.putBoolean(session_status_level2, true);
+								editor.putString(TAG_NIP, nip);
+								editor.putString(TAG_NAMA_PEGAWAI, nama_pegawai);
+								editor.putString(TAG_JABATAN, jabatan);
+								editor.putString(TAG_GOLONGAN, golongan);
+								editor.putString(TAG_UNIT, unit);
+								editor.putString(TAG_PASSWORD, password);
+								editor.putString(TAG_EMAIL, email);
+								editor.putString(versi, versiApk);
+								editor.apply();
+
+								Intent intent = new Intent(
+										Login_Activity.this,
+										MainActivityUtama.class
+								);
+
+								intent.putExtra(TAG_NIP, nip);
+								intent.putExtra(TAG_NAMA_PEGAWAI, nama_pegawai);
+								intent.putExtra(TAG_JABATAN, jabatan);
+								intent.putExtra(TAG_GOLONGAN, golongan);
+								intent.putExtra(TAG_UNIT, unit);
+								intent.putExtra(TAG_PASSWORD, password);
+								intent.putExtra(TAG_EMAIL, email);
+								intent.putExtra(versi, versiApk);
+
+								finish();
+								startActivity(intent);
+
+							});
+
+						}
+
+						jawaban_json = jsonObjectNya.getString(TAG_PESAN2);
+
+					} else {
+						jawaban_json = jsonObjectNya.getString(TAG_PESAN2);
+					}
 				}
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				return e.toString();
+				jawaban_json = e.toString();
 			}
-		}
 
-		@Override
-		protected void onPostExecute(String jawaban_json) {
-			loading_sembunyi();
+			String finalJawaban = jawaban_json;
 
-			if (jawaban_json != null) {
-				Toast.makeText(
-						getApplicationContext(),
-						jawaban_json,
-						Toast.LENGTH_LONG
-				).show();
-			}
-		}
+			mainHandler.post(() -> {
+
+				hideLoading();
+
+                Toast.makeText(
+                        getApplicationContext(),
+                        finalJawaban,
+                        Toast.LENGTH_LONG
+                ).show();
+
+            });
+
+		});
+
 	}
-
 	private void show_warning(String message) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage(message)
@@ -1086,7 +796,7 @@ public class Login_Activity extends AppCompatActivity {
 		builder.setMessage(message)
 				.setTitle("Informasi")
 				.setCancelable(false)
-				.setIcon(R.drawable.ic_info_outline_24dp)
+				.setIcon(R.drawable.ic_warning_black)
 				.setPositiveButton("Ok",
 						(dialog, id) -> dialog.dismiss());
 		AlertDialog alert = builder.create();
@@ -1097,11 +807,6 @@ public class Login_Activity extends AppCompatActivity {
 	public void refresh() {
 		finish();
 		startActivity(getIntent());
-	}
-
-	@Override
-	public void onBackPressed() {
-		infodialogback();
 	}
 
 	private void infodialogback() {
@@ -1120,10 +825,10 @@ public class Login_Activity extends AppCompatActivity {
 
 	public void onRequestPermissionsResult(int RC, @NonNull String[] per, @NonNull int[] PResult) {
 
-		if (RC == RequestPermissionCode_StorageCamera) {
+        super.onRequestPermissionsResult(RC, per, PResult);
+        if (RC == RequestPermissionCode_StorageCamera) {
 			if ((PResult.length > 0) && (PResult[0] == PackageManager.PERMISSION_DENIED)) {
-
-				Toast.makeText(Login_Activity.this, "Diperlukan Ijin Mengakses Lokasi Penyimpanan dan Kamera !!!", Toast.LENGTH_LONG).show();
+				makeText(Login_Activity.this, "Diperlukan ijin akses lokasi penyimpanan data dan akses galery!", LENGTH_LONG).show();
 			}
 		}
 	}
@@ -1133,8 +838,7 @@ public class Login_Activity extends AppCompatActivity {
 		if ((ActivityCompat.shouldShowRequestPermissionRationale(Login_Activity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) &&
 				(ActivityCompat.shouldShowRequestPermissionRationale(Login_Activity.this, Manifest.permission.CAMERA))) {
 
-			Toast.makeText(Login_Activity.this, "Diperlukan Ijin Mengakses Penyimpanan  dan Kamera !!!", Toast.LENGTH_LONG).show();
-
+			makeText(Login_Activity.this, "Diperlukan ijin akses lokasi penyimpanan data dan akses kamera!", LENGTH_LONG).show();
 			ActivityCompat.requestPermissions(Login_Activity.this,
 					new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, RequestPermissionCode_StorageCamera);
 		} else {
@@ -1143,28 +847,39 @@ public class Login_Activity extends AppCompatActivity {
 		}
 	}
 
-	public void loading_sembunyi() {
+	public void showLoading() {
 		frame_loading_login.setVisibility(View.GONE);
 		edit_nip.setEnabled(true);
 		edit_pass.setEnabled(true);
-		cardView_btnlogin.setEnabled(true);
-		cardView_register.setEnabled(true);
-		cardview_lupapass.setEnabled(true);
+		btnlogin.setEnabled(true);
+		txt_signup.setEnabled(true);
+		txt_bantuan.setEnabled(true);
 	}
 
-	public void loading_tampil() {
+	public void hideLoading() {
 		frame_loading_login.setVisibility(View.VISIBLE);
 		edit_nip.setEnabled(false);
 		edit_pass.setEnabled(false);
-		cardView_btnlogin.setEnabled(false);
-		cardView_register.setEnabled(false);
-		cardview_lupapass.setEnabled(false);
+		btnlogin.setEnabled(false);
+		txt_signup.setEnabled(false);
+		txt_bantuan.setEnabled(false);
 
 		Glide.with(Login_Activity.this)
-				// LOAD URL DARI LOKAL DRAWABLE
-				.load(R.drawable.loading_ring)
-				.asGif()
-				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
+				.load(R.drawable.loading_blue)
 				.into(gmbar_loading_login);
+	}
+	public void showDownloadDialog() {
+
+		dialogDownload = new Dialog(this);
+		dialogDownload.setContentView(R.layout.dialog_download_progress);
+
+		progressBar = dialogDownload.findViewById(R.id.progressBar);
+		txtProgress = dialogDownload.findViewById(R.id.txtProgress);
+
+		progressBar.setProgress(0);
+		txtProgress.setText("0%");
+
+		dialogDownload.setCancelable(false);
+		dialogDownload.show();
 	}
 }

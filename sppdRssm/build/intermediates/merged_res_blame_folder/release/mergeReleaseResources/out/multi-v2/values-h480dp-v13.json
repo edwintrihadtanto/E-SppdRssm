@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.e_sppd.rssm.sppdRssm-mergeReleaseResources-42:/values-h480dp-v13/values-h480dp-v13.xml",
+            "outputFile": "com.e_sppd.rssm.sppdRssm-mergeReleaseResources-56:/values-h480dp-v13/values-h480dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rssm_\\.gradle\\caches\\8.9\\transforms\\348e96839a69e9084e51d7d247ce68b6\\transformed\\material-1.13.0\\res\\values-h480dp-v13\\values-h480dp-v13.xml",
+                    "source": "C:\\Users\\rssm_\\.gradle\\caches\\8.13\\transforms\\5f27ec5da8d05a58e949e25830c01c22\\transformed\\material-1.13.0\\res\\values-h480dp-v13\\values-h480dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

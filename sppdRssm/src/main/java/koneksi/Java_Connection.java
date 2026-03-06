@@ -16,7 +16,6 @@ import java.util.Map;
 
 public class Java_Connection {
 
-	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
 	public String sendPostRequest(String requestURL,
 								  HashMap<String, String> postDataParams) {
 
@@ -100,7 +99,6 @@ public class Java_Connection {
 		return result.toString();
 	}
 
-	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
 	public String sendGetRequest(String requestURL) {
 
 		HttpURLConnection conn = null;
@@ -158,7 +156,6 @@ public class Java_Connection {
 		return response.toString();
 	}
 
-	@RequiresApi(api = Build.VERSION_CODES.KITKAT)
 	public String sendMultipart(
 			String requestURL,
 			HashMap<String, String> params,
@@ -227,7 +224,7 @@ public class Java_Connection {
 			String line;
 			while ((line = br.readLine()) != null) sb.append(line);
 			br.close();
-			Log.e("UPLOAD_DEBUG", "Response Body = " + sb.toString());
+			Log.e("UPLOAD_DEBUG", "Response Body = " + sb);
 			return sb.toString();
 
 		} catch (Exception e) {

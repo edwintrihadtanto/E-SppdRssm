@@ -1,19 +1,16 @@
 package com.fungsiutama;
 
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,24 +22,27 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-//import koneksi.JSONParser;
+import android.os.Looper;
+
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
+
 public class Edit_LaporanPerjalanan extends AppCompatActivity {
 	private static final String TAG = "LAPORAN";
 	private final Handler handler = new Handler();
-	private ProgressDialog ProgressDialog1;
-
+	private final ExecutorService executor = Executors.newSingleThreadExecutor();
+	private final Handler mainHandler = new Handler(Looper.getMainLooper());
 	private EditText hasilRapat, hasilMasalah, hasilSaran, hasilLainnya;
-
+	private FrameLayout loadingOverlay;
 	int tahun, bulan, hari;
-//	JSONParser classJsonParser = new JSONParser();
-	private static final String TAG_BERHASIL 	= "success";
 	private static final String TAG_PESAN 		= "message";
 	TextView noSPT, tglBerangkat, tglSampai, lamaperjalanan, nama_petugas, kotatujuan, acratujuan, acara, tglSPT, nipTTD, tgl_ttd;
 	String nomor_spt, nip, nama, lama_perj, tgl_brngkt, tgl_kembali, daerah_tujuan, instansi_yg_dikunjungi, acaraSPPD, tgl_surat_masuk, stsLaporan, tglSekarang;
 	String idLaporanSPPD = "";
+	Button simpanlaporan, hapuslaporan;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,17 +64,15 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		hasilMasalah 			= findViewById(R.id.edit_masalah);
 		hasilSaran 				= findViewById(R.id.edit_saran);
 		hasilLainnya 			= findViewById(R.id.edit_lain_lain);
-        Button simpanlaporan 	= findViewById(R.id.btnSimpanLaporan);
-		Button hapuslaporan 	= findViewById(R.id.btnHapusLaporan);
+		simpanlaporan 			= findViewById(R.id.btnSimpanLaporan);
+		hapuslaporan 			= findViewById(R.id.btnHapusLaporan);
+		loadingOverlay 			= findViewById(R.id.loadingOverlay);
 
 		final Calendar c 	= Calendar.getInstance();
 		tahun 				= c.get(Calendar.YEAR);
 		bulan 				= c.get(Calendar.MONTH);
 		hari 				= c.get(Calendar.DAY_OF_MONTH);
 
-		//Bundle b = getIntent().getExtras();
-		//String transfer_nip = b.getString("transfer_nip");
-		// nip_lokal.setText("NIP. "+transfer_nip);
 		Tampil_data();
 //		String cek_status_laporan_petugas = status_laporan_petugas.getText().toString();
 		if (stsLaporan.equalsIgnoreCase("BELUM")) {
@@ -128,7 +126,8 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		acara.setText(acaraSPPD);
 		nipTTD.setText("NIP : "+ nip);
 
-		new LoadLaporan().execute();
+//		new LoadLaporan().execute();
+		loadLaporan();
 //		if (hasil_pertemuan.contains("null")){
 //			hasilRapat.setText("");
 //		}else{
@@ -156,8 +155,10 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				String pesan = "Form masih kosong";
 				show_alert(pesan);
 			} else {
-				new Simpan_Laporan_Perjalanan_Dinas().execute();
+//				new SimpanLaporan().execute();
+				SimpanLaporan();
 			}
+
 
 		});
 		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
@@ -174,7 +175,8 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				String pesan = "Id Laporan SPPD tidak diketahui!";
 				show_alert(pesan);
 			} else {
-				new Hapus_Laporan_Perj_Dinas().execute();
+//				new Hapus_Laporan_Perj_Dinas().execute();
+				hapusLaporanPerjDinas();
 			}
 
 		});
@@ -192,28 +194,21 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				showSnackbar(pesan);
 			} else {
 				dialog.dismiss();
-				new Edit_Laporan_Perj_Dinas().execute();
+//				new Edit_Laporan_Perj_Dinas().execute();
+				updateLaporanPerjDinas();
 			}
 
 		});
 		ad.setNegativeButton("Batal", (dialog, which) -> dialog.dismiss());
 		ad.show();
 	}
-	@SuppressLint("StaticFieldLeak")
-	public class LoadLaporan extends AsyncTask<Void, Void, JSONObject> {
+	@SuppressLint("SetTextI18n")
+    private void loadLaporan() {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			ProgressDialog1 = new ProgressDialog(Edit_LaporanPerjalanan.this);
-			ProgressDialog1.setMessage("Memuat data laporan...");
-			ProgressDialog1.setCancelable(false);
-			ProgressDialog1.show();
-		}
+		showLoading();
+		executor.execute(() -> {
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-		@Override
-		protected JSONObject doInBackground(Void... voids) {
+			JSONObject json = null;
 
 			try {
 				HashMap<String, String> params = new HashMap<>();
@@ -226,184 +221,80 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 						params
 				);
 
-				if (response == null) return null;
-
-				Log.d("LOAD_LAPORAN", response);
-
-				return new JSONObject(response);
-
-			} catch (Exception e) {
-				e.printStackTrace();
-				return null;
-			}
-		}
-
-		@SuppressLint("SetTextI18n")
-        @Override
-		protected void onPostExecute(JSONObject json) {
-
-			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
-				ProgressDialog1.dismiss();
-			}
-
-			if (json == null) {
-				show_alert("Gagal memuat data laporan");
-				return;
-			}
-
-			try {
-				int success = json.getInt("success");
-
-				if (success == 1) {
-
-					JSONObject data = json.getJSONObject("data");
-					idLaporanSPPD = data.getString("idLaporan");
-					hasilRapat.setText(data.getString("hasil_pertemuan"));
-					hasilMasalah.setText(data.getString("masalah"));
-					hasilSaran.setText(data.getString("saran"));
-					hasilLainnya.setText(data.getString("lain_lain"));
-
-					String tgl = data.getString("tgl_pembuatan_laporan");
-					tglSekarang = tgl;
-					tgl_ttd.setText("Madiun, " + tgl);
-
-					Log.d(TAG, String.valueOf(data));
-
-				} else {
-					show_alert(json.getString("message"));
+				if (response != null) {
+					Log.d("LOAD_LAPORAN", response);
+					json = new JSONObject(response);
 				}
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				show_alert("Terjadi kesalahan parsing data");
 			}
-		}
-	}
-	@SuppressLint("StaticFieldLeak")
-    public class Simpan_Laporan_Perjalanan_Dinas extends AsyncTask<Void, Void, String> {
-		Java_Connection jc = new Java_Connection();
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			ProgressDialog1 = new ProgressDialog(
-					Edit_LaporanPerjalanan.this);
-			ProgressDialog1.setMessage("Loading ...");
-			ProgressDialog1.setIndeterminate(false);
-			ProgressDialog1.setCancelable(false);
-			ProgressDialog1.show();
-		}
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-        @Override
-		protected String doInBackground(Void... voids) {
-			nomor_spt 					= getIntent().getStringExtra("nomor_spt");
-			nip 						= getIntent().getStringExtra("nip");
-			nama 						= getIntent().getStringExtra("nama_pegawai");
-			lama_perj 					= getIntent().getStringExtra("lama_perj");
-			tgl_brngkt 					= getIntent().getStringExtra("tgl_brngkt");
-			tgl_kembali 				= getIntent().getStringExtra("tgl_kembali");
-			daerah_tujuan 				= getIntent().getStringExtra("tempat_tujuan");
-			instansi_yg_dikunjungi 		= getIntent().getStringExtra("surat_masuk_dari");
-			acaraSPPD 					= getIntent().getStringExtra("maksud_perj");
-			tgl_surat_masuk 			= getIntent().getStringExtra("tgl_surat_masuk");
-			stsLaporan 					= getIntent().getStringExtra("status_laporan_petugas");
+			JSONObject finalJson = json;
 
-			try {
-				HashMap<String, String> params = new HashMap<>();
+			mainHandler.post(() -> {
 
-				params.put("ambil_nomor_spt", nomor_spt.trim());
-				params.put("nip", nip.trim());
-				params.put("hasil_pertemuan", hasilRapat.getText().toString().trim());
-				params.put("masalah", hasilMasalah.getText().toString().trim());
-				params.put("saran", hasilMasalah.getText().toString().trim());
-				params.put("lain_lain", hasilLainnya.getText().toString().trim());
-				params.put("tgl_pembuatan_laporan", tglSekarang.trim());
+				hideLoading();
 
-				String response = jc.sendPostRequest(
-						Koneksi.simpanupdate_laporan_petugas,
-						params
-				);
-
-				if (response == null) {
-					return null;
+				if (finalJson == null) {
+					show_alert("Gagal memuat data laporan");
+					return;
 				}
 
-				Log.d("Info", response);
+				try {
+					int success = finalJson.getInt("success");
 
-				JSONObject json = new JSONObject(response);
-//				int berhasil = json.getInt(TAG_BERHASIL);
+					if (success == 1) {
 
-                return json.getString(TAG_PESAN);
+						JSONObject data = finalJson.getJSONObject("data");
+						idLaporanSPPD = data.getString("idLaporan");
+						hasilRapat.setText(data.getString("hasil_pertemuan"));
+						hasilMasalah.setText(data.getString("masalah"));
+						hasilSaran.setText(data.getString("saran"));
+						hasilLainnya.setText(data.getString("lain_lain"));
 
-            } catch (Exception e) {
-				e.printStackTrace();
-				return e.toString();
-			}
-		}
+						String tgl = data.getString("tgl_pembuatan_laporan");
+						tglSekarang = tgl;
+						tgl_ttd.setText("Madiun, " + tgl);
 
-		@Override
-		protected void onPostExecute(String hasil) {
+					} else {
+						show_alert(finalJson.getString("message"));
+					}
 
-			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
-				ProgressDialog1.dismiss();
-			}
-
-			Log.e(TAG, "Respon Dari Server Pembuatan Laporan ::: " + hasil);
-
-			if (hasil != null) {
-
-				String errorJson = "org.json.JSONException: No value for sukses";
-				if (hasil.contains(errorJson)) {
-
-					String pesan =
-							"Koneksi Terputus\n" +
-									"Pastikan Koneksi Data Internet Terhubung dan Lancar !!!";
-					show_alert(pesan);
-
-				} else {
-					Toast.makeText(
-							Edit_LaporanPerjalanan.this,
-							hasil,
-							Toast.LENGTH_LONG
-					).show();
-					finish();
+				} catch (Exception e) {
+					e.printStackTrace();
+					show_alert("Terjadi kesalahan parsing data");
 				}
 
-			} else {
-				show_alert(
-						"Koneksi Terputus\nPastikan Internet Aktif"
-				);
-			}
-		}
+			});
+
+		});
 	}
-	@SuppressLint("StaticFieldLeak")
-    public class Edit_Laporan_Perj_Dinas extends AsyncTask<Void, Void, String> {
+	private void SimpanLaporan() {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			ProgressDialog1 = new ProgressDialog(
-					Edit_LaporanPerjalanan.this);
-			ProgressDialog1.setMessage("Sedang memperbarui laporan..");
-			ProgressDialog1.setIndeterminate(false);
-			ProgressDialog1.setCancelable(false);
-			ProgressDialog1.show();
-		}
+		showLoading();
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-        @Override
-		protected String doInBackground(Void... voids) {
+		String hasil_pertemuan = hasilRapat.getText().toString().trim();
+		String masalah = hasilMasalah.getText().toString().trim();
+		String saran = hasilSaran.getText().toString().trim();
+		String lain_lain = hasilLainnya.getText().toString().trim();
+
+		executor.execute(() -> {
+
+			String hasil = null;
 
 			try {
-				HashMap<String, String> params = new HashMap<>();
 
-				params.put("nip_pembuatlaporanperj", getIntent().getStringExtra("nip_pembuatlaporanperj"));
+				nomor_spt = getIntent().getStringExtra("nomor_spt");
+				nip = getIntent().getStringExtra("nip");
+
+				HashMap<String, String> params = new HashMap<>();
 				params.put("ambil_nomor_spt", nomor_spt.trim());
 				params.put("nip", nip.trim());
-				params.put("hasil_pertemuan", hasilRapat.getText().toString().trim());
-				params.put("masalah", hasilMasalah.getText().toString().trim());
-				params.put("saran", hasilSaran.getText().toString().trim());
-				params.put("lain_lain", hasilLainnya.getText().toString().trim());
+				params.put("hasil_pertemuan", hasil_pertemuan);
+				params.put("masalah", masalah);
+				params.put("saran", saran);
+				params.put("lain_lain", lain_lain);
 				params.put("tgl_pembuatan_laporan", tglSekarang.trim());
 
 				Java_Connection jc = new Java_Connection();
@@ -412,54 +303,125 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 						params
 				);
 
-				if (response == null) {
-					return null;
+				if (response != null) {
+					Log.d("Info", response);
+					JSONObject json = new JSONObject(response);
+					hasil = json.getString(TAG_PESAN);
 				}
 
-				Log.d(TAG, response);
-
-				JSONObject json = new JSONObject(response);
-//				int berhasil = json.getInt(TAG_BERHASIL);
-
-                return json.getString(TAG_PESAN);
-
-            } catch (Exception e) {
+			} catch (Exception e) {
 				e.printStackTrace();
-				return e.toString();
-			}
-		}
-
-		@Override
-		protected void onPostExecute(String hasil) {
-
-			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
-				ProgressDialog1.dismiss();
+				hasil = e.toString();
 			}
 
-			if (hasil != null) {
-				show_alert2(hasil);
-			}
-		}
+			String finalHasil = hasil;
+
+			mainHandler.post(() -> {
+
+				hideLoading();
+				Log.e(TAG, "Respon Server ::: " + finalHasil);
+
+				if (finalHasil != null) {
+
+					if (finalHasil.contains("No value for sukses")) {
+
+						show_alert(
+								"Koneksi Terputus\n" +
+										"Pastikan Koneksi Data Internet Terhubung dan Lancar !!!"
+						);
+
+					} else {
+
+						Toast.makeText(
+								Edit_LaporanPerjalanan.this,
+								finalHasil,
+								Toast.LENGTH_LONG
+						).show();
+
+						finish();
+					}
+
+				} else {
+
+					show_alert(
+							"Koneksi Terputus\nPastikan Internet Aktif"
+					);
+				}
+
+			});
+
+		});
 	}
-	@SuppressLint("StaticFieldLeak")
-	public class Hapus_Laporan_Perj_Dinas extends AsyncTask<Void, Void, String> {
+	private void updateLaporanPerjDinas() {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			ProgressDialog1 = new ProgressDialog(Edit_LaporanPerjalanan.this);
-			ProgressDialog1.setMessage("Sedang menghapus laporan..");
-			ProgressDialog1.setCancelable(false);
-			ProgressDialog1.show();
-		}
+		showLoading();
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
-        @Override
-		protected String doInBackground(Void... voids) {
+		String hasil_pertemuan = hasilRapat.getText().toString().trim();
+		String masalah = hasilMasalah.getText().toString().trim();
+		String saran = hasilSaran.getText().toString().trim();
+		String lain_lain = hasilLainnya.getText().toString().trim();
+
+		executor.execute(() -> {
+
+			String hasil = null;
 
 			try {
-				HashMap<String, String> params = new HashMap<>();
 
+				HashMap<String, String> params = new HashMap<>();
+				params.put("nip_pembuatlaporanperj",
+						getIntent().getStringExtra("nip_pembuatlaporanperj"));
+				params.put("ambil_nomor_spt", nomor_spt.trim());
+				params.put("nip", nip.trim());
+				params.put("hasil_pertemuan", hasil_pertemuan);
+				params.put("masalah", masalah);
+				params.put("saran", saran);
+				params.put("lain_lain", lain_lain);
+				params.put("tgl_pembuatan_laporan", tglSekarang.trim());
+
+				Java_Connection jc = new Java_Connection();
+				String response = jc.sendPostRequest(
+						Koneksi.simpanupdate_laporan_petugas,
+						params
+				);
+
+				if (response != null) {
+					Log.d(TAG, response);
+					JSONObject json = new JSONObject(response);
+					hasil = json.getString(TAG_PESAN);
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+				hasil = e.toString();
+			}
+
+			String finalHasil = hasil;
+
+			mainHandler.post(() -> {
+
+				hideLoading();
+
+				if (finalHasil != null) {
+					show_alert2(finalHasil);
+				} else {
+					show_alert2("Koneksi Terputus\nPastikan Internet Aktif");
+				}
+
+			});
+
+		});
+	}
+	private void hapusLaporanPerjDinas() {
+
+		showLoading();
+
+		executor.execute(() -> {
+
+			String hasil = null;
+
+			try {
+
+				HashMap<String, String> params = new HashMap<>();
 				params.put("idlaporan", idLaporanSPPD.trim());
 				params.put("noSPT", nomor_spt.trim());
 				params.put("nip", nip.trim());
@@ -471,32 +433,31 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 				);
 
 				if (response == null) {
-					return "Server tidak merespon";
+					hasil = "Server tidak merespon";
+				} else {
+					JSONObject json = new JSONObject(response);
+					hasil = json.getString("message");
 				}
-
-				JSONObject json = new JSONObject(response);
-
-//				boolean success = json.getBoolean("success");   // ✔ sesuai backend baru
-
-                return json.getString("message");
 
 			} catch (Exception e) {
 				e.printStackTrace();
-				return e.toString();
-			}
-		}
-
-		@Override
-		protected void onPostExecute(String hasil) {
-
-			if (ProgressDialog1 != null && ProgressDialog1.isShowing()) {
-				ProgressDialog1.dismiss();
+				hasil = e.toString();
 			}
 
-			if (hasil != null) {
-				show_alert2(hasil);
-			}
-		}
+			String finalHasil = hasil;
+
+			mainHandler.post(() -> {
+
+				hideLoading();
+				if (finalHasil != null) {
+					show_alert2(finalHasil);
+				} else {
+					show_alert2("Terjadi kesalahan koneksi");
+				}
+
+			});
+
+		});
 	}
 
 	private void show_alert2(String pesan) {
@@ -541,4 +502,12 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		}
 
 	};
+
+	private void showLoading() {
+		loadingOverlay.setVisibility(View.VISIBLE);
+	}
+
+	private void hideLoading() {
+		loadingOverlay.setVisibility(View.GONE);
+	}
 }

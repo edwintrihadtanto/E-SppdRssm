@@ -83,4 +83,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         notificationManager.notify(0, notificationBuilder.build());
     }
+
+    @Override
+    public void onNewToken(String token) {
+        super.onNewToken(token);
+        Log.i("TOKEN_ESPPD", token);
+        // kirim ke server di sini
+    }
 }

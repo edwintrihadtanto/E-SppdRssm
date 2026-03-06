@@ -1,47 +1,61 @@
-com.e_sppd.rssm.sppdRssm-constraintlayout-2.2.1-0 C:\Users\rssm_\.gradle\caches\8.9\transforms\0ed5c72b4d0c19900bb7462841e44448\transformed\constraintlayout-2.2.1\res
-com.e_sppd.rssm.sppdRssm-transition-1.5.0-1 C:\Users\rssm_\.gradle\caches\8.9\transforms\16059ca2cb6e3388bc97611c13d344a6\transformed\transition-1.5.0\res
-com.e_sppd.rssm.sppdRssm-core-1.13.0-2 C:\Users\rssm_\.gradle\caches\8.9\transforms\18ce045060b4746d3676469cbdca203d\transformed\core-1.13.0\res
-com.e_sppd.rssm.sppdRssm-jetified-core-ktx-1.13.0-3 C:\Users\rssm_\.gradle\caches\8.9\transforms\1bba160dd3eed980edbd25087bb2e290\transformed\jetified-core-ktx-1.13.0\res
-com.e_sppd.rssm.sppdRssm-jetified-activity-1.8.0-4 C:\Users\rssm_\.gradle\caches\8.9\transforms\21780d35b56fe453e2a996e0c085ea27\transformed\jetified-activity-1.8.0\res
-com.e_sppd.rssm.sppdRssm-dynamicanimation-1.1.0-5 C:\Users\rssm_\.gradle\caches\8.9\transforms\26a8f4b9047438deef5cd8880e6174af\transformed\dynamicanimation-1.1.0\res
-com.e_sppd.rssm.sppdRssm-cardview-1.0.0-6 C:\Users\rssm_\.gradle\caches\8.9\transforms\28c30a9f7c6c35a0c37b0267fa60776a\transformed\cardview-1.0.0\res
-com.e_sppd.rssm.sppdRssm-core-runtime-2.2.0-7 C:\Users\rssm_\.gradle\caches\8.9\transforms\2d7266ec6c708ea4c3282e1afc7d21fe\transformed\core-runtime-2.2.0\res
-com.e_sppd.rssm.sppdRssm-jetified-profileinstaller-1.4.0-8 C:\Users\rssm_\.gradle\caches\8.9\transforms\2df7281838226c0fccaa69fa9c3a71ae\transformed\jetified-profileinstaller-1.4.0\res
-com.e_sppd.rssm.sppdRssm-material-1.13.0-9 C:\Users\rssm_\.gradle\caches\8.9\transforms\348e96839a69e9084e51d7d247ce68b6\transformed\material-1.13.0\res
-com.e_sppd.rssm.sppdRssm-jetified-magic-1.0-10 C:\Users\rssm_\.gradle\caches\8.9\transforms\35ee05c7796990a861ee6c8f5c61492a\transformed\jetified-magic-1.0\res
-com.e_sppd.rssm.sppdRssm-fragment-1.5.4-11 C:\Users\rssm_\.gradle\caches\8.9\transforms\385d7fb68dabb9e21edc30206a450f4b\transformed\fragment-1.5.4\res
-com.e_sppd.rssm.sppdRssm-lifecycle-livedata-core-2.6.2-12 C:\Users\rssm_\.gradle\caches\8.9\transforms\3ba8d1ee7a605e66b2d0fd05a02784d9\transformed\lifecycle-livedata-core-2.6.2\res
-com.e_sppd.rssm.sppdRssm-drawerlayout-1.1.1-13 C:\Users\rssm_\.gradle\caches\8.9\transforms\3ca6c4a8a8cfb72e202c7f9715c440da\transformed\drawerlayout-1.1.1\res
-com.e_sppd.rssm.sppdRssm-jetified-viewpager2-1.0.0-14 C:\Users\rssm_\.gradle\caches\8.9\transforms\41c994588153125afcbc2d90faa343bb\transformed\jetified-viewpager2-1.0.0\res
-com.e_sppd.rssm.sppdRssm-jetified-emoji2-1.3.0-15 C:\Users\rssm_\.gradle\caches\8.9\transforms\47ad709d5bce9c77f96bc9e41738073f\transformed\jetified-emoji2-1.3.0\res
-com.e_sppd.rssm.sppdRssm-jetified-lifecycle-viewmodel-savedstate-2.6.2-16 C:\Users\rssm_\.gradle\caches\8.9\transforms\505659bbde6b24c791396cccb3930b76\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\res
-com.e_sppd.rssm.sppdRssm-jetified-circleindicator-2.1.6-17 C:\Users\rssm_\.gradle\caches\8.9\transforms\571259c0add4e82fbcaf89f98651fddd\transformed\jetified-circleindicator-2.1.6\res
-com.e_sppd.rssm.sppdRssm-jetified-circleimageview-3.1.0-18 C:\Users\rssm_\.gradle\caches\8.9\transforms\69ab6f0b7026d0bb9898fb6f9601fe4c\transformed\jetified-circleimageview-3.1.0\res
-com.e_sppd.rssm.sppdRssm-jetified-play-services-basement-17.0.0-19 C:\Users\rssm_\.gradle\caches\8.9\transforms\69d801acc9d26e4c75b903bd077ffc4f\transformed\jetified-play-services-basement-17.0.0\res
-com.e_sppd.rssm.sppdRssm-jetified-calligraphy-2.3.0-20 C:\Users\rssm_\.gradle\caches\8.9\transforms\7a742a78bc074883dbfbc3ca00804919\transformed\jetified-calligraphy-2.3.0\res
-com.e_sppd.rssm.sppdRssm-jetified-startup-runtime-1.1.1-21 C:\Users\rssm_\.gradle\caches\8.9\transforms\7cddfd280f613c8453a481f3947504a7\transformed\jetified-startup-runtime-1.1.1\res
-com.e_sppd.rssm.sppdRssm-jetified-appcompat-resources-1.7.1-22 C:\Users\rssm_\.gradle\caches\8.9\transforms\866d392f35dc478ee3043dc9d40dfc1e\transformed\jetified-appcompat-resources-1.7.1\res
-com.e_sppd.rssm.sppdRssm-appcompat-1.7.1-23 C:\Users\rssm_\.gradle\caches\8.9\transforms\983810364131296866382042c6a4ad21\transformed\appcompat-1.7.1\res
-com.e_sppd.rssm.sppdRssm-lifecycle-runtime-2.6.2-24 C:\Users\rssm_\.gradle\caches\8.9\transforms\9cd32dbdaa9d74217d0faaf9c890d5ed\transformed\lifecycle-runtime-2.6.2\res
-com.e_sppd.rssm.sppdRssm-media-1.0.0-25 C:\Users\rssm_\.gradle\caches\8.9\transforms\9d4dff90e36953404218f4011ab3aba1\transformed\media-1.0.0\res
-com.e_sppd.rssm.sppdRssm-jetified-savedstate-1.2.1-26 C:\Users\rssm_\.gradle\caches\8.9\transforms\a84500fcc972bffd4249f12819bc1eb4\transformed\jetified-savedstate-1.2.1\res
-com.e_sppd.rssm.sppdRssm-coordinatorlayout-1.1.0-27 C:\Users\rssm_\.gradle\caches\8.9\transforms\a93b836a123d6229f7591c96d501b8a3\transformed\coordinatorlayout-1.1.0\res
-com.e_sppd.rssm.sppdRssm-jetified-firebase-messaging-20.0.0-28 C:\Users\rssm_\.gradle\caches\8.9\transforms\ab32231ca2573c6295ceae24589cc615\transformed\jetified-firebase-messaging-20.0.0\res
-com.e_sppd.rssm.sppdRssm-jetified-AwesomeSplash-v1.0.0-29 C:\Users\rssm_\.gradle\caches\8.9\transforms\b1ef976be6f98bc66fe87db684b0ffa5\transformed\jetified-AwesomeSplash-v1.0.0\res
-com.e_sppd.rssm.sppdRssm-exifinterface-1.4.2-30 C:\Users\rssm_\.gradle\caches\8.9\transforms\bc8b958a4e95d7d4560c5fd5e9cc4c4a\transformed\exifinterface-1.4.2\res
-com.e_sppd.rssm.sppdRssm-lifecycle-viewmodel-2.6.2-31 C:\Users\rssm_\.gradle\caches\8.9\transforms\c03accd040317065e2c7ae254432cadd\transformed\lifecycle-viewmodel-2.6.2\res
-com.e_sppd.rssm.sppdRssm-jetified-play-services-base-17.1.0-32 C:\Users\rssm_\.gradle\caches\8.9\transforms\deecf295aba1e10e3c8abd5af772aeb1\transformed\jetified-play-services-base-17.1.0\res
-com.e_sppd.rssm.sppdRssm-recyclerview-1.2.1-33 C:\Users\rssm_\.gradle\caches\8.9\transforms\df9c9b6a890759db7a44247e0f2709c8\transformed\recyclerview-1.2.1\res
-com.e_sppd.rssm.sppdRssm-jetified-annotation-experimental-1.4.0-34 C:\Users\rssm_\.gradle\caches\8.9\transforms\e3e4a115ccb514809d7a06fef6440cca\transformed\jetified-annotation-experimental-1.4.0\res
-com.e_sppd.rssm.sppdRssm-jetified-fillableloaders-1.02-35 C:\Users\rssm_\.gradle\caches\8.9\transforms\ec2933abaa66e47d15c357b497701347\transformed\jetified-fillableloaders-1.02\res
-com.e_sppd.rssm.sppdRssm-lifecycle-livedata-2.6.2-36 C:\Users\rssm_\.gradle\caches\8.9\transforms\f2301228326b4084ffb404acc731edc2\transformed\lifecycle-livedata-2.6.2\res
-com.e_sppd.rssm.sppdRssm-jetified-lifecycle-process-2.6.2-37 C:\Users\rssm_\.gradle\caches\8.9\transforms\fa518595cda7959aaae900a7b5a58ef7\transformed\jetified-lifecycle-process-2.6.2\res
-com.e_sppd.rssm.sppdRssm-jetified-emoji2-views-helper-1.3.0-38 C:\Users\rssm_\.gradle\caches\8.9\transforms\fb1e50e2018fd01d244fd8c3ffd8a2a7\transformed\jetified-emoji2-views-helper-1.3.0\res
-com.e_sppd.rssm.sppdRssm-google-services-39 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\generated\res\google-services\release
-com.e_sppd.rssm.sppdRssm-pngs-40 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\generated\res\pngs\release
-com.e_sppd.rssm.sppdRssm-resValues-41 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\generated\res\resValues\release
-com.e_sppd.rssm.sppdRssm-mergeReleaseResources-42 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.e_sppd.rssm.sppdRssm-mergeReleaseResources-43 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.e_sppd.rssm.sppdRssm-release-44 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\merged_res\release\mergeReleaseResources
-com.e_sppd.rssm.sppdRssm-main-45 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\src\main\res
-com.e_sppd.rssm.sppdRssm-release-46 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\src\release\res
+com.e_sppd.rssm.sppdRssm-lifecycle-livedata-core-2.6.2-0 C:\Users\rssm_\.gradle\caches\8.13\transforms\05e3addfbf005d07c245c0e96c25c38c\transformed\lifecycle-livedata-core-2.6.2\res
+com.e_sppd.rssm.sppdRssm-jetified-datastore-preferences-release-1 C:\Users\rssm_\.gradle\caches\8.13\transforms\13280d701a911a430a7019b8efeae688\transformed\jetified-datastore-preferences-release\res
+com.e_sppd.rssm.sppdRssm-dynamicanimation-1.1.0-2 C:\Users\rssm_\.gradle\caches\8.13\transforms\1494023efcd8b84dd8d367b362234db5\transformed\dynamicanimation-1.1.0\res
+com.e_sppd.rssm.sppdRssm-jetified-emoji2-views-helper-1.3.0-3 C:\Users\rssm_\.gradle\caches\8.13\transforms\18c70d93b7d28b4dc4c30385ca5a878f\transformed\jetified-emoji2-views-helper-1.3.0\res
+com.e_sppd.rssm.sppdRssm-jetified-firebase-messaging-25.0.1-4 C:\Users\rssm_\.gradle\caches\8.13\transforms\1a63eebd7350b7c5ac40d20c783dd310\transformed\jetified-firebase-messaging-25.0.1\res
+com.e_sppd.rssm.sppdRssm-jetified-savedstate-1.2.1-5 C:\Users\rssm_\.gradle\caches\8.13\transforms\1f4ff3d84980b295ca787180e828128c\transformed\jetified-savedstate-1.2.1\res
+com.e_sppd.rssm.sppdRssm-jetified-AwesomeSplash-v1.0.0-6 C:\Users\rssm_\.gradle\caches\8.13\transforms\21b24452a29b8e20a8834810a55785f2\transformed\jetified-AwesomeSplash-v1.0.0\res
+com.e_sppd.rssm.sppdRssm-transition-1.5.0-7 C:\Users\rssm_\.gradle\caches\8.13\transforms\2210a12ce1989a6106ccdcea9a979189\transformed\transition-1.5.0\res
+com.e_sppd.rssm.sppdRssm-fragment-1.6.1-8 C:\Users\rssm_\.gradle\caches\8.13\transforms\2cb1bc60a53b455439da24382f5aec29\transformed\fragment-1.6.1\res
+com.e_sppd.rssm.sppdRssm-appcompat-1.7.1-9 C:\Users\rssm_\.gradle\caches\8.13\transforms\2dbba39d659e0a7f654d3aa485844651\transformed\appcompat-1.7.1\res
+com.e_sppd.rssm.sppdRssm-jetified-fillableloaders-1.02-10 C:\Users\rssm_\.gradle\caches\8.13\transforms\2f745976446f262d8db79df43bd8291b\transformed\jetified-fillableloaders-1.02\res
+com.e_sppd.rssm.sppdRssm-jetified-circleindicator-2.1.6-11 C:\Users\rssm_\.gradle\caches\8.13\transforms\30e2371f055d9779a52aabc5ef6f82db\transformed\jetified-circleindicator-2.1.6\res
+com.e_sppd.rssm.sppdRssm-jetified-calligraphy-2.3.0-12 C:\Users\rssm_\.gradle\caches\8.13\transforms\347355f86e691a882c7f73937e5832ff\transformed\jetified-calligraphy-2.3.0\res
+com.e_sppd.rssm.sppdRssm-jetified-play-services-basement-18.9.0-13 C:\Users\rssm_\.gradle\caches\8.13\transforms\3a1e7a13a1fd69ea7a0d43ee83c7cbbc\transformed\jetified-play-services-basement-18.9.0\res
+com.e_sppd.rssm.sppdRssm-jetified-datastore-preferences-core-release-14 C:\Users\rssm_\.gradle\caches\8.13\transforms\3a6b63af3866965f1389de3244ccfc93\transformed\jetified-datastore-preferences-core-release\res
+com.e_sppd.rssm.sppdRssm-jetified-lifecycle-process-2.6.2-15 C:\Users\rssm_\.gradle\caches\8.13\transforms\3aafa51db5d37f1b32d14d864dd502c9\transformed\jetified-lifecycle-process-2.6.2\res
+com.e_sppd.rssm.sppdRssm-jetified-viewpager2-1.0.0-16 C:\Users\rssm_\.gradle\caches\8.13\transforms\4849931cda91bc7ffd6c771980708a82\transformed\jetified-viewpager2-1.0.0\res
+com.e_sppd.rssm.sppdRssm-core-1.13.0-17 C:\Users\rssm_\.gradle\caches\8.13\transforms\5150ce71bf84f7634698b4360510b075\transformed\core-1.13.0\res
+com.e_sppd.rssm.sppdRssm-jetified-activity-1.8.0-18 C:\Users\rssm_\.gradle\caches\8.13\transforms\51cd67330ec601206a581ddba9a4cb28\transformed\jetified-activity-1.8.0\res
+com.e_sppd.rssm.sppdRssm-jetified-appcompat-resources-1.7.1-19 C:\Users\rssm_\.gradle\caches\8.13\transforms\5267ecb764ecfdac542f013598fed836\transformed\jetified-appcompat-resources-1.7.1\res
+com.e_sppd.rssm.sppdRssm-constraintlayout-2.2.1-20 C:\Users\rssm_\.gradle\caches\8.13\transforms\52aa9a579db2be29dd900754687bb76e\transformed\constraintlayout-2.2.1\res
+com.e_sppd.rssm.sppdRssm-browser-1.4.0-21 C:\Users\rssm_\.gradle\caches\8.13\transforms\54fd2dd4eb255f2cbc0dcde2f78ca6f3\transformed\browser-1.4.0\res
+com.e_sppd.rssm.sppdRssm-drawerlayout-1.1.1-22 C:\Users\rssm_\.gradle\caches\8.13\transforms\5edb348801b580e16bbffcf9d2287320\transformed\drawerlayout-1.1.1\res
+com.e_sppd.rssm.sppdRssm-material-1.13.0-23 C:\Users\rssm_\.gradle\caches\8.13\transforms\5f27ec5da8d05a58e949e25830c01c22\transformed\material-1.13.0\res
+com.e_sppd.rssm.sppdRssm-lifecycle-viewmodel-2.6.2-24 C:\Users\rssm_\.gradle\caches\8.13\transforms\5f2ea3adc7d080416bbcd9b96ff752e5\transformed\lifecycle-viewmodel-2.6.2\res
+com.e_sppd.rssm.sppdRssm-jetified-core-common-2.0.3-25 C:\Users\rssm_\.gradle\caches\8.13\transforms\6db764cae4180761cedc635f60c106e3\transformed\jetified-core-common-2.0.3\res
+com.e_sppd.rssm.sppdRssm-jetified-annotation-experimental-1.4.1-26 C:\Users\rssm_\.gradle\caches\8.13\transforms\6efe0fcdb707bc5276bcd4608d279487\transformed\jetified-annotation-experimental-1.4.1\res
+com.e_sppd.rssm.sppdRssm-jetified-lifecycle-viewmodel-savedstate-2.6.2-27 C:\Users\rssm_\.gradle\caches\8.13\transforms\71fca0f15b729af2271d020405cac13f\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\res
+com.e_sppd.rssm.sppdRssm-jetified-profileinstaller-1.4.0-28 C:\Users\rssm_\.gradle\caches\8.13\transforms\73a276558acce22c76067e2a99800e36\transformed\jetified-profileinstaller-1.4.0\res
+com.e_sppd.rssm.sppdRssm-coordinatorlayout-1.1.0-29 C:\Users\rssm_\.gradle\caches\8.13\transforms\77f4ca1f671b3e4e5329a74fd9b7b3b5\transformed\coordinatorlayout-1.1.0\res
+com.e_sppd.rssm.sppdRssm-jetified-credentials-1.2.0-rc01-30 C:\Users\rssm_\.gradle\caches\8.13\transforms\7a62f3dae7ab33edb989e2049a57351c\transformed\jetified-credentials-1.2.0-rc01\res
+com.e_sppd.rssm.sppdRssm-core-runtime-2.2.0-31 C:\Users\rssm_\.gradle\caches\8.13\transforms\7aefab6c42729c6456619aa507536204\transformed\core-runtime-2.2.0\res
+com.e_sppd.rssm.sppdRssm-jetified-firebase-common-22.0.1-32 C:\Users\rssm_\.gradle\caches\8.13\transforms\84045867f7542dd9c818dbbda810010a\transformed\jetified-firebase-common-22.0.1\res
+com.e_sppd.rssm.sppdRssm-jetified-ads-adservices-1.1.0-beta11-33 C:\Users\rssm_\.gradle\caches\8.13\transforms\866cf9ba1d2ff8ce0d2d347e8763b4a1\transformed\jetified-ads-adservices-1.1.0-beta11\res
+com.e_sppd.rssm.sppdRssm-media-1.0.0-34 C:\Users\rssm_\.gradle\caches\8.13\transforms\897a8fc82ed68c1e6aebef373659ef11\transformed\media-1.0.0\res
+com.e_sppd.rssm.sppdRssm-jetified-core-ktx-1.13.0-35 C:\Users\rssm_\.gradle\caches\8.13\transforms\925736daf9586bd56933e04c7cf267ab\transformed\jetified-core-ktx-1.13.0\res
+com.e_sppd.rssm.sppdRssm-jetified-glide-5.0.5-36 C:\Users\rssm_\.gradle\caches\8.13\transforms\96e4b67756558b0faaa6a2a3efe4ccbf\transformed\jetified-glide-5.0.5\res
+com.e_sppd.rssm.sppdRssm-jetified-graphics-shapes-release-37 C:\Users\rssm_\.gradle\caches\8.13\transforms\ae9dbfbd9efe2ed6defa93e9cfe938a9\transformed\jetified-graphics-shapes-release\res
+com.e_sppd.rssm.sppdRssm-jetified-magic-1.0-38 C:\Users\rssm_\.gradle\caches\8.13\transforms\aee15d2cca11ad3c7694c87cc9076482\transformed\jetified-magic-1.0\res
+com.e_sppd.rssm.sppdRssm-jetified-credentials-play-services-auth-1.2.0-rc01-39 C:\Users\rssm_\.gradle\caches\8.13\transforms\b13b4d015fee8404b81886fc2a23c273\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\res
+com.e_sppd.rssm.sppdRssm-recyclerview-1.2.1-40 C:\Users\rssm_\.gradle\caches\8.13\transforms\b28b712ab717ccd6a4d8ce78e66e355a\transformed\recyclerview-1.2.1\res
+com.e_sppd.rssm.sppdRssm-jetified-datastore-release-41 C:\Users\rssm_\.gradle\caches\8.13\transforms\c1d403e6a0bbaffde4161c54790d46a8\transformed\jetified-datastore-release\res
+com.e_sppd.rssm.sppdRssm-jetified-play-services-base-18.9.0-42 C:\Users\rssm_\.gradle\caches\8.13\transforms\ca4e73b05fe0f7ebf6ecd803e3710485\transformed\jetified-play-services-base-18.9.0\res
+com.e_sppd.rssm.sppdRssm-jetified-ads-adservices-java-1.1.0-beta11-43 C:\Users\rssm_\.gradle\caches\8.13\transforms\ce89bc6ae5dd9c3d25ac9f5856796485\transformed\jetified-ads-adservices-java-1.1.0-beta11\res
+com.e_sppd.rssm.sppdRssm-jetified-circleimageview-3.1.0-44 C:\Users\rssm_\.gradle\caches\8.13\transforms\d12e936320b1a5a299a50282de39a7e5\transformed\jetified-circleimageview-3.1.0\res
+com.e_sppd.rssm.sppdRssm-cardview-1.0.0-45 C:\Users\rssm_\.gradle\caches\8.13\transforms\dc2f011a006cb40ae0cbeb8f5bc84ff5\transformed\cardview-1.0.0\res
+com.e_sppd.rssm.sppdRssm-jetified-emoji2-1.3.0-46 C:\Users\rssm_\.gradle\caches\8.13\transforms\e4222ad01c904de0014b8536125fe10c\transformed\jetified-emoji2-1.3.0\res
+com.e_sppd.rssm.sppdRssm-jetified-startup-runtime-1.1.1-47 C:\Users\rssm_\.gradle\caches\8.13\transforms\e87a31affc5f35e2160b8207aa5b049a\transformed\jetified-startup-runtime-1.1.1\res
+com.e_sppd.rssm.sppdRssm-jetified-datastore-core-release-48 C:\Users\rssm_\.gradle\caches\8.13\transforms\ef37fd394f1410c3b40d14e97f3efab5\transformed\jetified-datastore-core-release\res
+com.e_sppd.rssm.sppdRssm-jetified-play-services-auth-20.7.0-49 C:\Users\rssm_\.gradle\caches\8.13\transforms\f5a54e513bb479193b868e4d92b2895e\transformed\jetified-play-services-auth-20.7.0\res
+com.e_sppd.rssm.sppdRssm-lifecycle-livedata-2.6.2-50 C:\Users\rssm_\.gradle\caches\8.13\transforms\f8cafe12170adfe3d45a98132f8bfeb5\transformed\lifecycle-livedata-2.6.2\res
+com.e_sppd.rssm.sppdRssm-exifinterface-1.4.2-51 C:\Users\rssm_\.gradle\caches\8.13\transforms\f93a306776c494468fba98adbb2351a0\transformed\exifinterface-1.4.2\res
+com.e_sppd.rssm.sppdRssm-lifecycle-runtime-2.6.2-52 C:\Users\rssm_\.gradle\caches\8.13\transforms\fe49bff217a55300fe4cfc64e85ff9f7\transformed\lifecycle-runtime-2.6.2\res
+com.e_sppd.rssm.sppdRssm-pngs-53 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\generated\res\pngs\release
+com.e_sppd.rssm.sppdRssm-res-54 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\generated\res\processReleaseGoogleServices
+com.e_sppd.rssm.sppdRssm-resValues-55 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\generated\res\resValues\release
+com.e_sppd.rssm.sppdRssm-mergeReleaseResources-56 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.e_sppd.rssm.sppdRssm-mergeReleaseResources-57 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.e_sppd.rssm.sppdRssm-release-58 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\merged_res\release\mergeReleaseResources
+com.e_sppd.rssm.sppdRssm-main-59 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\src\main\res
+com.e_sppd.rssm.sppdRssm-release-60 G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\src\release\res

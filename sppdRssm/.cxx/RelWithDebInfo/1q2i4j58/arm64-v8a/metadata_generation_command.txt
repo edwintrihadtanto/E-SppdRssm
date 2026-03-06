@@ -1,0 +1,18 @@
+                        -HG:\Kumpulan Project Android\E-SppdRssm\sppdRssm\src\main\cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=24
+-DANDROID_PLATFORM=android-24
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=E:\SDK\ndk\27.0.12077973
+-DCMAKE_ANDROID_NDK=E:\SDK\ndk\27.0.12077973
+-DCMAKE_TOOLCHAIN_FILE=E:\SDK\ndk\27.0.12077973\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=E:\SDK\cmake\3.22.1\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\cxx\RelWithDebInfo\1q2i4j58\obj\arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\cxx\RelWithDebInfo\1q2i4j58\obj\arm64-v8a
+-DCMAKE_BUILD_TYPE=RelWithDebInfo
+-BG:\Kumpulan Project Android\E-SppdRssm\sppdRssm\.cxx\RelWithDebInfo\1q2i4j58\arm64-v8a
+-GNinja
+                        Build command args: []
+                        Version: 2

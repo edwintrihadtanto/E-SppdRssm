@@ -9,7 +9,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -18,9 +20,7 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme"
         android:supportsRtl="true"
-        android:fullBackupContent="false"
-        tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode"
-        tools:targetApi="n">
+        tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode">
         <activity
             android:name="com.fungsiutama.Splash_Screen"
             android:exported="true"
@@ -35,10 +35,6 @@
             android:name="com.fungsiutama.Login_Activity"
             android:exported="true"
             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
 
         <provider
@@ -63,7 +59,7 @@
         <activity android:name="com.fungsiutama.HistoryVersiSimpleActivity" />
 
         <activity android:name="com.fungsiutama.Edit_LaporanPerjalanan" android:theme="@style/AppTheme"/>
-        <activity android:name="com.fungsiutama.Register_Activity_Baru" android:theme="@style/AppTheme"/>
+        <activity android:name="com.fungsiutama.Register_Activity" android:theme="@style/AppTheme"/>
         <activity android:name="com.fungsiutama.Tentang_Aplikasi" android:theme="@style/AppTheme"/>
         <activity android:name="com.fungsiutama.Profil" android:theme="@style/AppTheme"/>
         <activity android:name="com.fungsiutama.Tampil_Bantuan" android:theme="@style/AppTheme"/>
@@ -74,7 +70,13 @@
 
         <activity android:name="koneksi.FontChange" android:theme="@style/AppTheme"
             tools:ignore="Instantiatable" />
-        <service android:name="koneksi.MyFirebaseMessagingService" />
+        <service
+            android:name="koneksi.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

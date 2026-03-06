@@ -1,0 +1,7 @@
+[
+{
+  "directory": "G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86",
+  "command": "E:\\SDK\\ndk\\29.0.14206865\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android24 --sysroot=E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drssm_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\rssm.dir\\rssm.cpp.o -c \"G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\src\\main\\cpp\\rssm.cpp\"",
+  "file": "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\src\\main\\cpp\\rssm.cpp"
+}
+]

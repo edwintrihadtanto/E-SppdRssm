@@ -160,13 +160,13 @@
     <string name="ext" translatable="false">Ext :</string>
     <string name="nomor_edwin" translatable="false">082-299-458-803</string>
     <string name="nomor_reski" translatable="false">085-708-679-994</string>
-    <string name="informasi_lupa_password" translatable="false">Informasi Lupa Password</string>
-    <string name="lupa_password_nsilahkan_hubungi_admin_ipde" translatable="false">Lupa Password Silahkan Hubungi Admin IPDE</string>
-    <string name="_146_ipde" translatable="false">146 [ IPDE ]</string>
+    <string name="informasi_lupa_password" translatable="false">Informasi</string>
+    <string name="lupa_password_nsilahkan_hubungi_admin_ipde" translatable="false">Bantuan silahkan hubungi</string>
+    <string name="_146_ipde" translatable="false">146 [ ITISI ]</string>
     <string name="_262_tu_umum" translatable="false">262 [ TU/UMUM ]</string>
     <string name="no_kontak" translatable="false">No. Kontak</string>
-    <string name="edwin" translatable="false">/ Edwin</string>
-    <string name="reski" translatable="false">/ Reski</string>
+    <string name="edwin" translatable="false">by Edwin - IT ITISI</string>
+    <string name="reski" translatable="false">by Reski - IT ITISI</string>
     <string name="btn_refresh" translatable="false" />
     <string name="pembuatan_sppd" translatable="false">Pembuatan SPPD</string>
     <string name="pembuatan_spt" translatable="false">Pembuatan SPT</string>

@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "E:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\4x2a1n2u\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "E:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\4x2a1n2u\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "rssm::@6890427a1f51a3e7e1df": {
+      "artifactName": "rssm",
+      "abi": "x86",
+      "output": "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\build\\intermediates\\cxx\\RelWithDebInfo\\4x2a1n2u\\obj\\x86\\librssm.so",
+      "runtimeFiles": []
+    }
+  }
+}

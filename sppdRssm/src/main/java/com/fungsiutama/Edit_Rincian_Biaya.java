@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -20,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
@@ -34,6 +32,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Objects;
 
 import kamera.FileUtil;
 import koneksi.Java_Connection;
@@ -93,7 +92,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                 imgBukti.setImageResource(R.drawable.no_bukti);
             }
 
-            if (!namaFile.isEmpty()) {
+            if (!Objects.requireNonNull(namaFile).isEmpty()) {
                 String urlImage = Koneksi.FolderUpload + namaFile;
                 new DownloadImageTask(imgBukti).execute(urlImage);
             }
@@ -101,7 +100,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
 
         btnSimpan.setOnClickListener(v -> {
             if (mode.equals("tambah")) {
-                new SimpanRincianBaru(Edit_Rincian_Biaya.this).execute();
+                new SimpanRincianBiaya(Edit_Rincian_Biaya.this).execute();
             } else {
                 new UpdateRincian(Edit_Rincian_Biaya.this).execute();
             }
@@ -165,7 +164,7 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
         ProgressDialog pd;
         Java_Connection jc = new Java_Connection();
         Activity activity;
-
+        String uraian, jumlah;
         public UpdateRincian(Activity activity) {
             this.activity = activity;
         }
@@ -176,17 +175,19 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
             pd.setMessage("Menyimpan perubahan rincian...");
             pd.setCancelable(false);
             pd.show();
+
+            uraian = edtRincian.getText().toString();
+            jumlah = edtJumlah.getText().toString();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
             String response = null;
             try {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("id_rincian", id_rincian);
-                params.put("uraian", edtRincian.getText().toString());
-                params.put("jml", edtJumlah.getText().toString());
+                params.put("uraian", uraian);
+                params.put("jml", jumlah);
                 params.put("nomor_surat_sppd", nosppd);
                 params.put("nip", nip);
 
@@ -258,7 +259,6 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
             pd.show();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
             try {
@@ -293,13 +293,13 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public class SimpanRincianBaru extends AsyncTask<Void, Void, String> {
+    public class SimpanRincianBiaya extends AsyncTask<Void, Void, String> {
 
         ProgressDialog pd;
         Java_Connection jc = new Java_Connection();
         Activity activity;
-
-        public SimpanRincianBaru(Activity activity) {
+        String uraian, jumlah;
+        public SimpanRincianBiaya(Activity activity) {
             this.activity = activity;
         }
 
@@ -309,9 +309,11 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
             pd.setMessage("Menyimpan rincian biaya.");
             pd.setCancelable(false);
             pd.show();
+
+            uraian = edtRincian.getText().toString();
+            jumlah = edtJumlah.getText().toString();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
             String res = null;
@@ -320,8 +322,8 @@ public class Edit_Rincian_Biaya extends AppCompatActivity {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("nosppd", nosppd);
                 params.put("nip", nip);
-                params.put("uraian", edtRincian.getText().toString());
-                params.put("jml", edtJumlah.getText().toString());
+                params.put("uraian", uraian);
+                params.put("jml", jumlah);
 
                 res = jc.sendMultipart(
                         Koneksi.simpan_rincian_biaya,

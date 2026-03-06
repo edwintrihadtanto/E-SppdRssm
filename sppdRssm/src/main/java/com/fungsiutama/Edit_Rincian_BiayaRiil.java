@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.e_sppd.rssm.R;
@@ -22,6 +20,7 @@ import com.e_sppd.rssm.R;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
@@ -65,7 +64,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
             edtJumlahRiil.setText(i.getStringExtra("jumlah"));
             txtTanggalRiil.setText(i.getStringExtra("tgl"));
             pembuat = i.getStringExtra("pembuat");
-            if (pembuat.equals("1")){
+            if (Objects.requireNonNull(pembuat).equals("1")){
                 btnHapus.setVisibility(View.GONE);
                 btnSimpan.setVisibility(View.GONE);
             }
@@ -92,7 +91,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
         ProgressDialog pd;
         Java_Connection jc = new Java_Connection();
         Activity activity;
-
+        String uraian, jumlah;
         public UpdateRiil(Activity activity) {
             this.activity = activity;
         }
@@ -103,17 +102,19 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
             pd.setMessage("Menyimpan perubahan...");
             pd.setCancelable(false);
             pd.show();
+
+            uraian = edtRincianRiil.getText().toString();
+            jumlah = edtJumlahRiil.getText().toString();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
 
             try {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("id_riil", id_riil);
-                params.put("uraian", edtRincianRiil.getText().toString());
-                params.put("jml", edtJumlahRiil.getText().toString());
+                params.put("uraian", uraian);
+                params.put("jml", jumlah);
                 params.put("nomor_surat_sppd", nosppd);
                 params.put("nip", nip);
 
@@ -163,7 +164,6 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
             pd.show();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
             try {
@@ -203,7 +203,7 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
         ProgressDialog pd;
         Java_Connection jc = new Java_Connection();
         Activity activity;
-
+        String uraian, jumlah;
         public SimpanBiayaRiil(Activity activity) {
             this.activity = activity;
         }
@@ -214,17 +214,19 @@ public class Edit_Rincian_BiayaRiil extends AppCompatActivity {
             pd.setMessage("Menyimpan riil biaya...");
             pd.setCancelable(false);
             pd.show();
+
+            uraian = edtRincianRiil.getText().toString();
+            jumlah = edtJumlahRiil.getText().toString();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
             try {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("nosppd", nosppd);
                 params.put("nip", nip);
-                params.put("uraian", edtRincianRiil.getText().toString());
-                params.put("jml", edtJumlahRiil.getText().toString());
+                params.put("uraian", uraian);
+                params.put("jml", jumlah);
 
                 String res = jc.sendPostRequest(
                         Koneksi.simpan_riil_biaya,

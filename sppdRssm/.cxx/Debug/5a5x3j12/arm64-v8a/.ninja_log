@@ -1,0 +1,20 @@
+# ninja log v5
+0	47	7942997313349581	CMakeFiles/rssm.dir/rssm.cpp.o	50283c7b52d45d3a
+47	272	7942997314885531	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/5a5x3j12/obj/arm64-v8a/librssm.so	3e4dba5d9058d38c
+0	26	0	clean	8962b3a4fdabe0d
+0	93	7943000168333045	CMakeFiles/rssm.dir/rssm.cpp.o	50283c7b52d45d3a
+93	443	7943000170833917	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/5a5x3j12/obj/arm64-v8a/librssm.so	3e4dba5d9058d38c
+0	12	0	clean	8962b3a4fdabe0d
+0	219	7943013281700725	CMakeFiles/rssm.dir/rssm.cpp.o	50283c7b52d45d3a
+219	367	7943013283324090	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/5a5x3j12/obj/arm64-v8a/librssm.so	3e4dba5d9058d38c
+19	72	0	clean	8962b3a4fdabe0d
+0	125	7943038321045314	CMakeFiles/rssm.dir/rssm.cpp.o	50283c7b52d45d3a
+126	248	7943038322333277	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/5a5x3j12/obj/arm64-v8a/librssm.so	3e4dba5d9058d38c
+22	43	0	clean	8962b3a4fdabe0d
+3	7565	7943862759103221	CMakeFiles/rssm.dir/rssm.cpp.o	50283c7b52d45d3a
+7566	15861	7943862842077139	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/5a5x3j12/obj/arm64-v8a/librssm.so	3e4dba5d9058d38c
+0	39	0	clean	8962b3a4fdabe0d
+0	15	0	clean	8962b3a4fdabe0d
+0	11	0	clean	8962b3a4fdabe0d
+0	427	7943907646368806	CMakeFiles/rssm.dir/rssm.cpp.o	50283c7b52d45d3a
+427	754	7943907649011793	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/5a5x3j12/obj/arm64-v8a/librssm.so	3e4dba5d9058d38c

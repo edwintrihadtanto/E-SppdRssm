@@ -1,13 +1,11 @@
 package com.fungsiutama;
 
 import static android.widget.Toast.LENGTH_LONG;
-import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.provider.MediaStore;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +19,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,24 +29,24 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
+import androidx.core.view.WindowCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONObject;
 
@@ -55,12 +55,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Objects;
 
-//import koneksi.JSONParser;
 import koneksi.Java_Connection;
 import koneksi.Koneksi;
 
@@ -70,7 +69,7 @@ public class MainActivityUtama extends AppCompatActivity
     private final static String TAG = "MainActivity";
     private ProgressDialog downloaddiMAIN;
     private String progressdownload = "";
-    DrawerLayout drawer;
+    private DrawerLayout drawer;
     NavigationView navigationView;
     FragmentManager fragmentManager;
     Fragment fragment = null;
@@ -78,7 +77,7 @@ public class MainActivityUtama extends AppCompatActivity
     String nip, nama_pegawai, jabatan, golongan, unit, password, email;
     RelativeLayout frame_loading_utama;
     ImageView gmbar_loading_utama, img_refresh;
-    private ProgressDialog progresdialog;
+//    private ProgressDialog progresdialog;
     boolean doubleBackToExitPressedOnce = false;
 
     TextView tgl_utama, jam_utama, menuutama_nippetugas, menuutama_namapetugas, menuutama_jabpetugas, menuutama_unitpetugas, tvToken1, menuutama_version;
@@ -89,17 +88,18 @@ public class MainActivityUtama extends AppCompatActivity
     public final static String TAG_UNIT 		= "unit";
     public final static String TAG_PASSWORD 	= "password";
     public final static String TAG_EMAIL 		= "email";
-    private static final String STATUSSUKSES 	= "sukses";
+//    private static final String STATUSSUKSES 	= "sukses";
     private static final String STATUSPESANTOKEN 	= "pesan";
     private static final String TAG_VERSI           = "versi";
-    private static final int progress_DOWNLOAD 	= 0;
+//    private static final int progress_DOWNLOAD 	= 0;
 
     private static final String TAG_VERSICODE 		= "code";
     private static final String TAG_VERSIPESAN_CEK	= "pesan";
     private static final String TAG_VERSIWARNING	= "warning";
     private static final String TAG_VERSIBARU	    = "versiygbaru";
+    private static final String TAG_LINK	        = "link";
     String cek_versi_apk = BuildConfig.VERSION_NAME;
-    public String pesanversi, warningversi, versiygbaru;
+    public String pesanversi, warningversi, versiygbaru, linkupdate;
     public String token_lama;
     public  static final int RequestPermissionCode_StorageCamera  = 11 ;
 
@@ -107,11 +107,12 @@ public class MainActivityUtama extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), true);
         setContentView(R.layout.activity_main_petugas);
         handler.postDelayed(runnable, 1000);
         Permission_AksesCameradanStorage();
 //        Log.e("info versi bawaan ", BuildConfig.VERSION_NAME);
-        Log.e("TAG_VERSI", getIntent().getStringExtra(TAG_VERSI));
+        Log.e("TAG_VERSI", Objects.requireNonNull(getIntent().getStringExtra(TAG_VERSI)));
         gmbar_loading_utama     = findViewById(R.id.gmbar_loading_utama);
         frame_loading_utama     = findViewById(R.id.frame_loading_utama);
 
@@ -134,13 +135,6 @@ public class MainActivityUtama extends AppCompatActivity
         unit                = getIntent().getStringExtra(TAG_UNIT);
         password            = getIntent().getStringExtra(TAG_PASSWORD);
         email               = getIntent().getStringExtra(TAG_EMAIL);
-        if (!terkoneksi_roaming(MainActivityUtama.this)) {
-            String a = "Tidak ada sambungan Internet.\nPastikan Wi-fi atau Data Seluler aktif, lalu coba lagi";
-            info_tak_ada_koneksi(a);
-        }else{
-            //new FCM_TOKEN().execute();
-            fcm();
-        }
 
         menuutama_nippetugas.setText(nip);
         menuutama_namapetugas.setText(nama_pegawai);
@@ -162,12 +156,40 @@ public class MainActivityUtama extends AppCompatActivity
             callFragment(fragment);
         }
 
-        /*Glide.with(MainActivityBaru_Petugas.this)
-                // LOAD URL DARI LOKAL DRAWABLE
-                .load(R.drawable.loading_ring)
-                .asGif()
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .into(img_refresh);*/
+        if (!terkoneksi_roaming(MainActivityUtama.this)) {
+            String a = "Tidak ada sambungan Internet.\nPastikan Wi-fi atau Data Seluler aktif, lalu coba lagi";
+            info_tak_ada_koneksi(a);
+        }else{
+            //new FCM_TOKEN().execute();
+            fcm();
+        }
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                    return;
+                }
+
+                if (doubleBackToExitPressedOnce) {
+                    setEnabled(false);   // penting agar tidak loop
+                    getOnBackPressedDispatcher().onBackPressed();
+                    return;
+                }
+
+                doubleBackToExitPressedOnce = true;
+                Toast.makeText(MainActivityUtama.this,
+                        "Tekan tombol kembali [2x] untuk keluar aplikasi.",
+                        Toast.LENGTH_SHORT).show();
+
+                new Handler(Looper.getMainLooper()).postDelayed(
+                        () -> doubleBackToExitPressedOnce = false,
+                        2000
+                );
+            }
+        });
     }
 
     private boolean terkoneksi_roaming(Context mContext) {
@@ -177,164 +199,58 @@ public class MainActivityUtama extends AppCompatActivity
         return netInfo != null && netInfo.isConnectedOrConnecting();
 
     }
-    public void fcm(){
+    public void fcm() {
+
         String tok = tvToken1.getText().toString();
         Log.i("TOKEN_ESPPD", tok);
-        if (tvToken1.getText().toString().isEmpty()){
-            token_lama = FirebaseInstanceId.getInstance().getToken();
-            tvToken1.setText(token_lama);
-            Log.i("TOKEN_ESPPD", token_lama);
-            new GETTOKEN().execute();
+
+        if (tok.isEmpty()) {
+
+            FirebaseMessaging.getInstance().getToken()
+                    .addOnCompleteListener(task -> {
+                        if (!task.isSuccessful()) {
+                            Log.w("TOKEN_ESPPD", "Fetching FCM token failed", task.getException());
+                            return;
+                        }
+
+                        String tokenBaru = task.getResult();
+                        tvToken1.setText(tokenBaru);
+                        Log.i("TOKEN_ESPPD", tokenBaru);
+
+                        new GETTOKEN().execute();
+                    });
+        }
+
+        if (Build.VERSION.SDK_INT >= 33) {
+            requestPermissions(new String[]{
+                    Manifest.permission.POST_NOTIFICATIONS
+            }, 1);
         }
     }
-
-    /*@SuppressLint("StaticFieldLeak")
-    public class FCM_TOKEN extends AsyncTask<String, String, String> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-//            loading_fcm = new ProgressDialog(MainActivityBaru_Petugas.this);
-//            loading_fcm.setMessage("Loading Cek Notifikasi... !!!");
-//            loading_fcm.setIndeterminate(false);
-//            loading_fcm.setCancelable(false);
-//            loading_fcm.show();
-//            loading_fcm.hide();
-            loading_tampil();
-        }
-
-        @Override
-        protected String doInBackground(String... args) {
-            int jikaSukses;
-            String responseString;
-            String fcm_token  = tvToken1.getText().toString();
-            String nip_peg    = menuutama_nippetugas.getText().toString();
-            Log.i("Info", fcm_token);
-            Log.i("Info", nip_peg);
-//            notifikasi(fcm_token);
-//            notifikasi(nip_peg);
-            try {
-
-                List<NameValuePair> tokenlist = new ArrayList<>();
-                tokenlist.add(new BasicNameValuePair("fcm_token", fcm_token));
-                tokenlist.add(new BasicNameValuePair("nip_pegawai", nip_peg));
-
-                JSONObject jsonObjectNya = classJsonParser.makeHttpRequest(
-                        Koneksi.FCM_TOKEN, "POST", tokenlist);
-
-                // priksa log jawaban dari JSON
-                //Log.i("Pesan JSON Token", jsonObjectNya.toString());
-                jikaSukses = jsonObjectNya.getInt(STATUSSUKSES);
-
-                if (jikaSukses == 1) {
-                    //Log.i("Pesan Token", jsonObjectNya.getString(STATUSPESANTOKEN));
-                    return jsonObjectNya.getString(STATUSPESANTOKEN);
-                }else{
-                    //Log.i("Pesan Token Gagal:",jsonObjectNya.getString(STATUSPESANTOKEN));
-                    return jsonObjectNya.getString(STATUSPESANTOKEN);
-                }
-            } catch (JSONException e) {
-                responseString = e.toString();
-            } catch (Exception e){
-                responseString = e.toString();
-            }
-
-            return responseString;
-
-        }
-
-        @Override
-        protected void onPostExecute(String a) {
-            //loading_fcm.dismiss();
-            loading_sembunyi();
-            //notifikasi(a+"\n"+tvToken1.getText().toString());
-            //Toast.makeText(MainActivityBaru_Petugas.this, a+"\n"+tvToken1.getText().toString(), LENGTH_LONG).show();
-            makeText(MainActivityBaru_Petugas.this, a, LENGTH_LONG).show();
-        }
-
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    public class GETTOKEN extends AsyncTask<String, String, String> {
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-//            loading_fcm = new ProgressDialog(MainActivityBaru_Petugas.this);
-//            loading_fcm.setMessage("Loading Cek Notifikasi... !!!");
-//            loading_fcm.setIndeterminate(false);
-//            loading_fcm.setCancelable(false);
-//            loading_fcm.show();
-//            loading_fcm.hide();
-			loading_tampil();
-		}
-
-		@Override
-		protected String doInBackground(String... args) {
-			int jikaSukses;
-
-            String fcm_token  = tvToken1.getText().toString();
-            String nip_peg    = menuutama_nippetugas.getText().toString();
-            Log.i("Info", fcm_token);
-            Log.i("Info", nip_peg);
-
-			String responseString;
-			try {
-
-				List<NameValuePair> versi = new ArrayList<>();
-				versi.add(new BasicNameValuePair("fcm_token", fcm_token));
-                versi.add(new BasicNameValuePair("nip_pegawai", nip_peg));
-				Log.i("Proses Cek Token!", "dimulai");
-				JSONObject jsonObjectNya = classJsonParser.makeHttpRequest(Koneksi.FCM_TOKEN, "POST", versi);
-
-				Log.i("Proses Method Token", jsonObjectNya.toString());
-				jikaSukses = jsonObjectNya.getInt(STATUSSUKSES);
-                Log.i("INFO TOKEN", jsonObjectNya.getString(STATUSPESANTOKEN));
-                return jsonObjectNya.getString(STATUSPESANTOKEN);
-			} catch (JSONException e) {
-				responseString = e.toString();
-			} catch (Exception e){
-				responseString = e.toString();
-			}
-
-			return responseString;
-		}
-
-		@Override
-		protected void onPostExecute(String code) {
-//            loading_fcm.dismiss();
-            loading_sembunyi();
-//            notifikasi(a+"\n"+tvToken1.getText().toString());
-//            Toast.makeText(MainActivityBaru_Petugas.this, a+"\n"+tvToken1.getText().toString(), LENGTH_LONG).show();
-//            makeText(MainActivityBaru_Petugas.this, code, LENGTH_LONG).show();
-            Snackbar.make(findViewById(R.id.myCoordinatorLayout), code, Snackbar.LENGTH_SHORT).show();
-        }
-
-	}
-*/
 
     @SuppressLint("StaticFieldLeak")
     public class GETTOKEN extends AsyncTask<Void, Void, String> {
+        private String fcm_token;
+        private String nip_peg;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             loading_tampil();
+
+            nip_peg   = menuutama_nippetugas.getText().toString().trim();
+            fcm_token = tvToken1.getText().toString().trim();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
-
-            String fcm_token = tvToken1.getText().toString().trim();
-            String nip_peg   = menuutama_nippetugas.getText().toString().trim();
 
             try {
                 HashMap<String, String> params = new HashMap<>();
                 params.put("fcm_token", fcm_token);
                 params.put("nip_pegawai", nip_peg);
 
-                Log.i("FCM", "Kirim token ke server");
+                Log.i("FCM", String.valueOf(params));
 
                 Java_Connection jc = new Java_Connection();
                 String response = jc.sendPostRequest(
@@ -383,7 +299,6 @@ public class MainActivityUtama extends AppCompatActivity
             loading_tampil();
         }
 
-        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected String doInBackground(Void... voids) {
 
@@ -411,6 +326,7 @@ public class MainActivityUtama extends AppCompatActivity
                 pesanversi      = json.optString(TAG_VERSIPESAN_CEK, "");
                 warningversi    = json.optString(TAG_VERSIWARNING, "");
                 versiygbaru     = json.optString(TAG_VERSIBARU, "");
+                linkupdate      = json.optString(TAG_LINK, "");
 
                 return String.valueOf(code);
 
@@ -442,7 +358,7 @@ public class MainActivityUtama extends AppCompatActivity
                     break;
 
                 case "101": // wajib update
-                    info_download(pesanversi, warningversi);
+                    info_download(pesanversi, warningversi, linkupdate);
                     break;
 
                 default:
@@ -512,38 +428,48 @@ public class MainActivityUtama extends AppCompatActivity
         alert.show();
     }
 
-    private void info_download(String message, String warningversi) {
+    private void info_download(String message, String warningversi, String linkupdate) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message)
                 .setTitle(warningversi)
                 .setCancelable(false)
-                .setIcon(R.drawable.ic_download_sppd)
-                .setPositiveButton("✅ Download",
+                .setIcon(R.drawable.ic_download)
+//                .setPositiveButton("✅ Download",
+//                        (dialog, id) -> {
+//                            dialog.dismiss();
+//                            try {
+//                                  new down_apk().execute(Koneksi.download_apk + "e-Sppd.v" + URLEncoder.encode(versiygbaru, "UTF-8")+".apk");
+//                            } catch (Exception ex) {
+//                                // TODO Auto-generated catch block
+//                                ex.printStackTrace();
+//                            }
+//                        })
+                .setPositiveButton("✅ Update",
                         (dialog, id) -> {
-                            dialog.dismiss();
-                            try {
-                                  new down_apk().execute(Koneksi.download_apk + "e-Sppd.v" + URLEncoder.encode(versiygbaru, "UTF-8")+".apk");
-                            } catch (Exception ex) {
-                                // TODO Auto-generated catch block
-                                ex.printStackTrace();
-                            }
-                        })
-                .setNegativeButton("Nanti",
-                        (dialog, id) -> {
-                            dialog.dismiss();
-                            MainActivityUtama.this.finish();
-                            finish();
-                        })
-                .setNeutralButton("Masuk Website",
-                        (dialog, id) -> {
-                           // Intent in = null;
+                            // Intent in = null;
                             dialog.dismiss();
                             Intent in = new Intent();
                             in.setAction(Intent.ACTION_VIEW);
                             in.addCategory(Intent.CATEGORY_BROWSABLE);
-                            in.setData(Uri.parse(Koneksi.URL_WEBSITE));
+                            in.setData(Uri.parse(linkupdate));
                             startActivity(in);
+                        })
+                .setNegativeButton("❌ Nanti",
+                        (dialog, id) -> {
+                            dialog.dismiss();
+                            MainActivityUtama.this.finish();
+                            finish();
                         });
+//                .setNeutralButton("Masuk Website",
+//                        (dialog, id) -> {
+//                           // Intent in = null;
+//                            dialog.dismiss();
+//                            Intent in = new Intent();
+//                            in.setAction(Intent.ACTION_VIEW);
+//                            in.addCategory(Intent.CATEGORY_BROWSABLE);
+//                            in.setData(Uri.parse(Koneksi.URL_WEBSITE));
+//                            startActivity(in);
+//                        });
         AlertDialog alert = builder.create();
         alert.show();
     }
@@ -679,49 +605,17 @@ public class MainActivityUtama extends AppCompatActivity
         }
     }
 
-
     private void showprogress_download(String a) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(a)
                 .setTitle("Status")
                 .setCancelable(false)
-                .setIcon(R.drawable.ic_info_outline_24dp)
+                .setIcon(R.drawable.ic_warning_black)
                 .setPositiveButton("Ok",
                         (dialog, id) -> {
                             dialog.dismiss();
                             finish();
                             startActivity(getIntent());
-                        });
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
-    private void info_maintenance(String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(message)
-                .setTitle("Informasi")
-                .setCancelable(false)
-                .setIcon(R.drawable.ic_info_outline_24dp)
-                .setPositiveButton("Ok",
-                        (dialog, id) -> {
-                            dialog.dismiss();
-                            MainActivityUtama.this.finish();
-                            finish();
-
-                        });
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
-    private void info_selesai_download(String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(message)
-                .setTitle("Informasi")
-                .setCancelable(false)
-                .setIcon(R.drawable.ic_info_outline_24dp)
-                .setPositiveButton("Ok",
-                        (dialog, id) -> {
-                            dialog.dismiss();
-                            MainActivityUtama.this.finish();
-                            finish();
                         });
         AlertDialog alert = builder.create();
         alert.show();
@@ -772,12 +666,12 @@ public class MainActivityUtama extends AppCompatActivity
         if (id == R.id.menu1) {
             finish();
             startActivity(getIntent());
-            makeText(MainActivityUtama.this, "Selamat Datang\n"+nama_pegawai,
+            makeText(MainActivityUtama.this, "Selamat Datang "+nama_pegawai,
                            LENGTH_LONG).show();
 
-         //   new Activity_Gambar().onDestroyView();
-        //    fragment = new Activity_Gambar();
-         //   callFragment(fragment);
+            /*new Activity_Gambar().onDestroyView();
+            fragment = new Activity_Gambar();
+            callFragment(fragment);*/
         } else if (id == R.id.menu2) {
             Intent in;
 
@@ -851,22 +745,6 @@ public class MainActivityUtama extends AppCompatActivity
                 .commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            if (doubleBackToExitPressedOnce) {
-                super.onBackPressed();
-                return;
-            }
-            this.doubleBackToExitPressedOnce = true;
-            makeText(this, "Tekan tombol kembali [2x] untuk keluar aplikasi.", LENGTH_SHORT).show();
-            new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
-        }
-
-    }
     private void infodialogback() {
         AlertDialog.Builder ad = new AlertDialog.Builder(this);
         ad.setTitle("Warning");
@@ -932,20 +810,25 @@ public class MainActivityUtama extends AppCompatActivity
 
     public void loading_tampil() {
         frame_loading_utama.setVisibility(View.VISIBLE);
+//        Glide.with(MainActivityUtama.this)
+//                // LOAD URL DARI LOKAL DRAWABLE
+//                .load(R.drawable.loading_blue)
+//                .asGif()
+//                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+//                .into(gmbar_loading_utama);
+
         Glide.with(MainActivityUtama.this)
-                // LOAD URL DARI LOKAL DRAWABLE
-                .load(R.drawable.loading_ring)
-                .asGif()
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .load(R.drawable.loading_blue)
                 .into(gmbar_loading_utama);
     }
 
     public void onRequestPermissionsResult(int RC, @NonNull String[] per, @NonNull int[] PResult) {
 
+        super.onRequestPermissionsResult(RC, per, PResult);
         if (RC == RequestPermissionCode_StorageCamera) {
             if ((PResult.length > 0) && (PResult[0] == PackageManager.PERMISSION_DENIED)) {
 
-                makeText(MainActivityUtama.this, "Diperlukan Ijin Mengakses Lokasi Penyimpanan dan Kamera !!!", Toast.LENGTH_LONG).show();
+                makeText(MainActivityUtama.this, "Diperlukan ijin akses lokasi penyimpanan data dan akses galery!", LENGTH_LONG).show();
             }
         }
     }
@@ -955,7 +838,7 @@ public class MainActivityUtama extends AppCompatActivity
         if ((ActivityCompat.shouldShowRequestPermissionRationale(MainActivityUtama.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) &&
                 (ActivityCompat.shouldShowRequestPermissionRationale(MainActivityUtama.this, Manifest.permission.CAMERA))) {
 
-            makeText(MainActivityUtama.this, "Diperlukan Ijin Mengakses Penyimpanan  dan Kamera !!!", Toast.LENGTH_LONG).show();
+            makeText(MainActivityUtama.this, "Diperlukan ijin akses lokasi penyimpanan data dan akses galery!", Toast.LENGTH_LONG).show();
 
             ActivityCompat.requestPermissions(MainActivityUtama.this,
                     new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, RequestPermissionCode_StorageCamera);
@@ -965,25 +848,4 @@ public class MainActivityUtama extends AppCompatActivity
         }
     }
 
-    /*public void showImage(View view)
-    {
-    ViewFlipper viewFlipper = findViewById(R.id.viewFlippermainactivity);
-    viewFlipper.setFlipInterval(2500);
-    viewFlipper.startFlipping();
-
-    Cursor cursor = db.rawQuery(Query_Select_All ,  null);
-    int i = 1;
-    if(cursor.getCount() != 0)
-        while (cursor.moveToNext())
-        {
-            Cursor cursor2 = db.rawQuery("select * from imageColumns where id = "+i , null);
-            String path = cursor2.getString(cursor2.getColumnIndex(imageColumnName));
-            File imageFile = new File(path);
-            Bitmap bitmapImage = BitmapFactory.decodeFile(imageFile.toString());
-            ImageView imageView = new ImageView(this);
-            imageView.setImageBitmap(bitmapImage);
-            viewFlipper.addView(imageView);
-            i++;
-        }
-    }*/
 }

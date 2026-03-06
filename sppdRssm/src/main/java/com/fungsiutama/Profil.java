@@ -1,9 +1,7 @@
 package com.fungsiutama;
 
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -20,7 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -28,7 +25,6 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 //import koneksi.JSONParser;
 import koneksi.Java_Connection;
@@ -37,7 +33,6 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 	private static final String TAG = "Profil";
 	private TextView nip_lokal, update_nip, update_namapeg, update_jabatan, update_golongan, update_reg_pass;
 	Button btn_change,btn_batal, btn_update_pass;
-	ProgressDialog loading;
 	EditText update_reg_pass_ulangi, update_unit, update_email;
 	ImageView imgedit_email1, imgedit_email2, imgedit_unit, imgedit_unit2, img_showpass_profil1, img_showpass_profil2, gmbar_loading, img_refresh;
 	Animation anim_hilang, anim_putar;
@@ -109,7 +104,7 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 			imgedit_email2.setVisibility(View.GONE);
 			update_email.setEnabled(false);
 			v.startAnimation(anim_hilang);
-			new Proses_update_email().execute();
+			new ProsesUpdateEmail().execute();
 		});
 
 		imgedit_unit.setOnClickListener(v -> {
@@ -125,7 +120,7 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 			imgedit_unit2.setVisibility(View.GONE);
 			update_unit.setEnabled(false);
 			v.startAnimation(anim_hilang);
-			new Proses_update_unitkerja().execute();
+			new ProsesUpdateUnit().execute();
 		});
 
 		img_showpass_profil1.setOnClickListener(v -> {
@@ -183,14 +178,8 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 		update_email.setText(emailp);
 		update_unit.setText(unitkerjap);
 		if (passwordp != null) {
-			if (passwordp.isEmpty()){
-//				update_reg_pass.setText(null);
-				update_reg_pass.setText("Silahkan Update Password!");
-			}else {
-//				update_reg_pass.setText(passwordp);
-				update_reg_pass.setText("Silahkan Update Password!");
-			}
-		}
+            update_reg_pass.setText("Silahkan Update Password!");
+        }
 		/*
 		ViewFlipper viewFlipper = findViewById(R.id.viewFlippermainactivity);
 		viewFlipper.setFlipInterval(2500);
@@ -256,7 +245,7 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 			} else if (update_reg_pass_ulangi.getText().toString().length() < 5) {
 				Snackbar.make(v, "Password Kurang Lebih Minimal Lima (5) Karakter", Snackbar.LENGTH_LONG).setAction("Snackbar", null).show();
 			} else {
-				new Proses_update_Pass().execute();
+				new ProsesUpdatePass().execute();
 			}
 
 			break;
@@ -265,84 +254,26 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 	}
 
 	@SuppressLint("StaticFieldLeak")
-	/*public class Proses_update_Pass extends AsyncTask<String, String, String> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			loading_tampil();
-		}
-
-		@Override
-		protected String doInBackground(String... args) {
-			int berhasil;
-
-			String nip_pegawai = nip_lokal.getText().toString().trim();
-			String ambil_pass_baru = update_reg_pass_ulangi.getText()
-					.toString().trim();
-
-			try {
-
-				List<NameValuePair> parameterNya = new ArrayList<>();
-				parameterNya.add(new BasicNameValuePair("nip_pegawai", nip_pegawai));
-				parameterNya.add(new BasicNameValuePair("ambil_pass_baru", ambil_pass_baru));
-
-				JSONParser ambil_classJSONParser = new JSONParser();
-				JSONObject jsonObjectNya = ambil_classJSONParser.makeHttpRequest(Koneksi.update_pass, "POST", parameterNya);
-
-				Log.d("ProsesUpdatePass:", jsonObjectNya.toString());
-
-				berhasil = jsonObjectNya.getInt(TAG_BERHASIL);
-				if (berhasil == 1) {
-					Log.d("Sukses !!!", jsonObjectNya.toString());
-					finish();
-					return jsonObjectNya.getString(TAG_PESAN);
-				} else {
-					Log.d("Failed !!!", jsonObjectNya.getString(TAG_PESAN));
-					return jsonObjectNya.getString(TAG_PESAN);
-				}
-
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}
-			return null;
-		}
-
-		@Override
-		protected void onPostExecute(String url_registrasi_nya) {
-			//loading.dismiss();
-			Log.e(TAG, "ProsesUpdatePass : " + url_registrasi_nya);
-			if (url_registrasi_nya != null) {
-				loading_sembunyi();
-				Toast.makeText(Profil.this, url_registrasi_nya,
-						Toast.LENGTH_LONG).show();
-			}
-		}
-	}*/
-
-	public class Proses_update_Pass extends AsyncTask<Void, Void, String> {
+	public class ProsesUpdatePass extends AsyncTask<Void, Void, String> {
 		Java_Connection jc = new Java_Connection();
+		private String nipx;
+		private String passx;
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
 			loading_tampil();
+
+			nipx = nip_lokal.getText().toString().trim();
+			passx = update_reg_pass_ulangi.getText().toString().trim();
 		}
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
 		protected String doInBackground(Void... voids) {
 
 			try {
 				HashMap<String, String> params = new HashMap<>();
-
-				params.put(
-						"nip_pegawai",
-						nip_lokal.getText().toString().trim()
-				);
-				params.put(
-						"ambil_pass_baru",
-						update_reg_pass_ulangi.getText().toString().trim()
-				);
+				params.put("nip_pegawai",nipx);
+				params.put("ambil_pass_baru",passx);
 
 				String response = jc.sendPostRequest(
 						Koneksi.update_pass,
@@ -390,29 +321,28 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 			}
 		}
 	}
-	public class Proses_update_email extends AsyncTask<Void, Void, String> {
+
+	@SuppressLint("StaticFieldLeak")
+    public class ProsesUpdateEmail extends AsyncTask<Void, Void, String> {
+		private String nipxx;
+		private String emailx;
 
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
 			loading_tampil();
+
+			nipxx = nip_lokal.getText().toString().trim();
+			emailx = update_email.getText().toString().trim();
 		}
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
 		protected String doInBackground(Void... voids) {
 
 			try {
 				HashMap<String, String> params = new HashMap<>();
-
-				params.put(
-						"nip",
-						nip_lokal.getText().toString().trim()
-				);
-				params.put(
-						"email",
-						update_email.getText().toString().trim()
-				);
+				params.put("nip", nipxx);
+				params.put("email",emailx);
 
 				Java_Connection jc = new Java_Connection();
 				String response = jc.sendPostRequest(
@@ -453,29 +383,27 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 			}
 		}
 	}
-	public class Proses_update_unitkerja extends AsyncTask<Void, Void, String> {
+	@SuppressLint("StaticFieldLeak")
+    public class ProsesUpdateUnit extends AsyncTask<Void, Void, String> {
+		private String nipxxx;
+		private String unitx;
 
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
 			loading_tampil();
+			nipxxx = nip_lokal.getText().toString().trim();
+			unitx 	= update_unit.getText().toString().trim();
 		}
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
 		protected String doInBackground(Void... voids) {
 
 			try {
 				HashMap<String, String> params = new HashMap<>();
 
-				params.put(
-						"nip",
-						nip_lokal.getText().toString().trim()
-				);
-				params.put(
-						"unitkerja",
-						update_unit.getText().toString().trim()
-				);
+				params.put("nip",nipxxx);
+				params.put("unitkerja",unitx);
 
 				Log.d("ProsesUpdateUnit", "proses update start");
 
@@ -516,93 +444,22 @@ public class Profil extends AppCompatActivity implements OnClickListener {
 		}
 	}
 
-	/*public class Loading_Profil extends AsyncTask<String, String, String> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-//			loading = new ProgressDialog(Profil.this);
-//			loading.setMessage("Sedang memuat data pegawai...");
-//			loading.setIndeterminate(false);
-//			loading.setCancelable(false);
-//			loading.show();
-            loading_tampil();
-		}
-
-		@Override
-		protected String doInBackground(String... args) {
-			int berhasil;
-
-			String nip 	 = nip_lokal.getText().toString().trim();
-
-			try {
-
-				List<NameValuePair> parameterNya = new ArrayList<>();
-				parameterNya.add(new BasicNameValuePair("nip", nip));
-
-				Log.d("Loading_Profil:", "proses update start");
-
-				JSONParser ambil_classJSONParser = new JSONParser();
-				JSONObject jsonObjectNya = ambil_classJSONParser.makeHttpRequest(Koneksi.loading_profil, "POST", parameterNya);
-
-				Log.d("Loading_Profil:", jsonObjectNya.toString());
-				Log.d("Loading_Profil:", jsonObjectNya.getString(TAG_PESAN));
-
-				berhasil = jsonObjectNya.getInt(TAG_BERHASIL);
-				if (berhasil == 1) {
-					namap 		= jsonObjectNya.getString(NAMA);
-					jabatanp 	= jsonObjectNya.getString(JABATAN);
-					golonganp 	= jsonObjectNya.getString(GOLONGAN);
-					passwordp 	= jsonObjectNya.getString(PASSWORD);
-					emailp 		= jsonObjectNya.getString(EMAIL);
-					unitkerjap	= jsonObjectNya.getString(UNIT);
-					path	 	= jsonObjectNya.getString(PATH);
-					return jsonObjectNya.getString(TAG_PESAN);
-
-				}else if (berhasil == 404) {
-					finish();
-					return jsonObjectNya.getString(TAG_PESAN);
-				} else {
-					return jsonObjectNya.getString(TAG_PESAN);
-				}
-
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}
-			return null;
-		}
-
-		@Override
-		protected void onPostExecute(String url_registrasi_nya) {
-			//loading.dismiss();
-			Log.i(TAG, "Loading_Profil : " + url_registrasi_nya);
-			if (url_registrasi_nya != null) {
-				loading_sembunyi();
-				Toast.makeText(Profil.this, url_registrasi_nya, Toast.LENGTH_LONG).show();
-			}else{
-				loading_tampil();
-			}
-			isi_text();
-		}
-	}*/
-	public class Loading_Profil extends AsyncTask<Void, Void, String> {
-
+	@SuppressLint("StaticFieldLeak")
+    public class Loading_Profil extends AsyncTask<Void, Void, String> {
+		private String nipxxx;
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
 			loading_tampil();
+			nipxxx = nip_lokal.getText().toString().trim();
 		}
 
-		@RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
 		protected String doInBackground(Void... voids) {
 
 			try {
 				HashMap<String, String> params = new HashMap<>();
-				params.put(
-						"nip",
-						nip_lokal.getText().toString().trim()
-				);
+				params.put("nip",nipxxx);
 
 				Log.d("Loading_Profil", "request start");
 
@@ -698,11 +555,15 @@ public class Profil extends AppCompatActivity implements OnClickListener {
     public void loading_tampil() {
         frame_loading.setVisibility(View.VISIBLE);
 		frame_profil.setVisibility(View.GONE);
+//		Glide.with(Profil.this)
+//				// LOAD URL DARI LOKAL DRAWABLE
+//				.load(R.drawable.loading_ring)
+//				.asGif()
+//				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
+//				.into(gmbar_loading);
+
 		Glide.with(Profil.this)
-				// LOAD URL DARI LOKAL DRAWABLE
-				.load(R.drawable.loading_ring)
-				.asGif()
-				.diskCacheStrategy(DiskCacheStrategy.SOURCE)
+				.load(R.drawable.loading_blue)
 				.into(gmbar_loading);
     }
 }
