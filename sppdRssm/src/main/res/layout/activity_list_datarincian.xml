@@ -5,32 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8" >
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/grslogtengahlistrincian"
-        android:background="@drawable/circle_reg_v3"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/grslogtengahlistrincian"
-        android:background="@drawable/circle_reg_v4"/>
-
-    <View
-        android:id="@+id/grslogtengahlistrincian"
-        android:layout_width="0dp"
-        android:layout_height="10dp"
-        android:layout_centerHorizontal="true"/>
+    android:fitsSystemWindows="true">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/grslogtengahlistrincian" >
+        android:background="#F4F6F8" >
 
         <LinearLayout
             android:layout_width="match_parent"

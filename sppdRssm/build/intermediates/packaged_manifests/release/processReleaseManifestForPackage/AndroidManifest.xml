@@ -73,14 +73,30 @@
         <activity
             android:name="com.fungsiutama.MainActivityUtama"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.fungsiutama.List_DataSppd" />
-        <activity android:name="com.fungsiutama.History" />
-        <activity android:name="com.fungsiutama.List_DataRincian" />
-        <activity android:name="com.fungsiutama.Edit_Rincian_Biaya" />
-        <activity android:name="com.fungsiutama.List_DataRiil" />
-        <activity android:name="com.fungsiutama.Edit_Rincian_BiayaRiil" />
-        <activity android:name="com.fungsiutama.List_Notif" />
-        <activity android:name="com.fungsiutama.HistoryVersiSimpleActivity" />
+        <activity
+            android:name="com.fungsiutama.List_DataSppd"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.History"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.List_DataRincian"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.Edit_Rincian_Biaya"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.List_DataRiil"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.Edit_Rincian_BiayaRiil"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.List_Notif"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.fungsiutama.HistoryVersiSimpleActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.fungsiutama.Edit_LaporanPerjalanan"
             android:theme="@style/AppTheme" />
@@ -94,16 +110,7 @@
             android:name="com.fungsiutama.Profil"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.fungsiutama.Tampil_Bantuan"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name="bantuan_tutorial.Tutorial"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name="bantuan_tutorial.Tutorial_Ke2"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name="bantuan_tutorial.Tutorial_Bantuan_Data_Tidak_Tampil"
+            android:name="bantuan_tutorial.TutorialNew"
             android:theme="@style/AppTheme" />
 
         <uses-library

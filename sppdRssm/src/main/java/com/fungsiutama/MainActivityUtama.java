@@ -42,7 +42,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
-import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -98,7 +97,7 @@ public class MainActivityUtama extends AppCompatActivity
     private static final String TAG_VERSIWARNING	= "warning";
     private static final String TAG_VERSIBARU	    = "versiygbaru";
     private static final String TAG_LINK	        = "link";
-    String cek_versi_apk = BuildConfig.VERSION_NAME;
+    String cek_versi_apk = null;
     public String pesanversi, warningversi, versiygbaru, linkupdate;
     public String token_lama;
     public  static final int RequestPermissionCode_StorageCamera  = 11 ;
@@ -109,6 +108,13 @@ public class MainActivityUtama extends AppCompatActivity
         super.onCreate(savedInstanceState);
         WindowCompat.setDecorFitsSystemWindows(getWindow(), true);
         setContentView(R.layout.activity_main_petugas);
+        try {
+            cek_versi_apk = getPackageManager()
+                    .getPackageInfo(getPackageName(), 0)
+                    .versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         handler.postDelayed(runnable, 1000);
         Permission_AksesCameradanStorage();
 //        Log.e("info versi bawaan ", BuildConfig.VERSION_NAME);

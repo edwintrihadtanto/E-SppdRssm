@@ -880,11 +880,13 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <color name="dot_active">#FFFFFF</color>
     <color name="dot_dark_screen1">#d1395c</color>
     <color name="dot_dark_screen2">#14a895</color>
     <color name="dot_dark_screen3">#0C68CC</color>
     <color name="dot_dark_screen4">#a854d4</color>
     <color name="dot_dark_screen5">#d1395c</color>
+    <color name="dot_inactive">#80FFFFFF</color>
     <color name="dot_light_screen1">#f98da5</color>
     <color name="dot_light_screen2">#ab448e84</color>
     <color name="dot_light_screen3">#3511457e</color>

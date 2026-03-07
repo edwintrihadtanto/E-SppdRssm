@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.cardview.widget.CardView;
 
-import com.e_sppd.rssm.BuildConfig;
 import com.e_sppd.rssm.R;
 
 import org.json.JSONObject;
@@ -34,6 +34,7 @@ import koneksi.PdfViewerActivity;
 public class Tentang_Aplikasi extends AppCompatActivity {
     private final Handler handler = new Handler();
 	String nippegawai, tglkritik;
+	String versi = null;
 	@SuppressLint("SetTextI18n")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,14 @@ public class Tentang_Aplikasi extends AppCompatActivity {
 		}else{
 			nippegawai = transferan_nip;
 		}
-		String versi = BuildConfig.VERSION_NAME; //b.getString("versi");
+
+		try {
+			versi = getPackageManager()
+					.getPackageInfo(getPackageName(), 0)
+					.versionName;
+		} catch (PackageManager.NameNotFoundException e) {
+			throw new RuntimeException(e);
+		}
 		textVersion.setText("Versi Aplikasi : " + versi+"RSSM");
 
 		historyVersi.setOnClickListener(v -> {

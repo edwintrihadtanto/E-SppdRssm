@@ -13,7 +13,7 @@ import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;
 
-import bantuan_tutorial.Tutorial;
+import bantuan_tutorial.TutorialNew;
 
 public class Splash_Screen extends AwesomeSplash {
 	boolean doubleBackToExitPressedOnce = false;
@@ -67,6 +67,6 @@ public class Splash_Screen extends AwesomeSplash {
 
 	public void animationsFinished(){
 		finish();
-		startActivity(new Intent(Splash_Screen.this, Tutorial.class));
+		startActivity(new Intent(Splash_Screen.this, TutorialNew.class));
 	}
 }

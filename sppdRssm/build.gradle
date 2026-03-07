@@ -45,8 +45,8 @@ android {
     productFlavors {
     }
     compileOptions {
-    targetCompatibility = 1.8
-        sourceCompatibility = 1.8
+    targetCompatibility = 17
+        sourceCompatibility = 17
     }
     namespace = 'com.e_sppd.rssm'
     externalNativeBuild {

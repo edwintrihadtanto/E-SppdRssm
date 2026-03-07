@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="dot_active">#FFFFFF</color>
+    <color name="dot_inactive">#80FFFFFF</color>
     <color name="wrna_bantuan"              >#8e911624  </color>
 <!--    <color name="list_item_title"           >#08BDDD</color>-->
     <color name="list_item_title"           >#0082C8</color>

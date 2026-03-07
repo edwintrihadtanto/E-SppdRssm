@@ -1,3 +1,3 @@
-G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86/CMakeFiles/rssm.dir
-G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86/CMakeFiles/edit_cache.dir
-G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86/CMakeFiles/rebuild_cache.dir
+D:/Workspace/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86/CMakeFiles/rssm.dir
+D:/Workspace/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86/CMakeFiles/edit_cache.dir
+D:/Workspace/E-SppdRssm/sppdRssm/.cxx/Debug/4g5i4562/x86/CMakeFiles/rebuild_cache.dir

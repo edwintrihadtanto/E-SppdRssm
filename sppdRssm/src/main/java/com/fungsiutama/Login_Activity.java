@@ -136,7 +136,7 @@ public class Login_Activity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
 
-        animAlpha 	= AnimationUtils.loadAnimation(this, R.anim.anim_menghilang);
+		animAlpha 	= AnimationUtils.loadAnimation(this, R.anim.anim_menghilang);
 		animkekiri 	= AnimationUtils.loadAnimation(this, R.anim.anim_kekiri);
 		animkekanan = AnimationUtils.loadAnimation(this, R.anim.anim_kekanan);
 		gmbar_loading_login = findViewById(R.id.gmbar_loading_login);

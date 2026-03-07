@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe")
+set(CMAKE_C_COMPILER "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "Clang")
 set(CMAKE_C_COMPILER_VERSION "21.0.0")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe")
-set(CMAKE_C_COMPILER_AR "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe")
-set(CMAKE_RANLIB "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe")
-set(CMAKE_LINKER "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld.exe")
+set(CMAKE_AR "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe")
+set(CMAKE_C_COMPILER_AR "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe")
+set(CMAKE_RANLIB "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe")
+set(CMAKE_LINKER "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC )
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/21/include;E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/i686-linux-android;E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/21/include;D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/i686-linux-android;D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "-l:libunwind.a;dl;c;-l:libunwind.a;dl")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/21/lib/linux/i386;E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/i686-linux-android/24;E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/i686-linux-android;E:/SDK/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/21/lib/linux/i386;D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/i686-linux-android/24;D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/i686-linux-android;D:/SDK_Workspace/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -1,0 +1,18 @@
+# ninja log v5
+1	356	7945983645373529	CMakeFiles/rssm.dir/rssm.cpp.o	4212d3be65ea6217
+374	1855	7945983657979382	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/4g5i4562/obj/arm64-v8a/librssm.so	99581ea68e5ae2e2
+0	24	0	clean	dc3571c68329d5e6
+2	233	7945985793421138	CMakeFiles/rssm.dir/rssm.cpp.o	4212d3be65ea6217
+234	568	7945985796656836	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/4g5i4562/obj/arm64-v8a/librssm.so	99581ea68e5ae2e2
+0	26	0	clean	dc3571c68329d5e6
+1	120	7945992272246895	CMakeFiles/rssm.dir/rssm.cpp.o	4212d3be65ea6217
+121	355	7945992274476563	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/4g5i4562/obj/arm64-v8a/librssm.so	99581ea68e5ae2e2
+0	27	0	clean	dc3571c68329d5e6
+1	17	0	clean	dc3571c68329d5e6
+0	129	7946006201697940	CMakeFiles/rssm.dir/rssm.cpp.o	4212d3be65ea6217
+130	414	7946006204335426	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/4g5i4562/obj/arm64-v8a/librssm.so	99581ea68e5ae2e2
+1	19	0	clean	dc3571c68329d5e6
+1	108	7946044006029584	CMakeFiles/rssm.dir/rssm.cpp.o	4212d3be65ea6217
+109	325	7946044007990543	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/Debug/4g5i4562/obj/arm64-v8a/librssm.so	99581ea68e5ae2e2
+0	18	0	clean	dc3571c68329d5e6
+0	37	0	clean	dc3571c68329d5e6

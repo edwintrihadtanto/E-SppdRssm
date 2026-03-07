@@ -1,3 +1,28 @@
 # ninja log v5
-6	159	7944665691566689	CMakeFiles/rssm.dir/rssm.cpp.o	6ccb8f64b94866a1
-160	385	7944665693733204	G:/Kumpulan Project Android/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	5958c326fc38b45f
+1	201	7945929590526112	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+203	876	7945929595486637	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+0	24	0	clean	dc3571c68329d5e6
+5	430	7945967553155764	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+431	1103	7945967559549648	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+0	22	0	clean	dc3571c68329d5e6
+1	212	7945976058045002	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+213	648	7945976061613983	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+1	37	0	clean	dc3571c68329d5e6
+0	22	0	clean	dc3571c68329d5e6
+2	268	7945988978639617	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+269	601	7945988981815321	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+0	25	0	clean	dc3571c68329d5e6
+1	191	7946001584084669	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+192	516	7946001587174110	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+0	17	0	clean	dc3571c68329d5e6
+3	154	7946002784848561	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+155	492	7946002788082279	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+1	18	0	clean	dc3571c68329d5e6
+1	167	7946041905988744	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+168	481	7946041909431289	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+0	18	0	clean	dc3571c68329d5e6
+1	159	7946045751385597	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+159	436	7946045754019960	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea
+0	25	0	clean	dc3571c68329d5e6
+1	370	7946047620828092	CMakeFiles/rssm.dir/rssm.cpp.o	af618af66775ee0d
+371	787	7946047624827439	D:/Workspace/E-SppdRssm/sppdRssm/build/intermediates/cxx/RelWithDebInfo/472c4d61/obj/arm64-v8a/librssm.so	be839d529654aeea

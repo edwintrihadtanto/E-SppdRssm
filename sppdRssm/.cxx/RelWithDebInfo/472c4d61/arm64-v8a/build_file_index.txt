@@ -1,1 +1,1 @@
-G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\src\main\cpp\CMakeLists.txt
+D:\Workspace\E-SppdRssm\sppdRssm\src\main\cpp\CMakeLists.txt

@@ -1,3 +1,2 @@
-ninja: Entering directory `G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\.cxx\RelWithDebInfo\472c4d61\x86'
-[1/2] Building CXX object CMakeFiles/rssm.dir/rssm.cpp.o
-[2/2] Linking CXX shared library "G:\Kumpulan Project Android\E-SppdRssm\sppdRssm\build\intermediates\cxx\RelWithDebInfo\472c4d61\obj\x86\librssm.so"
+ninja: Entering directory `D:\Workspace\E-SppdRssm\sppdRssm\.cxx\RelWithDebInfo\472c4d61\x86'
+ninja: no work to do.

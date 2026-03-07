@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
 
 import com.e_sppd.rssm.R;
 import com.google.android.material.snackbar.Snackbar;
@@ -22,6 +23,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -46,6 +48,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		WindowCompat.setDecorFitsSystemWindows(getWindow(), true);
 		setContentView(R.layout.activity_laporansppd);
 		handler.postDelayed(runnable, 1000);
 
@@ -126,17 +129,18 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 		acara.setText(acaraSPPD);
 		nipTTD.setText("NIP : "+ nip);
 
-//		new LoadLaporan().execute();
 		loadLaporan();
-//		if (hasil_pertemuan.contains("null")){
-//			hasilRapat.setText("");
-//		}else{
-//			hasilRapat.setText(hasil_pertemuan);
-//			hasilMasalah.setText(masalah);
-//			hasilSaran.setText(saran);
-//			hasilLainnya.setText(lain_lain);
-//		}
-	}
+/*
+		if (hasil_pertemuan.contains("null")){
+			hasilRapat.setText("");
+		}else{
+			hasilRapat.setText(hasil_pertemuan);
+			hasilMasalah.setText(masalah);
+			hasilSaran.setText(saran);
+			hasilLainnya.setText(lain_lain);
+		}
+*/
+    }
 	private void showSnackbar(String message) {
 
 		View rootView = findViewById(android.R.id.content);
@@ -449,11 +453,7 @@ public class Edit_LaporanPerjalanan extends AppCompatActivity {
 			mainHandler.post(() -> {
 
 				hideLoading();
-				if (finalHasil != null) {
-					show_alert2(finalHasil);
-				} else {
-					show_alert2("Terjadi kesalahan koneksi");
-				}
+                show_alert2(Objects.requireNonNullElse(finalHasil, "Terjadi kesalahan koneksi"));
 
 			});
 

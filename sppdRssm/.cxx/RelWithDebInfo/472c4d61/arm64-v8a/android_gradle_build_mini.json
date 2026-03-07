@@ -1,26 +1,26 @@
 {
   "buildFiles": [
-    "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\src\\main\\cpp\\CMakeLists.txt"
+    "D:\\Workspace\\E-SppdRssm\\sppdRssm\\src\\main\\cpp\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
-      "E:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "D:\\SDK_Workspace\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
-      "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\472c4d61\\arm64-v8a",
+      "D:\\Workspace\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\472c4d61\\arm64-v8a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "E:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "D:\\SDK_Workspace\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
-    "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\472c4d61\\arm64-v8a",
+    "D:\\Workspace\\E-SppdRssm\\sppdRssm\\.cxx\\RelWithDebInfo\\472c4d61\\arm64-v8a",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
     "rssm::@6890427a1f51a3e7e1df": {
       "artifactName": "rssm",
       "abi": "arm64-v8a",
-      "output": "G:\\Kumpulan Project Android\\E-SppdRssm\\sppdRssm\\build\\intermediates\\cxx\\RelWithDebInfo\\472c4d61\\obj\\arm64-v8a\\librssm.so",
+      "output": "D:\\Workspace\\E-SppdRssm\\sppdRssm\\build\\intermediates\\cxx\\RelWithDebInfo\\472c4d61\\obj\\arm64-v8a\\librssm.so",
       "runtimeFiles": []
     }
   }

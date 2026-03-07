@@ -4,10 +4,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_plus.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor2.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor2.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_refresh3.gif.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/refresh3.gif"
     },
@@ -24,10 +20,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_file.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lupa1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lupa1.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/menu_activity_main_drawer.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/menu/activity_main_drawer.xml"
     },
@@ -40,10 +32,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pop_up.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_1.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hijau.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/hijau.png"
     },
@@ -54,10 +42,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_swap_horiz_black.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_swap_horiz_black.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg5.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg5.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_posting.xml.flat",
@@ -84,18 +68,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/badge_primary.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menu_pilihan1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menu_pilihan1.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur4.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tdktampildata4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tdktampildata4.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide3.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide3.xml"
     },
@@ -120,10 +92,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_content_copy_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg4.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_trans.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_trans.png"
     },
@@ -132,36 +100,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_tutorial.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tdktampildata3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tdktampildata3.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_view_activitysppd.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_view_activitysppd.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_solusi_koneksi.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/solusi_koneksi.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor3.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor3.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_silahkan_register.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/silahkan_register.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_tambah.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_tambah.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_lock_open_black.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_lock_open_black.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_welcometutor.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/welcometutor.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -176,10 +120,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide4.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur3.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_menghilang.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_menghilang.xml"
     },
@@ -192,20 +132,8 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_laporansppd.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_3.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg3.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xxhdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_tutorial.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/tutorial.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hijau_background.png.flat",
@@ -216,24 +144,20 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/slide_out_left.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_gif.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_gif.gif"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur2.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_file_download_black_24dp.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_file_download_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_list_history.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_list_history.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pilihan_daftar_petugas.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pilihan_daftar_petugas.xml"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-mdpi/ic_launcher.webp"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_main.xml.flat",
@@ -252,10 +176,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_edit_rincian.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg6.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg6.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_warning_black.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_warning_black.xml"
     },
@@ -264,20 +184,8 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_simpan.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_cara_menampilkan_menu_pilihan.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/cara_menampilkan_menu_pilihan.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_lakilaki.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_lakilaki.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor1_1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor1_1.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_selesai.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/selesai.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_launcher_background.xml.flat",
@@ -304,10 +212,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_save_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_4.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_4.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_lock.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_lock.png"
     },
@@ -332,10 +236,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/search_user.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor5.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor5.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_splash_welcome.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/splash_welcome.xml"
     },
@@ -344,20 +244,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_user_white.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_back_hijau.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/back_hijau.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_welcome.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/welcome.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur5.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur5.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_cari.png.flat",
@@ -396,18 +288,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor6.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor6.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_tampil_detail_history.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/list_tampil_detail_history.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_solusi_koneksi1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/solusi_koneksi1.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_no_bukti.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/no_bukti.png"
     },
@@ -428,16 +308,8 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_chat.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_transparan_baru.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/transparan_baru.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_login.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_login.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_beberapa_menu1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/beberapa_menu1.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_tampil_data_sppd_berdasarkan_spt.xml.flat",
@@ -472,10 +344,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/slide_satu.jpg"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor1_1_1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor1_1_1.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_profil.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_profil.png"
     },
@@ -488,10 +356,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_informasi.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_beberapa_menu.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/beberapa_menu.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_activity_list_notif.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_list_notif.xml"
     },
@@ -502,10 +366,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_informasi_update_versi.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_informasi_update_versi.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor7.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor7.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_satu_gambar.png.flat",
@@ -522,10 +382,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_badge_sudah.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/badge_sudah.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_nama_pegawai.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_nama_pegawai.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_arti_logo.png.flat",
@@ -560,10 +416,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/activity_pdf_viewer.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_tampil_activity_sppd_berdasarkan_spt.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_tampil_activity_sppd_berdasarkan_spt.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_password.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_password.xml"
     },
@@ -576,20 +428,8 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm3x.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tunjuk2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tunjuk2.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pilihan_download.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pilihan_download.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_reload.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_reload.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_cara_menampilkan_menu_pilihan1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/cara_menampilkan_menu_pilihan1.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_edit_riil.xml.flat",
@@ -610,10 +450,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_splash.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_splash.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tentang.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tentang.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_view_pegawai.xml.flat",
@@ -640,28 +476,8 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_upload.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor1.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor1.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_kekiri.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_kekiri.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lupa2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lupa2.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_register_button.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/register_button.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_background2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/background2.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slide_gambar_utama.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slide_gambar_utama.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_plus_image.png.flat",
@@ -678,10 +494,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logosimbol1.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logosimbol1.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_multi_login.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/multi_login.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_vpn_key_black_24dp.xml.flat",
@@ -744,10 +556,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_camera.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tiga_gambar.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tiga_gambar.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_lock_icon.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/lock_icon.png"
     },
@@ -758,10 +566,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_hitam.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/hitam.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_pilihanmenu.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/pilihanmenu.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_menusamping2.png.flat",
@@ -792,20 +596,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/gnti_pass2.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_dialog_pertanyaan_cek_no_spt.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/dialog_pertanyaan_cek_no_spt.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_jdlpenyebab1.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/jdlpenyebab1.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_check_circle_black_24dp.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_check_circle_black_24dp.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_background.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/background.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_empat_gambar.png.flat",
@@ -832,10 +628,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_123.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_transparan_baru2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/transparan_baru2.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_reg_v2.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_reg_v2.xml"
     },
@@ -850,10 +642,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_time_white.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_time_white.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_tunjuk.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/tunjuk.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo2.png.flat",
@@ -936,10 +724,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_visibility_black_24dp.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_background3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/background3.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
@@ -958,10 +742,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_input_black_24dp.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_input_black_24dp.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo3.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo3.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle.xml.flat",
@@ -1000,14 +780,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_keterangan.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg2_2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg2_2.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_panah.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/panah.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_font_insomnia.ttf.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/font_insomnia.ttf"
     },
@@ -1042,10 +814,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_assignment_turned.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_assignment_turned.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_soedono.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/soedono.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_date_range_black_24dp.xml.flat",
@@ -1088,10 +856,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/iconbantuan.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_gif2.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_gif2.gif"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/menu_activity_main_drawer_petugas.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/menu/activity_main_drawer_petugas.xml"
     },
@@ -1132,24 +896,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/icon_tentang.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg8.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg8.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_kekanan.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_kekanan.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_pilihanmenu_baru.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/pilihanmenu_baru.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_row_list_view_pegawai.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/row_list_view_pegawai.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg1.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -1164,16 +916,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/default_regular.ttf"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_penyebab2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/penyebab2.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_profils.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/profils.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_no_upload.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/no_upload.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_profils.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/profils.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_keluar.png.flat",
@@ -1200,10 +948,6 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ripple_row.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg7.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg7.png"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/font_poppins_regular.ttf.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/font/poppins_regular.ttf"
     },
@@ -1216,12 +960,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/xml/network_security_config.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_galery.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/galery.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_merah.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/merah.png"
+    },
+    {
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_galery.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/galery.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
@@ -1244,16 +988,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_simpan2.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_plus.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/plus.png"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_profil.png.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/profil.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_refresh.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_refresh.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_profil.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/profil.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_delete_black.xml.flat",
@@ -1266,10 +1006,6 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_refresh_black_24dp.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_refresh_black_24dp.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menu_pilihan2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menu_pilihan2.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_list_profil.xml.flat",
@@ -1304,20 +1040,12 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_save_3.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/layout_slidenomor4.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/layout/slidenomor4.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_reg_v1.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/circle_reg_v1.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_help.png.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_help.png"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_alur1.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/alur1.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_circle_download3.xml.flat",
@@ -1332,24 +1060,16 @@
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logorssm.png"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_youtube_searched_for_black_24dp.xml.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_youtube_searched_for_black_24dp.xml"
-    },
-    {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_lock_black.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_lock_black.xml"
     },
     {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_logo_rssm_gif3.gif.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/logo_rssm_gif3.gif"
+        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_youtube_searched_for_black_24dp.xml.flat",
+        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_youtube_searched_for_black_24dp.xml"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/anim_anim_memutar.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/anim/anim_memutar.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_menampilkan_menu_2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/menampilkan_menu_2.png"
     },
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_icon_logout.png.flat",
@@ -1450,9 +1170,5 @@
     {
         "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_ic_navigate_next_black_24dp.xml.flat",
         "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/ic_navigate_next_black_24dp.xml"
-    },
-    {
-        "merged": "com.e_sppd.rssm.sppdRssm-release-58:/drawable_reg2.png.flat",
-        "source": "com.e_sppd.rssm.sppdRssm-main-59:/drawable/reg2.png"
     }
 ]

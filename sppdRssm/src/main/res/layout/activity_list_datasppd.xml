@@ -5,34 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6F8">
+    android:background="#EFEEEE">
 
     <View
+        android:id="@+id/actionbar_listsppd"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/grslogtengahlistriil"
-        android:background="@drawable/circle_reg_v3"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/grslogtengahlistriil"
-        android:background="@drawable/circle_reg_v4"/>
-
-    <View
-        android:id="@+id/grslogtengahlistriil"
-        android:layout_width="0dp"
-        android:layout_height="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_height="180dp"
+        android:background="@drawable/bg_header_modern" />
 
     <RelativeLayout
         android:id="@+id/layout_info_notif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/grslogtengahlistriil"
-        android:layout_margin="5dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -62,7 +49,7 @@
                         android:layout_height="24dp"
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_file"
-                        android:tint="@android:color/holo_orange_light"/>
+                        app:tint="@android:color/holo_orange_light" />
 
                     <TextView
                         android:id="@+id/txt_jumlah_sppd"
@@ -96,7 +83,7 @@
                         android:layout_height="24dp"
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_check"
-                        android:tint="@android:color/holo_green_dark"/>
+                        app:tint="@android:color/holo_green_dark" />
 
                     <TextView
                         android:id="@+id/txt_sppd_selesai"
@@ -129,7 +116,7 @@
                         android:layout_height="24dp"
                         android:src="@drawable/ic_file"
                         android:contentDescription="@string/todo"
-                        android:tint="@android:color/holo_red_light"/>
+                        app:tint="@android:color/holo_red_light" />
 
                     <TextView
                         android:id="@+id/txt_jumlah_laporan"
@@ -192,22 +179,12 @@
             tools:ignore="SpeakableTextPresentCheck"/>
     </LinearLayout>
 
-    <!-- GARIS PEMBATAS -->
-    <View
-        android:id="@+id/actionbar2"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_below="@+id/layoutButtonSPTSPPD"
-        android:background="@color/white"/>
-
     <!-- LIST SPPD -->
     <RelativeLayout
         android:id="@+id/laylistrecent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/actionbar2"
+        android:layout_below="@+id/actionbar_listsppd"
         android:layout_marginBottom="5dp"
         android:padding="8dp">
 
@@ -227,17 +204,4 @@
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/grslogtengahlistriil"
-        android:background="@drawable/circle_reg_v1"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/grslogtengahlistriil"
-        android:background="@drawable/circle_reg_v2"/>
 </RelativeLayout>

@@ -49,7 +49,7 @@ public class History extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.list_tampil_detail_history);
+		setContentView(R.layout.activity_list_history);
 		laylistrecent 	= findViewById(R.id.laylistrecent);
 		listHistory 	= findViewById(R.id.list_history);
 		dataHistory     = new ArrayList<>();

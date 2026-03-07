@@ -1,13 +1,13 @@
 <lint-module
     format="1"
-    dir="G:\Kumpulan Project Android\E-SppdRssm\sppdRssm"
+    dir="D:\Workspace\E-SppdRssm\sppdRssm"
     name=":sppdRssm"
     type="APP"
     maven="E-SppdRssm:sppdRssm:unspecified"
     agpVersion="8.11.2"
     buildFolder="build"
-    bootClassPath="E:\SDK\platforms\android-36\android.jar;E:\SDK\build-tools\35.0.0\core-lambda-stubs.jar"
-    javaSourceLevel="1.8"
+    bootClassPath="D:\SDK_Workspace\Sdk\platforms\android-36\android.jar;D:\SDK_Workspace\Sdk\build-tools\35.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="17"
     compileTarget="android-36"
     neverShrinking="true">
   <lintOptions
